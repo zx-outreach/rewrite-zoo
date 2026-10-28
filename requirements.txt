@@ -4,3 +4,4 @@ numpy
 jinja2>=3.1
 markdown-it-py>=3.0
 pytest
+networkx

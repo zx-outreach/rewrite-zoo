@@ -32,7 +32,6 @@ The GitHub Actions workflow in `.github/workflows/pages.yml` runs the tests, ver
 | `zxrewrites/` | the Python package: loading, verification, variants, export and site generation |
 | `authoring/` | the DSL and scripts used to write the initial rule data; see [authoring/README.md](authoring/README.md) for the data conventions |
 | `site/` | Jinja2 templates and static assets (CSS, the d3-based diagram viewer) |
-| `reference/book/` | the LaTeX/TikZ sources of the cheatsheets of *Picturing Quantum Software*, used as a source of rules |
 | `tests/` | pytest tests for the tooling |
 
 ## Adding a rule
