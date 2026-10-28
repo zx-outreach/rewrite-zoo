@@ -1,0 +1,36 @@
+{
+  "id": "fe-limit",
+  "name": "Idealising heavy fault gadgets",
+  "aliases": [
+    "(Limit_fe)",
+    "w-fault equivalence axiom"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 26,
+  "summary": "For w-fault equivalence, a fault gadget of weight at least w can be made fault-free.",
+  "description": "A fault gadget whose spawning edge has weight $w_F \\geq w$ is **$w$-fault-equivalent** to the same gadget with a fault-free spawning edge: $w$-fault equivalence only compares faults of weight less than $w$, so a fault that costs at least $w$ can be dropped. Added to the complete rules for fault equivalence, this rule gives a complete calculus for $w$-fault equivalence of Clifford ZX-diagrams.\n\nSemantically the two sides are the same ZX-diagram; only the noise annotation changes. A *fault gadget* is a red spider connected by fault-free edges to its targets (here Z-spiders, whose phase-free Z-flips it describes) and by a noisy *spawning edge*, annotated with the weight of the fault, to a one-legged green spider. A flip on the spawning edge spreads to the targets, so the gadget models one atomic fault; without a flip it does nothing. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "conditions": "w_F ≥ w; the rewrite is w-fault-equivalent (not fault-equivalent).",
+  "scalar": "1",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 4 (a), rule $(\\textsc{Limit}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "fb-bound",
+      "relation": "see-also"
+    },
+    {
+      "id": "fe-scalar",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "w-fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness"
+  ]
+}

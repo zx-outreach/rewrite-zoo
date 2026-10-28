@@ -1,0 +1,43 @@
+{
+  "id": "loop-copy",
+  "name": "Copying the Hadamard-loop state",
+  "aliases": [
+    "(L)",
+    "loop copy",
+    "angle-free π-copy",
+    "H-loop copy"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "copy",
+  "order": 10,
+  "summary": "An X-spider with a Hadamard self-loop (the state |1⟩) is copied by a Z-spider.",
+  "description": "A spider with a Hadamard self-loop is equal, up to a scalar, to the same spider with an extra π phase (see [Hadamard self-loop removal](../hadamard-self-loop-removal/)). So an X-spider with a Hadamard self-loop and one leg is the computational basis state $|1\\rangle$ (up to a scalar), and like any basis state it is copied by a Z-spider.\n\nDuncan and Perdrix used this rule, written with self-loops instead of π phases, as an axiom of their *angle-free* ZX-calculus, in which there are no phases at all: π phases are replaced by Hadamard self-loops (the H-loop axiom). They showed that this calculus is complete for real stabilizer quantum mechanics.",
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "n is the number of legs of the Z-spider (shown for n = 2).",
+  "scalar": "1",
+  "source": {
+    "bib": "DP3",
+    "location": "Section 'Angle-free calculus for Real Stabilizers', axiom (L)"
+  },
+  "related": [
+    {
+      "id": "state-copy",
+      "relation": "variant-of"
+    },
+    {
+      "id": "hadamard-self-loop-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "copy",
+    "self-loop",
+    "real stabilizer",
+    "angle-free",
+    "basis state"
+  ],
+  "alternative_of": "state-copy"
+}

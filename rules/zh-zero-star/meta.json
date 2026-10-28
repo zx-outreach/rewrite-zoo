@@ -1,0 +1,38 @@
+{
+  "id": "zh-zero-star",
+  "name": "Zero absorbs the star",
+  "aliases": [
+    "(Z)",
+    "zero rule (phase-free ZH)",
+    "star-zero rule"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-arithmetic",
+  "order": 20,
+  "summary": "The zero scalar (a Z-spider plugged into an arity-1 H-box) absorbs a star.",
+  "description": "The phase-free ZH-calculus has only H-boxes labelled $-1$; to write the normalisation factors of the grey spider and the NOT it adds a scalar generator, the *star* $\\star$, interpreted as $\\frac{1}{\\sqrt 2}$. A Z-spider plugged into an arity-1 H-box is $1 + (-1) = 0$, and rule (Z) says that this zero scalar absorbs a star. It is the only rule that changes the parity of the number of stars, so it is needed for completeness.\n\nWith scalars written as numbers both sides are $0$, so the rule is trivial.",
+  "checked": false,
+  "unchecked_reason": "uses the star generator (the scalar 1/√2), which PyZX cannot represent",
+  "scalar": "1",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Figure 2, rule (Z)"
+  },
+  "related": [
+    {
+      "id": "star-rule",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-zero-label",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "star",
+    "zero",
+    "scalar",
+    "phase-free ZH"
+  ]
+}

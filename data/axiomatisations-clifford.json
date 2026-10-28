@@ -1,0 +1,1751 @@
+[
+ {
+  "bib": "Backens1",
+  "results": [
+   {
+    "title": "Completeness for stabilizer quantum mechanics",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 21 (Section 6); rules in Section 3.3 (Rules of the ZX-calculus)",
+    "summary": "The ZX-calculus with phases restricted to multiples of π/2 is complete for pure-state stabilizer quantum mechanics, up to non-zero scalars: the rules are stated ignoring non-zero scalar factors, together with the meta-rule 'only the topology matters', and hold with colours swapped or inputs and outputs reversed. The rules are not labelled in the paper; the labels below are the names used in the text.",
+    "axioms": [
+     {
+      "label": "Spider rule",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "Identity rule",
+      "rule": "identity-removal",
+      "note": "The figure also shows the arity-2 spider as a cup and as a cap; these are the same equation with the wires bent."
+     },
+     {
+      "label": "Bialgebra law",
+      "rule": "bialgebra",
+      "note": "Stated without scalars."
+     },
+     {
+      "label": "Hopf law",
+      "rule": "hopf",
+      "note": "Stated without scalars."
+     },
+     {
+      "label": "Copying",
+      "rule": "state-copy",
+      "note": "Phase-free instance (a phase-free spider copies the phase-free state of the other colour), stated without scalars."
+     },
+     {
+      "label": "π-copy rule",
+      "rule": "pi-commutation",
+      "note": "Instance with a phase-free spider with one input and two outputs (α = 0)."
+     },
+     {
+      "label": "π-commutation",
+      "rule": "pi-commutation",
+      "note": "Instance with one input and one output, stated without the global phase."
+     },
+     {
+      "label": "Colour change",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "Euler decomposition of the Hadamard operator",
+      "rule": "euler-decomposition-hadamard",
+      "note": "Stated without the global phase."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "Backens:2015aa",
+  "results": [
+   {
+    "title": "Completeness for non-zero scaled diagrams",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 14 (Section 4.2); rules in Section 2.2 (Rewrite rules), with the scaled rules of Section 3.2 and the star rule of Definition 2",
+    "summary": "The stabilizer ZX-calculus with exactly scaled rules and an extra star generator for the scalar 1/2 is complete for stabilizer diagrams that are not zero, taking scalars into account. The rules hold with colours swapped and upside down, and 'only the topology matters'. The rules are not labelled in the paper; the labels below are the names used in the text.",
+    "axioms": [
+     {
+      "label": "Spider rule",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "Loop rule",
+      "rule": "self-loop-removal",
+      "note": ""
+     },
+     {
+      "label": "Cup rule",
+      "rule": "identity-removal",
+      "note": "The paper states it as 'a spider with two outputs and no inputs is a cup'; this is identity removal with a wire bent."
+     },
+     {
+      "label": "Bialgebra rule (scaled)",
+      "rule": "bialgebra",
+      "note": "Scaled version of Section 3.2."
+     },
+     {
+      "label": "Copy rule (scaled)",
+      "rule": "state-copy",
+      "note": "Phase-free instance; scaled version of Section 3.2."
+     },
+     {
+      "label": "Colour change rule",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "π-copy rule",
+      "rule": "pi-commutation",
+      "note": "Instance with a phase-free spider (α = 0)."
+     },
+     {
+      "label": "π-commutation rule (scaled)",
+      "rule": "pi-commutation",
+      "note": "Instance with one input and one output; scaled version of Section 3.2."
+     },
+     {
+      "label": "Euler decomposition of the Hadamard operator (scaled)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "Scaled version of Section 3.2; the paper writes the scalar as diagrams on the left-hand side."
+     },
+     {
+      "label": "Hopf law (scaled)",
+      "rule": "hopf",
+      "note": "Listed with the scaled rules of Section 3.2, with a footnote that it is derivable from the other rules."
+     },
+     {
+      "label": "Star rule",
+      "rule": "star-rule",
+      "note": "With scalars written as numbers the star rule says that the legless Z-spider is the scalar 2, which is the α = 0 case of [scalar-z-spider].",
+      "description": "A new scalar generator ⋆ (interpreted as 1/2) is the inverse of the legless phase-free Z-spider: ⋆ together with the legless Z-spider is the empty diagram."
+     }
+    ]
+   },
+   {
+    "title": "Completeness for stabilizer zero diagrams",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 16 (Section 4.3); zero rule and zero scalar rule in Section 4.3",
+    "summary": "Adding the zero rule and the zero scalar rule makes the scaled stabilizer ZX-calculus (with the star) complete for zero diagrams as well, and hence complete for all stabilizer diagrams with scalars.",
+    "axioms": [
+     {
+      "label": "Spider rule",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "Loop rule",
+      "rule": "self-loop-removal",
+      "note": ""
+     },
+     {
+      "label": "Cup rule",
+      "rule": "identity-removal",
+      "note": "The paper states it as 'a spider with two outputs and no inputs is a cup'; this is identity removal with a wire bent."
+     },
+     {
+      "label": "Bialgebra rule (scaled)",
+      "rule": "bialgebra",
+      "note": "Scaled version of Section 3.2."
+     },
+     {
+      "label": "Copy rule (scaled)",
+      "rule": "state-copy",
+      "note": "Phase-free instance; scaled version of Section 3.2."
+     },
+     {
+      "label": "Colour change rule",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "π-copy rule",
+      "rule": "pi-commutation",
+      "note": "Instance with a phase-free spider (α = 0)."
+     },
+     {
+      "label": "π-commutation rule (scaled)",
+      "rule": "pi-commutation",
+      "note": "Instance with one input and one output; scaled version of Section 3.2."
+     },
+     {
+      "label": "Euler decomposition of the Hadamard operator (scaled)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "Scaled version of Section 3.2; the paper writes the scalar as diagrams on the left-hand side."
+     },
+     {
+      "label": "Hopf law (scaled)",
+      "rule": "hopf",
+      "note": "Listed with the scaled rules of Section 3.2, with a footnote that it is derivable from the other rules."
+     },
+     {
+      "label": "Star rule",
+      "rule": "star-rule",
+      "note": "With scalars written as numbers the star rule says that the legless Z-spider is the scalar 2, which is the α = 0 case of [scalar-z-spider].",
+      "description": "A new scalar generator ⋆ (interpreted as 1/2) is the inverse of the legless phase-free Z-spider: ⋆ together with the legless Z-spider is the empty diagram."
+     },
+     {
+      "label": "Zero rule",
+      "rule": "zero-rule",
+      "note": ""
+     },
+     {
+      "label": "Zero scalar rule",
+      "rule": "zero-scalar-rule",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "BackensSimplified",
+  "results": [
+   {
+    "title": "Star-free rules with the inverse rule, without (ZS)",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Corollary 3.7 (Section 3.2); rules in Figure 1, without (ZS) and with (SR) replaced by (IV) (Section 3.1)",
+    "summary": "The rules of Backens' scaled stabilizer ZX-calculus (Figure 1) without the zero scalar rule (ZS), and with the star rule (SR) replaced by the star-free inverse rule (IV), are complete for stabilizer quantum mechanics including scalars. (Theorem 3.3 states the same for non-zero diagrams, keeping (ZS).) The rules also hold with colours swapped and upside down.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(S1′)",
+      "rule": "self-loop-removal",
+      "note": ""
+     },
+     {
+      "label": "(S3)",
+      "rule": "identity-removal",
+      "note": "A phase-free green spider with two outputs is the cup: identity removal with the wire bent."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance; the scalar is written as a diagram."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The scalar is written as a diagram."
+     },
+     {
+      "label": "(K1)",
+      "rule": "pi-commutation",
+      "note": "π-copy: instance with a phase-free spider (α = 0) and any number of legs."
+     },
+     {
+      "label": "(K2)",
+      "rule": "pi-commutation",
+      "note": "Instance with one input and one output; scalars written as diagrams."
+     },
+     {
+      "label": "(EU)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "Scalars written as diagrams."
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(ZO)",
+      "rule": "zero-rule",
+      "note": ""
+     },
+     {
+      "label": "(IV)",
+      "rule": "inverse-rule",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "title": "Simplified rules for the stabilizer ZX-calculus",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 4.2 (Section 4.2); rules in Figure 2",
+    "summary": "The eight simplified rules of Figure 2, together with the topology meta-rule, are complete for stabilizer quantum mechanics including scalars, without assuming that rules also hold with colours swapped or upside down.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(S3′)",
+      "rule": "identity-removal",
+      "note": "First half of (S3′): the phase-free green cup is the cup (identity removal with the wire bent); called (S3′L) in backens2017minimal."
+     },
+     {
+      "label": "(S3′)",
+      "rule": "cup-colour-coincidence",
+      "note": "Second half of (S3′): the green cup equals the red cup; called (S3′R) in backens2017minimal."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance with the scalar written as a diagram (a Z- and an X-spider joined by a wire)."
+     },
+     {
+      "label": "(B2′)",
+      "rule": "bialgebra",
+      "note": "The scalar is written as diagrams (a legless Z-spider on the left, a Z- and X-spider joined by a wire on the right)."
+     },
+     {
+      "label": "(EU′)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(IV′)",
+      "rule": "inverse-rule-simplified",
+      "note": ""
+     },
+     {
+      "label": "(ZO′)",
+      "rule": "zero-rule-state",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "backens2017minimal",
+  "results": [
+   {
+    "title": "The simplified stabilizer ZX-calculus ZX_s",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 2.9 (Section 2.3); rules in Figure 1",
+    "summary": "The nine rules of Figure 1 with the meta-rule 'only connectivity matters' are sound and complete for stabilizer quantum mechanics, with scalars and with ordinary (not modular) addition of phases. The paper shows all rules except (S3′R) and (B2′) to be necessary.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(S3′L)",
+      "rule": "identity-removal",
+      "note": "Drawn together with (S3′R) as (S3′) in Figure 1: the phase-free green cup is the cup (identity removal with the wire bent)."
+     },
+     {
+      "label": "(S3′R)",
+      "rule": "cup-colour-coincidence",
+      "note": "Drawn together with (S3′L) as (S3′) in Figure 1."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance with the scalar written as a diagram."
+     },
+     {
+      "label": "(B2′)",
+      "rule": "bialgebra",
+      "note": "The scalar is written as diagrams."
+     },
+     {
+      "label": "(EU′)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(IV′)",
+      "rule": "inverse-rule-simplified",
+      "note": ""
+     },
+     {
+      "label": "(ZO′)",
+      "rule": "zero-rule-state",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "title": "ZX_c: compact closed category instead of 'only connectivity matters'",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 4.6 (Section 4.1); rules in Figure 1 and rule (S2′)",
+    "summary": "Replacing the meta-rule 'only connectivity matters' by the axioms of a compact closed category (no symmetry of the generators assumed), the rules of Figure 1 together with (S2′) are complete for stabilizer quantum mechanics.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(S3′L)",
+      "rule": "identity-removal",
+      "note": "Drawn together with (S3′R) as (S3′) in Figure 1: the phase-free green cup is the cup (identity removal with the wire bent)."
+     },
+     {
+      "label": "(S3′R)",
+      "rule": "cup-colour-coincidence",
+      "note": "Drawn together with (S3′L) as (S3′) in Figure 1."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance with the scalar written as a diagram."
+     },
+     {
+      "label": "(B2′)",
+      "rule": "bialgebra",
+      "note": "The scalar is written as diagrams."
+     },
+     {
+      "label": "(EU′)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(IV′)",
+      "rule": "inverse-rule-simplified",
+      "note": ""
+     },
+     {
+      "label": "(ZO′)",
+      "rule": "zero-rule-state",
+      "note": ""
+     },
+     {
+      "label": "(S2′)",
+      "rule": "identity-removal",
+      "note": "Colour-swapped instance: a phase-free red spider with one input and one output is the identity."
+     }
+    ]
+   },
+   {
+    "title": "ZX_b: braided autonomous category",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 4.17 (Section 4.2); rules in Figure 1 with (B2′) replaced by (B2″), rule (S2′), loop rule (R1) of Figure 3",
+    "summary": "Working in a braided autonomous category (3D isotopy), the rules of Figure 1 with the bialgebra rule replaced by a braided version (B2″), together with (S2′) and the Reidemeister loop rule (R1), are complete for stabilizer quantum mechanics.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(S3′L)",
+      "rule": "identity-removal",
+      "note": "Drawn together with (S3′R) as (S3′) in Figure 1: the phase-free green cup is the cup (identity removal with the wire bent)."
+     },
+     {
+      "label": "(S3′R)",
+      "rule": "cup-colour-coincidence",
+      "note": "Drawn together with (S3′L) as (S3′) in Figure 1."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance with the scalar written as a diagram."
+     },
+     {
+      "label": "(EU′)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(IV′)",
+      "rule": "inverse-rule-simplified",
+      "note": ""
+     },
+     {
+      "label": "(ZO′)",
+      "rule": "zero-rule-state",
+      "note": ""
+     },
+     {
+      "label": "(B2″)",
+      "rule": "bialgebra",
+      "note": "Braided version of (B2′): the crossing in the right-hand side is a chosen braiding; PyZX does not distinguish braidings, so this is the ordinary bialgebra rule."
+     },
+     {
+      "label": "(S2′)",
+      "rule": "identity-removal",
+      "note": "Colour-swapped instance: a phase-free red spider with one input and one output is the identity."
+     },
+     {
+      "label": "(R1)",
+      "rule": "reidemeister-curl",
+      "note": "",
+      "description": "A curl (a wire looping over itself) is equal to a straight wire: the first Reidemeister move."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "k.stoltz2026simplified",
+  "results": [
+   {
+    "title": "The simplified stabilizer ZX-calculus ZX_simp",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Table 1 (the rule set ZX_simp); completeness cited as Theorem 2.10 of Backens, Perdrix and Wang",
+    "summary": "Restates the complete rule set of Backens, Perdrix and Wang (with the meta-rule 'only connectivity matters') and proves that (S3′R) and (B2′) are each necessary, so that every rule of ZX_simp is necessary.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(S3′L)",
+      "rule": "identity-removal",
+      "note": "The phase-free green cup is the cup: identity removal with the wire bent."
+     },
+     {
+      "label": "(S3′R)",
+      "rule": "cup-colour-coincidence",
+      "note": ""
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance with the scalar written as a diagram."
+     },
+     {
+      "label": "(B2′)",
+      "rule": "bialgebra",
+      "note": "The scalar is written as diagrams."
+     },
+     {
+      "label": "(EU′)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(IV′)",
+      "rule": "inverse-rule-simplified",
+      "note": ""
+     },
+     {
+      "label": "(ZO′)",
+      "rule": "zero-rule-state",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "DP3",
+  "results": [
+   {
+    "title": "The angle-free ZX-calculus for real stabilizers",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Section 4 (Angle-free calculus for Real Stabilizers); rules in Figure 1 without (π) and (C), plus (C1) and (L), with π-phases replaced by Hadamard self-loops via (HL) (Theorem 3.3)",
+    "summary": "The paper shows that the ZX-calculus plus the H-loop axiom (HL), restricted to phases 0 and π, is complete for real stabilizer quantum mechanics (up to scalars), in the form of an angle-free calculus in which a π phase is a Hadamard self-loop. Completeness is argued in Section 4 (no numbered completeness theorem). All rules also hold with the colours swapped.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion",
+      "note": "In the angle-free calculus all spiders are phase-free."
+     },
+     {
+      "label": "(S2)",
+      "rule": "self-loop-removal",
+      "note": ""
+     },
+     {
+      "label": "(S3)",
+      "rule": "identity-removal",
+      "note": ""
+     },
+     {
+      "label": "(H1)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(Hpf)",
+      "rule": "hopf",
+      "note": "Stated with phases on both spiders and any number of further legs; equivalent to the phase-free rule given spider fusion."
+     },
+     {
+      "label": "(Bi)",
+      "rule": "bialgebra",
+      "note": "Stated without scalars."
+     },
+     {
+      "label": "(H2)",
+      "rule": "hadamard-cancellation",
+      "note": ""
+     },
+     {
+      "label": "(C1)",
+      "rule": "state-copy",
+      "note": "Phase-free instance, stated without scalars."
+     },
+     {
+      "label": "(L)",
+      "rule": "loop-copy",
+      "note": ""
+     },
+     {
+      "label": "(HL)",
+      "rule": "hadamard-self-loop-removal",
+      "note": "The H-loop axiom: a Z-spider with phase π equals two phase-free Z-spiders joined by a plain wire and a Hadamard wire, i.e. a spider with a Hadamard self-loop (α = 0). In the angle-free calculus it is used to replace π phases by Hadamard self-loops rather than as an equation; scalars are ignored."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "KissingervdWeteringbook",
+  "results": [
+   {
+    "title": "Completeness of phase-free ZX",
+    "calculus": "ZX",
+    "fragment": "phase-free",
+    "location": "Theorem 4.3.6 (Section 4.3.1); rules in Figure 4.1 (online edition, Chapter 4)",
+    "summary": "The phase-free ZX-calculus (spider fusion, identity removal and strong complementarity, for both colours) is complete for phase-free ZX-diagrams. The rules of Figure 4.1 are taken up to the normalisation factor of (sc), which is usually dropped; the proof deals with scalars separately.",
+    "axioms": [
+     {
+      "label": "(sp)",
+      "rule": "spider-fusion",
+      "note": "Z-spider version, phase-free; drawn with several wires between the two spiders."
+     },
+     {
+      "label": "(sp)",
+      "rule": "spider-fusion",
+      "note": "X-spider version (colour swap)."
+     },
+     {
+      "label": "(id)",
+      "rule": "identity-removal",
+      "note": "Z-spider version."
+     },
+     {
+      "label": "(id)",
+      "rule": "identity-removal",
+      "note": "X-spider version (colour swap)."
+     },
+     {
+      "label": "(unlabelled)",
+      "rule": "scalar-z-spider",
+      "note": "A legless phase-free Z-spider and a legless phase-free X-spider both equal the scalar 2: the α = 0 instance (and its colour swap)."
+     },
+     {
+      "label": "(sc)",
+      "rule": "bialgebra-generalised",
+      "note": "Strong complementarity, with normalisation ν = 2^((m−1)(n−1)/2)."
+     }
+    ]
+   },
+   {
+    "title": "Completeness of Clifford ZX-diagrams",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem 5.5.7 (Section 5.5); rules in Figure 3.2 (Section 3.6.2, 'Dealing with scalars')",
+    "summary": "The scalar-accurate rule set of Figure 3.2 is complete for Clifford ZX-diagrams, including scalars (Theorem 5.5.2 handles scalar diagrams, Theorem 5.5.7 all diagrams via the reduced AP normal form).",
+    "axioms": [
+     {
+      "label": "(sp)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "(cc)",
+      "rule": "colour-change",
+      "note": ""
+     },
+     {
+      "label": "(sc)",
+      "rule": "state-copy",
+      "note": "First (sc) rule: the state-copy half of strong complementarity, for a phase-free Z-spider with two outputs; the scalar is written as a diagram."
+     },
+     {
+      "label": "(sc)",
+      "rule": "bialgebra",
+      "note": "Second (sc) rule: the bialgebra half of strong complementarity; the scalar is written as a diagram."
+     },
+     {
+      "label": "(id)",
+      "rule": "identity-removal",
+      "note": ""
+     },
+     {
+      "label": "(hh)",
+      "rule": "hadamard-cancellation",
+      "note": ""
+     },
+     {
+      "label": "(eu)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "(π)",
+      "rule": "pi-commutation",
+      "note": "Minimal instance: an X(π) applied to a Z(α)-state with one leg; the global phase is written as diagrams."
+     },
+     {
+      "label": "(zo)",
+      "rule": "zero-rule-state",
+      "note": "The same equation, read from right to left."
+     },
+     {
+      "label": "(s)",
+      "rule": "inverse-rule",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "EPTCS287.2",
+  "results": [
+   {
+    "title": "Completeness of the ZH-calculus",
+    "calculus": "ZH",
+    "fragment": "universal",
+    "location": "Theorem 3.15 (Section 3); rules in Figure 1",
+    "summary": "The ZH-calculus with H-boxes labelled by arbitrary complex numbers is complete for all linear maps between qubits, exactly (with scalars), using the rules of Figure 1, the meta-rule 'only topology matters' and the symmetry of the generators.",
+    "axioms": [
+     {
+      "label": "(ZS1)",
+      "rule": "spider-fusion",
+      "note": "ZH Z-spiders have no phases: the phase-free instance."
+     },
+     {
+      "label": "(HS1)",
+      "rule": "zh-h-box-fusion-labelled",
+      "note": ""
+     },
+     {
+      "label": "(ZS2)",
+      "rule": "zh-z-special",
+      "note": "First equation of (ZS2): two Z-spiders joined by two wires."
+     },
+     {
+      "label": "(ZS2)",
+      "rule": "identity-removal",
+      "note": "Second equation of (ZS2): a Z-spider with two legs is the identity."
+     },
+     {
+      "label": "(HS2)",
+      "rule": "zh-h-box-identity",
+      "note": ""
+     },
+     {
+      "label": "(BA1)",
+      "rule": "bialgebra-generalised",
+      "note": "The grey spiders of ZH are derived generators; here they are PyZX X-spiders."
+     },
+     {
+      "label": "(BA2)",
+      "rule": "zh-bialgebra",
+      "note": ""
+     },
+     {
+      "label": "(M)",
+      "rule": "zh-multiply",
+      "note": ""
+     },
+     {
+      "label": "(U)",
+      "rule": "zh-unit",
+      "note": ""
+     },
+     {
+      "label": "(A)",
+      "rule": "zh-average",
+      "note": ""
+     },
+     {
+      "label": "(I)",
+      "rule": "zh-intro",
+      "note": ""
+     },
+     {
+      "label": "(O)",
+      "rule": "zh-ortho",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "PhasefreeZH2019",
+  "results": [
+   {
+    "title": "Completeness of the phase-free ZH-calculus",
+    "calculus": "ZH",
+    "fragment": "clifford+t",
+    "location": "Theorem 4.6 (Section 4); rules in Figure 2",
+    "summary": "The phase-free ZH-calculus (all H-boxes labelled −1, plus a star generator for the scalar 1/√2) is complete, by reduction to Vilmart's complete ZX-calculus with triangles for the π-fragment.",
+    "axioms": [
+     {
+      "label": "(ZS1)",
+      "rule": "spider-fusion",
+      "note": "ZH Z-spiders have no phases: the phase-free instance."
+     },
+     {
+      "label": "(HS1)",
+      "rule": "zh-h-box-fusion",
+      "note": ""
+     },
+     {
+      "label": "(ZS2)",
+      "rule": "identity-removal",
+      "note": "In this paper (ZS2) is only the identity rule for the arity-2 Z-spider."
+     },
+     {
+      "label": "(HS2)",
+      "rule": "zh-h-box-identity",
+      "note": ""
+     },
+     {
+      "label": "(BA1)",
+      "rule": "bialgebra-generalised",
+      "note": "The grey spiders of ZH are derived generators; here they are PyZX X-spiders."
+     },
+     {
+      "label": "(BA2)",
+      "rule": "zh-bialgebra",
+      "note": ""
+     },
+     {
+      "label": "(M)",
+      "rule": "zh-multiply-phase-free",
+      "note": ""
+     },
+     {
+      "label": "(O)",
+      "rule": "zh-ortho",
+      "note": ""
+     },
+     {
+      "label": "(Z)",
+      "rule": "zh-zero-star",
+      "note": "With scalars written as numbers both sides are 0, so the rule is trivial.",
+      "description": "The zero scalar (a Z-spider plugged into an arity-1 H-box) absorbs a star (the scalar 1/√2)."
+     },
+     {
+      "label": "(&)",
+      "rule": "zh-and-rule",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "backens2021completenessZH",
+  "results": [
+   {
+    "title": "Completeness of the (phase-free) ZH-calculus",
+    "calculus": "ZH",
+    "fragment": "clifford+t",
+    "location": "Theorem 6.5 (Section 6); rules in Figure 1",
+    "summary": "The ZH-calculus with unlabelled H-boxes and a star generator for 1/2 is complete for matrices over ℤ[1/2] (the Toffoli–Hadamard fragment), with the eight rules of Figure 1, 'only topology matters' and symmetry of the generators. Section 8.4 notes that reinterpreting the star as 1/√2 and adding one zero rule gives completeness for all Toffoli+Hadamard circuits.",
+    "axioms": [
+     {
+      "label": "(zs)",
+      "rule": "spider-fusion",
+      "note": "ZH Z-spiders have no phases: the phase-free instance."
+     },
+     {
+      "label": "(id)",
+      "rule": "identity-removal",
+      "note": ""
+     },
+     {
+      "label": "(hs)",
+      "rule": "zh-h-box-fusion",
+      "note": ""
+     },
+     {
+      "label": "(hh)",
+      "rule": "zh-h-box-identity",
+      "note": "Section 8.2 shows that (hh) is derivable from the other rules."
+     },
+     {
+      "label": "(ba₁)",
+      "rule": "bialgebra-generalised",
+      "note": "The grey spiders of ZH are derived generators; here they are PyZX X-spiders."
+     },
+     {
+      "label": "(ba₂)",
+      "rule": "zh-bialgebra",
+      "note": ""
+     },
+     {
+      "label": "(m)",
+      "rule": "zh-multiply-phase-free",
+      "note": ""
+     },
+     {
+      "label": "(o)",
+      "rule": "zh-ortho",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "title": "Variant with (o) replaced by two smaller rules",
+    "calculus": "ZH",
+    "fragment": "clifford+t",
+    "location": "Theorem 8.6 (Section 8.1); Lemma 2.28 and Lemma 5.1 replace (o) in Figure 1",
+    "summary": "In the presence of the other rules of Figure 1, (o) is equivalent to the two lemmas below, so replacing (o) by them gives another complete rule set.",
+    "axioms": [
+     {
+      "label": "(zs)",
+      "rule": "spider-fusion",
+      "note": "ZH Z-spiders have no phases: the phase-free instance."
+     },
+     {
+      "label": "(id)",
+      "rule": "identity-removal",
+      "note": ""
+     },
+     {
+      "label": "(hs)",
+      "rule": "zh-h-box-fusion",
+      "note": ""
+     },
+     {
+      "label": "(hh)",
+      "rule": "zh-h-box-identity",
+      "note": "Section 8.2 shows that (hh) is derivable from the other rules."
+     },
+     {
+      "label": "(ba₁)",
+      "rule": "bialgebra-generalised",
+      "note": "The grey spiders of ZH are derived generators; here they are PyZX X-spiders."
+     },
+     {
+      "label": "(ba₂)",
+      "rule": "zh-bialgebra",
+      "note": ""
+     },
+     {
+      "label": "(m)",
+      "rule": "zh-multiply-phase-free",
+      "note": ""
+     },
+     {
+      "label": "Lemma 2.28",
+      "rule": "zh-h-box-z-pi-copy",
+      "note": ""
+     },
+     {
+      "label": "Lemma 5.1",
+      "rule": "zh-dedup",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "title": "The ZH_R-calculus over a ring containing 1/2",
+    "calculus": "ZH",
+    "fragment": "universal",
+    "location": "Theorem 7.10 (Section 7.1); rules in Figure 3",
+    "summary": "For any commutative ring R containing 1/2 (in particular ℂ), the ZH-calculus with H-boxes labelled by elements of R and the rules of Figure 3 is complete for matrices over R. (Theorem 7.18 treats rings without 1/2, with extra rules and a scalar-cancellation meta-rule.)",
+    "axioms": [
+     {
+      "label": "(zs)",
+      "rule": "spider-fusion",
+      "note": "ZH Z-spiders have no phases: the phase-free instance."
+     },
+     {
+      "label": "(id)",
+      "rule": "identity-removal",
+      "note": ""
+     },
+     {
+      "label": "(HS)",
+      "rule": "zh-h-box-fusion-labelled",
+      "note": ""
+     },
+     {
+      "label": "(hh)",
+      "rule": "zh-h-box-identity",
+      "note": ""
+     },
+     {
+      "label": "(ba₁)",
+      "rule": "bialgebra-generalised",
+      "note": "The grey spiders of ZH are derived generators; here they are PyZX X-spiders."
+     },
+     {
+      "label": "(ba₂)",
+      "rule": "zh-bialgebra",
+      "note": ""
+     },
+     {
+      "label": "(M)",
+      "rule": "zh-multiply",
+      "note": "Labels in a ring R; here complex labels."
+     },
+     {
+      "label": "(o)",
+      "rule": "zh-ortho",
+      "note": ""
+     },
+     {
+      "label": "(A)",
+      "rule": "zh-average-prime",
+      "note": ""
+     },
+     {
+      "label": "(I)",
+      "rule": "zh-intro",
+      "note": ""
+     },
+     {
+      "label": "(U)",
+      "rule": "zh-unit",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "hadzihasanovic2015diagrammatic",
+  "results": [
+   {
+    "title": "Completeness of the ZW-calculus",
+    "calculus": "ZW",
+    "fragment": "clifford+t",
+    "location": "Theorem 15 and Corollary 16 (Section 4); rules: Rules 0–7 and X of Section 3",
+    "summary": "The ZW-calculus (black W-vertices, white Z(π)-vertices and a fermionic crossing) is complete for qubit maps with integer coefficients, exactly. The theorem is stated for the condensed calculus with spider rules; the expanded calculus of Rules 0–7 and X is complete as well. The white vertices of this paper are Z-spiders with phase π; the translations below follow the conventions of the zoo's ZW rules (white monoid ↦ phase-free Z-spider, black vertex ↦ W-node).",
+    "axioms": [
+     {
+      "label": "0a",
+      "rule": "w-swap-symmetry",
+      "note": "A binary black vertex with its two legs swapped is the binary black vertex: the binary instance.",
+      "description": "The binary black vertex (bent into a cup) is symmetric under the swap. The crossing in Rule 0 is the ordinary braiding of the paper, not the fermionic crossing."
+     },
+     {
+      "label": "0b",
+      "rule": "w-swap-symmetry",
+      "note": "",
+      "description": "A ternary black vertex with two of its legs swapped is the ternary black vertex."
+     },
+     {
+      "label": "0b′",
+      "rule": "w-swap-symmetry",
+      "note": "The same, with the other pair of legs swapped.",
+      "description": "A ternary black vertex with its other two legs swapped is the ternary black vertex."
+     },
+     {
+      "label": "0c",
+      "rule": "z-swap-symmetry",
+      "note": "Binary instance, for the unlabelled white vertex Z(π).",
+      "description": "A binary white vertex with its two legs swapped is the binary white vertex. The crossing in Rule 0 is the ordinary braiding of the paper, not the fermionic crossing."
+     },
+     {
+      "label": "0d",
+      "rule": "z-swap-symmetry",
+      "note": "Ternary instance, for the unlabelled white vertex Z(π).",
+      "description": "A ternary white vertex with two of its legs swapped is the ternary white vertex."
+     },
+     {
+      "label": "0d′",
+      "rule": "z-swap-symmetry",
+      "note": "The same, with the other pair of legs swapped.",
+      "description": "A ternary white vertex with its other two legs swapped is the ternary white vertex."
+     },
+     {
+      "label": "1a",
+      "rule": "w-fusion",
+      "note": "Associativity of the black monoid, in the expanded (ternary) form."
+     },
+     {
+      "label": "1b",
+      "rule": "w-fusion",
+      "note": "Unit law of the black monoid: the instance where one W-node has no outputs (the unit |0⟩), followed by [w-identity]."
+     },
+     {
+      "label": "1c",
+      "rule": "spider-fusion",
+      "note": "Associativity of the white monoid (a ternary white vertex with a binary white vertex on its output, i.e. a phase-free Z-spider)."
+     },
+     {
+      "label": "1d",
+      "rule": "spider-fusion",
+      "note": "Unit law of the white monoid; also uses self-loop and identity removal."
+     },
+     {
+      "label": "2a",
+      "rule": "w-identity",
+      "note": "The binary black vertex (NOT) is an involution; PyZX's W-node with one output is two binary black vertices in a row."
+     },
+     {
+      "label": "2b",
+      "rule": "spider-fusion",
+      "note": "The binary white vertex (Z(π)) is an involution: fusing gives phase 2π = 0, then identity removal."
+     },
+     {
+      "label": "3a",
+      "rule": "pi-commutation",
+      "note": "The binary black vertex is an automorphism of the white monoid: NOT (X(π)) copies through a phase-free Z-spider. The binary black vertex of the ZW-calculus is the NOT gate, i.e. an X-spider with phase π."
+     },
+     {
+      "label": "3b",
+      "rule": "w-pi-commutation",
+      "note": ""
+     },
+     {
+      "label": "4",
+      "rule": "spider-fusion",
+      "note": "The white monoid and comonoid form a Frobenius algebra, which follows from spider fusion."
+     },
+     {
+      "label": "5a",
+      "rule": "w-bialgebra",
+      "note": "The crossing in the right-hand side is the fermionic crossing, drawn in PyZX as a swap with a CZ."
+     },
+     {
+      "label": "5b",
+      "rule": "w-zero-copy",
+      "note": ""
+     },
+     {
+      "label": "5c",
+      "rule": "w-unit-counit",
+      "note": ""
+     },
+     {
+      "label": "5d",
+      "rule": "w-hopf",
+      "note": ""
+     },
+     {
+      "label": "6a",
+      "rule": "w-z-bialgebra",
+      "note": "The crossing in the right-hand side is between different kinds of maps; as for the other rules the white vertices become phase-free Z-spiders."
+     },
+     {
+      "label": "6b",
+      "rule": "zw-zero-copy",
+      "note": ""
+     },
+     {
+      "label": "6c",
+      "rule": "zw-hopf",
+      "note": ""
+     },
+     {
+      "label": "7a",
+      "rule": "fermionic-crossing-w-merge",
+      "note": "",
+      "description": "The black vertex is even with respect to the crossing: a wire crossing over a black monoid can be moved to cross its inputs."
+     },
+     {
+      "label": "7b",
+      "rule": "fermionic-crossing-not",
+      "note": "",
+      "description": "The binary black vertex is odd: moving it through a crossing introduces a binary white vertex on the other wire."
+     },
+     {
+      "label": "X",
+      "rule": "fermionic-crossing-elimination",
+      "note": "",
+      "description": "Elimination rule for crossings: a crossing between the outputs of two black-white structures can be replaced by a crossing-free diagram."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "hadzihasanovic2017algebra",
+  "results": [
+   {
+    "title": "Completeness of the ZW_R-calculus",
+    "calculus": "ZW",
+    "fragment": "universal",
+    "location": "Theorem 5.27 (Section 5.2); rules in the 'List of rules of the ZW calculus' at the end of Section 5.2",
+    "summary": "For every commutative ring R, the ZW_R-calculus (W-vertices, R-labelled Z-vertices and the fermionic crossing) is complete for matrices over R; with R = ℂ this is a complete axiomatisation of qubit quantum mechanics. Restricting to labels 1 and dropping the last two rules axiomatises the integer ZW-calculus. The axioms of PROPs are implied.",
+    "axioms": [
+     {
+      "label": "adj_L",
+      "rule": "snake-equation",
+      "note": "",
+      "description": "Snake equation: a cup followed by a cap is a straight wire."
+     },
+     {
+      "label": "com (cup)",
+      "rule": "cup-swap-symmetry",
+      "note": "",
+      "description": "The cup composed with the swap is the cup."
+     },
+     {
+      "label": "com (cap)",
+      "rule": "cup-swap-symmetry",
+      "note": "The upside-down version (the cap).",
+      "description": "The cap composed with the swap is the cap."
+     },
+     {
+      "label": "rei^x_2",
+      "rule": "fermionic-crossing-involution",
+      "note": "",
+      "description": "Two crossings in a row cancel (second Reidemeister move for the crossing)."
+     },
+     {
+      "label": "rei^x_3",
+      "rule": "fermionic-crossing-yang-baxter",
+      "note": "",
+      "description": "Yang–Baxter equation for the crossing (third Reidemeister move)."
+     },
+     {
+      "label": "rei^x_1",
+      "rule": "fermionic-crossing-curl",
+      "note": "",
+      "description": "A curl made with the crossing on one side of a wire can be moved to the other side."
+     },
+     {
+      "label": "nat_x^η",
+      "rule": "fermionic-crossing-cup",
+      "note": "",
+      "description": "The cup slides through the crossing."
+     },
+     {
+      "label": "nat_x^ε",
+      "rule": "fermionic-crossing-cap",
+      "note": "",
+      "description": "The cap slides through the crossing."
+     },
+     {
+      "label": "nat_x^w",
+      "rule": "fermionic-crossing-w-merge",
+      "note": "",
+      "description": "A black vertex slides through the crossing."
+     },
+     {
+      "label": "cut_w",
+      "rule": "w-fusion",
+      "note": ""
+     },
+     {
+      "label": "tr_w",
+      "rule": "w-self-loop",
+      "note": ""
+     },
+     {
+      "label": "sym_w",
+      "rule": "w-swap-symmetry",
+      "note": "",
+      "description": "Black vertices are symmetric under swapping legs."
+     },
+     {
+      "label": "sym^x_w",
+      "rule": "w-fermionic-symmetry",
+      "note": "",
+      "description": "Black vertices are symmetric under crossing legs."
+     },
+     {
+      "label": "inv",
+      "rule": "w-identity",
+      "note": "The binary black vertex (NOT) is an involution; PyZX's W-node with one output is two binary black vertices in a row."
+     },
+     {
+      "label": "ba_w",
+      "rule": "w-bialgebra",
+      "note": "The crossings in the left-hand side are fermionic crossings, drawn in PyZX as a swap with a CZ."
+     },
+     {
+      "label": "ant_x^n",
+      "rule": "fermionic-crossing-not",
+      "note": "The thesis draws the Pauli Z on the other wire as a curl through the crossing.",
+      "description": "A binary black vertex passing a crossing turns into a curl on the other wire."
+     },
+     {
+      "label": "cut_z",
+      "rule": "zw-weighted-fusion",
+      "note": ""
+     },
+     {
+      "label": "tr_z",
+      "rule": "self-loop-removal",
+      "note": "Stated for white vertices with a label r (Z-boxes) instead of a phase."
+     },
+     {
+      "label": "sym_z",
+      "rule": "z-swap-symmetry",
+      "note": "",
+      "description": "White vertices are symmetric under swapping legs."
+     },
+     {
+      "label": "id",
+      "rule": "identity-removal",
+      "note": "The unlabelled binary white vertex is the identity."
+     },
+     {
+      "label": "rng_1",
+      "rule": "identity-removal",
+      "note": "The binary white vertex with label 1 is the identity (a Z-box with label 1 is a phase-free Z-spider)."
+     },
+     {
+      "label": "ba_zw",
+      "rule": "w-z-bialgebra",
+      "note": "Stated with a label r on the white vertex; the labelled version follows by combining with [w-weight-copy]."
+     },
+     {
+      "label": "loop",
+      "rule": "zw-hopf",
+      "note": "Stated with a label r on the white vertex."
+     },
+     {
+      "label": "ph",
+      "rule": "fermionic-curl-z-spider",
+      "note": "",
+      "description": "A crossing-curl on one leg of a white vertex can be moved to another leg."
+     },
+     {
+      "label": "nat_c^n",
+      "rule": "pi-commutation",
+      "note": "The binary black vertex (NOT) copies through a white vertex. The binary black vertex of the ZW-calculus is the NOT gate, i.e. an X-spider with phase π."
+     },
+     {
+      "label": "unx",
+      "rule": "fermionic-crossing-unx",
+      "note": "",
+      "description": "Two labelled white vertices joined to a black vertex: a crossing between them can be removed."
+     },
+     {
+      "label": "rng_{-1}",
+      "rule": "fermionic-curl-minus-one",
+      "note": "",
+      "description": "The binary white vertex with label −1 is a wire with a crossing-curl."
+     },
+     {
+      "label": "rng_+^{r,s}",
+      "rule": "w-sum",
+      "note": ""
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "HarnyAmarCompleteness",
+  "results": [
+   {
+    "title": "Completeness of the ZW_R-calculus",
+    "calculus": "ZW",
+    "fragment": "universal",
+    "location": "Theorem 3.8 (Section 3); ZW axioms 1–3 in Section 3",
+    "summary": "For every commutative ring R the ZW_R-calculus (W-vertices, R-labelled white vertices and the fermionic crossing, in a self-dual compact closed PROP) is complete for matrices over R; for R = ℂ this gives completeness for pure-state qubit quantum computing. The paper is not on arXiv; it merges Hadzihasanovic's thesis and Ng–Wang's arXiv:1706.09877. Locations refer to the LICS 2018 proceedings version.",
+    "axioms": [
+     {
+      "label": "1(a)",
+      "rule": "fermionic-crossing-involution",
+      "note": "",
+      "description": "Two crossings in a row cancel."
+     },
+     {
+      "label": "1(b)",
+      "rule": "fermionic-crossing-yang-baxter",
+      "note": "",
+      "description": "Yang–Baxter equation for the crossing."
+     },
+     {
+      "label": "1(c)",
+      "rule": "fermionic-crossing-cup",
+      "note": "",
+      "description": "The cup slides through the crossing."
+     },
+     {
+      "label": "1(d)",
+      "rule": "fermionic-crossing-cap",
+      "note": "",
+      "description": "The cap slides through the crossing."
+     },
+     {
+      "label": "1(e)",
+      "rule": "fermionic-crossing-curl",
+      "note": "",
+      "description": "A crossing-curl can be moved from one side of a wire to the other."
+     },
+     {
+      "label": "2(a)",
+      "rule": "fermionic-crossing-w-merge",
+      "note": "",
+      "description": "A black vertex slides through the crossing."
+     },
+     {
+      "label": "2(b)",
+      "rule": "w-fusion",
+      "note": ""
+     },
+     {
+      "label": "2(c)",
+      "rule": "w-identity",
+      "note": "The binary black vertex (NOT) is an involution."
+     },
+     {
+      "label": "2(d)",
+      "rule": "w-self-loop",
+      "note": ""
+     },
+     {
+      "label": "2(e)",
+      "rule": "w-swap-symmetry",
+      "note": "",
+      "description": "Black vertices are symmetric under swapping legs."
+     },
+     {
+      "label": "2(f)",
+      "rule": "w-fermionic-symmetry",
+      "note": "",
+      "description": "Black vertices are symmetric under crossing legs."
+     },
+     {
+      "label": "2(g)",
+      "rule": "fermionic-crossing-not",
+      "note": "The Pauli Z on the other wire is drawn as a curl through the crossing.",
+      "description": "A binary black vertex passing a crossing turns into a curl on the other wire."
+     },
+     {
+      "label": "2(h)",
+      "rule": "w-bialgebra",
+      "note": "The crossings are fermionic crossings, drawn in PyZX as a swap with a CZ."
+     },
+     {
+      "label": "3(a)",
+      "rule": "zw-weighted-fusion",
+      "note": ""
+     },
+     {
+      "label": "3(b)",
+      "rule": "self-loop-removal",
+      "note": "Stated for white vertices with a label r (Z-boxes) instead of a phase."
+     },
+     {
+      "label": "3(c)",
+      "rule": "z-swap-symmetry",
+      "note": "",
+      "description": "White vertices are symmetric under swapping legs."
+     },
+     {
+      "label": "3(d)",
+      "rule": "w-z-bialgebra",
+      "note": "Stated with a label r; the labelled version follows by combining with [w-weight-copy]."
+     },
+     {
+      "label": "3(e)",
+      "rule": "identity-removal",
+      "note": "Two equations: the unlabelled binary white vertex is the identity, and so is the one with label 1."
+     },
+     {
+      "label": "3(f)",
+      "rule": "zw-hopf",
+      "note": "Stated with a label r on the white vertex."
+     },
+     {
+      "label": "3(g)",
+      "rule": "fermionic-curl-z-spider",
+      "note": "",
+      "description": "A crossing-curl on one leg of a white vertex can be moved to another leg."
+     },
+     {
+      "label": "3(h)",
+      "rule": "pi-commutation",
+      "note": "The binary black vertex (NOT) copies through a white vertex. The binary black vertex of the ZW-calculus is the NOT gate, i.e. an X-spider with phase π."
+     },
+     {
+      "label": "3(i)",
+      "rule": "fermionic-crossing-unx",
+      "note": "",
+      "description": "Two labelled white vertices joined to a black vertex: a crossing between them can be removed."
+     },
+     {
+      "label": "3(j)",
+      "rule": "fermionic-curl-minus-one",
+      "note": "",
+      "description": "The binary white vertex with label −1 is a wire with a crossing-curl."
+     },
+     {
+      "label": "3(k)",
+      "rule": "w-sum",
+      "note": ""
+     }
+    ]
+   },
+   {
+    "title": "Completeness of the ZX-calculus with triangle and λ-boxes",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 4.2 (Section 4); ZX axioms 1–2 in Section 4",
+    "summary": "The ZX-calculus extended with green λ-boxes (λ > 0) and the triangle is complete for pure-state qubit quantum computing, via a translation to and from ZW_ℂ. Restricting phases to multiples of π/4 and λ to positive elements of ℤ[1/2] (changing the side condition of 2(o)) gives a complete axiomatisation of the Clifford+T fragment (Theorem 4.4). The axioms also hold with colours swapped and upside down.",
+    "axioms": [
+     {
+      "label": "1(a)",
+      "rule": "spider-fusion",
+      "note": ""
+     },
+     {
+      "label": "1(b)",
+      "rule": "identity-removal",
+      "note": "A phase-free green spider with two inputs is the cap: identity removal with the wire bent."
+     },
+     {
+      "label": "1(c)",
+      "rule": "identity-removal",
+      "note": "Two equations: a green spider with phase 0 is the unlabelled one, which is the identity."
+     },
+     {
+      "label": "1(d)",
+      "rule": "hadamard-cancellation",
+      "note": ""
+     },
+     {
+      "label": "1(e)",
+      "rule": "hadamard-transpose",
+      "note": "",
+      "description": "The Hadamard gate is self-transpose: bending its wires gives the Hadamard gate."
+     },
+     {
+      "label": "1(f)",
+      "rule": "hadamard-gadget-decomposition",
+      "note": ""
+     },
+     {
+      "label": "1(g)",
+      "rule": "state-copy",
+      "note": "Phase-free instance with the scalar written as a diagram."
+     },
+     {
+      "label": "1(h)",
+      "rule": "bialgebra",
+      "note": "The scalar is written as a diagram."
+     },
+     {
+      "label": "1(i)",
+      "rule": "pi-commutation",
+      "note": "Instance with one input and one output; the global phase is written as scalar diagrams."
+     },
+     {
+      "label": "1(j)",
+      "rule": "clifford-t-inverse-scalar",
+      "note": ""
+     },
+     {
+      "label": "2(a)",
+      "rule": "lambda-box-spider-slide",
+      "note": "The green box with label λ is a Z-box diag(1, λ); it fuses with a phase-free green spider (label 1). Stored as a ZW rule."
+     },
+     {
+      "label": "2(b)",
+      "rule": "lambda-box-identity",
+      "note": "The green box with label 1 is the identity (a Z-box with label 1 is a phase-free Z-spider)."
+     },
+     {
+      "label": "2(c)",
+      "rule": "lambda-box-multiplication",
+      "note": "Two green boxes with labels λ₁, λ₂ fuse into one with label λ₁λ₂ (binary Z-boxes)."
+     },
+     {
+      "label": "2(d)",
+      "rule": "triangle-z-pi-sandwich",
+      "note": "",
+      "description": "A triangle, a green π and an upside-down triangle in a row equal a red π followed by a triangle."
+     },
+     {
+      "label": "2(e)",
+      "rule": "triangle-x-pi-commutation",
+      "note": "",
+      "description": "A red π followed by a triangle equals an upside-down triangle followed by a red π."
+     },
+     {
+      "label": "2(f)",
+      "rule": "triangle-x-state",
+      "note": "",
+      "description": "A phase-free red state plugged into the input of a triangle is a phase-free red state."
+     },
+     {
+      "label": "2(g)",
+      "rule": "triangle-x-pi-state",
+      "note": "",
+      "description": "A red π state plugged into the input of a triangle is a phase-free green state (with a scalar diagram)."
+     },
+     {
+      "label": "2(h)",
+      "rule": "triangle-z-pi-triangle",
+      "note": "",
+      "description": "Two triangles around a green π spider equal the green π spider."
+     },
+     {
+      "label": "2(i)",
+      "rule": "triangle-loop-disconnect",
+      "note": "",
+      "description": "A loop through a triangle and an upside-down triangle between a green and a red spider disconnects (with a scalar diagram)."
+     },
+     {
+      "label": "2(j)",
+      "rule": "triangle-hopf",
+      "note": "",
+      "description": "A loop through a triangle between a green and a red spider equals a triangle (with a scalar diagram)."
+     },
+     {
+      "label": "2(k)",
+      "rule": "triangle-rule-tr8",
+      "note": "",
+      "description": "An axiom moving a red spider past two triangles and green spiders."
+     },
+     {
+      "label": "2(l)",
+      "rule": "triangle-rule-tr9",
+      "note": "",
+      "description": "An axiom relating a configuration of a red spider, green spiders and triangles to one with a Hadamard gate, a sideways triangle and π phases."
+     },
+     {
+      "label": "2(m)",
+      "rule": "triangle-rule-tr12",
+      "note": "",
+      "description": "An axiom simplifying two triangles attached to a green spider and joined through a red spider."
+     },
+     {
+      "label": "2(n)",
+      "rule": "triangle-lambda-phase-copy",
+      "note": "",
+      "description": "An axiom moving green λ-boxes with phase α through a configuration of a red spider, green spiders and a triangle."
+     },
+     {
+      "label": "2(o)",
+      "rule": "lambda-addition-simplified",
+      "note": "",
+      "description": "The sum rule: two λ-boxes with phases attached via a triangle structure give one green spider with phase α and a λ-box, where λe^{iα} = λ₁e^{iα₁} + λ₂e^{iα₂}."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "carette2023compositionality",
+  "results": [
+   {
+    "title": "Completeness of the planar W-calculus",
+    "calculus": "ZW",
+    "fragment": "universal",
+    "location": "Theorem 3.11 (Section 3); axioms in Figure 1",
+    "summary": "The planar W-calculus (flexsymmetric black W-spiders and binary white vertices with complex weights, no wire crossings except the fermionic swap as syntactic sugar) is complete for its interpretation, and universal and complete for matchgates (Theorem 4.8). The axioms are not labelled in the paper; labels give their position in Figure 1.",
+    "axioms": [
+     {
+      "label": "row 1, 1st",
+      "rule": "w-fusion",
+      "note": "Two black vertices joined through a binary black vertex fuse (with any number of legs)."
+     },
+     {
+      "label": "row 1, 2nd",
+      "rule": "w-identity",
+      "note": "Two binary black vertices in a row are the identity."
+     },
+     {
+      "label": "row 1, 3rd",
+      "rule": "w-bialgebra",
+      "note": "The crossings in the right-hand side are fermionic swaps, drawn in PyZX as a swap with a CZ."
+     },
+     {
+      "label": "row 1, 4th",
+      "rule": "w-self-loop",
+      "note": ""
+     },
+     {
+      "label": "row 2, 1st",
+      "rule": "zw-weighted-fusion",
+      "note": "Binary instance: two binary white vertices with weights r, s fuse into one with weight rs."
+     },
+     {
+      "label": "row 2, 2nd",
+      "rule": "identity-removal",
+      "note": "A binary white vertex with weight 1 is the identity."
+     },
+     {
+      "label": "row 2, 3rd",
+      "rule": "w-weight-copy",
+      "note": "The paper's version: a weight r on one leg of a (symmetric) black vertex equals r times weights 1/r on all its other legs (r ≠ 0). In PyZX the black vertex is a W-node with a NOT on its input, so this is [w-weight-copy] with weight 1/r up to a NOT and the scalar r."
+     },
+     {
+      "label": "row 2, 4th",
+      "rule": "w-sum",
+      "note": ""
+     },
+     {
+      "label": "row 3, 1st",
+      "rule": "fermionic-crossing-z-weight",
+      "note": "",
+      "description": "A white vertex moves through a fermionic swap from one wire to the other."
+     },
+     {
+      "label": "row 3, 2nd",
+      "rule": "fermionic-crossing-w-sign",
+      "note": "",
+      "description": "A black vertex passes through fermionic swaps, picking up a weight −1."
+     },
+     {
+      "label": "row 3, 3rd",
+      "rule": "w-zero-rule",
+      "note": "",
+      "description": "The nullary black vertex (the scalar 0) next to a wire equals 0 times a cut wire (two |0⟩-type pieces)."
+     },
+     {
+      "label": "row 4, 1st",
+      "rule": "w-fermionic-symmetry",
+      "note": "",
+      "description": "A fermionic swap between two adjacent legs of a black vertex can be removed."
+     },
+     {
+      "label": "row 4, 2nd",
+      "rule": "fermionic-crossing-yang-baxter",
+      "note": "",
+      "description": "Yang–Baxter equation for the fermionic swap."
+     },
+     {
+      "label": "row 4, 3rd",
+      "rule": "fermionic-crossing-rotated",
+      "note": "",
+      "description": "A fermionic swap drawn rotated (with its wires bent) is a fermionic swap."
+     }
+    ]
+   }
+  ]
+ }
+]

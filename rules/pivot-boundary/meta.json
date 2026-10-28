@@ -1,0 +1,190 @@
+{
+  "id": "pivot-boundary",
+  "name": "Boundary pivot",
+  "aliases": [
+    "pivot with a boundary spider",
+    "boundary pivot simplification",
+    "(P3)",
+    "pivot-boundary simplification"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "pivoting",
+  "order": 4,
+  "view": "graph-like",
+  "summary": "An internal Pauli spider connected to a boundary spider can be removed by pivoting, leaving a Hadamard on the boundary wire.",
+  "description": "A variant of the [pivot simplification](../pivot/) for an internal Pauli spider $u$ (phase $j\\pi$) that is connected to a spider $v$ on a boundary wire, with any phase $\\alpha$. Pivoting along $uv$ removes $u$. The phase $\\alpha$ of $v$ becomes a phase gadget connected to the former neighbours of $u$ (as in the [gadget pivot](../pivot-gadget/)), and the boundary wire is now attached, through a Hadamard, to a new spider with phase $j\\pi$ that is connected to the former neighbours of $u$. Shared neighbours of $u$ and $v$ get $(j+1)\\pi$, neighbours of only $v$ get $j\\pi$.\n\nTogether with the gadget pivot this allows removing every internal Pauli spider in a graph-like diagram. The Duncan–Kissinger–Perdrix–van de Wetering simplification achieves the same by first unfusing the boundary spider (see [graph-like identity removal](../graph-like-identity-removal/)) and then applying the ordinary pivot. As in the gadget pivot, the hub of the gadget carries $j\\pi$, which is equivalent to a phase-free hub with leaf $(-1)^j\\alpha$.",
+  "variables": {
+    "j": "boolean",
+    "alpha": "real",
+    "delta": "real",
+    "beta": "real",
+    "gamma": "real"
+  },
+  "parameters": {
+    "n_u": 2,
+    "n_w": 0,
+    "n_v": 1
+  },
+  "parameter_notes": "n_u, n_w and n_v are the numbers of neighbours of only u, of both, and of only v (shown for n_u = 2, n_w = 0, n_v = 1; shared neighbours of u and v also get connected to the gadget and to the new boundary spider, and get (j+1)π added). The neighbours may have any number of further legs and edges.",
+  "conditions": "u is internal and has a Pauli phase jπ; v has exactly one boundary wire.",
+  "scalar": "sqrt(2)**((n_u-1)*(n_v+1)+n_w*(n_u+n_v))",
+  "source": {
+    "bib": "kissinger2019tcount",
+    "location": "Section 'Full simplification of ZX-diagrams', rule (P3)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "pivot",
+      "relation": "variant-of"
+    },
+    {
+      "id": "graph-like-identity-removal",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "pivot",
+    "boundary",
+    "phase gadget",
+    "graph-like",
+    "simplification",
+    "pauli"
+  ],
+  "arity": {
+    "params": {
+      "n_u": {
+        "label": "neighbours of only u",
+        "min": 0,
+        "max": 2
+      },
+      "n_w": {
+        "label": "shared neighbours",
+        "min": 0,
+        "max": 2
+      },
+      "n_v": {
+        "label": "neighbours of only v",
+        "min": 0,
+        "max": 2
+      }
+    },
+    "lhs": [
+      {
+        "param": "n_u",
+        "vertices": [
+          3,
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "delta"
+        ]
+      },
+      {
+        "param": "n_w",
+        "vertices": [
+          5,
+          6
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "beta"
+        ]
+      },
+      {
+        "param": "n_v",
+        "vertices": [
+          7,
+          8
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "gamma"
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n_u",
+        "vertices": [
+          4,
+          5
+        ],
+        "offset": [
+          -0.5,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "delta"
+        ]
+      },
+      {
+        "param": "n_w",
+        "vertices": [
+          6,
+          7
+        ],
+        "offset": [
+          -0.3,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "beta"
+        ]
+      },
+      {
+        "param": "n_v",
+        "vertices": [
+          8,
+          9
+        ],
+        "offset": [
+          -0.5,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "gamma"
+        ]
+      }
+    ]
+  }
+}

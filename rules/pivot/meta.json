@@ -1,0 +1,188 @@
+{
+  "id": "pivot",
+  "name": "Pivot simplification",
+  "aliases": [
+    "pivoting",
+    "pivot rule",
+    "Pauli pair removal",
+    "(P1)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "pivoting",
+  "order": 1,
+  "view": "graph-like",
+  "summary": "Two connected internal spiders with Pauli phases can be removed by complementing the edges between their neighbourhoods.",
+  "description": "In a graph-like diagram, two connected internal spiders u and v with phases jπ and kπ can be removed. Their neighbours fall into three groups: those connected only to u, those connected to both, and those connected only to v. Every pair of spiders taken from two *different* groups has its connectivity toggled (this is the graph-theoretic *pivot* along the edge uv). The neighbours of only u get kπ added to their phase, those of only v get jπ, and the shared neighbours get (j+k+1)π.\n\nThe rule follows from three local complementations. Together with [local complementation](../local-complementation/) it is the main simplification rule of PyZX.",
+  "variables": {
+    "j": "boolean",
+    "k": "boolean",
+    "alpha": "real",
+    "beta": "real",
+    "gamma": "real"
+  },
+  "parameters": {
+    "n_u": 2,
+    "n_w": 1,
+    "n_v": 2
+  },
+  "parameter_notes": "n_u, n_w and n_v are the numbers of neighbours of only u, of both, and of only v (shown for n_u = 2, n_w = 1, n_v = 2). The neighbours may have any number of further legs and edges.",
+  "scalar": "(-1)**(j*k)*sqrt(2)**((n_u-1)*(n_v-1)+n_w*(n_u+n_v-2))",
+  "source": {
+    "bib": "duncan2019graph"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 5 (pivoting)"
+    },
+    {
+      "bib": "kissinger2019tcount",
+      "location": "rule (P1)"
+    }
+  ],
+  "related": [
+    {
+      "id": "local-complementation",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "pivot",
+    "pivoting",
+    "graph-like",
+    "simplification",
+    "pauli"
+  ],
+  "arity": {
+    "params": {
+      "n_u": {
+        "label": "neighbours of only u",
+        "min": 0,
+        "max": 3
+      },
+      "n_w": {
+        "label": "shared neighbours",
+        "min": 0,
+        "max": 3
+      },
+      "n_v": {
+        "label": "neighbours of only v",
+        "min": 0,
+        "max": 3
+      }
+    },
+    "lhs": [
+      {
+        "param": "n_u",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "alpha"
+        ]
+      },
+      {
+        "param": "n_w",
+        "vertices": [
+          4,
+          5
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "beta"
+        ]
+      },
+      {
+        "param": "n_v",
+        "vertices": [
+          6,
+          7
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "gamma"
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n_u",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          -0.5,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "alpha"
+        ]
+      },
+      {
+        "param": "n_w",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          -0.1,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "beta"
+        ]
+      },
+      {
+        "param": "n_v",
+        "vertices": [
+          4,
+          5
+        ],
+        "offset": [
+          -0.6,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ],
+        "index_vars": [
+          "gamma"
+        ]
+      }
+    ]
+  }
+}

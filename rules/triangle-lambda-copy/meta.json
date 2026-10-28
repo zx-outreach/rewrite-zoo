@@ -1,0 +1,40 @@
+{
+  "id": "triangle-lambda-copy",
+  "name": "λ-boxes copy through the triangle structure",
+  "aliases": [
+    "(TR14)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "triangle",
+  "order": 17,
+  "summary": "λ-boxes on both outputs of a structure of Z-spiders, an X-spider and a triangle equal one λ-box on its input.",
+  "description": "The same as [(TR13)](../triangle-phase-copy/), but for the λ-box $\\mathrm{diag}(1, \\lambda)$ instead of a phase.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.\n\nThe λ-box is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in the papers of Ng and Wang, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). Up to the fact that it is drawn differently, it is a Z-box of arity 2 with label $\\lambda$. Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "lambda": "real"
+  },
+  "checked": false,
+  "unchecked_reason": "the triangle and the λ-box are not generators of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR14)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 6, rule (TR14)"
+    }
+  ],
+  "related": [
+    {
+      "id": "triangle-lambda-phase-copy",
+      "relation": "special-case-of"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "copy",
+    "lambda"
+  ]
+}

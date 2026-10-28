@@ -1,0 +1,32 @@
+{
+  "id": "scalar-pi2-inverse",
+  "name": "Opposite π/2 scalars",
+  "aliases": [
+    "(1+i)(1-i) = 2",
+    "π/2 and −π/2 scalars cancel"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "scalars",
+  "order": 6,
+  "summary": "Legless spiders with phases π/2 and −π/2 together are the scalar 2.",
+  "description": "Legless Z-spiders with phases π/2 and −π/2 are the scalars $1+i$ and $1-i$, whose product is 2. Diagrammatically, 2 is two copies of the phase-free [two-spider scalar](../scalar-state-effect/) √2.\n\nTogether with the [two π/2 scalars](../scalar-pi2-pair/) rule, this allows all Clifford scalar diagrams to be brought to a normal form.",
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook"
+  },
+  "related": [
+    {
+      "id": "scalar-pi2-pair",
+      "relation": "see-also"
+    },
+    {
+      "id": "scalar-z-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "clifford"
+  ]
+}

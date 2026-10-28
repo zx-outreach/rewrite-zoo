@@ -1,0 +1,38 @@
+{
+  "id": "star-rule",
+  "name": "Star rule",
+  "aliases": [
+    "star node",
+    "inverse of the scalar 2",
+    "halfscalar"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "scalars",
+  "order": 20,
+  "summary": "A new scalar generator, the star, is the inverse of the legless phase-free Z-spider.",
+  "description": "To make the stabilizer ZX-calculus complete *with* scalars, Backens adds a new generator with no inputs or outputs, the *star* $\\star$, interpreted as $\\frac12$. It is defined by the star rule: the star next to the legless phase-free Z-spider (the scalar 2) is the empty diagram. From it one derives inverses for all other non-zero stabilizer scalars.\n\nWhen scalars are written as numbers, as in the zoo, this rule just says that the legless Z-spider is the number 2: the $\\alpha = 0$ case of [legless Z-spiders](../scalar-z-spider/).",
+  "checked": false,
+  "unchecked_reason": "uses Backens' star generator (the scalar 1/2), which PyZX cannot represent",
+  "scalar": "1",
+  "source": {
+    "bib": "Backens:2015aa",
+    "location": "Section 3.2, Definition 2 (star rule)"
+  },
+  "related": [
+    {
+      "id": "scalar-z-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-zero-star",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "star",
+    "scalar",
+    "inverse",
+    "1/2"
+  ]
+}

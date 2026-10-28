@@ -1,0 +1,40 @@
+{
+  "id": "w-unit-counit",
+  "name": "W unit meets counit",
+  "aliases": [
+    "5c",
+    "counit of unit",
+    "⟨0|0⟩ = 1",
+    "W unit scalar"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-rules",
+  "order": 4,
+  "summary": "Plugging the W unit |0⟩ into the W counit ⟨0| gives the empty diagram.",
+  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. A W-node with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the unit of the W-node read as a 'merge'.\n\nConnecting two W-nodes without outputs along their input legs is therefore the scalar $\\langle 0|0\\rangle = 1$, the empty diagram. This is one of the Hopf-algebra axioms of the W-node (the counit of the unit is 1), axiom 5c of Hadzihasanovic's original complete ZW-calculus, where the unit is drawn as a binary black vertex on a black vertex with a loop.",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), Rule 5c"
+  },
+  "related": [
+    {
+      "id": "w-zero-copy",
+      "relation": "see-also"
+    },
+    {
+      "id": "w-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "W",
+    "unit",
+    "counit",
+    "scalar",
+    "Hopf algebra",
+    "empty diagram"
+  ],
+  "notes": "The right-hand side is the empty diagram."
+}

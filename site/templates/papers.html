@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block bodyclass %}page-papers{% endblock %}
+{% block content %}
+<header class="rule-head">
+  <h1>Papers</h1>
+  <p class="lede">The papers that rules in the zoo come from, in chronological order. The bibliographic data comes from the <a href="https://zxcalculus.com/publications.html">publication list on zxcalculus.com</a>.</p>
+</header>
+<ol class="paper-list">
+{% for p in papers %}
+  <li class="paper" id="{{ p.key }}">
+    <p class="ref">
+      <span class="paper-title">{% if p.arxiv %}<a href="{{ p.arxiv }}">{{ p.title }}</a>{% elif p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>.
+      <span class="paper-authors">{{ p.author_str }}</span> ({{ p.year }}).
+      {% if p.venue %}<span class="paper-venue">{{ p.venue }}</span>.{% endif %}
+      {% if p.doi_url %}<a class="pill" href="{{ p.doi_url }}">journal</a>{% endif %}
+      {% if p.arxiv %}<a class="pill" href="{{ p.arxiv }}">arXiv</a>{% endif %}
+    </p>
+    {% if p.roles.source %}<p class="paper-rules"><span class="relation">Introduces</span> {% for r in p.roles.source %}<a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+    {% if p.roles.axiom %}<p class="paper-rules"><span class="relation">Axioms</span> {% for r in p.roles.axiom %}<a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+    {% if p.roles.also %}<p class="paper-rules"><span class="relation">Also uses</span> {% for r in p.roles.also %}<a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+  </li>
+{% endfor %}
+</ol>
+{% endblock %}

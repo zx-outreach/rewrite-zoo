@@ -1,0 +1,38 @@
+{
+  "id": "fe-x-phase",
+  "name": "Phases on fault gadgets",
+  "aliases": [
+    "(XPhase_fe)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "fault-equivalent",
+  "order": 21,
+  "summary": "A Clifford phase kπ/2 on the red spider of a fault gadget can be removed.",
+  "description": "A red spider with phase $k\\frac{\\pi}{2}$ and a one-legged green spider attached by a noisy edge of weight $w$ (the head of a fault gadget) is fault-equivalent to the same with phase 0. Semantically the phase disappears because the green spider copies through the red spider. Under noise, both sides only allow the trivial fault or a single $Z$-flip on the noisy edge, which have the same effect up to a global phase. This allows ignoring global phases introduced when moving fault gadgets.\n\nA *fault gadget* is a red spider connected by fault-free edges to its targets (here Z-spiders, whose phase-free Z-flips it describes) and by a noisy *spawning edge*, annotated with the weight of the fault, to a one-legged green spider. A flip on the spawning edge spreads to the targets, so the gadget models one atomic fault; without a flip it does nothing. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "variables": {
+    "k": "integer"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 3, rule $(\\textsc{XPhase}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "state-copy",
+      "relation": "see-also"
+    },
+    {
+      "id": "fe-commute",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness",
+    "global phase"
+  ]
+}

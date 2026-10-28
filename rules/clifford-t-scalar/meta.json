@@ -1,0 +1,52 @@
+{
+  "id": "clifford-t-scalar",
+  "name": "Clifford+T scalar rule (E)",
+  "aliases": [
+    "(E)",
+    "E rule",
+    "bicolour π/4 scalar"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "scalars",
+  "order": 20,
+  "summary": "A π/4 Z-spider connected to a −π/4 X-spider is the empty diagram (the scalar 1).",
+  "description": "The scalar diagram consisting of a Z-spider with phase $\\frac\\pi4$ connected to an X-spider with phase $-\\frac\\pi4$ represents the number $1$, so it is equal to the empty diagram.\n\nJeandel, Perdrix, Vilmart and Wang showed that this equation cannot be derived from the earlier rules of the ZX-calculus, using a simple invariant (the parity of the number of odd-degree X-spiders plus the number of Hadamards). As it only involves angles that are multiples of $\\pi/4$, this was another proof that the Clifford+T fragment was incomplete. Adding (E) made the older scalar rules (IV) and (ZO) derivable, and it is an axiom of all the Jeandel–Perdrix–Vilmart complete axiomatisations and of Vilmart's near-minimal one.",
+  "scalar": "1",
+  "source": {
+    "bib": "cyclo",
+    "location": "Section 3, rule (E)"
+  },
+  "also_in": [
+    {
+      "bib": "SimonCompleteness",
+      "location": "Fig. 1, rule (E)"
+    },
+    {
+      "bib": "JPV-universal",
+      "location": "Fig. 1 and Fig. 2, rule (E)"
+    },
+    {
+      "bib": "vilmarteulercompleteness",
+      "location": "Fig. 1, rule (E)"
+    },
+    {
+      "bib": "jeandel2019completeness",
+      "location": "Fig. 2, rule (E)"
+    }
+  ],
+  "related": [
+    {
+      "id": "inverse-scalar-phase",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "empty diagram",
+    "clifford+t",
+    "T",
+    "invariant",
+    "incompleteness"
+  ]
+}

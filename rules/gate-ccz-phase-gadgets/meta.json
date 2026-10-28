@@ -1,0 +1,49 @@
+{
+  "id": "gate-ccz-phase-gadgets",
+  "name": "CCZ gate (phase gadgets)",
+  "aliases": [
+    "controlled-controlled-Z",
+    "CCZ",
+    "Toffoli phase polynomial"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "gates",
+  "order": 20,
+  "summary": "The CCZ gate is a phase polynomial: π/4 phases on every qubit, −π/4 gadgets on every pair and a π/4 gadget on all three.",
+  "description": "The CCZ gate is diagonal, $|x_1x_2x_3\\rangle \\mapsto (-1)^{x_1x_2x_3}|x_1x_2x_3\\rangle$, and since $4x_1x_2x_3 = x_1+x_2+x_3 - (x_1\\oplus x_2) - (x_2\\oplus x_3) - (x_1\\oplus x_3) + (x_1\\oplus x_2\\oplus x_3)$ it is a product of π/4 phases on single qubits and ∓π/4 phase gadgets on parities. This gives the well-known decomposition of the CCZ (and hence the Toffoli) gate with 7 T-gates. Drawn in graph-like form.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 3,
+    "gates": [
+      [
+        "CCZ",
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "scalar": "4*sqrt(2)",
+  "source": {
+    "bib": "kissinger2019tcount"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CCZ",
+    "Toffoli",
+    "T-count",
+    "phase gadget",
+    "gate"
+  ]
+}

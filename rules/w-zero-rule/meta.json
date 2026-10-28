@@ -1,0 +1,38 @@
+{
+  "id": "w-zero-rule",
+  "name": "ZW zero rule",
+  "aliases": [
+    "ax-zero",
+    "zero axiom",
+    "nullary black vertex"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "zw-rules",
+  "order": 22,
+  "summary": "The legless black vertex (the scalar 0) next to a wire equals 0 times the disconnected wire.",
+  "description": "The black vertex with no legs is the empty sum, the scalar $0$. This axiom of the planar W-calculus says that a diagram multiplied by it is $0$ times a disconnected diagram: here a wire is cut into the effect $\\langle 0|$ and the state $|0\\rangle$, each a W-node with no outputs. It plays the role of the [zero rule](../zero-rule/) of the ZX-calculus.\n\nWith the scalar $0$ written as a number both sides are $0$.",
+  "checked": false,
+  "unchecked_reason": "the black vertex without legs (the scalar 0) is not a PyZX W-node",
+  "scalar": "0",
+  "source": {
+    "bib": "carette2023compositionality",
+    "location": "Figure 1 (axioms of the planar W-calculus), row 3, 3rd axiom"
+  },
+  "related": [
+    {
+      "id": "zero-rule",
+      "relation": "see-also"
+    },
+    {
+      "id": "w-zero-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "zero",
+    "scalar",
+    "W",
+    "planar W-calculus"
+  ]
+}

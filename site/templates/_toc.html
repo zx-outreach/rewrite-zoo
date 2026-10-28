@@ -1,0 +1,23 @@
+{# Table of contents of all categories (groups). `toc` is the list of groups with their rules;
+   on the index page the links are anchors, on group pages they point to the other group pages. #}
+<nav class="toc" aria-label="Categories">
+  <details class="toc-box" open>
+    <summary>Categories</summary>
+    {% for calc in calculi %}
+    {% set gs = toc|selectattr("calculus", "equalto", calc)|list %}
+    {% if gs %}
+    <p class="toc-calc">{{ calc }}-calculus</p>
+    <ul>
+      {% for g in gs %}
+      <li data-toc-item="{{ g.id }}"><a href="{% if anchors %}#g-{{ g.id }}{% else %}{{ root }}groups/{{ g.id }}/index.html{% endif %}" data-toc="{{ g.id }}"{% if g.id == current %} aria-current="page"{% endif %}>{{ g.name }} <span class="toc-n">{{ g.rules|length }}</span></a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+    <p class="toc-calc">More</p>
+    <ul>
+      <li><a href="{{ root }}completeness/index.html">Complete axiomatisations</a></li>
+      <li><a href="{{ root }}papers/index.html">Papers</a></li>
+    </ul>
+  </details>
+</nav>

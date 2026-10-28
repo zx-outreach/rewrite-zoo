@@ -1,0 +1,38 @@
+{
+  "id": "fe-weighted-repetition",
+  "name": "Fault improvement by repetition",
+  "aliases": [
+    "repetition rewrite",
+    "fault-improved distribution edge"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 13,
+  "summary": "Two noisy X-X connections in parallel are fault-equivalent to one connection with improved weights.",
+  "description": "Under *weighted* edge-flip noise, where each edge has weights $(w_X, w_Y, w_Z)$ for its three flips, a square of four X-spiders whose two vertical edges have weights $v = (v_X, v_Y, v_Z)$ and $w = (w_X, w_Y, w_Z)$ (and the other edges weight 1) is fault-equivalent to two X-spiders connected by a single edge with weights $(w'_X, w'_Y, w'_Z) = (\\min(v_Z, w_Z), \\min(v_Y + w_Z, v_Z + w_Y), \\min(v_Z + w_Z, v_Y + w_Y))$, as written in the paper, where the weights on the right are capped at $w'_Y, w'_Z \\leq 2$ and $w'_X \\leq 1$. Repeating a noisy distribution edge (e.g. a Bell pair between two modules) in this way protects it against the errors that flip the corresponding measurement outcome; iterating gives a ladder of $d$ rungs with weights $(1/\\varepsilon, d/\\varepsilon, d/\\varepsilon)$. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "conditions": "All weights positive; weighted edge-flip noise.",
+  "scalar": "1",
+  "source": {
+    "bib": "schmidt2026resourceadaptive",
+    "location": "Sec. 3.2 (Repetition), proposition on fault improvement"
+  },
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-merge",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "weighted noise",
+    "edge-flip noise",
+    "distributed QEC",
+    "Bell pair",
+    "repetition"
+  ]
+}

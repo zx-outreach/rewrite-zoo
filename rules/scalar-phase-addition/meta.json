@@ -1,0 +1,41 @@
+{
+  "id": "scalar-phase-addition",
+  "name": "Scalar phases combine",
+  "aliases": [
+    "global phases multiply",
+    "scalar phase combination"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "scalars",
+  "order": 4,
+  "summary": "Two global-phase scalar diagrams combine into one, with their phases added.",
+  "description": "The diagram consisting of a Z-spider with phase α connected to an X-spider with phase π is the scalar $\\sqrt2 e^{i\\alpha}$ (see [this rule](../scalar-state-effect/)). This rule expresses diagrammatically that multiplying two such scalars adds their phases: $\\sqrt2e^{i\\alpha}\\cdot\\sqrt2e^{i\\beta} = \\sqrt2e^{i(\\alpha+\\beta)}\\cdot\\sqrt2$, where the last factor √2 is a phase-free pair of spiders.\n\nIt is one of the scalar lemmas that the book derives from the rules of the ZX-calculus, so that diagrammatic reasoning with scalars does not require translating to numbers.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook"
+  },
+  "related": [
+    {
+      "id": "scalar-state-effect",
+      "relation": "see-also"
+    },
+    {
+      "id": "pi-commutation",
+      "relation": "see-also"
+    },
+    {
+      "id": "state-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "global phase",
+    "phase addition"
+  ]
+}

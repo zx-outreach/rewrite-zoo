@@ -1,0 +1,41 @@
+{
+  "id": "cz-cnot-hadamard",
+  "name": "CNOT conjugated by Hadamards is CZ",
+  "aliases": [
+    "CZ as CNOT",
+    "CNOT = (I⊗H) CZ (I⊗H)",
+    "CZ from CNOT"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "circuits",
+  "order": 3,
+  "summary": "A CNOT with Hadamard gates before and after its target is a CZ gate.",
+  "description": "Conjugating the target of a CNOT gate with Hadamard gates gives the controlled-Z gate. In the ZX-calculus this is immediate from the [colour change](../colour-change/) rule: the Hadamards turn the X-spider of the target into a Z-spider, leaving a Hadamard on the connecting wire, which is the diagram of the CZ gate.\n\nSince the CZ diagram is symmetric, it does not matter which qubit is the control and which the target.",
+  "scalar": "1",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 2.3 (Hadamards and colour changing)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "colour-change",
+      "relation": "derived-from"
+    },
+    {
+      "id": "cz-pauli-propagation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CZ",
+    "CNOT",
+    "hadamard",
+    "circuit"
+  ]
+}

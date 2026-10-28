@@ -1,0 +1,32 @@
+{
+  "id": "triangle-loop-disconnect",
+  "name": "Triangle loop disconnects",
+  "aliases": [
+    "(TR5')",
+    "2(i)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 7,
+  "summary": "A Z- and an X-spider connected through a triangle and a reversed triangle disconnect.",
+  "description": "A phase-free Z-spider and a phase-free X-spider connected by two wires, one with a triangle pointing towards the Z-spider and one with a triangle pointing towards the X-spider, equal a disconnected Z-effect and Z-state, i.e. the projector-like map $(|0\\rangle+|1\\rangle)(\\langle 0|+\\langle 1|)$. The paper writes the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the left-hand side.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "sqrt(2)/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "ng_completeness_2018",
+    "location": "Fig. 5, rule (TR5')"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(i)"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "disconnect"
+  ]
+}

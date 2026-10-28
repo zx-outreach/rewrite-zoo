@@ -1,0 +1,45 @@
+{
+  "id": "scalar-inverse-sqrt2",
+  "name": "1/√2 scalar",
+  "aliases": [
+    "inverse square root of two",
+    "triple-wire scalar"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "scalars",
+  "order": 3,
+  "summary": "A Z- and an X-spider connected by three wires are the scalar 1/√2.",
+  "description": "A phase-free Z-spider and a phase-free X-spider connected by three parallel wires represent the scalar $\\frac{1}{\\sqrt2}$. By the [Hopf rule](../hopf/), two of the three wires can be removed at the cost of a factor ½, leaving the scalar √2 of a single connecting wire.\n\nThis is the standard way to write *negative* powers of √2 as a ZX-diagram, as for example needed to normalise the CNOT gate. It is the inverse of the [two-spider scalar](../scalar-state-effect/) for a = 0: placing the two side by side gives the empty diagram.",
+  "scalar": "sqrt(2)/2",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 3.4 (scalars)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.1 (generators and their matrices)"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.4 (ZX-calculus full cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "hopf",
+      "relation": "derived-from"
+    },
+    {
+      "id": "scalar-state-effect",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "sqrt 2",
+    "normalisation",
+    "hopf"
+  ]
+}

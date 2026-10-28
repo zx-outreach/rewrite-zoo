@@ -1,0 +1,62 @@
+{
+  "id": "fe-four-legged-spider",
+  "name": "Fault-equivalent four-legged spider",
+  "aliases": [
+    "(r_4)",
+    "(Fuse-4_fe)",
+    "four-legged spider rewrite",
+    "square decomposition"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 3,
+  "summary": "A phase-free four-legged Z-spider is fault-equivalent to a 4-cycle of three-legged Z-spiders.",
+  "description": "A four-legged Z-spider can be replaced by a square of four three-legged Z-spiders, one for each leg. This decomposes a weight-four measurement into spiders of degree three while preserving fault equivalence, in contrast to the naive decomposition into a chain or star of spiders, in which a single flip can spread to two legs.\n\nFault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1. The four spiders of the square form a detecting region, so an odd number of $X$-flips on the internal edges is detected, while an even number of $X$-flips and all $Z$-flips can be pushed to the outer legs without increasing their weight. The rule follows by [spider fusion](../spider-fusion/) and [self-loop removal](../self-loop-removal/), but fusion in general is not fault-equivalent.",
+  "scalar": "1",
+  "source": {
+    "bib": "rodatz2024floquetifying",
+    "location": "Sec. 3.2, rewrite $(r_4)$"
+  },
+  "also_in": [
+    {
+      "bib": "rodatz2025fault",
+      "location": "Sec. 6.2, rule $(\\textsc{Fuse-4}_{\\text{fe}})$"
+    },
+    {
+      "bib": "rusch2025completeness",
+      "location": "Sec. 4, running example (four-legged spider)"
+    },
+    {
+      "bib": "boriskhesin2026spidercat:",
+      "location": "Sec. 2, figure of fault-equivalent rewrites"
+    },
+    {
+      "bib": "poor2026spidercss:",
+      "location": "Sec. 2.3, figure of elementary fault-equivalent rewrites"
+    },
+    {
+      "bib": "Schweikart2025Masters",
+      "location": "Sec. 2.4.2, eq. (2.62); Lemma 3.21"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-five-legged-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "distance-preserving",
+    "edge-flip noise",
+    "fault tolerance",
+    "detecting region",
+    "unfusion",
+    "syndrome extraction"
+  ]
+}

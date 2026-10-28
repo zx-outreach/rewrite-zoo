@@ -1,0 +1,44 @@
+{
+  "id": "triangle-phase-copy",
+  "name": "Phases copy through the triangle structure",
+  "aliases": [
+    "(TR13)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "triangle",
+  "order": 16,
+  "summary": "Z(α) phases on both outputs of a structure of Z-spiders, an X-spider and a triangle equal one Z(α) on its input.",
+  "description": "The structure on the right (the input is copied, passes a triangle and is copied again, and an X-spider computes the parity of the two copies) maps $|0\\rangle \\mapsto |00\\rangle$ and $|1\\rangle \\mapsto |11\\rangle$ (up to normalisation), so a phase on its input can be copied to both outputs. [(TR14)](../triangle-lambda-copy/) is the same rule for λ-boxes.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "variables": {
+    "alpha": "real"
+  },
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR13)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR13)"
+    }
+  ],
+  "related": [
+    {
+      "id": "triangle-lambda-copy",
+      "relation": "see-also"
+    },
+    {
+      "id": "triangle-lambda-phase-copy",
+      "relation": "special-case-of"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "copy",
+    "phase"
+  ]
+}

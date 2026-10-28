@@ -1,0 +1,45 @@
+{
+  "id": "cnot-phase-commutation",
+  "name": "Phases commute through CNOT",
+  "aliases": [
+    "Z-rotation through CNOT control",
+    "X-rotation through CNOT target",
+    "T-CNOT commutation"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "circuits",
+  "order": 4,
+  "summary": "A Z-rotation on the control of a CNOT commutes with the CNOT.",
+  "description": "A Z-phase gate on the control qubit commutes with a CNOT gate. In the ZX-calculus this is just [spider fusion](../spider-fusion/): both the phase and the control are Z-spiders, so they fuse and unfuse on the other side. With the colours swapped (also shown on this page), an X-phase gate on the target commutes with the CNOT in the same way.\n\nThis is the simplest example of how ZX-diagrams make commutation relations in circuits visible: gates commute when the spiders they meet are of the same colour.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 2.1 (from quantum circuits to ZX-diagrams)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "derived-from"
+    },
+    {
+      "id": "cnot-pauli-propagation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CNOT",
+    "phase",
+    "commutation",
+    "circuit",
+    "T gate"
+  ]
+}

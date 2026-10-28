@@ -1,0 +1,42 @@
+{
+  "id": "fe-six-legged-spider",
+  "name": "Fault-equivalent six-legged spider",
+  "aliases": [
+    "(r_6)",
+    "triangle decomposition"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 9,
+  "summary": "A phase-free six-legged Z-spider is fault-equivalent to a triangle of three Z-spiders with two legs each.",
+  "description": "A six-legged Z-spider can be replaced by a triangle of three Z-spiders, each carrying two of the legs. Like the [four-legged](../fe-four-legged-spider/) and [five-legged](../fe-five-legged-spider/) rules it decomposes a spider into a ring, which forms a detecting region for the flips on its internal edges. Fault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1.\n\nIn Schweikart's thesis the rule is shown to be moreover *matchability-preserving* in a blossom-shaped detector context: the rewritten diagram keeps a detector basis in which every fault triggers at most two detectors, so that it can still be decoded by minimum-weight perfect matching.",
+  "scalar": "1",
+  "source": {
+    "bib": "Schweikart2025Masters",
+    "location": "Sec. 3.3, Lemma 3.22, eq. (3.47)"
+  },
+  "related": [
+    {
+      "id": "fe-four-legged-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "fe-five-legged-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "matchability-preserving",
+    "edge-flip noise",
+    "fault tolerance",
+    "unfusion",
+    "detecting region",
+    "MWPM"
+  ]
+}

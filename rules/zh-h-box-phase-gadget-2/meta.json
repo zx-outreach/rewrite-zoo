@@ -1,0 +1,45 @@
+{
+  "id": "zh-h-box-phase-gadget-2",
+  "name": "Arity-2 H-box as a phase gadget",
+  "aliases": [
+    "controlled phase decomposition",
+    "CZ(α)"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-translation",
+  "order": 5,
+  "summary": "An arity-2 H-box with label $e^{iα}$ decomposes into Z-phases α/2 and a phase gadget with phase −α/2.",
+  "description": "An arity-2 H-box with label $e^{i\\alpha}$ is the diagonal map that applies the phase $e^{i\\alpha xy}$ to $|x,y\\rangle$ (read as a state on two qubits it is a controlled phase gate applied to $|{+}{+}\\rangle$). Using $xy = \\frac{1}{2}(x + y - x\\oplus y)$ this phase can be written with two Z-phases $\\frac{\\alpha}{2}$ and one [phase gadget](../phase-gadget-fusion/) with phase $-\\frac{\\alpha}{2}$ on the parity $x\\oplus y$.\n\nThis is the simplest instance of the *graphical Fourier transform*, which turns any H-box with a phase label into phase gadgets; see the [arity-3 version](../zh-h-box-phase-gadget-3/).",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.4 (H-box cheatsheet)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.4"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-phase-gadget-3",
+      "relation": "variant-of"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "Fourier transform",
+    "controlled phase",
+    "translation"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

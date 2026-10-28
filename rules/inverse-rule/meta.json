@@ -1,0 +1,38 @@
+{
+  "id": "inverse-rule",
+  "name": "Inverse rule",
+  "aliases": [
+    "(IV)",
+    "scalar inverse rule",
+    "√2 · 1/√2 = 1"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "scalars",
+  "order": 13,
+  "summary": "The scalar √2 (a Z- and X-spider joined by one wire) is inverse to a Z- and X-spider joined by three wires.",
+  "description": "A Z-spider and an X-spider connected by a single wire represent the scalar $\\sqrt2$, and a Z-spider and an X-spider connected by three wires represent $\\frac1{\\sqrt2}$. Together they are the empty diagram, i.e. the scalar 1.\n\nBackens, Perdrix and Wang introduced this rule to replace the 'star' generator (a new node representing the scalar $\\frac12$) and the star rule that Backens had used to make the stabilizer ZX-calculus complete for scalars: every non-zero stabilizer scalar can then be inverted using diagrams built from spiders only.",
+  "scalar": "1",
+  "source": {
+    "bib": "BackensSimplified",
+    "location": "Section 3.1 (Removing the star), rule (IV)"
+  },
+  "related": [
+    {
+      "id": "inverse-rule-simplified",
+      "relation": "equivalent-to"
+    },
+    {
+      "id": "hopf",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "inverse",
+    "stabilizer",
+    "completeness",
+    "sqrt 2"
+  ],
+  "notes": "The right-hand side is the empty diagram."
+}

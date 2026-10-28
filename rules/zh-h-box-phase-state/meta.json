@@ -1,0 +1,39 @@
+{
+  "id": "zh-h-box-phase-state",
+  "name": "Arity-1 H-box is a Z-state",
+  "aliases": [
+    "H-box state"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-translation",
+  "order": 3,
+  "summary": "An arity-1 H-box with label $e^{iα}$ is the Z-state with phase α.",
+  "description": "The arity-1 H-box with label $e^{i\\alpha}$ is the state $|0\\rangle + e^{i\\alpha}|1\\rangle$, which is the arity-1 Z-spider with phase $\\alpha$. With $\\alpha = 0$ and $\\alpha = \\pi$: the H-box labelled $1$ is the phase-free Z-state (the [unit rule](../zh-unit/)) and the standard H-box state is the Z-state with phase $\\pi$.\n\n(In the book the H-boxes are normalised with a factor $\\frac{1}{\\sqrt 2}$, which then appears here as a scalar.)",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 8.2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-unit",
+      "relation": "generalises"
+    }
+  ],
+  "tags": [
+    "state",
+    "phase",
+    "label",
+    "translation"
+  ]
+}

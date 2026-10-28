@@ -1,0 +1,44 @@
+{
+  "id": "hopf",
+  "name": "Hopf rule",
+  "aliases": [
+    "complementarity",
+    "Hopf law",
+    "(ho)",
+    "(Hpf)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "bialgebra",
+  "order": 3,
+  "summary": "A Z- and X-spider connected by two wires disconnect.",
+  "description": "When a Z-spider and an X-spider are connected by two wires, both wires can be removed. This expresses that the Z- and X-bases are *complementary* (mutually unbiased). More generally, spiders of opposite colour connected by k wires can have their connection reduced to k mod 2 wires.\n\nThe Hopf rule follows from the bialgebra rule together with the other phase-free rules.",
+  "scalar": "1/2",
+  "source": {
+    "bib": "CD1"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "related": [
+    {
+      "id": "hadamard-hopf",
+      "relation": "variant-of"
+    },
+    {
+      "id": "bialgebra",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "complementarity",
+    "hopf",
+    "parallel edges"
+  ]
+}

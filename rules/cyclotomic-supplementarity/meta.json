@@ -1,0 +1,47 @@
+{
+  "id": "cyclotomic-supplementarity",
+  "name": "Cyclotomic supplementarity",
+  "aliases": [
+    "(SUP_n)",
+    "SUPn",
+    "generalised supplementarity",
+    "cyclotomic twins"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "supplementarity",
+  "order": 3,
+  "summary": "n Z-states whose phases α + 2kπ/n divide the circle into equal parts, attached to one X-spider, merge into one Z-spider with phase nα+(n−1)π connected by n wires.",
+  "description": "A generalisation of [supplementarity](../supplementarity/) from two to $n$ dots: if $n$ arity-one Z-spiders with phases $\\alpha, \\alpha+\\frac{2\\pi}n, \\ldots, \\alpha+\\frac{(n-1)2\\pi}n$ are attached to the same X-spider, they can be merged into a single Z-spider with phase $n\\alpha+(n-1)\\pi$, connected to the X-spider by $n$ parallel wires. Supplementarity is the case $n=2$.\n\nJeandel, Perdrix, Vilmart and Wang showed that $(\\mathrm{SUP}_n)$ cannot be derived from the other rules when $n$ is an odd prime, giving a countable family of necessary axioms, while for composite $n$ it follows from the rules for its factors. As for supplementarity, the dots can more generally be merged when they have the same neighbourhood (*cyclotomic twins*).",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "Shown for n = 3, where the merged phase 3α + 2π equals 3α. The rule holds for every n ≥ 1, with the phases depending on n.",
+  "scalar": "1",
+  "source": {
+    "bib": "cyclo",
+    "location": "Section 4.1, rule (SUP_n)"
+  },
+  "also_in": [
+    {
+      "bib": "JPV-universal",
+      "location": "Section 6.1 (incompleteness), rule (SUP_n)"
+    }
+  ],
+  "related": [
+    {
+      "id": "supplementarity",
+      "relation": "generalises"
+    }
+  ],
+  "tags": [
+    "supplementarity",
+    "cyclotomic",
+    "roots of unity",
+    "necessity",
+    "incompleteness"
+  ]
+}

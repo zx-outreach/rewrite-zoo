@@ -1,0 +1,53 @@
+{
+  "id": "lambda-box-spider-slide",
+  "name": "λ-box moves through a spider",
+  "aliases": [
+    "(L1)",
+    "2(a)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "lambda-box",
+  "order": 2,
+  "summary": "A λ-box can be moved from one leg of a phase-free Z-spider to another.",
+  "description": "A λ-box on one leg of a phase-free Z-spider with three legs can be moved to any of its other legs: being diagonal, it 'commutes' with the Z-spider just like a phase. The paper states the three versions (on either input or on the output) as a chain of equations.\n\n**Conventions.** The λ-box of Ng and Wang is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in their papers, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). It is the same as a Z-box of arity 2 with label $\\lambda$, which is how it is drawn and checked here (the rule holds for every complex $\\lambda$; it is checked for some positive values). Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "lambda": {
+      "domain": "real",
+      "values": [
+        "1/3",
+        "2",
+        "5/2"
+      ]
+    }
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 2, rule (L1)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 6, rule (L1)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(a)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zw-weighted-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "lambda-box-phase-commutation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "spider"
+  ]
+}

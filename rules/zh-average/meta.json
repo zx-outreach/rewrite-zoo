@@ -1,0 +1,51 @@
+{
+  "id": "zh-average",
+  "name": "Average rule",
+  "aliases": [
+    "(A)",
+    "average"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-arithmetic",
+  "order": 4,
+  "summary": "Two H-boxes with labels a and b, connected through a NOT, add their labels.",
+  "description": "Two arity-2 H-boxes with labels $a$ and $b$ that are connected to each other via a NOT gate and whose other legs meet in a Z-spider produce the state $2\\,(|0\\rangle + \\frac{a+b}{2}|1\\rangle)$, i.e. twice an H-box with the *average* $\\frac{a+b}{2}$ as its label. Summing over the internal wire, exactly one of the two H-boxes is 'active'.\n\nTogether with the [multiply rule](../zh-multiply/) this lets one do arithmetic with H-box labels. The 2021 completeness paper uses a [variant without the division by 2](../zh-average-prime/), which also works over rings without a half.",
+  "variables": {
+    "a": "complex",
+    "b": "complex"
+  },
+  "scalar": "2",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (A)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-average-prime",
+      "relation": "equivalent-to"
+    },
+    {
+      "id": "zh-average-generalised",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "zh-multiply",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "average",
+    "addition",
+    "label",
+    "arithmetic"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

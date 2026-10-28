@@ -1,0 +1,33 @@
+{
+  "id": "fb-bound",
+  "name": "Increasing the weight of a fault gadget",
+  "aliases": [
+    "(Bound_fb)",
+    "fault boundedness axiom"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 27,
+  "summary": "For fault boundedness, the weight of a fault gadget may be increased, or a fault-free gadget made noisy.",
+  "description": "A fault gadget with weight $w$ is *fault-bounded* by the same gadget with weight $w'$ if $w \\geq w'$ or $w = -$ (the edge is fault-free on the left-hand side). Fault boundedness is the one-directional version of fault equivalence: $D_1$ is fault-bounded by $D_2$ if every undetectable fault on $D_1$ has a fault of at most the same weight with the same effect on $D_2$. So this is a directed rewrite, not a fault-equivalence. Added to the complete rules for fault equivalence it gives a complete calculus for fault boundedness, and together with [the w-fault equivalence rule](../fe-limit/) for $w$-fault boundedness.\n\nSemantically the two sides are the same ZX-diagram; only the noise annotation changes. A *fault gadget* is a red spider connected by fault-free edges to its targets (here Z-spiders, whose phase-free Z-flips it describes) and by a noisy *spawning edge*, annotated with the weight of the fault, to a one-legged green spider. A flip on the spawning edge spreads to the targets, so the gadget models one atomic fault; without a flip it does nothing. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "conditions": "w ≥ w′ or w = − (fault-free); fault boundedness only, in one direction.",
+  "scalar": "1",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 4 (b), rule $(\\textsc{Bound}_{\\text{fb}})$"
+  },
+  "related": [
+    {
+      "id": "fe-limit",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-bounded",
+    "fault boundedness",
+    "fault gadget",
+    "weighted noise",
+    "completeness"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "zh-average-prime",
+  "name": "Average rule (sum form)",
+  "aliases": [
+    "(A)",
+    "average",
+    "addition"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-arithmetic",
+  "order": 5,
+  "summary": "Two H-boxes with labels a and b, connected through a NOT, give an H-box labelled a+b combined with a NOT-ed H-box labelled 2.",
+  "description": "A form of the [average rule](../zh-average/) that avoids dividing by 2. The left-hand side is the same, but the right-hand side combines an H-box with label $a+b$ and an H-box with label $2$ followed by a NOT (which is the state $2|0\\rangle + |1\\rangle$) in a Z-spider, giving $2|0\\rangle + (a+b)|1\\rangle$.\n\nThis version is used in the axiomatisation of the ZH-calculus over an arbitrary commutative ring $R$ in the 2021 completeness paper.",
+  "variables": {
+    "a": "complex",
+    "b": "complex"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "backens2021completenessZH",
+    "location": "Figure 3, rule (A)"
+  },
+  "tags": [
+    "average",
+    "addition",
+    "label",
+    "arithmetic",
+    "ring"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "alternative_of": "zh-average"
+}

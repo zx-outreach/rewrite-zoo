@@ -1,0 +1,48 @@
+{
+  "id": "gate-toffoli-zh",
+  "name": "Toffoli gate (H-box)",
+  "aliases": [
+    "CCNOT",
+    "CCX",
+    "Toffoli"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-gates",
+  "order": 2,
+  "summary": "The Toffoli gate is a CCZ with Hadamards on the target.",
+  "description": "The Toffoli gate is $(I\\otimes I\\otimes H)\\,\\mathrm{CCZ}\\,(I\\otimes I\\otimes H)$, so in the ZH-calculus it is three Z-spiders connected to a standard H-box, with Hadamards on the target wire.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 3,
+    "gates": [
+      [
+        "CCX",
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "gate-ccz-zh",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "Toffoli",
+    "CCNOT",
+    "H-box",
+    "gate"
+  ]
+}

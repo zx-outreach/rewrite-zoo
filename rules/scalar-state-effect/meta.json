@@ -1,0 +1,54 @@
+{
+  "id": "scalar-state-effect",
+  "name": "Basis state and phase effect scalar",
+  "aliases": [
+    "√2 e^{iα}",
+    "scalar lollipop",
+    "√2 scalar",
+    "two-spider scalar"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "scalars",
+  "order": 2,
+  "summary": "An X-spider with phase aπ connected to a Z-spider with phase α is the scalar √2 $e^{iaα}$.",
+  "description": "An X-spider with phase aπ, for a ∈ {0, 1}, is (up to √2) the computational basis state $|a\\rangle$. Plugging it into the one-legged Z-spider with phase α, which is the effect $\\langle 0| + e^{i\\alpha}\\langle 1|$, gives the scalar $\\sqrt2\\, e^{ia\\alpha}$.\n\nFor a = 0 this says that a phase-free X-spider connected to *any* Z-phase is √2, so a Z-phase can be absorbed into such a scalar diagram. For a = 1 this gives a diagram for every scalar of modulus √2. These diagrams are the standard way to represent global phases in ZX-diagrams, for instance in [local complementation](../local-complementation/).",
+  "variables": {
+    "alpha": "real",
+    "a": "boolean"
+  },
+  "scalar": "sqrt(2)*exp(I*a*alpha)",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 3.4 (scalars)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.1 (generators and their matrices)"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.4 (ZX-calculus full cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "scalar-z-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "state-copy",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "scalar-phase-addition",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "global phase",
+    "sqrt 2"
+  ]
+}

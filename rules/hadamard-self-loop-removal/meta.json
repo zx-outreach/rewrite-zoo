@@ -1,0 +1,122 @@
+{
+  "id": "hadamard-self-loop-removal",
+  "name": "Hadamard self-loop removal",
+  "aliases": [
+    "Hadamard loop removal",
+    "(HL)",
+    "H-loop axiom"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "spiders",
+  "order": 4,
+  "summary": "A self-loop containing a Hadamard can be removed by adding π to the phase.",
+  "description": "A spider that is connected to itself through a Hadamard gate is equal, up to a scalar, to the same spider without the loop and with π added to its phase. This rule is needed to bring diagrams into graph-like form, where self-loops are not allowed.",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameter_notes": "n inputs and m outputs (shown for n = m = 1); holds for any number of legs.",
+  "scalar": "sqrt(2)/2",
+  "source": {
+    "bib": "DP3",
+    "location": "Section on pivoting, the H-loop axiom (HL)"
+  },
+  "also_in": [
+    {
+      "bib": "duncan2019graph"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.2 (derived rewrite rules)"
+    }
+  ],
+  "related": [
+    {
+      "id": "self-loop-removal",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "self-loop",
+    "hadamard edge",
+    "graph-like"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 1,
+    "m": 1
+  }
+}

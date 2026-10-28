@@ -1,0 +1,44 @@
+{
+  "id": "fe-five-legged-spider",
+  "name": "Distance-preserving five-legged spider",
+  "aliases": [
+    "(r_5)",
+    "five-legged spider rewrite",
+    "pentagon decomposition"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 4,
+  "summary": "A phase-free five-legged Z-spider is fault-equivalent to a 5-cycle of three-legged Z-spiders.",
+  "description": "A five-legged Z-spider can be replaced by a pentagon of five three-legged Z-spiders, one for each leg, without changing the distance of any code or circuit containing it (a distance-preserving, equivalently fault-equivalent, rewrite).\n\nFault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1. The pentagon is a detecting region for $X$-flips, so only even numbers of internal $X$-flips are undetectable, and these, as well as all $Z$-flips, can be pushed to the outer legs without increasing their weight. Together with [the four-legged version](../fe-four-legged-spider/) and the general decompositions of [even](../fe-even-spider-decomposition/) and [odd](../fe-odd-spider-decomposition/) spiders, this reduces any spider to spiders of degree at most three.",
+  "scalar": "1",
+  "source": {
+    "bib": "rodatz2024floquetifying",
+    "location": "Sec. 3.2, rewrite $(r_5)$"
+  },
+  "also_in": [
+    {
+      "bib": "Schweikart2025Masters",
+      "location": "Sec. 2.4.2, eq. (2.62); Lemma 3.22"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-four-legged-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "distance-preserving",
+    "edge-flip noise",
+    "fault tolerance",
+    "detecting region",
+    "unfusion"
+  ]
+}

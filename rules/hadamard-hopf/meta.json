@@ -1,0 +1,123 @@
+{
+  "id": "hadamard-hopf",
+  "name": "Hopf rule for Hadamard edges",
+  "aliases": [
+    "Hadamard Hopf",
+    "parallel Hadamard edge removal"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "bialgebra",
+  "order": 4,
+  "summary": "Two spiders of the same colour connected by two Hadamard edges disconnect.",
+  "description": "Two spiders of the same colour connected by a pair of parallel Hadamard edges are equal to the two spiders without those edges. This is the [Hopf rule](../hopf/) after a colour change. In graph-like diagrams it means that parallel Hadamard edges cancel in pairs, so graph-like diagrams can be taken to be simple graphs.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "parameter_notes": "n legs on the first spider and m legs on the second (shown for n = m = 2); holds for any number of legs.",
+  "scalar": "1/2",
+  "source": {
+    "bib": "duncan2019graph"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.2 (derived rewrite rules)"
+    }
+  ],
+  "related": [
+    {
+      "id": "hopf",
+      "relation": "derived-from"
+    },
+    {
+      "id": "colour-change",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "hopf",
+    "hadamard edge",
+    "parallel edges",
+    "graph-like"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  }
+}

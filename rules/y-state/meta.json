@@ -1,0 +1,31 @@
+{
+  "id": "y-state",
+  "name": "Y-state identity",
+  "aliases": [
+    "S-state equality",
+    "Y eigenstate"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "euler",
+  "order": 10,
+  "summary": "The two ways of writing the Pauli Y eigenstate as a single spider are equal up to a global phase.",
+  "description": "An X-spider with phase −π/2 and a Z-spider with phase π/2, each with a single leg, both represent the +1 eigenstate of the Pauli Y operator, and are equal up to the global phase $e^{-i\\pi/4}$.",
+  "scalar": "exp(-I*pi/4)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.2 (cf. Exercise 3.15)"
+  },
+  "related": [
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "Y eigenstate",
+    "S state",
+    "clifford",
+    "pauli Y"
+  ]
+}

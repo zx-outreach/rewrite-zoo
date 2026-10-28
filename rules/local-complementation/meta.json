@@ -1,0 +1,119 @@
+{
+  "id": "local-complementation",
+  "name": "Local complementation simplification",
+  "aliases": [
+    "LC",
+    "lcomp",
+    "local complementation rule",
+    "proper Clifford spider removal",
+    "(LC)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "local-complementation",
+  "order": 1,
+  "view": "graph-like",
+  "summary": "An internal spider with phase ±π/2 can be removed by complementing the connectivity of its neighbours.",
+  "description": "In a graph-like diagram, an internal spider with phase π/2 (or −π/2) can be removed. Every pair of its neighbours that was connected becomes disconnected and vice versa, and π/2 is subtracted from (or added to) the phase of every neighbour. This is the graph-theoretic operation of *local complementation*.\n\nThe rule is derived from the local complementation rule for graph states of Duncan & Perdrix, followed by spider fusion. It is one of the two main simplification rules of PyZX, together with [pivoting](../pivot/).",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n is the number of neighbours (shown for n = 3). The neighbours may have any number of further legs and edges.",
+  "scalar": "exp(I*pi/4)*sqrt(2)**((n-1)*(n-2)/2)",
+  "source": {
+    "bib": "duncan2019graph"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.2 (derived rewrite rules)"
+    },
+    {
+      "bib": "kissinger2019tcount",
+      "location": "rule (LC)"
+    }
+  ],
+  "related": [
+    {
+      "id": "pivot",
+      "relation": "see-also"
+    },
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "local complementation",
+    "graph-like",
+    "simplification",
+    "clifford"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "neighbours",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1,
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "bulge": [
+          0.7,
+          0
+        ],
+        "dots_shift": [
+          0.55,
+          0
+        ],
+        "index_vars": [
+          "alpha"
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "clique": [
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "bulge": [
+          0.7,
+          0
+        ],
+        "dots_shift": [
+          0.55,
+          0
+        ],
+        "index_vars": [
+          "alpha"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "hadamard-pi2-sandwich",
+  "name": "Hadamard between two π/2 X-rotations",
+  "aliases": [
+    "V H V = S†",
+    "Hadamard Euler sandwich"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "euler",
+  "order": 11,
+  "summary": "A Hadamard gate between two π/2 X-rotations is a −π/2 Z-rotation.",
+  "description": "Sandwiching a Hadamard gate between two X-rotations by π/2 (the $V=\\sqrt X$ gate) gives the Z-rotation by −π/2 (the $S^\\dagger$ gate), up to a global phase: $VHV \\propto S^\\dagger$.\n\nThis is the [Euler decomposition of the Hadamard](../euler-decomposition-hadamard/) in its colour-swapped form $H \\propto X(\\frac\\pi2)Z(\\frac\\pi2)X(\\frac\\pi2)$, with the outer X-rotations moved to the other side. It is useful for absorbing Hadamards into neighbouring Clifford phases.",
+  "scalar": "exp(I*pi/4)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "derived-from"
+    },
+    {
+      "id": "colour-change",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "euler",
+    "hadamard",
+    "clifford",
+    "S gate",
+    "V gate"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "fe-commute",
+  "name": "Commuting fault gadgets",
+  "aliases": [
+    "(Commute_fe)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "fault-equivalent",
+  "order": 22,
+  "summary": "A π/2 Z-spider connecting the red spiders of two fault gadgets can be removed.",
+  "description": "Two fault-gadget heads (red spiders, each with a one-legged green spider attached by a noisy edge of weight $w_1$ and $w_2$) whose red spiders are connected through a green $\\frac{\\pi}{2}$-spider are fault-equivalent to the two heads without this connection. The connection appears when two anticommuting fault gadgets are moved past each other; the rule says that the resulting global phase can be ignored.\n\nA *fault gadget* is a red spider connected by fault-free edges to its targets (here Z-spiders, whose phase-free Z-flips it describes) and by a noisy *spawning edge*, annotated with the weight of the fault, to a one-legged green spider. A flip on the spawning edge spreads to the targets, so the gadget models one atomic fault; without a flip it does nothing. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "scalar": "(-1)**(1/4)*sqrt(2)/2",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 3, rule $(\\textsc{Commute}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "fe-x-phase",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness",
+    "global phase",
+    "commutation"
+  ]
+}

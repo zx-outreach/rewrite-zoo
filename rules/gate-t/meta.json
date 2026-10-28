@@ -1,0 +1,39 @@
+{
+  "id": "gate-t",
+  "name": "T gate",
+  "aliases": [
+    "T",
+    "π/8 gate"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "gates",
+  "order": 6,
+  "summary": "The T gate is a Z-spider with phase π/4.",
+  "description": "The T gate $T = \\mathrm{diag}(1, e^{i\\pi/4})$ is a Z-spider with phase π/4.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 1,
+    "gates": [
+      [
+        "T",
+        0
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "T gate",
+    "gate",
+    "clifford+t"
+  ]
+}

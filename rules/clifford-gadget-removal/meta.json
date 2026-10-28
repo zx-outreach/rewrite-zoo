@@ -1,0 +1,112 @@
+{
+  "id": "clifford-gadget-removal",
+  "name": "Clifford phase gadget removal",
+  "aliases": [
+    "local complementation and deletion",
+    "(LCD)",
+    "π/2 gadget removal",
+    "YZ-plane ±π/2 vertex removal",
+    "lc-delete"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "local-complementation",
+  "order": 4,
+  "summary": "A phase gadget with phase π/2 can be removed by complementing the connectivity of its targets and adding π/2 to each target.",
+  "description": "A phase-free Z-spider $u$ whose only other leg is an X-spider with phase $\\frac\\pi2$ (in graph-like form: a phase gadget with phase $\\frac\\pi2$) can be removed: every pair of its neighbours has its connectivity toggled, and $\\frac\\pi2$ is added to every neighbour. With $-\\frac\\pi2$ in place of $\\frac\\pi2$, $-\\frac\\pi2$ is added instead. In MBQC terms, a vertex measured in the YZ-plane at angle $\\pm\\frac\\pi2$ can be deleted by a local complementation.\n\nAs a unitary, a phase gadget on $n$ qubits with phase $\\frac\\pi2$ is $\\exp(-i\\frac\\pi4 Z\\otimes\\cdots\\otimes Z)$, which (up to global phase) is a CZ gate between every pair of qubits followed by an S gate on each. This is the reason that Clifford phase gadgets never need to remain after simplification. Compare this with the [local complementation simplification](../local-complementation/), which removes a spider with phase $\\pm\\frac\\pi2$ itself.",
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n is the number of neighbours of u (shown for n = 3). The neighbours may have any phases and any number of further legs and edges; π/2 is added to their phases and existing edges between them are toggled (the scalar given is for neighbours that are not yet connected).",
+  "scalar": "sqrt(2)**((n-1)*(n-2)/2)",
+  "source": {
+    "bib": "Backens2020extraction",
+    "location": "Section 4.3 (Removing Clifford vertices), YZ-plane case"
+  },
+  "also_in": [
+    {
+      "bib": "backens2026completeness",
+      "location": "Section 3.3, rule (LCD)"
+    }
+  ],
+  "related": [
+    {
+      "id": "local-complementation",
+      "relation": "variant-of"
+    },
+    {
+      "id": "pauli-gadget-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "local complementation",
+    "phase gadget",
+    "graph-like",
+    "MBQC",
+    "clifford",
+    "simplification"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "targets",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "bulge": [
+          0.8,
+          0
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "clique": [
+          [
+            0,
+            0,
+            2
+          ]
+        ],
+        "bulge": [
+          0.8,
+          0
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

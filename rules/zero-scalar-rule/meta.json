@@ -1,0 +1,40 @@
+{
+  "id": "zero-scalar-rule",
+  "name": "Zero scalar rule",
+  "aliases": [
+    "(ZS)",
+    "zero absorbs scalars"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "scalars",
+  "order": 12,
+  "summary": "The zero scalar absorbs any other scalar spider.",
+  "description": "A Z-spider with phase π and no legs is the scalar 0, so it absorbs any other scalar, in particular a Z-spider with no legs and any phase α (which is the scalar $1+e^{i\\alpha}$).\n\nBackens added this rule, together with the [zero rule](../zero-rule/), to make the stabilizer ZX-calculus with scalars complete for zero diagrams (there α is a multiple of π/2). Backens, Perdrix and Wang later showed that it is derivable from the other rules.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "Backens:2015aa",
+    "location": "Section 4.3 (Completeness for stabilizer zero diagrams), zero scalar rule"
+  },
+  "also_in": [
+    {
+      "bib": "BackensSimplified",
+      "location": "Figure 1, rule (ZS); Section 3.2 shows it is not necessary"
+    }
+  ],
+  "related": [
+    {
+      "id": "zero-rule",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "zero",
+    "scalar",
+    "stabilizer",
+    "completeness"
+  ]
+}

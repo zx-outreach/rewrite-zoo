@@ -1,0 +1,50 @@
+{
+  "id": "triangle-z-pi-sandwich",
+  "name": "Z(π) between triangles",
+  "aliases": [
+    "(TR6)",
+    "(BW')",
+    "2(d)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 8,
+  "summary": "A triangle, a Z(π) and a reversed triangle in sequence equal an X(π) followed by a triangle.",
+  "description": "A triangle, a Z(π) phase and a triangle pointing the other way, in sequence, equal a NOT followed by a triangle. Jeandel, Perdrix and Vilmart use it as rule (BW') in their axiomatisation with parametrised triangles, where it replaces the [(BW) rule](../bw-rule/); in that paper the triangle is drawn in red.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR6)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR6)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(d)"
+    },
+    {
+      "bib": "jeandel2019completeness",
+      "location": "Fig. 6, rule (BW')"
+    }
+  ],
+  "related": [
+    {
+      "id": "bw-rule",
+      "relation": "see-also"
+    },
+    {
+      "id": "triangle-x-pi-commutation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "NOT"
+  ]
+}

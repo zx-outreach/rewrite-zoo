@@ -1,0 +1,46 @@
+{
+  "id": "lambda-box-phase-commutation",
+  "name": "λ-box commutes with Z-phases",
+  "aliases": [
+    "(L5)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "lambda-box",
+  "order": 6,
+  "summary": "A λ-box and a Z(α) phase commute.",
+  "description": "Both the λ-box and the Z-phase are diagonal, so they commute. Together they represent $\\mathrm{diag}(1, \\lambda e^{i\\alpha})$: every complex number is represented by a λ-box and a phase.\n\n**Conventions.** The λ-box of Ng and Wang is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in their papers, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). It is the same as a Z-box of arity 2 with label $\\lambda$, which is how it is drawn and checked here (the rule holds for every complex $\\lambda$; it is checked for some positive values). Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "lambda": {
+      "domain": "real",
+      "values": [
+        "1/3",
+        "2",
+        "5/2"
+      ]
+    },
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 2, rule (L5)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 6, rule (L5)"
+    }
+  ],
+  "related": [
+    {
+      "id": "lambda-box-spider-slide",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "phase",
+    "commutation"
+  ]
+}

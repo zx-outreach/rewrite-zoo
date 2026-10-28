@@ -1,0 +1,38 @@
+{
+  "id": "fe-wire-replication",
+  "name": "Spider unfusion with replicated wires",
+  "aliases": [
+    "wire replication"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 10,
+  "summary": "Unfusing a spider is fault-equivalent if the two halves are connected by three (or more) parallel wires.",
+  "description": "Unfusing a six-legged spider into two spiders connected by a single wire is not fault-equivalent: one flip on the connecting wire is equivalent to flips on three legs. Replicating the connecting wire fixes this: with three parallel wires there are pairwise detectors between them, so a fault on the internal wires is only undetectable if it occurs on all three, and then it can be pushed out through either spider without increasing its weight. Fault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1. The rewrite is moreover matchability-preserving. Replicating wires in the same way in the four-, five- and six-legged ring decompositions gives decompositions of spiders with $4n$, $5n$ and $6n$ legs.",
+  "conditions": "At least three parallel wires (shown for three).",
+  "scalar": "1",
+  "source": {
+    "bib": "Schweikart2025Masters",
+    "location": "Sec. 3.5.2, eqs. (3.76) and (3.77)"
+  },
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-six-legged-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "matchability-preserving",
+    "edge-flip noise",
+    "fault tolerance",
+    "unfusion",
+    "parallel wires",
+    "MWPM"
+  ]
+}

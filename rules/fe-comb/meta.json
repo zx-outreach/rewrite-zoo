@@ -1,0 +1,35 @@
+{
+  "id": "fe-comb",
+  "name": "Combining fault gadgets",
+  "aliases": [
+    "(Comb_fe)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 24,
+  "summary": "A fault gadget for the combination of two faults, with weight w₁ + w₂, can be added.",
+  "description": "Two $Z$-flip gadgets on different spiders, of weights $w_1$ and $w_2$, are fault-equivalent to the same two gadgets together with a gadget for their combined fault with weight $w_1 + w_2$: a red spider connected by fault-free edges to both spiders and by a noisy edge of weight $w_1 + w_2$ to a one-legged green spider. The combined fault could already be produced by both faults together at weight $w_1 + w_2$, so the induced weight of every fault is unchanged.\n\nA *fault gadget* is a red spider connected by fault-free edges to its targets (here Z-spiders, whose phase-free Z-flips it describes) and by a noisy *spawning edge*, annotated with the weight of the fault, to a one-legged green spider. A flip on the spawning edge spreads to the targets, so the gadget models one atomic fault; without a flip it does nothing. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 3, rule $(\\textsc{Comb}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "fe-merge",
+      "relation": "see-also"
+    },
+    {
+      "id": "fe-detect",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness",
+    "atomic faults"
+  ]
+}

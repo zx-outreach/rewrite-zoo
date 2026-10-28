@@ -1,0 +1,92 @@
+{
+  "id": "antiphase-twins",
+  "name": "Merging antiphase twins",
+  "aliases": [
+    "antiphase twins",
+    "twin merging"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "supplementarity",
+  "order": 4,
+  "summary": "Two spiders of the same colour with phases α and α+π and the same neighbourhood merge into one spider with phase 2α+π, with every connection doubled.",
+  "description": "Two spiders $u$ and $v$ are *antiphase twins* if they have the same colour, their phases differ by $\\pi$, and they have the same neighbourhood: every other spider is connected to $u$ by as many wires as to $v$. Antiphase twins with phases $\\alpha$ and $\\alpha+\\pi$ can be merged into a single spider with phase $2\\alpha+\\pi$ that is connected to each neighbour by twice as many wires.\n\nPerdrix and Wang showed that, in the presence of the other rules, merging antiphase twins is equivalent to [supplementarity](../supplementarity/), which is the special case of twins of degree one sharing a single neighbour. This gives supplementarity a purely graphical meaning. The doubled wires can be removed in pairs with the [Hopf rule](../hopf/) when the neighbours have the opposite colour.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "parameter_notes": "n is the number of common neighbours of the twins (shown for n = 2, as X-spiders with one output each); holds for any common neighbourhood.",
+  "scalar": "1",
+  "source": {
+    "bib": "supplementarity",
+    "location": "Section 3, Theorem (Antiphase Twins and Supplementarity)"
+  },
+  "related": [
+    {
+      "id": "supplementarity",
+      "relation": "generalises"
+    },
+    {
+      "id": "cyclotomic-supplementarity",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "supplementarity",
+    "antiphase",
+    "twins",
+    "merging"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "common neighbours",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          2
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ],
+        "index_vars": [
+          "beta"
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1,
+          2
+        ],
+        "offset": [
+          0,
+          2
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ],
+        "index_vars": [
+          "beta"
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2
+  }
+}

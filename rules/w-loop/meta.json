@@ -1,0 +1,41 @@
+{
+  "id": "w-loop",
+  "name": "W loop rule",
+  "aliases": [
+    "lp_W^{n,m}",
+    "signed wire counting"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-arithmetic",
+  "order": 3,
+  "summary": "Between a W split and a W merge, a wire with Z(π) cancels a plain wire.",
+  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nSplitting with a W-node and merging again with $k$ parallel wires gives $\\mathrm{diag}(1, k)$: the excitation can take any of the $k$ routes. A wire carrying a Pauli Z contributes $-1$ instead of $+1$, so $n$ plain wires and $m \\leq n$ wires with Z can be replaced by $n - m$ plain wires. This is Hadzihasanovic's generalised loop rule $\\mathrm{lp}_W^{n,m}$, a form of integer arithmetic inside the ZW-calculus; the case $n = m = 1$ is the [W Hopf rule](../w-hopf/). The stored instance has $n = 2$ and $m = 1$.\n\nWith arbitrary labels on the wires it becomes the [sum rule](../w-sum/).",
+  "parameters": {
+    "n": 2,
+    "m": 1
+  },
+  "parameter_notes": "$n$ plain wires and $m$ wires with Z(π) on the left, $n-m$ plain wires on the right; holds for all $n \\geq m$.",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), generalised loop rule I, $\\mathrm{lp}_W^{n,m}$"
+  },
+  "related": [
+    {
+      "id": "w-hopf",
+      "relation": "generalises"
+    },
+    {
+      "id": "w-sum",
+      "relation": "special-case-of"
+    }
+  ],
+  "tags": [
+    "W",
+    "loop",
+    "arithmetic",
+    "integers",
+    "parallel edges"
+  ]
+}

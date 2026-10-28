@@ -1,0 +1,82 @@
+{
+  "id": "fb-copy",
+  "name": "Copy rule is fault-bounding",
+  "aliases": [
+    "copy rule (fault boundedness)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 28,
+  "summary": "n separate |+⟩-states are fault-bounded by a Z-state plugged into an n-legged X-spider.",
+  "description": "The ordinary [copy rule](../state-copy/) is not fault-equivalent, but it can only improve fault tolerance: the $n$ separate one-legged Z-spiders on the left are *fault-bounded* by the right-hand side, meaning every fault on the left has a fault of at most the same weight with the same effect on the right (any flip on a boundary edge on the left is the same flip on the right). The converse fails, since a single flip on the internal edge on the right spreads to all $n$ legs. So applying the copy rule from right to left, to remove a spider, never makes a diagram less fault-tolerant. The colour-swapped version holds as well.",
+  "conditions": "Fault boundedness only (left is fault-bounded by right), not fault equivalence.",
+  "scalar": "sqrt(2)**(n - 1)",
+  "source": {
+    "bib": "boriskhesin2026spidercat:",
+    "location": "App. C.4, lemma on the copy rule"
+  },
+  "related": [
+    {
+      "id": "state-copy",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fb-bound",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-bounded",
+    "fault boundedness",
+    "copy",
+    "edge-flip noise",
+    "cat state"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "outputs",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          0.6,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n outputs (shown for n = 3); holds for any n ≥ 1."
+}

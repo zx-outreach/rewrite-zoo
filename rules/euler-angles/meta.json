@@ -1,0 +1,98 @@
+{
+  "id": "euler-angles",
+  "name": "Euler-angle rule (EU)",
+  "aliases": [
+    "(EU)",
+    "(P)",
+    "Euler rule",
+    "colour swapping of Euler angles",
+    "ZXZ = XZX",
+    "Euler angles"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "euler",
+  "order": 1,
+  "summary": "A Z–X–Z sequence of rotations equals an X–Z–X sequence of rotations, with angles given by explicit (non-linear) formulas.",
+  "description": "By Euler's rotation theorem every single-qubit unitary can be written both as a Z–X–Z and as an X–Z–X sequence of rotations. This rule makes that explicit: $R_Z(\\alpha_3)R_X(\\alpha_2)R_Z(\\alpha_1) = e^{i\\gamma}R_X(\\beta_3)R_Z(\\beta_2)R_X(\\beta_1)$, where the angles $\\beta_1,\\beta_2,\\beta_3$ and the global phase $\\gamma$ are the following functions of $\\alpha_1,\\alpha_2,\\alpha_3$. Let $x^+ = \\frac{\\alpha_1+\\alpha_3}2$, $x^- = x^+-\\alpha_3$, $z = \\cos\\frac{\\alpha_2}2\\cos x^+ + i\\sin\\frac{\\alpha_2}2\\cos x^-$ and $z' = \\cos\\frac{\\alpha_2}2\\sin x^+ - i\\sin\\frac{\\alpha_2}2\\sin x^-$. Then $\\beta_1 = \\arg z+\\arg z'$, $\\beta_2 = 2\\arg(i+|z/z'|)$, $\\beta_3 = \\arg z - \\arg z'$ and $\\gamma = x^+-\\arg z+\\frac{\\alpha_2-\\beta_2}2$.\n\nCoecke and Wang introduced the scalar-free version as rule (P), and showed that adding it makes the ZX-calculus complete for 2-qubit Clifford+T circuits; it necessarily leaves the Clifford+T fragment, since the angles $\\beta_i$ are generally not multiples of $\\pi/4$. Vilmart then showed that this single *non-linear* rule (with the scalar, which in the paper is drawn as a small diagram on the right-hand side) together with a few Clifford axioms and the [Clifford+T scalar rule (E)](../clifford-t-scalar/) is complete for the full ZX-calculus, replacing supplementarity and the axioms (C), (BW) and (A). A non-linear axiom like this one is necessary for completeness of the universal ZX-calculus.\n\nThe stored instance is checked for $\\alpha_1=\\frac\\pi3$, $\\alpha_2=\\frac\\pi4$, $\\alpha_3=\\frac{3\\pi}5$ (the other angles computed from the formulas); the authoring script also checks the formulas on random angles.",
+  "variables": {
+    "alpha1": {
+      "domain": "real",
+      "values": [
+        "1/3"
+      ]
+    },
+    "alpha2": {
+      "domain": "real",
+      "values": [
+        "1/4"
+      ]
+    },
+    "alpha3": {
+      "domain": "real",
+      "values": [
+        "3/5"
+      ]
+    },
+    "beta1": {
+      "domain": "real",
+      "values": [
+        "7319161/15651722"
+      ]
+    },
+    "beta2": {
+      "domain": "real",
+      "values": [
+        "652924649/854931739"
+      ]
+    },
+    "beta3": {
+      "domain": "real",
+      "values": [
+        "126417884/350387055"
+      ]
+    },
+    "gamma": {
+      "domain": "real",
+      "values": [
+        "-194958800/953801481"
+      ]
+    }
+  },
+  "conditions": "β₁, β₂, β₃ and γ are functions of α₁, α₂, α₃: with x⁺ = (α₁+α₃)/2, x⁻ = x⁺ − α₃, z = cos(α₂/2)cos(x⁺) + i sin(α₂/2)cos(x⁻) and z′ = cos(α₂/2)sin(x⁺) − i sin(α₂/2)sin(x⁻), one takes β₁ = arg z + arg z′, β₂ = 2 arg(i + |z/z′|), β₃ = arg z − arg z′ and γ = x⁺ − arg z + (α₂ − β₂)/2, with the conventions arg(0) = 0 and β₂ = 0 when z′ = 0.",
+  "scalar": "exp(I*gamma)",
+  "source": {
+    "bib": "coecke2018zx",
+    "location": "main theorem, rule (P)"
+  },
+  "also_in": [
+    {
+      "bib": "vilmarteulercompleteness",
+      "location": "Fig. 1, rule (EU)"
+    }
+  ],
+  "related": [
+    {
+      "id": "euler-angles-hadamard",
+      "relation": "variant-of"
+    },
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "see-also"
+    },
+    {
+      "id": "supplementarity",
+      "relation": "used-to-derive"
+    }
+  ],
+  "tags": [
+    "euler",
+    "euler angles",
+    "non-linear",
+    "universal",
+    "completeness",
+    "single qubit",
+    "unitary"
+  ],
+  "notes": "The build checks one generic instance of the angles (the variables are restricted to those values); `authoring/beyond_clifford.py` additionally verifies the formulas with PyZX on random angles."
+}

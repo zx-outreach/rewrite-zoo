@@ -1,0 +1,35 @@
+{
+  "id": "triangle-rule-tr9",
+  "name": "Triangle rule (TR9)",
+  "aliases": [
+    "(TR9)",
+    "2(l)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 11,
+  "summary": "A two-output identity between a structure with two triangles and one with two triangles, a Hadamard and Z(π) phases.",
+  "description": "The left-hand side is as in [(TR8)](../triangle-rule-tr8/), except that the last triangle points towards the output. The right-hand side contains a Hadamard, two Z(π) phases and two triangles. The paper writes the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the right-hand side.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR9)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR9)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(l)"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "Hadamard"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "fe-repeated-measurement",
+  "name": "Repeated measurement",
+  "aliases": [
+    "triple measurement fault equivalence"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 11,
+  "summary": "Repeating a (post-selected) Z-measurement several times is fault-equivalent to cutting the wire.",
+  "description": "A wire on which the same $Z$-measurement (an X-spider with a one-legged Z-spider attached) is repeated three times is fault-equivalent to the wire cut into a $\\langle +|$-effect and a $|+\\rangle$-state. Semantically, already a single such measurement cuts the wire; under noise, the repetitions form detecting regions so that faults between them are detected. The thesis notes that the same holds for any number $n \\geq 2$ of repetitions. Fault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1.",
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "Shown for n = 3 repetitions (the triple measurement of the thesis); holds for any n ≥ 2.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "Schweikart2025Masters",
+    "location": "Sec. 4.2, Lemma 4.1, eq. (4.6)"
+  },
+  "related": [
+    {
+      "id": "fe-identity-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "edge-flip noise",
+    "fault tolerance",
+    "measurement",
+    "repetition",
+    "syndrome extraction"
+  ]
+}

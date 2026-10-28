@@ -1,0 +1,43 @@
+{
+  "id": "bw-rule",
+  "name": "The (BW) rule",
+  "aliases": [
+    "(BW)",
+    "BW rule",
+    "black-white rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "supplementarity",
+  "order": 11,
+  "summary": "The second new axiom of the Jeandel–Perdrix–Vilmart Clifford+T axiomatisation: a single-qubit identity between two diagrams with π/4 phase gadgets.",
+  "description": "This is the second of the two axioms that Jeandel, Perdrix and Vilmart added to obtain the first complete axiomatisation of the Clifford+T ZX-calculus (the other one is [commutation of controls](../commutation-of-controls/)). Unlike (C) it is specific to the $\\frac\\pi4$ angle. Like (C) it arose from the translation between the ZX- and ZW-calculi used in the completeness proof, and the authors remark that it is \"hardly understandable as is\".\n\nBoth sides are single-qubit maps built from Clifford+T phases and small phase gadgets with $\\frac\\pi4$ phases. No derivation of (BW) from the earlier axioms was known when it was introduced.",
+  "scalar": "1",
+  "source": {
+    "bib": "SimonCompleteness",
+    "location": "Fig. 1, rule (BW)"
+  },
+  "also_in": [
+    {
+      "bib": "JPV-universal",
+      "location": "Fig. 1 and Fig. 2, rule (BW)"
+    },
+    {
+      "bib": "jeandel2019completeness",
+      "location": "Fig. 2, rule (BW)"
+    }
+  ],
+  "related": [
+    {
+      "id": "commutation-of-controls",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "clifford+t",
+    "completeness",
+    "axiom",
+    "ZW",
+    "T"
+  ]
+}

@@ -1,0 +1,1061 @@
+[
+ {
+  "bib": "SimonCompleteness",
+  "results": [
+   {
+    "title": "Completeness for the Clifford+T fragment",
+    "calculus": "ZX",
+    "fragment": "clifford+t",
+    "location": "Theorem 1; axioms in Fig. 1",
+    "summary": "The ZX-calculus with the rules of Fig. 1 is complete for the π/4-fragment (Clifford+T): two diagrams with angles multiple of π/4 are equal as matrices, scalars included, iff they can be rewritten into each other. All rules also hold upside-down and with the colours swapped.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(S2)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(S3)",
+      "rule": "cup-as-spider",
+      "description": "A bare cup (cap) equals a phase-free Z-spider with two outputs (inputs): wires can be bent."
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(SUP)",
+      "rule": "supplementarity"
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(C)",
+      "rule": "commutation-of-controls"
+     },
+     {
+      "label": "(BW)",
+      "rule": "bw-rule"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "JPV-universal",
+  "results": [
+   {
+    "title": "Completeness for linear diagrams with π/4 constants",
+    "calculus": "ZX",
+    "fragment": "clifford+t",
+    "location": "Theorem 1; axioms in Fig. 1",
+    "summary": "The Clifford+T axiomatisation of Fig. 1 (from SimonCompleteness) proves every equation that holds for all values of the variables between diagrams whose angles are linear in some variables with constants in π/4ℤ.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(S2)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(S3)",
+      "rule": "cup-as-spider",
+      "description": "A bare cup (cap) equals a phase-free Z-spider with two outputs (inputs): wires can be bent."
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(SUP)",
+      "rule": "supplementarity"
+     },
+     {
+      "label": "(C)",
+      "rule": "commutation-of-controls"
+     },
+     {
+      "label": "(BW)",
+      "rule": "bw-rule"
+     }
+    ]
+   },
+   {
+    "title": "Completeness for the universal ZX-calculus",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 6; axioms in Fig. 2",
+    "summary": "Adding the single non-linear rule (A) to the Clifford+T axioms gives a complete axiomatisation of the ZX-calculus for all of pure qubit quantum mechanics (arbitrary angles, scalars included).",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(S2)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(S3)",
+      "rule": "cup-as-spider",
+      "description": "A bare cup (cap) equals a phase-free Z-spider with two outputs (inputs): wires can be bent."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(C)",
+      "rule": "commutation-of-controls"
+     },
+     {
+      "label": "(SUP)",
+      "rule": "supplementarity"
+     },
+     {
+      "label": "(BW)",
+      "rule": "bw-rule"
+     },
+     {
+      "label": "(A)",
+      "rule": "addition-rule",
+      "note": "The stored instance is checked at one numerical choice of angles satisfying the side condition 2e^{iθ₃}cos γ = e^{iθ₁}cos α + e^{iθ₂}cos β."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "jeandel2019completeness",
+  "results": [
+   {
+    "title": "Clifford fragment (recalled)",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Section 2.2, Fig. 1",
+    "summary": "The paper recalls the known complete axiomatisation ZX_{π/2} of the Clifford (π/2-) fragment with scalars, a simplified version of Backens–Perdrix–Wang's; no new theorem is stated for it.",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(IV)",
+      "rule": "inverse-rule"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(ZO)",
+      "rule": "zero-rule-state"
+     }
+    ]
+   },
+   {
+    "title": "Completeness for the Clifford+T fragment",
+    "calculus": "ZX",
+    "fragment": "clifford+t",
+    "location": "Theorem 1.1 (and Theorem 1.2 for linear diagrams); axioms: Fig. 1 without (IV) and (ZO), plus Fig. 2",
+    "summary": "ZX_{π/4} = (ZX_{π/2} \\ {(IV),(ZO)}) + Fig. 2 is complete for the π/4-fragment, scalars included. The same axioms are also complete for diagrams linear in variables with constants in π/4ℤ (Theorem 1.2).",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(SUP)",
+      "rule": "supplementarity"
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(C)",
+      "rule": "commutation-of-controls"
+     },
+     {
+      "label": "(BW)",
+      "rule": "bw-rule"
+     }
+    ]
+   },
+   {
+    "title": "Completeness for the universal ZX-calculus",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 1.3; axioms: ZX_{π/4} plus rule (A) of Fig. 3",
+    "summary": "Adding the non-linear rule (A) to ZX_{π/4} gives a complete axiomatisation for all ZX-diagrams (pure qubit quantum mechanics, scalars included).",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(SUP)",
+      "rule": "supplementarity"
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(C)",
+      "rule": "commutation-of-controls"
+     },
+     {
+      "label": "(BW)",
+      "rule": "bw-rule"
+     },
+     {
+      "label": "(A)",
+      "rule": "addition-rule",
+      "note": "The stored instance is checked at one numerical choice of angles satisfying the side condition 2e^{iθ₃}cos γ = e^{iθ₁}cos α + e^{iθ₂}cos β."
+     }
+    ]
+   },
+   {
+    "title": "ZX-calculus with parametrised triangles",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 8.10; axioms in Fig. 6",
+    "summary": "With a parametrised triangle Δ(r) (r ∈ ℂ) added as a generator, the rules ZX_Δ of Fig. 6 are complete for pure qubit quantum mechanics.",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(K)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(SUP)",
+      "rule": "supplementarity"
+     },
+     {
+      "label": "(C)",
+      "rule": "commutation-of-controls"
+     },
+     {
+      "label": "(TD)",
+      "rule": "param-triangle-decomposition",
+      "description": "Triangle decomposition: for α ≠ π/2 mod π, the parametrised triangle with parameter e^{iθ}tan(α) equals a ZX-diagram in the angles α and θ (with a scalar)."
+     },
+     {
+      "label": "(BW')",
+      "rule": "triangle-z-pi-sandwich",
+      "description": "A triangle, a Z(π) phase and an upside-down triangle in sequence equal an X(π) phase followed by a triangle; replaces (BW)."
+     },
+     {
+      "label": "(TA)",
+      "rule": "param-triangle-addition",
+      "description": "Triangle addition: two parametrised triangles in sequence, with parameters r and s, equal one triangle with parameter r+s."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "vilmarteulercompleteness",
+  "results": [
+   {
+    "title": "Completeness with the Euler-angle rule",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 1; axioms in Fig. 1",
+    "summary": "The nine rules of Fig. 1, including the non-linear Euler-angle rule (EU), form a complete axiomatisation of the ZX-calculus for pure qubit quantum mechanics, scalars included. Along the way, the paper shows that the same set is complete for the π/2- and π/4-fragments.",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I_g)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(I_r)",
+      "rule": "identity-removal",
+      "note": "Colour-swapped version (X-spider) of the stored rule."
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "euler-angles",
+      "note": "The paper writes the scalar e^{iγ} as a diagram; here it is stored as a number. The stored instance is checked at one numerical choice of angles."
+     },
+     {
+      "label": "(HD)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     }
+    ]
+   },
+   {
+    "title": "Shorter axiomatisation ZX′",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 2; axioms in Fig. 2",
+    "summary": "(HD), (EU) and (E) can be replaced by (EU') and (IV), giving the complete eight-rule axiomatisation ZX′ of Fig. 2.",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I_g)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(I_r)",
+      "rule": "identity-removal",
+      "note": "Colour-swapped version (X-spider) of the stored rule."
+     },
+     {
+      "label": "(IV)",
+      "rule": "inverse-scalar-phase"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(EU')",
+      "rule": "euler-angles-hadamard",
+      "note": "The paper writes the scalar e^{iγ} as a diagram; here it is stored as a number. The stored instance is checked at one numerical choice of angles."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "ng2017universal",
+  "results": [
+   {
+    "title": "Universal completion with triangle and λ-box",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 5.2; axioms in Figs. 1, 2 and 3",
+    "summary": "With two extra generators, the triangle and the λ-box, the rules of Figs. 1–3 make the ZX-calculus complete for pure qubit quantum mechanics (scalars included). Upside-down versions of all rules also hold.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(S2)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(S3)",
+      "rule": "cup-as-spider",
+      "description": "A bare cup (cap) equals a phase-free Z-spider with two outputs (inputs): wires can be bent."
+     },
+     {
+      "label": "(H2)",
+      "rule": "hadamard-cancellation",
+      "note": "The paper composes two Hadamard gates; here they are two Hadamard edges around a phase-free Z-spider."
+     },
+     {
+      "label": "(H3)",
+      "rule": "hadamard-cup-slide",
+      "description": "A Hadamard gate on one leg of a cap can be moved to the other leg."
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "The paper writes the scalar e^{-iπ/4} as diagrams (two triple-wire Z/X pairs and a connected X(-π/2)/Z(-π/2) pair); here it is stored as a number."
+     },
+     {
+      "label": "(K2)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(S4)",
+      "rule": "state-copy",
+      "note": "Matches only up to representation: the paper's rule says a Z(α) phase followed by a phase-free X-effect equals the X-effect, i.e. the transposed one-leg case (a = 0) of the stored rule, which has two legs."
+     },
+     {
+      "label": "(IV)",
+      "rule": "lambda-inverse-scalar",
+      "description": "A scalar built from a Z/X pair, a Z(π)-spider and a λ-box with label 1 − 1/√2 equals the empty diagram."
+     },
+     {
+      "label": "(L1)",
+      "rule": "lambda-box-spider-slide",
+      "description": "A λ-box can be moved between the legs of a phase-free Z-spider."
+     },
+     {
+      "label": "(AD)",
+      "rule": "lambda-addition",
+      "description": "Addition rule: two branches carrying λ₁e^{iβ} and λ₂e^{iα} (λ-boxes and phases), joined by a W-like structure built from triangles, equal a single branch carrying λe^{iγ} where λe^{iγ} = λ₁e^{iβ} + λ₂e^{iα}."
+     },
+     {
+      "label": "(L2)",
+      "rule": "lambda-box-x-effect",
+      "description": "A λ-box followed by an X-effect equals the X-effect."
+     },
+     {
+      "label": "(L3)",
+      "rule": "lambda-box-identity",
+      "description": "A λ-box with label 1 is the identity."
+     },
+     {
+      "label": "(L4)",
+      "rule": "lambda-box-multiplication",
+      "description": "Two λ-boxes in sequence multiply: λ₁ then λ₂ equals λ₁·λ₂."
+     },
+     {
+      "label": "(L5)",
+      "rule": "lambda-box-phase-commutation",
+      "description": "A λ-box commutes with a Z(α) phase."
+     },
+     {
+      "label": "(TR1)",
+      "rule": "triangle-x-pi-commutation",
+      "description": "An upside-down triangle followed by X(π) equals X(π) followed by a triangle."
+     },
+     {
+      "label": "(TR2)",
+      "rule": "triangle-x-state",
+      "description": "The triangle leaves the phase-free X-state unchanged."
+     },
+     {
+      "label": "(TR3)",
+      "rule": "triangle-x-pi-state",
+      "description": "The triangle applied to the X(π)-state gives the phase-free Z-state (with a scalar Z/X pair)."
+     },
+     {
+      "label": "(TR4)",
+      "rule": "triangle-transpose-z-pi-state",
+      "description": "An upside-down triangle applied to the Z(π)-state gives the X-state (with a scalar Z/X pair)."
+     },
+     {
+      "label": "(TR5)",
+      "rule": "triangle-hadamard-loop",
+      "description": "A Z-spider splitting into a branch with a Hadamard and a branch with a triangle, merged by a Z-spider, equals a triangle followed by Z(π) (with a scalar)."
+     },
+     {
+      "label": "(TR6)",
+      "rule": "triangle-z-pi-sandwich",
+      "description": "A triangle, Z(π) and an upside-down triangle in sequence equal X(π) followed by a triangle."
+     },
+     {
+      "label": "(TR7)",
+      "rule": "triangle-hopf",
+      "description": "A Z-spider and an X-spider joined by a plain branch and a branch with a triangle equal a single triangle (with a scalar)."
+     },
+     {
+      "label": "(TR8)",
+      "rule": "triangle-rule-tr8",
+      "description": "A two-qubit identity commuting a triangle through a structure of Z-spiders and an X-spider."
+     },
+     {
+      "label": "(TR9)",
+      "rule": "triangle-rule-tr9",
+      "description": "A two-qubit identity involving triangles, an X-spider and Z-spiders, whose right-hand side contains a Hadamard and Z(π)-phases."
+     },
+     {
+      "label": "(TR10)",
+      "rule": "triangle-parallel",
+      "description": "Two parallel triangles between two Z-spiders equal a single triangle."
+     },
+     {
+      "label": "(TR11)",
+      "rule": "triangle-rule-tr11",
+      "description": "Two inputs passing through a Z-spider and an X(π)-spider that are joined by a wire, then through triangles into a Z-spider, with a scalar, equal the two inputs passing through triangles into a Z-spider."
+     },
+     {
+      "label": "(TR12)",
+      "rule": "triangle-rule-tr12",
+      "description": "A Z-spider splitting into two branches with triangles, followed by a Z-spider and an X-spider joined by a wire (a CNOT), with a scalar, equals the Z-spider splitting into two branches with triangles."
+     },
+     {
+      "label": "(TR13)",
+      "rule": "triangle-phase-copy",
+      "description": "Z(α) phases on both output legs of a structure made of an X-spider, Z-spiders and a triangle equal a single Z(α) on its input."
+     },
+     {
+      "label": "(TR14)",
+      "rule": "triangle-lambda-copy",
+      "description": "λ-boxes on both output legs of a structure made of an X-spider, Z-spiders and a triangle equal a single λ-box on its input."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "ng_completeness_2018",
+  "results": [
+   {
+    "title": "Completeness for Clifford+T with triangle and λ-box",
+    "calculus": "ZX",
+    "fragment": "clifford+t",
+    "location": "Theorem 6.2; axioms in Figs. 4, 5 and 6",
+    "summary": "Restricting angles to multiples of π/4 and λ to non-negative dyadic rationals, the rules of Figs. 4–6 (with triangle and λ-box generators) are complete for Clifford+T quantum mechanics, i.e. matrices over ℤ[i, 1/√2].",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(S2)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(S3)",
+      "rule": "cup-as-spider",
+      "description": "A bare cup (cap) equals a phase-free Z-spider with two outputs (inputs): wires can be bent."
+     },
+     {
+      "label": "(H2)",
+      "rule": "hadamard-cancellation",
+      "note": "The paper composes two Hadamard gates; here they are two Hadamard edges around a phase-free Z-spider."
+     },
+     {
+      "label": "(H3)",
+      "rule": "hadamard-cup-slide",
+      "description": "A Hadamard gate on one leg of a cap can be moved to the other leg."
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "The paper writes the scalar e^{-iπ/4} as diagrams (two triple-wire Z/X pairs and a connected X(-π/2)/Z(-π/2) pair); here it is stored as a number."
+     },
+     {
+      "label": "(K2)",
+      "rule": "pi-commutation",
+      "note": "The paper's version has one input and one output, the colours swapped and the scalars written as diagrams; the stored rule copies an X(π) through a Z(α)-spider with two outputs, with scalar e^{iα} as a number."
+     },
+     {
+      "label": "(TR1)",
+      "rule": "triangle-x-pi-commutation",
+      "description": "An upside-down triangle followed by X(π) equals X(π) followed by a triangle."
+     },
+     {
+      "label": "(TR2)",
+      "rule": "triangle-x-state",
+      "description": "The triangle leaves the phase-free X-state unchanged."
+     },
+     {
+      "label": "(TR3)",
+      "rule": "triangle-x-pi-state",
+      "description": "The triangle applied to the X(π)-state gives the phase-free Z-state (with a scalar Z/X pair)."
+     },
+     {
+      "label": "(TR4')",
+      "rule": "triangle-z-pi-state",
+      "description": "A triangle applied to the Z(π)-state gives the X(π)-state, times a scalar diagram (Z(π) and X(π) joined by three wires)."
+     },
+     {
+      "label": "(TR5')",
+      "rule": "triangle-loop-disconnect",
+      "description": "A Z-spider splitting into a branch with a triangle and a branch with an upside-down triangle, merged by an X-spider, with a scalar, equals a disconnected phase-free Z-effect and Z-state."
+     },
+     {
+      "label": "(TR6)",
+      "rule": "triangle-z-pi-sandwich",
+      "description": "A triangle, Z(π) and an upside-down triangle in sequence equal X(π) followed by a triangle."
+     },
+     {
+      "label": "(TR7)",
+      "rule": "triangle-hopf",
+      "description": "A Z-spider and an X-spider joined by a plain branch and a branch with a triangle equal a single triangle (with a scalar)."
+     },
+     {
+      "label": "(TR8)",
+      "rule": "triangle-rule-tr8",
+      "description": "A two-qubit identity commuting a triangle through a structure of Z-spiders and an X-spider."
+     },
+     {
+      "label": "(TR9)",
+      "rule": "triangle-rule-tr9",
+      "description": "A two-qubit identity involving triangles, an X-spider and Z-spiders, whose right-hand side contains a Hadamard and Z(π)-phases."
+     },
+     {
+      "label": "(TR10')",
+      "rule": "triangle-z-pi-triangle",
+      "description": "A triangle, Z(π) and a triangle in sequence equal Z(π)."
+     },
+     {
+      "label": "(TR12)",
+      "rule": "triangle-rule-tr12",
+      "description": "A Z-spider splitting into two branches with triangles, followed by a Z-spider and an X-spider joined by a wire (a CNOT), with a scalar, equals the Z-spider splitting into two branches with triangles."
+     },
+     {
+      "label": "(TR13)",
+      "rule": "triangle-phase-copy",
+      "description": "Z(α) phases on both output legs of a structure made of an X-spider, Z-spiders and a triangle equal a single Z(α) on its input."
+     },
+     {
+      "label": "(IV')",
+      "rule": "clifford-t-inverse-scalar"
+     },
+     {
+      "label": "(L1)",
+      "rule": "lambda-box-spider-slide",
+      "description": "A λ-box can be moved between the legs of a phase-free Z-spider."
+     },
+     {
+      "label": "(AD)",
+      "rule": "lambda-addition-simplified",
+      "description": "Addition rule: two branches carrying λ₁e^{iβ} and λ₂e^{iα} (λ-boxes and phases), joined by a W-like structure built from triangles, equal a single branch carrying λe^{iγ} where λe^{iγ} = λ₁e^{iβ} + λ₂e^{iα}."
+     },
+     {
+      "label": "(L2)",
+      "rule": "lambda-box-x-effect",
+      "description": "A λ-box followed by an X-effect equals the X-effect."
+     },
+     {
+      "label": "(L3)",
+      "rule": "lambda-box-identity",
+      "description": "A λ-box with label 1 is the identity."
+     },
+     {
+      "label": "(L4)",
+      "rule": "lambda-box-multiplication",
+      "description": "Two λ-boxes in sequence multiply: λ₁ then λ₂ equals λ₁·λ₂."
+     },
+     {
+      "label": "(L5)",
+      "rule": "lambda-box-phase-commutation",
+      "description": "A λ-box commutes with a Z(α) phase."
+     },
+     {
+      "label": "(TR14)",
+      "rule": "triangle-lambda-copy",
+      "description": "λ-boxes on both output legs of a structure made of an X-spider, Z-spiders and a triangle equal a single λ-box on its input."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "coecke2018zx",
+  "results": [
+   {
+    "title": "Completeness for 2-qubit Clifford+T circuits",
+    "calculus": "ZX",
+    "fragment": "clifford+t",
+    "location": "Theorem 2",
+    "summary": "The rules (S1), (S2), (B1), (B2), (H1), (H2), (N) and (P) make the ZX-calculus complete for 2-qubit Clifford+T circuits. All rules hold up to a non-zero scalar.",
+    "axioms": [
+     {
+      "label": "(S1)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(S2)",
+      "rule": "identity-removal",
+      "note": "The paper states the green and red versions in one rule; the stored rule is the Z-spider case."
+     },
+     {
+      "label": "(B1)",
+      "rule": "state-copy",
+      "note": "Phase-free case of the stored rule; the paper ignores scalars."
+     },
+     {
+      "label": "(B2)",
+      "rule": "bialgebra",
+      "note": "The paper ignores scalars."
+     },
+     {
+      "label": "(H1)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "The paper ignores scalars (the stored rule has scalar e^{-iπ/4})."
+     },
+     {
+      "label": "(H2)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(N)",
+      "rule": "pi-commutation",
+      "note": "The paper's version is Z(α) followed by X(π) equals X(π) followed by Z(−α), on one wire and up to a scalar; the stored rule has two outputs and the colours swapped."
+     },
+     {
+      "label": "(P)",
+      "rule": "euler-angles",
+      "note": "The paper only asserts that suitable β's exist (with a side condition relating α₂ and γ₂) and works up to scalars; the stored rule uses Vilmart's explicit formulas and is checked at one numerical instance."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "backens2014zx",
+  "results": [
+   {
+    "title": "Completeness for the single-qubit Clifford+T group",
+    "calculus": "ZX",
+    "fragment": "clifford+t",
+    "location": "Section 2.1 (rules); Section 3, Theorems 5 and 8 (unique normal form)",
+    "summary": "With the rules (Id), (S), (P), (C), (Eu) and their colour-swapped versions, every single-qubit Clifford+T diagram (one input, one output) rewrites to a unique normal form, so the ZX-calculus is complete for the single-qubit Clifford+T group. Equality is up to a global scalar.",
+    "axioms": [
+     {
+      "label": "(Id)",
+      "rule": "identity-removal",
+      "note": "The paper allows a phase 2nπ, which is the same as 0."
+     },
+     {
+      "label": "(S)",
+      "rule": "spider-fusion",
+      "note": "The paper only uses the one-input one-output case."
+     },
+     {
+      "label": "(P)",
+      "rule": "pi-commutation",
+      "note": "The paper's version is on one wire (X(φ) then Z(π) equals Z(π) then X(−φ)), up to a scalar; the stored rule has two outputs and the colours swapped."
+     },
+     {
+      "label": "(C)",
+      "rule": "colour-change",
+      "note": "One-input one-output case: H Z(φ) H = X(φ), with Hadamard gates instead of Hadamard edges."
+     },
+     {
+      "label": "(Eu)",
+      "rule": "euler-decomposition-hadamard",
+      "note": "The paper ignores scalars (the stored rule has scalar e^{-iπ/4})."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "bib": "k.stoltz2026minimality",
+  "results": [
+   {
+    "title": "Complete and minimal ruleset ZX_opt",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 2.5; axioms in Fig. 2",
+    "summary": "Vilmart's ruleset without (I_r) is complete for pure qubit quantum mechanics and minimal: (I_r) is derivable and every remaining rule, including (B) and (I_g), is necessary. No colour-swapped or flipped versions of the rules are assumed.",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I_g)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(E)",
+      "rule": "clifford-t-scalar"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(EU)",
+      "rule": "euler-angles",
+      "note": "The paper writes the scalar e^{iγ} as a diagram; here it is stored as a number. The stored instance is checked at one numerical choice of angles."
+     },
+     {
+      "label": "(HD)",
+      "rule": "hadamard-gadget-decomposition"
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     }
+    ]
+   },
+   {
+    "title": "Complete and minimal ruleset ZX′_opt",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Section 5; axioms in Fig. 3",
+    "summary": "Vilmart's shorter ruleset ZX′ without (I_r) is likewise complete and minimal.",
+    "axioms": [
+     {
+      "label": "(S)",
+      "rule": "spider-fusion"
+     },
+     {
+      "label": "(I_g)",
+      "rule": "identity-removal"
+     },
+     {
+      "label": "(IV)",
+      "rule": "inverse-scalar-phase"
+     },
+     {
+      "label": "(CP)",
+      "rule": "state-copy",
+      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+     },
+     {
+      "label": "(B)",
+      "rule": "bialgebra",
+      "note": "The paper writes the scalar √2 as a diagram (a connected Z/X pair); here it is stored as a number."
+     },
+     {
+      "label": "(H)",
+      "rule": "colour-change",
+      "note": "The paper writes Hadamard gates on the legs of one of the spiders; here they are Hadamard edges."
+     },
+     {
+      "label": "(EU')",
+      "rule": "euler-angles-hadamard",
+      "note": "The paper writes the scalar e^{iγ} as a diagram; here it is stored as a number. The stored instance is checked at one numerical choice of angles."
+     }
+    ]
+   }
+  ]
+ }
+]

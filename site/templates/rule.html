@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block bodyclass %}page-rule{% endblock %}
+{% block description %}{{ rule.name }}: {{ rule.summary }}{% endblock %}
+{% macro paper(p) -%}
+<span class="paper-title">{% if p.arxiv %}<a href="{{ p.arxiv }}">{{ p.title }}</a>{% elif p.link %}<a href="{{ p.link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</span>.
+<span class="paper-authors">{{ p.author_str }}</span>{% if p.year %} ({{ p.year }}){% endif %}.
+{% if p.venue %}<span class="paper-venue">{{ p.venue }}</span>.{% endif %}
+{% if p.doi_url %}<a class="pill" href="{{ p.doi_url }}">journal</a>{% endif %}
+{% if p.arxiv %}<a class="pill" href="{{ p.arxiv }}">arXiv</a>{% endif %}
+{% if p.location %}<span class="location">{{ p.location }}</span>{% endif %}
+{%- endmacro %}
+{% block content %}
+<header class="rule-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ root }}index.html">Rules</a> › <a href="{{ root }}groups/{{ rule.group.id }}/index.html">{{ rule.group.name }}</a></nav>
+  <h1>{{ rule.name }}</h1>
+  {% if rule.aliases %}<p class="aliases">Also known as: {% for a in rule.aliases %}<span>{{ a }}</span>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+  <p class="badges">
+    <span class="badge calc">{{ rule.calculus }}</span>
+    <span class="badge frag-{{ rule.fragment|replace('+','p') }}" title="The smallest fragment containing this rule">{{ rule.fragment_name }}</span>
+    {% if arity %}<span class="badge arity" title="This rule holds for any number of legs">any number of legs</span>{% endif %}
+    {% if rule.kind == "circuit" %}<span class="badge circuit">circuit</span>{% endif %}
+    {% if rule.checked %}
+    <span class="badge verified" title="LHS = scalar · RHS checked by tensor contraction for {{ rule.n_variants }} variants and {{ rule.n_samples }} parameter samples">✓ Verified with PyZX {{ pyzx_version }}</span>
+    {% else %}
+    <span class="badge unchecked" title="This rule cannot be represented in PyZX, so it is drawn but not checked">not checked</span>
+    {% endif %}
+  </p>
+  <p class="lede">{{ rule.summary }}</p>
+  {% if not rule.checked %}<p class="alt-note"><strong>Not checked:</strong> {{ rule.unchecked_reason or "this rule uses notation that PyZX cannot represent" }}. It is drawn here and can be exported to TikZ, but it is not checked and cannot be exported to PyZX or ZXLive.</p>{% endif %}
+  {% if rule.alternative_of %}<p class="alt-note">This is an alternative representation of <a href="{{ root }}rules/{{ rule.alternative_of.id }}/index.html">{{ rule.alternative_of.name }}</a>, in the form needed for a particular paper.</p>{% endif %}
+</header>
+
+<section class="diagram-panel" id="diagram-panel" aria-label="Rule diagram">
+  <div class="toolbar" role="group" aria-label="Diagram options">
+    <div class="control" data-control="view">
+      <span class="control-label">View</span>
+      <div class="seg">
+        <button type="button" data-value="two-colour" title="Z- and X-spiders, Hadamards drawn as boxes">Two-colour</button>
+        <button type="button" data-value="gh" title="Only Z-spiders: X-spiders are turned into Z-spiders with Hadamard edges">GH</button>
+        <button type="button" data-value="graph-like" title="Graph-like: Z-spiders connected only by Hadamard edges, fully fused, no self-loops or parallel edges">Graph-like</button>
+      </div>
+    </div>
+    <div class="control" data-control="symmetry">
+      <span class="control-label">Variant</span>
+      <div class="seg">
+        <button type="button" data-value="id" title="The rule as stated">As stated</button>
+        <button type="button" data-value="conj" title="Complex conjugate: negate all phases">Conjugate</button>
+        <button type="button" data-value="transpose" title="Mirror the diagram: inputs become outputs">Transpose</button>
+        <button type="button" data-value="adjoint" title="Conjugate transpose">Adjoint</button>
+      </div>
+    </div>
+    <div class="control arity" id="arity-controls" hidden><span class="control-label">Legs</span></div>
+    <div class="control toggles">
+      <label class="check" data-control="colour"><input type="checkbox" id="opt-colour"> Swap colours</label>
+      <label class="check"><input type="checkbox" id="opt-swap"> Swap sides</label>
+      <label class="check" data-control="scalarside"><input type="checkbox" id="opt-scalar"> Scalar on left</label>
+    </div>
+  </div>
+  <div class="equation" id="equation" aria-live="polite"></div>
+  <p class="diagram-note muted" id="variant-note"></p>
+  <div class="downloads">
+    <span class="control-label">Download this version</span>
+    <div class="dl-buttons">
+      <button type="button" data-dl="tikzEq">TikZ (equation)</button>
+      <button type="button" data-dl="tikzLhs">TikZ (LHS)</button>
+      <button type="button" data-dl="tikzRhs">TikZ (RHS)</button>
+      <button type="button" data-dl="lhsJson">PyZX JSON (LHS)</button>
+      <button type="button" data-dl="rhsJson">PyZX JSON (RHS)</button>
+      <button type="button" data-dl="zxr">ZXLive rule (.zxr)</button>
+      <button type="button" data-copy="tikzEq" class="ghost">Copy TikZ</button>
+    </div>
+    <p class="muted small">Also: <a href="{{ root }}downloads/{{ rule.id }}/{{ rule.id }}.zip">all variants (.zip)</a> · <a href="{{ root }}downloads/{{ rule.id }}/meta.json">metadata (meta.json)</a> · <a href="{{ root }}downloads/zx-rewrites.tikzstyles">TikZiT styles</a></p>
+  </div>
+</section>
+
+<div class="rule-body">
+  <section class="prose">
+    <h2>Description</h2>
+    {{ rule.description_html|safe }}
+    {% if rule.conditions %}<p><strong>Conditions:</strong> {{ rule.conditions }}</p>{% endif %}
+    {% if rule.notes_html %}<h3>Notes</h3>{{ rule.notes_html|safe }}{% endif %}
+  </section>
+
+  <aside class="facts">
+    <h2>Details</h2>
+    <dl>
+      {% if rule.variables %}
+      <dt>Parameters</dt>
+      <dd>{% for v in rule.variables %}<span class="math">${{ v.tex }}$</span> ∈ {{ v.domain }}{% if v.checked %} (checked for {{ v.checked|join(', ') }}){% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}</dd>
+      {% endif %}
+      {% if rule.parameter_notes %}<dt>Arity</dt><dd>{{ rule.parameter_notes }}</dd>{% endif %}
+      <dt>Scalar</dt>
+      <dd>{% if rule.scalar_general is none %}Holds up to a non-zero scalar.{% elif rule.scalar_general == "1" %}Exact equality, no scalar.{% else %}LHS = <span class="math">${{ rule.scalar_general }}$</span> · RHS{% endif %}</dd>
+      <dt>Calculus</dt><dd>{{ rule.calculus }}</dd>
+      <dt>Fragment</dt><dd>{{ rule.fragment_name }}</dd>
+      <dt>Group</dt><dd><a href="{{ root }}groups/{{ rule.group.id }}/index.html">{{ rule.group.name }}</a></dd>
+      {% if rule.tags %}<dt>Keywords</dt><dd>{{ rule.tags|join(', ') }}</dd>{% endif %}
+    </dl>
+  </aside>
+</div>
+
+<section class="sources">
+  <h2>Sources</h2>
+  <h3>First appeared in</h3>
+  <p class="ref">{{ paper(rule.source) }}</p>
+  {% if rule.also_in %}
+  <h3>Also appears in</h3>
+  <ul class="refs">{% for p in rule.also_in %}<li>{{ paper(p) }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if rule.axiom_of %}
+  <h3>Axiom in the complete rule set of</h3>
+  <ul class="refs">{% for p in rule.axiom_of %}<li>{% if p.labels %}<strong>{{ p.labels|join(', ') }}</strong> in {% endif %}{{ paper(p) }}{% if p.completeness %} <a class="pill" href="{{ root }}completeness/{{ p.completeness }}/index.html">complete rule set</a>{% endif %}</li>{% endfor %}</ul>
+  {% endif %}
+</section>
+
+{% if alternatives %}
+<section class="alternatives">
+  <h2>Alternative representations</h2>
+  <p class="muted">Equivalent versions of this rule in the form in which they appear in other papers.</p>
+  {% for a in alternatives %}
+  <article class="group-rule">
+    <div class="group-rule-head"><h3><a href="{{ root }}rules/{{ a.id }}/index.html">{{ a.name }}</a></h3> <span class="badge frag-{{ a.fragment|replace('+','p') }}">{{ a.fragment_name }}</span></div>
+    <div class="equation static" data-alt-eq="{{ a.id }}"></div>
+    <p>{{ a.summary }} <span class="muted">— {{ a.cite }}</span></p>
+  </article>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% if rule.related %}
+<section class="related">
+  <h2>Related rules</h2>
+  <ul class="related-list">
+  {% for r in rule.related %}<li><span class="relation">{{ r.relation_name }}</span> <a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a></li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}
+{% block scripts %}
+<script type="application/json" id="alt-data">{{ alternatives|json|safe }}</script>
+<script type="application/json" id="rule-data">{{ {"id": rule.id, "name": rule.name, "summary": rule.summary, "exports": rule.exports, "checked": rule.checked, "defaultKey": rule.default_key, "scalarSide": rule.scalar_side, "arity": arity, "variants": variants}|json|safe }}</script>
+{% endblock %}

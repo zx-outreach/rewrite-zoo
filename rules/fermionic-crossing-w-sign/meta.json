@@ -1,0 +1,40 @@
+{
+  "id": "fermionic-crossing-w-sign",
+  "name": "Black vertices pass through the crossing with a sign",
+  "aliases": [
+    "fswaps-W",
+    "the black vertex is odd"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 14,
+  "summary": "Moving a wire across a black vertex through fermionic crossings puts a weight −1 on it.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe symmetric black vertex (the W-state $\\sum_k |0\\cdots010\\cdots0\\rangle$, drawn as a triangle without input dot) is *odd*: each of its terms has exactly one $|1\\rangle$. So a wire that crosses all its legs on one side through fermionic crossings can be moved to cross all its legs on the other side, at the price of a weight $-1$ (the Pauli Z) on that wire.\n\nCompare with [the W merge](../fermionic-crossing-w-merge/), which is even and passes the crossing without a sign.",
+  "parameter_notes": "Shown for a black vertex with two legs on each side; holds for any number of legs.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "carette2023compositionality",
+    "location": "Figure 1 (axioms of the planar W-calculus), row 3, 2nd axiom"
+  },
+  "related": [
+    {
+      "id": "fermionic-crossing-w-merge",
+      "relation": "see-also"
+    },
+    {
+      "id": "fermionic-crossing-not",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "W",
+    "odd",
+    "sign",
+    "planar W-calculus"
+  ]
+}

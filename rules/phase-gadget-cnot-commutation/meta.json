@@ -1,0 +1,44 @@
+{
+  "id": "phase-gadget-cnot-commutation",
+  "name": "Pushing a phase gadget through a CNOT",
+  "aliases": [
+    "gadget-CNOT commutation",
+    "phase gadget through CNOT"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "phase-gadgets",
+  "order": 4,
+  "summary": "A phase gadget on the target of a CNOT gains (or loses) the control qubit when pushed through it.",
+  "description": "A phase gadget on a set of qubits S that contains the target but not the control of a CNOT can be pushed through the CNOT, after which it also acts on the control qubit. Conversely, if S contains both control and target, pushing it through removes the control (read the rule from right to left). This is because the CNOT maps the parity $x_c\\oplus x_t$ to $x_t$.\n\nWhen the gadget acts only on the target, it is a Z-phase on the target, and pushing it through gives a two-qubit gadget; this is the basis of [building gadgets from CNOTs](../phase-gadget-cnot-conjugation/). The rule follows from spider fusion and the [bialgebra rule](../bialgebra/), and is central to phase-polynomial and Pauli-exponential circuit synthesis.",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameter_notes": "Shown for a gadget on the target and one further qubit; it holds for gadgets on any number of qubits.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "phase-gadget-cnot-conjugation",
+      "relation": "see-also"
+    },
+    {
+      "id": "bialgebra",
+      "relation": "derived-from"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "CNOT",
+    "commutation",
+    "phase polynomial",
+    "circuit"
+  ]
+}

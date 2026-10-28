@@ -1,0 +1,47 @@
+{
+  "id": "inverse-scalar-phase",
+  "name": "Inverse rule with a phase (IV)",
+  "aliases": [
+    "(IV)",
+    "inverse rule",
+    "parametrised inverse"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "scalars",
+  "order": 21,
+  "summary": "A Z-state with any phase α plugged into a phase-free X-effect, next to a Z- and X-spider connected by three wires, is the empty diagram.",
+  "description": "A Z-spider with phase $\\alpha$ connected to a phase-free X-spider represents the scalar $\\sqrt2$ for every $\\alpha$, and a phase-free Z- and X-spider connected by three wires represent $\\frac1{\\sqrt2}$, so together they are the empty diagram. In particular the first scalar does not depend on $\\alpha$.\n\nIn older axiomatisations the inverse rule (IV) appears without the phase. Vilmart showed that the version with an arbitrary phase $\\alpha$, together with the [Euler rule with a Hadamard](../euler-angles-hadamard/), can replace the Euler decomposition of the Hadamard, the [Euler-angle rule](../euler-angles/) and the [Clifford+T scalar rule (E)](../clifford-t-scalar/), giving a complete axiomatisation of the universal ZX-calculus with only seven rules.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "vilmarteulercompleteness",
+    "location": "Fig. 2, rule (IV)"
+  },
+  "related": [
+    {
+      "id": "clifford-t-scalar",
+      "relation": "see-also"
+    },
+    {
+      "id": "euler-angles-hadamard",
+      "relation": "see-also"
+    },
+    {
+      "id": "scalar-state-effect",
+      "relation": "derived-from"
+    },
+    {
+      "id": "scalar-inverse-sqrt2",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "empty diagram",
+    "inverse",
+    "universal"
+  ]
+}

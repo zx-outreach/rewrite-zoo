@@ -1,0 +1,136 @@
+{
+  "id": "w-z-bialgebra",
+  "name": "W/Z bialgebra",
+  "aliases": [
+    "ZW bialgebra",
+    "6a",
+    "ba^{n,m}",
+    "ba_zw"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-bialgebra",
+  "order": 1,
+  "summary": "A W-node merge followed by a Z-spider copy equals Z-copies followed by W merges.",
+  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. Read from right to left (the dot on the right), it merges its legs: $|0\\cdots0\\rangle\\mapsto|0\\rangle$, a single excitation maps to $|1\\rangle$, and everything else to $0$.\n\nThe phase-free Z-spider and the W-node satisfy a bialgebra law: merging two wires with a W-node and then copying with a Z-spider is the same as copying each input with a Z-spider and merging the copies pairwise with W-nodes. This is axiom 6a of Hadzihasanovic's ZW-calculus, there written with the black monoid and the 'mixed' white comonoid, and generalises to any number of inputs and outputs ($\\mathrm{ba}^{n,m}$; in the thesis, with a label $r$ on the Z-spider, $ba_{zw}$).\n\nUnlike the [W bialgebra](../w-bialgebra/), the crossing wires here are an ordinary swap: they can never both carry $|1\\rangle$ in a non-zero term.",
+  "parameter_notes": "n inputs and m outputs (shown for n = m = 2); holds for any numbers of inputs and outputs.",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), Rule 6a"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2015diagrammatic",
+      "location": "Section 3 (The rules), generalised bialgebra rule II, $\\mathrm{ba}^{n,m}$"
+    },
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $ba_{zw}$"
+    },
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-bialgebra",
+      "relation": "see-also"
+    },
+    {
+      "id": "zw-hopf",
+      "relation": "see-also"
+    },
+    {
+      "id": "w-zero-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "W",
+    "bialgebra",
+    "strong complementarity",
+    "copy"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1,
+          0
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          4,
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.4,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  }
+}

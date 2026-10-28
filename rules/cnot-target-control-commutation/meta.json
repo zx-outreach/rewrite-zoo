@@ -1,0 +1,35 @@
+{
+  "id": "cnot-target-control-commutation",
+  "name": "Commuting a CNOT target past a CNOT control",
+  "aliases": [
+    "CNOT-CNOT commutation",
+    "CNOT ladder commutation"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "circuits",
+  "order": 9,
+  "summary": "When the target of one CNOT is the control of the next, they can be swapped at the cost of an extra CNOT.",
+  "description": "Two CNOTs where the target of the first is the control of the second do not commute. Swapping them introduces a third CNOT from the first control to the second target: $\\mathrm{CNOT}_{12}\\mathrm{CNOT}_{01} = \\mathrm{CNOT}_{01}\\mathrm{CNOT}_{02}\\mathrm{CNOT}_{12}$ (in operator notation, so that the rightmost gate is applied first).\n\nIn the ZX-calculus this is a direct application of the [bialgebra rule](../bialgebra/) to the X-spider of the first target and the Z-spider of the second control. CNOTs sharing only controls or only targets commute by [spider fusion](../spider-fusion/).",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "bialgebra",
+      "relation": "derived-from"
+    },
+    {
+      "id": "cnot-cz-commutation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CNOT",
+    "commutation",
+    "circuit",
+    "parity"
+  ]
+}

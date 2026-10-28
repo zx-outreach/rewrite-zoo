@@ -1,0 +1,43 @@
+{
+  "id": "zh-ortho",
+  "name": "Ortho rule",
+  "aliases": [
+    "(O)",
+    "(o)",
+    "orthogonality"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-bialgebra",
+  "order": 2,
+  "summary": "A connection between two H-boxes that are controlled by a bit and its negation can be removed.",
+  "description": "Two H-boxes that are connected to the same Z-spider, one of them via a NOT, are 'orthogonal': for every value of the Z-spider exactly one of them is active. The rule says that a wire between two such H-boxes can be replaced by plugging a phase-free Z-state into each of them (up to a scalar).\n\nThis rule is part of every complete axiomatisation of the ZH-calculus, but is arguably the hardest to motivate. The 2021 completeness paper shows that it can be replaced by the two simpler rules [Z(π) copies through an H-box](../zh-h-box-z-pi-copy/) and [AND of a copied bit](../zh-dedup/).",
+  "scalar": "1/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (O)"
+  },
+  "also_in": [
+    {
+      "bib": "PhasefreeZH2019",
+      "location": "Figure 2, rule (O)"
+    },
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 1, rule (o)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-intro",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "ortho",
+    "orthogonality",
+    "NOT"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

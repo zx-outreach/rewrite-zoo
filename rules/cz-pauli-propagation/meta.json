@@ -1,0 +1,45 @@
+{
+  "id": "cz-pauli-propagation",
+  "name": "Pauli X propagates through CZ",
+  "aliases": [
+    "Pauli pushing through CZ",
+    "CZ Pauli conjugation"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "circuits",
+  "order": 6,
+  "summary": "A Pauli X on one qubit of a CZ becomes an X on that qubit and a Z on the other.",
+  "description": "Pushing a Pauli X gate through a CZ gate produces an extra Pauli Z on the other qubit: $\\mathrm{CZ}\\,(X\\otimes I) = (X\\otimes Z)\\,\\mathrm{CZ}$. In the ZX-calculus the π X-phase is copied by the Z-spider of the CZ by [π-commutation](../pi-commutation/); the copy that travels along the Hadamard edge becomes a π Z-phase by the [colour change](../colour-change/) rule.\n\nThis is the basic rule behind the stabilisers of graph states: an X on a vertex together with Z on all its neighbours stabilises the graph state.",
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "cnot-pauli-propagation",
+      "relation": "see-also"
+    },
+    {
+      "id": "pi-commutation",
+      "relation": "derived-from"
+    },
+    {
+      "id": "colour-change",
+      "relation": "derived-from"
+    },
+    {
+      "id": "cz-cnot-hadamard",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "pauli",
+    "CZ",
+    "pauli pushing",
+    "graph state",
+    "stabiliser",
+    "circuit"
+  ]
+}

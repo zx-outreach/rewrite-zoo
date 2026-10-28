@@ -1,0 +1,47 @@
+{
+  "id": "identity-removal",
+  "name": "Identity removal",
+  "aliases": [
+    "identity rule",
+    "(S2)",
+    "(I)",
+    "(I_g)",
+    "(I_r)",
+    "(Id)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "spiders",
+  "order": 2,
+  "summary": "A phase-free spider with exactly two legs is the identity wire.",
+  "description": "A spider with zero phase and exactly one input and one output is equal to a plain wire, and can therefore be removed. Together with [spider fusion](../spider-fusion/) this means that wires can be thought of as phase-free spiders. Read from right to left, the rule allows the introduction of a spider on any wire.",
+  "scalar": "1",
+  "source": {
+    "bib": "CD1"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Figure 1"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "hadamard-cancellation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "identity",
+    "spider",
+    "wire"
+  ]
+}

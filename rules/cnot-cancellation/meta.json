@@ -1,0 +1,44 @@
+{
+  "id": "cnot-cancellation",
+  "name": "CNOT cancellation",
+  "aliases": [
+    "CNOT self-inverse",
+    "two CNOTs cancel"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "circuits",
+  "order": 1,
+  "summary": "Two CNOT gates with the same control and target cancel.",
+  "description": "The CNOT gate is self-inverse. In the ZX-calculus this follows by fusing the two controls and the two targets with [spider fusion](../spider-fusion/), which leaves a Z- and an X-spider connected by two wires. The [Hopf rule](../hopf/) disconnects them, after which the remaining arity-2 spiders are [identities](../identity-removal/).\n\nEach CNOT written as a Z-spider connected to an X-spider is $\\frac{1}{\\sqrt2}$ times the unitary, hence the scalar ½.",
+  "scalar": "1/2",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 4.5 (bialgebra and Hopf rule)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "hopf",
+      "relation": "derived-from"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "derived-from"
+    },
+    {
+      "id": "swap-three-cnots",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CNOT",
+    "circuit",
+    "cancellation",
+    "self-inverse"
+  ]
+}

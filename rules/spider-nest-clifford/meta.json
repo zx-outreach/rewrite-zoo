@@ -1,0 +1,34 @@
+{
+  "id": "spider-nest-clifford",
+  "name": "Three-qubit Clifford spider nest",
+  "aliases": [
+    "π/2 spider nest",
+    "3-qubit spider nest"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "spider-nests",
+  "order": 2,
+  "summary": "On three qubits, π/2 phases on every qubit, −π/2 gadgets on every pair and a π/2 gadget on all three give the identity.",
+  "description": "The three-qubit analogue of the [spider nest identity](../spider-nest/) with phases $\\pm\\frac\\pi2$: a $\\frac\\pi2$ phase on each qubit, a $-\\frac\\pi2$ phase gadget on each pair of qubits and a $\\frac\\pi2$ gadget on all three qubits multiply to the identity (up to a scalar), because $\\sum_{S}(-1)^{|S|+1}\\bigoplus_{i\\in S}x_i = 4x_1x_2x_3$ and $\\frac\\pi2\\cdot 4 = 2\\pi$.\n\nAs all the phases are Clifford, this identity can be proven with the Clifford rules, for instance by fusing and colour-changing until local complementation removes all the $\\pm\\frac\\pi2$ spiders. The analogous identity with $\\frac\\pi4$ phases on three qubits is instead the CCZ gate.",
+  "scalar": "sqrt(2)/8",
+  "source": {
+    "bib": "KissingervdWeteringbook"
+  },
+  "related": [
+    {
+      "id": "spider-nest",
+      "relation": "see-also"
+    },
+    {
+      "id": "local-complementation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "spider nest",
+    "phase gadget",
+    "clifford",
+    "S gate"
+  ]
+}

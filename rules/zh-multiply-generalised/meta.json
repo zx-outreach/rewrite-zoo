@@ -1,0 +1,99 @@
+{
+  "id": "zh-multiply-generalised",
+  "name": "Generalised multiply rule",
+  "aliases": [
+    "(M!)",
+    "H-box merging"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-arithmetic",
+  "order": 3,
+  "summary": "Two H-boxes connected to exactly the same Z-spiders fuse, multiplying their labels.",
+  "description": "When two H-boxes with labels $a$ and $b$ are connected to exactly the same set of Z-spiders, they can be replaced by a single H-box with label $ab$. Here the Z-spiders are drawn with one output each, so that after removing them the result is a single H-box on the outputs. This is the !-box generalisation of the [multiply rule](../zh-multiply/).\n\nA frequently used case is $a = b = -1$: two standard H-boxes on the same Z-spiders cancel, since the result has label $1$ and [disconnects](../zh-unit-generalised/). For instance, this shows that a Toffoli gate is self-inverse.",
+  "variables": {
+    "a": "complex",
+    "b": "complex"
+  },
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "Shown for H-boxes connected to n = 2 Z-spiders; holds for any n.",
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Lemma 2.3, rule (M!)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Lemma 3.1"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-unit-generalised",
+      "relation": "see-also"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "multiply",
+    "label",
+    "fusion",
+    "Toffoli"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "Z-spiders",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

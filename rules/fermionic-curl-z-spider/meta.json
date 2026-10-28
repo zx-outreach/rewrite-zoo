@@ -1,0 +1,45 @@
+{
+  "id": "fermionic-curl-z-spider",
+  "name": "Crossing curls move through white vertices",
+  "aliases": [
+    "ph",
+    "3(g)",
+    "phase rule"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 10,
+  "summary": "A crossing curl on one leg of a white vertex can be moved to another leg.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nA wire with a curl through the crossing is the Pauli Z ([the curl is −1](../fermionic-curl-minus-one/)). This axiom says that it commutes through white vertices (Z-spiders): it can be moved from one leg to any other. In terms of ZX it is an instance of [spider fusion](../spider-fusion/) with a phase $\\pi$.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $ph$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 3(g)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-curl-minus-one",
+      "relation": "see-also"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "curl",
+    "phase",
+    "white vertex"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "zh-and-rule",
+  "name": "AND rule",
+  "aliases": [
+    "(&)",
+    "AND gate",
+    "triangle AND"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-hboxes",
+  "order": 6,
+  "summary": "The AND gate built from H-boxes equals the AND gate built from triangles.",
+  "description": "The left-hand side is the standard ZH construction of the AND gate: an arity-3 H-box followed by an arity-2 H-box (Hadamard), which maps $|x,y\\rangle$ to $2\\,|x\\wedge y\\rangle$. The right-hand side is the way the AND gate is built in the ZX-calculus with *triangles*: each triangle maps $|0\\rangle\\mapsto|0\\rangle$ and $|1\\rangle\\mapsto|0\\rangle+|1\\rangle$ (in the orientation used here, up to a scalar), and the Z-spiders with a $\\pi$ phase are the 'negate' spiders of the phase-free paper.\n\nIn the ZH-calculus the triangle is not a generator. Following the phase-free paper, each triangle is drawn here by its definition: a NOT followed by an arity-3 H-box with one leg plugged by a phase-free Z-state. This rule was added to the phase-free ZH-calculus to make it complete for the Toffoli-Hadamard fragment; it was later shown to be unnecessary in the rule set of the 2021 completeness paper.",
+  "scalar": "1/4",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Figure 2, rule (&)"
+  },
+  "related": [
+    {
+      "id": "zh-dedup",
+      "relation": "used-to-derive"
+    }
+  ],
+  "tags": [
+    "AND",
+    "triangle",
+    "Toffoli",
+    "phase-free"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers. The triangles are drawn expanded according to definition (Δ) of the phase-free paper."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "zh-x-phase-through-h-box",
+  "name": "X-phase through an H-box",
+  "aliases": [
+    "controlled phase from X-rotation"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-hboxes",
+  "order": 7,
+  "summary": "An X-phase on a leg of a standard H-box turns into a labelled H-box on the other legs.",
+  "description": "An X-spider with phase $\\alpha$ on one leg of a standard H-box can be pushed through the H-box. On the other side it becomes an H-box with label $e^{i\\alpha}$, connected to Z-spiders on all the remaining legs. The reason is that an H-box followed by a Hadamard on one leg is an AND gate, and an X-rotation before a Hadamard is a Z-rotation after it; a Z-phase on the output of an AND gate is a multiply-controlled phase, which is exactly what an H-box with label $e^{i\\alpha}$ on copies of the inputs represents.\n\nShown for an H-box with three legs; it holds for any number of legs.",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameter_notes": "n is the number of other legs of the H-box (shown for n = 2); holds for any n.",
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.4 (H-box cheatsheet)"
+  },
+  "related": [
+    {
+      "id": "zh-h-box-phase-state",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-multiply-generalised",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "H-box",
+    "phase",
+    "controlled phase",
+    "X-spider"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "other legs of the H-box",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3,
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2
+  }
+}

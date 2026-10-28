@@ -1,0 +1,38 @@
+{
+  "id": "fermionic-crossing-z-weight",
+  "name": "Weights pass through the crossing",
+  "aliases": [
+    "fswap-Z",
+    "naturality of the fermionic swap for weights"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 13,
+  "summary": "A binary white vertex (weight r) moves through a fermionic crossing from one wire to the other.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe binary white vertex $\\mathrm{diag}(1, r)$ (a weight $r$ on an edge, drawn as a Z-box) is even, so the crossing is natural with respect to it: a weight on a wire after the crossing equals the same weight on that wire before the crossing. In the planar W-calculus of Carette et al. the fermionic swap is not a generator but syntactic sugar for a gadget of black and white vertices; this axiom is one of the rules governing it.",
+  "variables": {
+    "r": "complex"
+  },
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "carette2023compositionality",
+    "location": "Figure 1 (axioms of the planar W-calculus), row 3, 1st axiom"
+  },
+  "related": [
+    {
+      "id": "fermionic-crossing-w-sign",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "weight",
+    "Z-box",
+    "planar W-calculus",
+    "matchgates"
+  ]
+}

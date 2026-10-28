@@ -1,0 +1,44 @@
+{
+  "id": "cup-as-spider",
+  "name": "Cups are spiders",
+  "aliases": [
+    "(S3)",
+    "compact structure",
+    "cup rule",
+    "wire bending"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "spiders",
+  "order": 5,
+  "summary": "A bare cup is a phase-free Z-spider with two outputs.",
+  "description": "The cup (and, upside down, the cap) is the same as a phase-free spider with two legs on the same side. Together with [spider fusion](../spider-fusion/) this means that only the connectivity of a ZX-diagram matters: wires can be bent around freely (*only connectivity matters*).\n\nIn PyZX and ZXLive inputs and outputs are determined by their position, so a bare cup cannot be drawn directly; this axiom is built into the way diagrams are represented there.",
+  "checked": false,
+  "unchecked_reason": "a bare cup (a wire whose two ends are both outputs) cannot be represented with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "CD1"
+  },
+  "also_in": [
+    {
+      "bib": "SimonCompleteness",
+      "location": "Fig. 1, rule (S3)"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "identity-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "cup",
+    "cap",
+    "compact structure",
+    "only connectivity matters"
+  ]
+}

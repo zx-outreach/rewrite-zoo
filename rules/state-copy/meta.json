@@ -1,0 +1,96 @@
+{
+  "id": "state-copy",
+  "name": "State copy",
+  "aliases": [
+    "copy rule",
+    "basis state copy",
+    "(B1)",
+    "(CP)",
+    "(S4)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "copy",
+  "order": 1,
+  "summary": "A computational-basis state copies through a Z-spider.",
+  "description": "An X-spider with phase aπ (where a ∈ {0, 1}) and a single leg is, up to a scalar, the computational basis state |a⟩. When it is plugged into a Z-spider, the Z-spider copies it to all of its other legs. The phase of the Z-spider only contributes a global phase $e^{iaα}$.\n\nWith the colours swapped, the states |+⟩ and |−⟩ copy through X-spiders.",
+  "variables": {
+    "alpha": "real",
+    "a": "boolean"
+  },
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "n is the number of output legs of the Z-spider (shown for n = 2).",
+  "scalar": "exp(I*a*alpha)*sqrt(2)**(-(n-1))",
+  "source": {
+    "bib": "CD2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Figure 1"
+    }
+  ],
+  "related": [
+    {
+      "id": "pi-commutation",
+      "relation": "see-also"
+    },
+    {
+      "id": "bialgebra",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "copy",
+    "basis state",
+    "pauli"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{"version": 2, "backend": "multigraph", "variable_types": {}, "scalar": {"power2": 0, "phase": "0"}, "inputs": [0], "outputs": [1], "edata": {}, "auto_simplify": false,
+ "vertices": [
+  {"id": 0, "t": 0, "pos": [0, 0]},
+  {"id": 1, "t": 0, "pos": [4, 0]},
+  {"id": 2, "t": 1, "pos": [2, 0], "phase": "π"},
+  {"id": 3, "t": 99, "pos": [1, 0], "data": {"symbol": "triangle", "rot": 180, "colour": "yellow"}},
+  {"id": 4, "t": 99, "pos": [3, 0], "data": {"symbol": "triangle", "colour": "yellow"}}
+ ],
+ "edges": [
+  [0, 3, 1],
+  [1, 4, 1],
+  [2, 3, 1],
+  [2, 4, 1]
+ ]
+}

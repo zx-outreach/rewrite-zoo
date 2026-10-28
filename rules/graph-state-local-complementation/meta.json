@@ -1,0 +1,111 @@
+{
+  "id": "graph-state-local-complementation",
+  "name": "Local complementation of graph states",
+  "aliases": [
+    "Van den Nest's theorem",
+    "graph state local complementation",
+    "LC on graph states",
+    "local Clifford equivalence of graph states"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "local-complementation",
+  "order": 2,
+  "summary": "Applying X(π/2) to a vertex of a graph state and Z(−π/2) to its neighbours complements the neighbourhood of that vertex.",
+  "description": "A *graph state* is drawn as a phase-free Z-spider for every vertex of the graph, each with one output, connected by Hadamard edges according to the edges of the graph. *Local complementation* $G\\star u$ of a graph about a vertex $u$ toggles every edge between two neighbours of $u$. Van den Nest showed that $G\\star u$ is obtained from $G$ by local Clifford operations: an $X_{\\pi/2}$ rotation on $u$ and a $Z_{-\\pi/2}$ rotation on each neighbour of $u$ (up to a global phase; complex conjugating both sides gives the version with the opposite signs).\n\nDuncan and Perdrix proved this equation in the ZX-calculus, and showed that it holds if and only if the Hadamard gate has an [Euler decomposition](../euler-decomposition-hadamard/) into $\\pi/2$ rotations; this was the original reason to add the Euler decomposition as an axiom. Fusing the phases into the spiders, this equation is the basis of the graph-like [local complementation simplification](../local-complementation/) and of [pivoting](../graph-state-pivot/).",
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n is the number of neighbours of u (shown for n = 3). The neighbours may be connected to further vertices of the graph state, which are left unchanged; existing edges between neighbours are toggled. The scalar is for neighbours that are not yet connected; since every Hadamard edge carries a factor 1/√2, in general it is √2 to the power (number of edges added − number of edges removed).",
+  "scalar": "sqrt(2)**(n*(n-1)/2)",
+  "source": {
+    "bib": "DuncanPerdrixGraphStates",
+    "location": "Section 5 (Local Complementation), theorem of Van den Nest"
+  },
+  "also_in": [
+    {
+      "bib": "DP3",
+      "location": "Section 'Graph states and Local complementation'"
+    },
+    {
+      "bib": "duncan2019graph",
+      "location": "Section 4, equation for local complementation of graph states"
+    }
+  ],
+  "related": [
+    {
+      "id": "local-complementation",
+      "relation": "used-to-derive"
+    },
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "equivalent-to"
+    }
+  ],
+  "tags": [
+    "local complementation",
+    "graph state",
+    "local Clifford",
+    "Van den Nest",
+    "clifford"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "neighbours",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3,
+          4,
+          5
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "bulge": [
+          0.8,
+          0
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "clique": [
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "bulge": [
+          0.8,
+          0
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

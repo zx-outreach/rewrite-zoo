@@ -1,0 +1,37 @@
+{
+  "id": "scalar-pi2-pair",
+  "name": "Two π/2 scalars",
+  "aliases": [
+    "(1+i)^2 = 2i",
+    "Clifford scalar rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "scalars",
+  "order": 5,
+  "summary": "Two legless π/2 spiders equal the global phase i times 2, written with two-spider scalars.",
+  "description": "A legless Z-spider with phase π/2 is the scalar $1+i = \\sqrt2 e^{i\\pi/4}$. Two of these multiply to $2i$, which can be written as the [scalar](../scalar-state-effect/) $\\sqrt2 e^{i\\pi/2}$ (a π/2 Z-spider connected to a π X-spider) times √2 (a phase-free pair of spiders).\n\nThis is one of the rules that relates the 'odd' Clifford scalars $1\\pm i$ to global phases. Note that a single $1+i$ cannot be written with only Clifford two-spider scalars (it has phase π/4), so such legless spiders must be paired up.",
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook"
+  },
+  "related": [
+    {
+      "id": "scalar-z-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "scalar-pi2-inverse",
+      "relation": "see-also"
+    },
+    {
+      "id": "y-state",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "clifford",
+    "global phase"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "zh-h-box-phase-gadget-3",
+  "name": "Arity-3 H-box as phase gadgets",
+  "aliases": [
+    "CCZ(α) decomposition",
+    "graphical Fourier transform"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-translation",
+  "order": 6,
+  "summary": "An arity-3 H-box with label $e^{iα}$ decomposes into phases ±α/4 on all non-empty parities of its legs.",
+  "description": "An arity-3 H-box with label $e^{i\\alpha}$ applies the phase $e^{i\\alpha xyz}$. Using the identity $4xyz = x + y + z - x\\oplus y - x\\oplus z - y\\oplus z + x\\oplus y\\oplus z$ this can be written with a Z-phase $\\frac{\\alpha}{4}$ on each leg, phase gadgets with phase $-\\frac{\\alpha}{4}$ on each pair of legs, and a phase gadget with phase $\\frac{\\alpha}{4}$ on all three legs.\n\nWith $\\alpha = \\pi$ this is the well-known decomposition of the CCZ gate into seven T-like phases. In general, an H-box with $n$ legs decomposes in this way into $2^n - 1$ phase gadgets with phases $\\pm\\frac{\\alpha}{2^{n-1}}$.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "4*sqrt(2)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.4 (H-box cheatsheet)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.4"
+    }
+  ],
+  "related": [
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "Fourier transform",
+    "CCZ",
+    "Toffoli",
+    "T-count",
+    "translation"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

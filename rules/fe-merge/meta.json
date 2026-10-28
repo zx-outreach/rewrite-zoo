@@ -1,0 +1,35 @@
+{
+  "id": "fe-merge",
+  "name": "Merging equal fault gadgets",
+  "aliases": [
+    "(Merge_fe)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 23,
+  "summary": "Two fault gadgets for the same fault, of weights w₁ and w₂, merge into one of weight min(w₁, w₂).",
+  "description": "Faults are described here by their $Z$-flips: a green spider (connected by a fault-free edge to the rest of the diagram) with a one-legged green spider attached by a noisy edge describes a $Z$-flip of the given weight. Two such gadgets on the same spider, of weights $w_1$ and $w_2$, describe the same fault twice; they are fault-equivalent to a single gadget of weight $\\min(w_1, w_2)$, since only the cheapest way to produce a fault matters, and producing it twice has no effect.\n\nAs in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "scalar": "1",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 3, rule $(\\textsc{Merge}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "fe-comb",
+      "relation": "see-also"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness",
+    "atomic faults"
+  ]
+}

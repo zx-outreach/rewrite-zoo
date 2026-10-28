@@ -1,0 +1,132 @@
+{
+  "id": "spider-fusion",
+  "name": "Spider fusion",
+  "aliases": [
+    "fusion",
+    "unfusion",
+    "(S1)",
+    "(S)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "spiders",
+  "order": 1,
+  "summary": "Adjacent spiders of the same colour fuse together, and their phases add.",
+  "description": "Two spiders of the same colour that are connected by one or more wires can be fused into a single spider, whose phase is the sum of the two phases. Read from right to left, this rule *unfuses* a spider into two, distributing the phase arbitrarily over the two.\n\nThe rule holds for any number of inputs and outputs on either spider. If the spiders are connected by more than one wire, the extra wires become self-loops, which can then be removed with the [self-loop removal](../self-loop-removal/) rule.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "parameter_notes": "Shown for two spiders with two legs each; holds for any number of legs.",
+  "scalar": "1",
+  "source": {
+    "bib": "CD1"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Figure 1"
+    }
+  ],
+  "related": [
+    {
+      "id": "identity-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "self-loop-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "used-to-derive"
+    }
+  ],
+  "tags": [
+    "fusion",
+    "unfusion",
+    "spider"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  }
+}

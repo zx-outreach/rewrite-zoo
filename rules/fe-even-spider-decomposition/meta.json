@@ -1,0 +1,97 @@
+{
+  "id": "fe-even-spider-decomposition",
+  "name": "Distance-preserving decomposition of an even spider",
+  "aliases": [
+    "(r_2n)",
+    "recursive spider rewrite",
+    "even-legged spider decomposition"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 5,
+  "summary": "A 2n-legged Z-spider is fault-equivalent to two n-legged spiders joined through n four-legged spiders.",
+  "description": "A phase-free Z-spider with $2n$ legs can be decomposed into two $n$-legged spiders and $n$ four-legged spiders: each four-legged spider carries two of the original legs and is connected to both of the $n$-legged spiders. The rewrite is distance-preserving (equivalently, fault-equivalent under edge-flip noise). Applied recursively, together with the four- and five-legged rules, it decomposes arbitrarily large spiders, and hence arbitrary-weight Pauli measurements, into spiders of degree at most three.\n\nIt is proven by unfusing a spider with [one-legged fusion](../fe-one-legged-fusion/), applying the [odd version](../fe-odd-spider-decomposition/), and fusing back.",
+  "scalar": "1",
+  "source": {
+    "bib": "rodatz2024floquetifying",
+    "location": "Sec. 3.3, rewrite $(r_{2n})$"
+  },
+  "also_in": [
+    {
+      "bib": "Schweikart2025Masters",
+      "location": "Sec. 2.4.2, eq. (2.62)"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-odd-spider-decomposition",
+      "relation": "derived-from"
+    },
+    {
+      "id": "fe-fuse-n",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "distance-preserving",
+    "edge-flip noise",
+    "fault tolerance",
+    "unfusion",
+    "syndrome extraction",
+    "Pauli measurement"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "four-legged spiders",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1,
+          2
+        ],
+        "offset": [
+          0,
+          1.3
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3,
+          4
+        ],
+        "offset": [
+          0,
+          1.3
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "A spider with 2n legs, built from two n-legged spiders and n four-legged spiders (shown for n = 3); holds for any n ≥ 1."
+}

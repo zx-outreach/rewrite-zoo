@@ -1,0 +1,50 @@
+{
+  "id": "cup-colour-coincidence",
+  "name": "Green and red cups coincide",
+  "aliases": [
+    "(S3'R)",
+    "(S3′R)",
+    "(S3′)",
+    "compact structures coincide",
+    "Z-cup equals X-cup"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "spiders",
+  "order": 10,
+  "summary": "A phase-free Z-spider with two outputs equals a phase-free X-spider with two outputs: both are the cup.",
+  "description": "Each colour of spider induces a compact structure: a phase-free spider with two outputs is a 'cup' (the Bell state $|00\\rangle+|11\\rangle$), and one with two inputs is a 'cap'. This rule says that the compact structures of the Z- and the X-spiders are the same: indeed $|00\\rangle + |11\\rangle = |{+}{+}\\rangle + |{-}{-}\\rangle$.\n\nIn the simplified stabilizer ZX-calculus of Backens, Perdrix and Wang this is the second half of the axiom (S3′), called (S3′R) in their follow-up paper; the first half, (S3′L), says that the green cup is the cup of the ambient category, i.e. [identity removal](../identity-removal/) with the wire bent. Backens, Perdrix and Wang could not decide whether (S3′R) is necessary; Stoltz later showed that it cannot be derived from the other rules.\n\nIn the usual presentation, where 'only connectivity matters', this rule follows from identity removal for both colours.",
+  "scalar": "1",
+  "source": {
+    "bib": "BackensSimplified",
+    "location": "Figure 2 (simplified rules), rule (S3′)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2017minimal",
+      "location": "Figure 1, rule (S3′); called (S3′R) in Section 3"
+    },
+    {
+      "bib": "k.stoltz2026simplified",
+      "location": "Table 1 (ZX_simp), rule (S3′R); Theorem 3.1 (necessity)"
+    }
+  ],
+  "related": [
+    {
+      "id": "identity-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "colour-change",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "cup",
+    "compact structure",
+    "identity",
+    "stabilizer",
+    "completeness",
+    "minimal"
+  ]
+}

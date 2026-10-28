@@ -1,0 +1,56 @@
+{
+  "id": "zh-dedup",
+  "name": "AND of a copied bit",
+  "aliases": [
+    "(DC)",
+    "dedup",
+    "double connection",
+    "AND-COPY cancel"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-hboxes",
+  "order": 5,
+  "summary": "Two parallel wires between a Z-spider and an H-box can be replaced by a single wire.",
+  "description": "If a Z-spider and an H-box are connected by two parallel wires, one of them can be removed. Here this is shown for an arity-3 H-box and an arity-3 Z-spider, where the result is a single arity-2 H-box. Since the Z-spider copies computational basis states, this expresses that $x \\wedge x = x$: copying a bit and then taking the AND of the two copies gives back the original bit.\n\nAlthough it looks simple, this rule is surprisingly hard to derive in the phase-free ZH-calculus: the phase-free paper derives it using the [AND rule](../zh-and-rule/). The 2021 completeness paper shows that, together with [Z(π) copying through an H-box](../zh-h-box-z-pi-copy/), it can replace the [ortho rule](../zh-ortho/) in the axiomatisation. More generally, the same holds for H-boxes with any label and any number of other legs on the Z-spider and the H-box.",
+  "scalar": "1",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Lemma 3.4, rule (DC)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Lemma 5.1"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-ortho",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-and-rule",
+      "relation": "derived-from"
+    },
+    {
+      "id": "zh-h-box-z-pi-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "H-box",
+    "AND",
+    "COPY",
+    "parallel edges"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

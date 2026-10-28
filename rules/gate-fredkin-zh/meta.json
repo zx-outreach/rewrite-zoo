@@ -1,0 +1,44 @@
+{
+  "id": "gate-fredkin-zh",
+  "name": "Controlled SWAP (H-box)",
+  "aliases": [
+    "Fredkin gate",
+    "CSWAP",
+    "controlled swap"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-gates",
+  "order": 3,
+  "summary": "The controlled SWAP is a Toffoli gate sandwiched between two CNOTs.",
+  "description": "The Fredkin gate swaps qubits 2 and 3 when qubit 1 is $|1\\rangle$. It equals $\\mathrm{CNOT}_{3\\to2}\\,\\mathrm{Toffoli}_{1,2\\to3}\\,\\mathrm{CNOT}_{3\\to2}$; here the Toffoli is drawn with an H-box and the CNOTs as Z- and X-spiders.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 3,
+    "gates": [
+      [
+        "CSWAP",
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "scalar": "2",
+  "source": {
+    "bib": "EPTCS287.2"
+  },
+  "related": [
+    {
+      "id": "gate-toffoli-zh",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "Fredkin",
+    "CSWAP",
+    "controlled swap",
+    "gate",
+    "H-box"
+  ]
+}

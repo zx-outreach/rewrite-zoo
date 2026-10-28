@@ -1,0 +1,130 @@
+{
+  "id": "w-fusion",
+  "name": "W fusion",
+  "aliases": [
+    "W spider rule",
+    "W associativity",
+    "sp_W",
+    "cut_w",
+    "W-node fusion"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-rules",
+  "order": 1,
+  "summary": "A W-node plugged into the input of another W-node fuses with it.",
+  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nWhen an output of one W-node is connected to the input of another, the two fuse into a single W-node with all the remaining outputs. This expresses (co)associativity of the W-node, and is the reason we can speak of a single $n$-output W-node rather than a tree of binary ones.\n\nIn Hadzihasanovic's undirected presentation this is the spider rule $\\mathrm{sp}_W^{n,m}$ for black vertices: two black vertices connected through a binary black vertex fuse. Together with [W identity](../w-identity/) it also gives the unit law: fusing with a W-node that has no outputs simply removes an output.",
+  "parameter_notes": "n is the number of other outputs of the first W-node and m the number of outputs of the second (shown for n = 1, m = 2); holds for any n and m.",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), spider rule $\\mathrm{sp}_W^{n,m}$"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2015diagrammatic",
+      "location": "Section 3 (The rules), Rule 1a (associativity, expanded form)"
+    },
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $cut_w$"
+    },
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-identity",
+      "relation": "see-also"
+    },
+    {
+      "id": "w-zero-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "W",
+    "fusion",
+    "spider",
+    "associativity"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "other outputs of the first W-node",
+        "min": 0,
+        "max": 3
+      },
+      "m": {
+        "label": "outputs of the second W-node",
+        "min": 0,
+        "max": 3
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          5
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.6,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          6
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.6,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.6,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.6,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 1,
+    "m": 2
+  }
+}

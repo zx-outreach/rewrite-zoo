@@ -1,0 +1,53 @@
+{
+  "id": "w-self-loop",
+  "name": "W self-loop removal",
+  "aliases": [
+    "tr_w",
+    "tr_W",
+    "W trace",
+    "W loop removal",
+    "2(d)"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-rules",
+  "order": 5,
+  "summary": "A plain self-loop on the outputs of a W-node can be removed.",
+  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nConnecting two outputs of a W-node to each other (a trace) keeps only the terms where both are $|0\\rangle$, since at most one output carries the excitation. So the loop can simply be removed. In the undirected ZW-calculus this is the rule $tr_W$: a black vertex with a self-loop is a black vertex with two fewer legs. Together with [W fusion](../w-fusion/) it makes up the spider presentation of the black vertices.",
+  "parameter_notes": "Shown for a W-node with two remaining outputs; holds for any number of outputs.",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), spider rule $\\mathrm{tr}_W$"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $tr_w$"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 2(d)"
+    },
+    {
+      "bib": "carette2023compositionality",
+      "location": "Figure 1 (axioms of the planar W-calculus), W-loop axiom"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "self-loop-removal",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "W",
+    "self-loop",
+    "trace",
+    "spider"
+  ]
+}

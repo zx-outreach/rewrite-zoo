@@ -1,0 +1,46 @@
+{
+  "id": "fermionic-curl-minus-one",
+  "name": "The curl is −1",
+  "aliases": [
+    "rng_{-1}",
+    "3(j)",
+    "self-crossing wire",
+    "Pauli Z as a curl"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 12,
+  "summary": "The binary white vertex with label −1 (the Pauli Z) is a wire with a curl through the crossing.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nBending one output of the crossing back to an input gives a wire that crosses itself. Its only sign comes from the term $|11\\rangle$, so it is $\\mathrm{diag}(1, -1)$: the binary white vertex with label $-1$, i.e. the Pauli Z. Hadzihasanovic's 2015 paper already remarks that the binary white vertex is a self-crossing wire; in the ring-labelled calculus this is the axiom $rng_{-1}$.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $rng_{-1}$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 3(j)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-crossing-curl",
+      "relation": "see-also"
+    },
+    {
+      "id": "fermionic-curl-z-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "curl",
+    "Pauli Z",
+    "minus one"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "triangle-rule-tr8",
+  "name": "Triangle through a copy-and-compare",
+  "aliases": [
+    "(TR8)",
+    "2(k)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 10,
+  "summary": "A two-output identity that moves a triangle from after to before a structure of two Z-spiders and an X-spider.",
+  "description": "On the left, the input is copied by a Z-spider, passes through a triangle and is copied again, passes another triangle, and the X-spider outputs the parity of the two copies. On the right the first triangle acts on the input instead and the second one sits between the two Z-spiders.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR8)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR8)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(k)"
+    }
+  ],
+  "related": [
+    {
+      "id": "triangle-rule-tr9",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle"
+  ]
+}

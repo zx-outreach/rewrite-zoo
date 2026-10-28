@@ -1,0 +1,24 @@
+{
+  "id": "triangle-z-pi-state",
+  "name": "Triangle on the Z(π)-state",
+  "aliases": [
+    "(TR4')"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 5,
+  "summary": "The triangle maps the Z(π)-state (|0⟩ − |1⟩) to the X(π)-state (|1⟩), up to the scalar −1/√2.",
+  "description": "Plugging the Z(π)-state $|0\\rangle - |1\\rangle$ into the input of a triangle gives $-|1\\rangle$. The paper writes the scalar as a diagram on the right-hand side: a Z(π)- and an X(π)-spider connected by three wires, which equals $-1/\\sqrt 2$.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "-sqrt(2)/2",
+  "source": {
+    "bib": "ng_completeness_2018",
+    "location": "Fig. 5, rule (TR4')"
+  },
+  "tags": [
+    "triangle",
+    "state"
+  ]
+}

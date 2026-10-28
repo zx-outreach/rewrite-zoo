@@ -1,0 +1,42 @@
+{
+  "id": "phase-gadget-pi-commutation",
+  "name": "Pauli X through a phase gadget",
+  "aliases": [
+    "π-commutation for phase gadgets",
+    "NOT through gadget"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "phase-gadgets",
+  "order": 6,
+  "summary": "A Pauli X on a qubit of a phase gadget flips the sign of the gadget's phase when pushed through.",
+  "description": "A NOT gate on one of the qubits of a phase gadget can be pushed through the gadget, at the cost of negating the gadget's phase (and a global phase $e^{i\\alpha}$). This is because the NOT flips the parity computed by the gadget, and $\\alpha\\,(1\\oplus y) = \\alpha - \\alpha y$.\n\nDiagrammatically, the π X-phase is copied through the Z-spider on the qubit wire, fuses into the X-hub of the gadget and is then pushed through the Z-spider of the phase using [π-commutation](../pi-commutation/), negating the phase.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "exp(I*alpha)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "pi-commutation",
+      "relation": "derived-from"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "cnot-pauli-propagation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "pauli",
+    "pi commutation",
+    "circuit"
+  ]
+}

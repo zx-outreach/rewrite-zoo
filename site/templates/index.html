@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block bodyclass %}page-index{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>ZX Rewrite Zoo</h1>
+  <p class="lede">A catalogue of the known useful rewrite rules of the ZX-calculus and its relatives, each with its source, its fragment, its exact scalar and downloadable diagrams.</p>
+  <p class="stats"><strong>{{ n_rules }}</strong> rules · <strong>{{ n_variants }}</strong> verified variants · <strong>{{ n_papers }}</strong> papers</p>
+</section>
+
+<div class="with-toc">
+{% set anchors = true %}{% set toc = groups_ctx %}{% set current = none %}
+{% include "_toc.html" %}
+<div class="toc-main">
+<section class="filters" aria-label="Search and filter rules">
+  <div class="search-row">
+    <input id="search" type="search" placeholder="Search by name, alias or keyword…" autocomplete="off" aria-label="Search rules">
+    <span id="result-count" class="muted" aria-live="polite"></span>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Calculus</span>
+    <div class="chips" data-filter="calculus">
+      {% for c in calculi %}<button type="button" class="chip" data-value="{{ c }}" aria-pressed="false">{{ c }}</button>{% endfor %}
+    </div>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Fragment</span>
+    <div class="chips" data-filter="fragment">
+      {% for f in fragments %}<button type="button" class="chip frag-{{ f|replace('+','p') }}" data-value="{{ f }}" aria-pressed="false">{{ fragment_names[f] }}</button>{% endfor %}
+    </div>
+    <label class="check"><input type="checkbox" id="frag-cumulative"> include smaller fragments</label>
+  </div>
+</section>
+
+<div id="rule-list">
+{% for g in groups_ctx %}
+<section class="group-section" data-group="{{ g.id }}" id="g-{{ g.id }}">
+  <div class="group-head">
+    <h2><a href="groups/{{ g.id }}/index.html">{{ g.name }}</a> <span class="badge calc">{{ g.calculus }}</span></h2>
+    <p class="muted">{{ g.description }}</p>
+  </div>
+  <div class="cards">
+  {% for e in g.rules %}
+    <a class="card" href="rules/{{ e.id }}/index.html" data-id="{{ e.id }}">
+      <div class="thumb" data-thumb="{{ e.id }}" aria-hidden="true"></div>
+      <div class="card-body">
+        <h3>{{ e.name }}</h3>
+        <p class="summary">{{ e.summary }}</p>
+        <p class="card-meta"><span class="badge frag-{{ e.fragment|replace('+','p') }}">{{ fragment_names[e.fragment] }}</span>{% if e.any_arity %} <span class="badge arity" title="Holds for any number of legs">n legs</span>{% endif %}{% if not e.checked %} <span class="badge unchecked" title="Not representable in PyZX; drawn but not checked">not checked</span>{% endif %} <span class="muted">{{ e.cite }}</span></p>
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endfor %}
+<p id="no-results" class="empty" hidden>No rules match your search. Try a different name, or clear the filters.</p>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="application/json" id="index-data">{{ entries|json|safe }}</script>
+<script type="application/json" id="fragment-order">{{ fragments|json|safe }}</script>
+{% endblock %}

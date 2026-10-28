@@ -1,0 +1,31 @@
+{
+  "id": "triangle-hadamard-loop",
+  "name": "Triangle in parallel with a Hadamard",
+  "aliases": [
+    "(TR5)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 6,
+  "summary": "A Hadamard and a triangle in parallel between two Z-spiders equal a triangle followed by Z(π).",
+  "description": "Two phase-free Z-spiders connected by two wires, one with a Hadamard and one with a triangle, equal a triangle followed by a Z(π) phase. The paper writes the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the left-hand side. In the 2018 paper of Ng and Wang this rule is replaced by [(TR5')](../triangle-loop-disconnect/).\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "sqrt(2)/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR5)"
+  },
+  "related": [
+    {
+      "id": "triangle-loop-disconnect",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "Hadamard"
+  ]
+}

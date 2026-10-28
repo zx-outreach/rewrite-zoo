@@ -1,0 +1,34 @@
+{
+  "id": "fermionic-crossing-rotated",
+  "name": "The rotated crossing is the crossing",
+  "aliases": [
+    "fswap-rotated",
+    "the fermionic swap is self-transpose"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 15,
+  "summary": "Bending two legs of the fermionic crossing around (rotating it by a quarter turn) gives the crossing.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nRotating the crossing by a quarter turn, by bending one input into an output with a cap and one output into an input with a cup, gives the crossing again. In the planar W-calculus of Carette et al. this is one of the axioms that let the fermionic swap be treated almost like an ordinary swap.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator; bent wires cannot be drawn with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "carette2023compositionality",
+    "location": "Figure 1 (axioms of the planar W-calculus), row 4, 3rd axiom"
+  },
+  "related": [
+    {
+      "id": "fermionic-crossing-cup",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "rotation",
+    "transpose",
+    "planar W-calculus"
+  ]
+}

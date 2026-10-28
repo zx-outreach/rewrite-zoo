@@ -1,0 +1,54 @@
+{
+  "id": "lambda-addition-simplified",
+  "name": "Addition rule with one triangle",
+  "aliases": [
+    "(AD)",
+    "2(o)",
+    "sum rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "lambda-box",
+  "order": 8,
+  "summary": "A smaller addition rule: two branches carrying λ₁·exp(iα) and λ₂·exp(iβ), joined by a structure with one triangle, equal one branch carrying their sum.",
+  "description": "The version of the [addition rule](../lambda-addition/) used in the Clifford+T paper of Ng and Wang and in the LICS'18 paper of Hadzihasanovic, Ng and Wang, with only one triangle. The states $|0\\rangle + \\lambda_1 e^{i\\alpha}|1\\rangle$ and $|0\\rangle + \\lambda_2 e^{i\\beta}|1\\rangle$ are combined into the diagonal map $\\mathrm{diag}(1, \\lambda e^{i\\gamma})$ with $\\lambda e^{i\\gamma} = \\lambda_1 e^{i\\alpha} + \\lambda_2 e^{i\\beta}$. In the Clifford+T paper the labels are restricted to $\\lambda_i \\in \\mathbb Z[\\frac12]$ and angles to multiples of $\\pi/4$. The papers write the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the left-hand side.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.\n\nThe λ-box is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in the papers of Ng and Wang, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). Up to the fact that it is drawn differently, it is a Z-box of arity 2 with label $\\lambda$. Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real",
+    "gamma": "real",
+    "lambda": "real",
+    "lambda1": "real",
+    "lambda2": "real"
+  },
+  "conditions": "$λe^{iγ} = λ₁e^{iα} + λ₂e^{iβ}$, with λ, λ₁, λ₂ ≥ 0.",
+  "checked": false,
+  "unchecked_reason": "the triangle and the λ-box are not generators of PyZX or ZXLive",
+  "scalar": "sqrt(2)/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "ng_completeness_2018",
+    "location": "Fig. 6, rule (AD)"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(o)"
+    }
+  ],
+  "related": [
+    {
+      "id": "lambda-addition",
+      "relation": "variant-of"
+    },
+    {
+      "id": "w-sum",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "addition",
+    "sum",
+    "triangle"
+  ]
+}

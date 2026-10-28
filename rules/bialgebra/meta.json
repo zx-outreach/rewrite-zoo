@@ -1,0 +1,52 @@
+{
+  "id": "bialgebra",
+  "name": "Bialgebra",
+  "aliases": [
+    "strong complementarity",
+    "bialgebra rule",
+    "(b)",
+    "(B2)",
+    "(Bi)",
+    "(B)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "bialgebra",
+  "order": 1,
+  "summary": "A phase-free X-spider followed by a phase-free Z-spider can be commuted past one another.",
+  "description": "The bialgebra rule expresses that the Z- and X-spiders form a (scaled) bialgebra, which is also called *strong complementarity*. A two-input X-spider (XOR) followed by a two-output Z-spider (COPY) is equal to first copying both inputs and then taking XORs pairwise. This is one of the main reasons that the phase-free fragment is so expressive: it captures the interaction of XOR and COPY, i.e. linear maps over the field with two elements.\n\nSee the [generalised bialgebra](../bialgebra-generalised/) rule for spiders with any number of legs.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "CD1"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "related": [
+    {
+      "id": "bialgebra-generalised",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "hopf",
+      "relation": "see-also"
+    },
+    {
+      "id": "state-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "strong complementarity",
+    "bialgebra",
+    "XOR",
+    "COPY",
+    "CNOT"
+  ]
+}

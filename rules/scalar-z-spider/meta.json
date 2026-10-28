@@ -1,0 +1,51 @@
+{
+  "id": "scalar-z-spider",
+  "name": "Spider scalar",
+  "aliases": [
+    "zero-arity spider",
+    "1 + e^{iα}",
+    "scalar spider",
+    "zero scalar",
+    "Z(π) = 0"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "scalars",
+  "order": 1,
+  "summary": "A spider without any legs is the scalar 1 + $e^{iα}$.",
+  "description": "A Z-spider (or X-spider) with phase α and no inputs or outputs is the scalar $1+e^{i\\alpha}$: it is the sum of the two terms $\\langle 0|0\\rangle$ and $e^{i\\alpha}\\langle 1|1\\rangle$ of the spider.\n\nTwo special cases are particularly important: a phase-free spider without legs is the scalar 2, and a spider with phase π and no legs is the scalar **0**. A diagram containing such a zero scalar is zero, and complete calculi need a rule (the *zero rule*) that lets such diagrams be brought to a normal form.\n\nTogether with the [two-spider scalars](../scalar-state-effect/) and the [1/√2 scalar](../scalar-inverse-sqrt2/), every complex number can be written as a scalar ZX-diagram.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1+exp(I*alpha)",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 3.4 (scalars)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.1 (generators and their matrices)"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.4 (ZX-calculus full cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "scalar-state-effect",
+      "relation": "see-also"
+    },
+    {
+      "id": "scalar-inverse-sqrt2",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "zero",
+    "spider",
+    "normalisation"
+  ]
+}

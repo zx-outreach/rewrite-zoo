@@ -1,0 +1,49 @@
+{
+  "id": "commutation-of-controls",
+  "name": "Commutation of controls (C)",
+  "aliases": [
+    "(C)",
+    "C rule",
+    "commutation of controlled triangles"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "supplementarity",
+  "order": 10,
+  "summary": "One of the two new axioms of the Jeandel–Perdrix–Vilmart Clifford+T axiomatisation: a three-input diagram parametrised by α, β, γ is symmetric under exchanging the roles of α and β.",
+  "description": "This is one of the two axioms that Jeandel, Perdrix and Vilmart added to the ZX-calculus to obtain the first complete axiomatisation for Clifford+T. It is parametrised by three arbitrary angles $\\alpha$, $\\beta$ and $\\gamma$ and holds for all of them. It arose from the translation between the ZX- and ZW-calculi used in the completeness proof and, as its name says, expresses that two *controlled* operations commute. When it was introduced, no derivation from the previous axioms was known.\n\nGoing from left to right, the phases $\\alpha$ and $\\beta$ swap places, and the positions of $\\gamma$ and $-\\gamma$ are exchanged. Since the rule is *linear* in its parameters, it also holds in the universal fragment, where it remains an axiom of the complete axiomatisations of Jeandel, Perdrix and Vilmart.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real",
+    "gamma": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "SimonCompleteness",
+    "location": "Fig. 1, rule (C)"
+  },
+  "also_in": [
+    {
+      "bib": "JPV-universal",
+      "location": "Fig. 1 and Fig. 2, rule (C)"
+    },
+    {
+      "bib": "jeandel2019completeness",
+      "location": "Fig. 2, rule (C)"
+    }
+  ],
+  "related": [
+    {
+      "id": "bw-rule",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "clifford+t",
+    "completeness",
+    "axiom",
+    "commutation",
+    "controls",
+    "triangle"
+  ]
+}

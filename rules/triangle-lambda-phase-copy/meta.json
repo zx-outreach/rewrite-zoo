@@ -1,0 +1,30 @@
+{
+  "id": "triangle-lambda-phase-copy",
+  "name": "λ-boxes and phases copy through the triangle structure",
+  "aliases": [
+    "2(n)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "triangle",
+  "order": 18,
+  "summary": "A λ-box and a Z(α) on both outputs of the triangle copy structure equal one λ-box and Z(α) on its input.",
+  "description": "The combination of [(TR13)](../triangle-phase-copy/) and [(TR14)](../triangle-lambda-copy/) used in the LICS'18 axiomatisation: the green box $\\mathrm{diag}(1, \\lambda)$ together with the phase $\\alpha$ represents the diagonal map $\\mathrm{diag}(1, \\lambda e^{i\\alpha})$, and it copies through the structure as a whole.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.\n\nThe λ-box is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in the papers of Ng and Wang, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). Up to the fact that it is drawn differently, it is a Z-box of arity 2 with label $\\lambda$. Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "lambda": "real",
+    "alpha": "real"
+  },
+  "checked": false,
+  "unchecked_reason": "the triangle and the λ-box are not generators of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "HarnyAmarCompleteness",
+    "location": "Section 4, ZX axiom 2(n)"
+  },
+  "tags": [
+    "triangle",
+    "copy",
+    "lambda",
+    "phase"
+  ]
+}

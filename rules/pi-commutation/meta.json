@@ -1,0 +1,96 @@
+{
+  "id": "pi-commutation",
+  "name": "π-commutation",
+  "aliases": [
+    "π-copy",
+    "pi commutation",
+    "Pauli pushing",
+    "(K)",
+    "(K2)",
+    "(π)",
+    "(K1)",
+    "(N)",
+    "(P)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "copy",
+  "order": 2,
+  "summary": "A π phase copies through a spider of the opposite colour, flipping the sign of its phase.",
+  "description": "An X-spider with phase π (the Pauli X gate) can be pushed through a Z-spider with phase α. The π phase is copied to all the other legs of the Z-spider, and the phase α is negated. Up to the global phase $e^{iα}$, this expresses the identity Z(α)X = X Z(−α).\n\nThe same holds with the colours interchanged: a Pauli Z gate commutes through an X-spider.",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameter_notes": "m is the number of other legs of the spider (shown for m = 2); holds for any m.",
+  "scalar": "exp(I*alpha)",
+  "source": {
+    "bib": "CD2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Figure 1"
+    }
+  ],
+  "related": [
+    {
+      "id": "state-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "pauli",
+    "pi",
+    "copy",
+    "commutation"
+  ],
+  "arity": {
+    "params": {
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "m",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "m",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.45,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "m": 2
+  }
+}

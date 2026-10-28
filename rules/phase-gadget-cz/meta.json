@@ -1,0 +1,39 @@
+{
+  "id": "phase-gadget-cz",
+  "name": "CZ as a phase gadget",
+  "aliases": [
+    "CZ decomposition into phase gadget",
+    "CZ = S⊗S·gadget"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "phase-gadgets",
+  "order": 5,
+  "summary": "A CZ gate is a π/2 phase gadget followed by −π/2 Z-phases on both qubits.",
+  "description": "The CZ gate acts as $|x_1x_2\\rangle\\mapsto e^{i\\pi x_1x_2}|x_1x_2\\rangle$. Using $x_1x_2 = \\frac12(x_1 + x_2 - x_1\\oplus x_2)$ and $e^{i\\pi x_1x_2} = e^{-i\\pi x_1x_2}$, it is the product of a two-qubit phase gadget with phase π/2, implementing $e^{i\\frac\\pi2(x_1\\oplus x_2)}$, and Z-phases −π/2 on both qubits. Negating all phases gives the equivalent form with an S gate on both qubits and a −π/2 gadget.\n\nIn the ZX-calculus this is a consequence of the [Euler decomposition of the Hadamard](../euler-decomposition-hadamard/) on the Hadamard edge of the CZ. The same decomposition with α/2 in place of π/2 gives the controlled-phase gate.",
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "derived-from"
+    },
+    {
+      "id": "hadamard-gadget-decomposition",
+      "relation": "see-also"
+    },
+    {
+      "id": "cz-cnot-hadamard",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CZ",
+    "phase gadget",
+    "clifford",
+    "controlled phase"
+  ]
+}

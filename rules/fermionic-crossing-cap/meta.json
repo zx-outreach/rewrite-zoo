@@ -1,0 +1,34 @@
+{
+  "id": "fermionic-crossing-cap",
+  "name": "Caps slide through the crossing",
+  "aliases": [
+    "nat_x^ε",
+    "1(d)",
+    "naturality of the crossing for the cap"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 5,
+  "summary": "A wire crossing both legs of a cap can be moved off the cap.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe upside-down version of [cups slide through the crossing](../fermionic-crossing-cup/): the cap is even, so a wire crossing both of its legs can be pulled off it.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator; bare caps cannot be drawn with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $nat_x^\\varepsilon$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 1(d)"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "cap",
+    "naturality"
+  ]
+}

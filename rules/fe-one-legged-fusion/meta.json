@@ -1,0 +1,103 @@
+{
+  "id": "fe-one-legged-fusion",
+  "name": "Fault-equivalent fusion of a one-legged spider",
+  "aliases": [
+    "(r_fuse)",
+    "(Fuse-1_fe)",
+    "fuse rewrite",
+    "distance-preserving fusion"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 2,
+  "summary": "A phase-free one-legged Z-spider attached to a Z-spider can be fused into it, fault-equivalently.",
+  "description": "Attaching a phase-free one-legged Z-spider to a phase-free Z-spider (or fusing it away) is fault-equivalent. This is a special case of [spider fusion](../spider-fusion/), which in general is *not* fault-equivalent: unfusing a spider creates internal edges, and a flip on an internal edge can be equivalent to a flip on several of the outer legs, so it would increase the weight of a fault.\n\nFault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1. Here the only internal edge is the one to the new spider: an $X$-flip on it is absorbed by the one-legged spider ($\\pi$-copy), and a $Z$-flip can be pushed to any single outer leg, so every fault on the right-hand side has a fault of at most the same weight on the left-hand side.",
+  "conditions": "The spider has at least one other leg ('any green spider with more than one edge' in the Floquetifying paper, 'spiders with at least one output leg' in Fault Tolerance by Construction).",
+  "scalar": "1",
+  "source": {
+    "bib": "rodatz2024floquetifying",
+    "location": "Sec. 3.2, rewrite $(r_{\\text{fuse}})$"
+  },
+  "also_in": [
+    {
+      "bib": "rodatz2025fault",
+      "location": "Sec. 6.2, rule $(\\textsc{Fuse-1}_{\\text{fe}})$"
+    },
+    {
+      "bib": "boriskhesin2026spidercat:",
+      "location": "Sec. 2, figure of fault-equivalent rewrites"
+    },
+    {
+      "bib": "poor2026spidercss:",
+      "location": "Sec. 2.3, figure of elementary fault-equivalent rewrites"
+    },
+    {
+      "bib": "Schweikart2025Masters",
+      "location": "Sec. 2.4.2, eq. (2.62); Example 3.19"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-identity-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "distance-preserving",
+    "edge-flip noise",
+    "fault tolerance",
+    "fusion",
+    "unfusion"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "legs",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n legs on the spider (shown for n = 3); the rule holds for any n ≥ 1."
+}

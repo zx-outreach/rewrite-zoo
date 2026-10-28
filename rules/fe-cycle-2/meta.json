@@ -1,0 +1,45 @@
+{
+  "id": "fe-cycle-2",
+  "name": "Cycle of spiders as a cat state",
+  "aliases": [
+    "N-cycle",
+    "loop decomposition"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 12,
+  "summary": "A cycle of N three-legged Z-spiders is 2-fault-equivalent to a single N-legged spider (a cat state).",
+  "description": "A cycle of $N$ phase-free Z-spiders, each with one leg, equals a single $N$-legged spider. Under edge-flip noise this is a **$w$-fault equivalence for $w = 2$** (the paper writes $\\widehat{=}$ with subscript 2): a single fault on the cycle is either detected or equivalent to a single fault on the spider, whatever $N$ is. For $N = 4$ and $N = 5$ the cycle is even [fully fault-equivalent](../fe-four-legged-spider/). In the language of the paper, this is the case $t = 1$ of fault-tolerant cat-state preparation: a loop cannot be cut by a single fault, so any number of legs can be attached to it, giving vertex ratio $r_1 = 0$.",
+  "parameters": {
+    "N": 6
+  },
+  "parameter_notes": "Shown for N = 6; holds for any N.",
+  "conditions": "2-fault equivalence only (one fault).",
+  "scalar": "1",
+  "source": {
+    "bib": "boriskhesin2026spidercat:",
+    "location": "Sec. 5.2 (Graphs of Z-spiders as fault-tolerant CAT states)"
+  },
+  "related": [
+    {
+      "id": "fe-four-legged-spider",
+      "relation": "generalises"
+    },
+    {
+      "id": "fe-five-legged-spider",
+      "relation": "generalises"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "w-fault-equivalent",
+    "edge-flip noise",
+    "fault tolerance",
+    "cat state",
+    "detecting region"
+  ]
+}

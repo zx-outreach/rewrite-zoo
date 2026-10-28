@@ -1,0 +1,85 @@
+{
+  "id": "addition-rule",
+  "name": "The non-linear axiom (A)",
+  "aliases": [
+    "(A)",
+    "A rule",
+    "addition axiom",
+    "sum rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "supplementarity",
+  "order": 12,
+  "summary": "Two single-qubit states built from angles α, β, θ₁, θ₂ are added together, giving a state of the same shape with angles γ, θ₃ where 2$e^{iθ₃}$cos γ = $e^{iθ₁}$cos α + $e^{iθ₂}$cos β.",
+  "description": "The first complete axiomatisation of the universal (pure qubit) ZX-calculus without extra generators, by Jeandel, Perdrix and Vilmart, consists of their Clifford+T axioms plus this single rule (A). The left-hand side joins two branches, parametrised by $(\\alpha,\\theta_1)$ and $(\\beta,\\theta_2)$, and the right-hand side is a single branch of the same shape parametrised by $(\\gamma,\\theta_3)$. The rule holds under the side condition $2e^{i\\theta_3}\\cos\\gamma = e^{i\\theta_1}\\cos\\alpha+e^{i\\theta_2}\\cos\\beta$.\n\nBecause of this side condition the rule is *non-linear* in the angles. The authors proved that any complete axiomatisation of the universal ZX-calculus that extends the Clifford+T one needs either a non-linear rule or constants that are not multiples of $\\pi/4$: all rules that are linear in their angles with $\\pi/4$ constants already follow from the Clifford+T axioms. In later work (A) was superseded by the [Euler-angle rule](../euler-angles/).\n\nThe stored instance is checked for $\\alpha=\\frac\\pi3$, $\\beta=\\frac\\pi4$, $\\theta_1=\\frac\\pi2$, $\\theta_2=\\frac\\pi6$, with $\\gamma$ and $\\theta_3$ computed from the side condition.",
+  "variables": {
+    "alpha": {
+      "domain": "real",
+      "values": [
+        "1/3"
+      ]
+    },
+    "beta": {
+      "domain": "real",
+      "values": [
+        "1/4"
+      ]
+    },
+    "theta1": {
+      "domain": "real",
+      "values": [
+        "1/2"
+      ]
+    },
+    "theta2": {
+      "domain": "real",
+      "values": [
+        "1/6"
+      ]
+    },
+    "gamma": {
+      "domain": "real",
+      "values": [
+        "226880375/700309612"
+      ]
+    },
+    "theta3": {
+      "domain": "real",
+      "values": [
+        "247385793/819416468"
+      ]
+    }
+  },
+  "conditions": "2$e^{iθ₃}$ cos γ = $e^{iθ₁}$ cos α + $e^{iθ₂}$ cos β.",
+  "scalar": "1",
+  "source": {
+    "bib": "JPV-universal",
+    "location": "Fig. 2, rule (A)"
+  },
+  "also_in": [
+    {
+      "bib": "jeandel2019completeness",
+      "location": "Fig. 3, rule (A)"
+    }
+  ],
+  "related": [
+    {
+      "id": "euler-angles",
+      "relation": "see-also"
+    },
+    {
+      "id": "commutation-of-controls",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "non-linear",
+    "universal",
+    "completeness",
+    "axiom",
+    "addition",
+    "side condition"
+  ],
+  "notes": "The build checks one instance satisfying the side condition (the variables are restricted to those values)."
+}

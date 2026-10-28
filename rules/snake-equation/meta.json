@@ -1,0 +1,41 @@
+{
+  "id": "snake-equation",
+  "name": "Snake equation",
+  "aliases": [
+    "adj_L",
+    "yanking",
+    "zigzag",
+    "compact structure",
+    "cup-cap cancellation"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "spiders",
+  "order": 6,
+  "summary": "A cup followed by a cap is a straight wire.",
+  "description": "The snake (or yanking) equations say that the cup and the cap are each other's inverse when composed side by side: a wire with a zigzag can be pulled straight. They are the defining axioms of a compact closed category, and hold in the ZX-, ZH- and ZW-calculus alike. Hadzihasanovic's presentation of the ZW-calculus lists them as axiom $adj_L$ (and its mirror image).\n\nTogether with [cups as spiders](../cup-as-spider/) this is what makes *only connectivity matters* work. In PyZX and ZXLive it holds by construction.",
+  "checked": false,
+  "unchecked_reason": "bare cups and caps cannot be represented with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $adj_L$"
+  },
+  "related": [
+    {
+      "id": "cup-as-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "cup-swap-symmetry",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "cup",
+    "cap",
+    "snake",
+    "yanking",
+    "compact closed"
+  ]
+}

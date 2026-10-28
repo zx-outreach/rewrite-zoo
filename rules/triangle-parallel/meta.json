@@ -1,0 +1,30 @@
+{
+  "id": "triangle-parallel",
+  "name": "Parallel triangles",
+  "aliases": [
+    "(TR10)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 12,
+  "summary": "Two parallel triangles between two phase-free Z-spiders equal one triangle.",
+  "description": "Two phase-free Z-spiders connected by two wires, each carrying a triangle pointing towards the first spider, equal a single triangle. In the 2018 paper of Ng and Wang this rule is replaced by [(TR10')](../triangle-z-pi-triangle/).\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR10)"
+  },
+  "related": [
+    {
+      "id": "triangle-hopf",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "parallel"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "fermionic-crossing-yang-baxter",
+  "name": "Yang–Baxter equation for the crossing",
+  "aliases": [
+    "rei^x_3",
+    "1(b)",
+    "third Reidemeister move",
+    "braid relation"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 2,
+  "summary": "The fermionic crossing satisfies the Yang–Baxter equation (third Reidemeister move).",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThree wires can be permuted by crossings in two different orders; the Yang–Baxter equation says that the result is the same. Together with [the involution rule](../fermionic-crossing-involution/) this makes the crossings generate a representation of the symmetric group (with signs).",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $rei^x_3$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 1(b)"
+    },
+    {
+      "bib": "carette2023compositionality",
+      "location": "Figure 1 (axioms of the planar W-calculus), row 4, 2nd axiom"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-crossing-involution",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "Yang-Baxter",
+    "Reidemeister"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "hadamard-gadget-decomposition",
+  "name": "Hadamard as a phase gadget",
+  "aliases": [
+    "Euler decomposition with a gadget",
+    "(EU)",
+    "(EU′)",
+    "(HD)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "hadamard",
+  "order": 4,
+  "summary": "The Hadamard gate is two π/2 Z-rotations around an X-spider with a −π/2 leg.",
+  "description": "A variant of the [Euler decomposition of the Hadamard](../euler-decomposition-hadamard/) in which the middle X-rotation is unfused into a phase-free X-spider with a −π/2 Z-spider attached to it.",
+  "scalar": "1",
+  "source": {
+    "bib": "BackensSimplified",
+    "location": "Fig. 2, rule (EU′)"
+  },
+  "related": [
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "euler",
+    "hadamard",
+    "phase gadget"
+  ],
+  "also_in": [
+    {
+      "bib": "SimonCompleteness",
+      "location": "Fig. 1, rule (EU)"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.1 (generators)"
+    }
+  ],
+  "alternative_of": "euler-decomposition-hadamard"
+}

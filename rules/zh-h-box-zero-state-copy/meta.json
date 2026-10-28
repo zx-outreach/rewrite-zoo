@@ -1,0 +1,96 @@
+{
+  "id": "zh-h-box-zero-state-copy",
+  "name": "|0⟩ explodes an H-box",
+  "aliases": [
+    "(HCP)",
+    "X-state copy through H-box"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-bialgebra",
+  "order": 3,
+  "summary": "A phase-free X-state (|0⟩) on an H-box disconnects it into phase-free Z-states.",
+  "description": "Plugging the computational basis state $|0\\rangle$ (a phase-free arity-1 X-spider) into one leg of an H-box removes the H-box: whatever the label, all entries of the remaining tensor are $1$, so the result is a product of phase-free Z-states $|0\\rangle+|1\\rangle$ on the other legs. In terms of AND gates: if one input is $0$, the output does not depend on the other inputs.\n\nThis is the special case of the [ZH bialgebra](../zh-bialgebra/) rule where the X-spider has no other legs. It also holds for an H-box with an arbitrary label. Compare [|1⟩ is absorbed](../zh-h-box-absorbs-one/).",
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "Shown for an H-box with n = 2 other legs; holds for any n.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Lemma 3.3, rule (HCP)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Lemma 2.26"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-absorbs-one",
+      "relation": "see-also"
+    },
+    {
+      "id": "state-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "copy",
+    "state",
+    "H-box",
+    "disconnect"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

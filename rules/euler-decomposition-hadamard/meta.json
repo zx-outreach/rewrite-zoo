@@ -1,0 +1,49 @@
+{
+  "id": "euler-decomposition-hadamard",
+  "name": "Euler decomposition of the Hadamard",
+  "aliases": [
+    "Hadamard decomposition",
+    "H = SVS",
+    "(H1)",
+    "(EU)",
+    "(Eu)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "hadamard",
+  "order": 3,
+  "summary": "The Hadamard gate is a sequence of three π/2 rotations, Z–X–Z.",
+  "description": "Up to a global phase, the Hadamard gate is equal to a π/2 Z-rotation, followed by a π/2 X-rotation, followed by a π/2 Z-rotation. By colour-swapping, also H = X(π/2) Z(π/2) X(π/2); by conjugating, the same holds with all phases −π/2 (with the inverse global phase).\n\nThis rule is what makes the Hadamard derivable from the spiders, so that in the Clifford fragment the Hadamard does not need to be a separate generator.",
+  "scalar": "exp(-I*pi/4)",
+  "source": {
+    "bib": "DuncanPerdrixGraphStates"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.1.1 (generators)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "related": [
+    {
+      "id": "hadamard-gadget-decomposition",
+      "relation": "variant-of"
+    },
+    {
+      "id": "colour-change",
+      "relation": "see-also"
+    },
+    {
+      "id": "local-complementation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "euler",
+    "hadamard",
+    "clifford"
+  ]
+}

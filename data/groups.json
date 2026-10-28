@@ -1,0 +1,158 @@
+[
+ {
+  "id": "spiders",
+  "calculus": "ZX",
+  "name": "Spider fusion and identities",
+  "description": "The most basic rules of the ZX-calculus: spiders of the same colour fuse, phase-free arity-2 spiders are identity wires, and self-loops can be removed."
+ },
+ {
+  "id": "hadamard",
+  "calculus": "ZX",
+  "name": "Hadamards and colour change",
+  "description": "Rules involving the Hadamard gate: it is self-inverse, it changes the colour of spiders, and it can be decomposed into Euler angles."
+ },
+ {
+  "id": "copy",
+  "calculus": "ZX",
+  "name": "Copying and π-commutation",
+  "description": "Computational-basis states copy through spiders of the opposite colour, and π phases commute through spiders of the opposite colour by flipping their phase."
+ },
+ {
+  "id": "bialgebra",
+  "calculus": "ZX",
+  "name": "Bialgebra and Hopf rules",
+  "description": "The interaction between phase-free Z- and X-spiders: strong complementarity (bialgebra) and complementarity (Hopf)."
+ },
+ {
+  "id": "scalars",
+  "calculus": "ZX",
+  "name": "Scalars",
+  "description": "Rules for diagrams without inputs or outputs, and rules whose purpose is to fix scalar factors."
+ },
+ {
+  "id": "euler",
+  "calculus": "ZX",
+  "name": "Euler decompositions",
+  "description": "Rules that relate different decompositions of single-qubit unitaries into Z- and X-rotations."
+ },
+ {
+  "id": "local-complementation",
+  "calculus": "ZX",
+  "name": "Local complementation",
+  "description": "Rules that complement the edges in the neighbourhood of a spider. In graph-like diagrams these allow removing spiders with phase ±π/2."
+ },
+ {
+  "id": "pivoting",
+  "calculus": "ZX",
+  "name": "Pivoting",
+  "description": "Rules that complement the edges between the neighbourhoods of two connected spiders. In graph-like diagrams these allow removing pairs of spiders with Pauli phases."
+ },
+ {
+  "id": "graph-like",
+  "calculus": "ZX",
+  "name": "Graph-like simplifications",
+  "description": "Further rules for simplifying graph-like diagrams, for instance removing identity spiders and parallel Hadamard edges."
+ },
+ {
+  "id": "phase-gadgets",
+  "calculus": "ZX",
+  "name": "Phase gadgets",
+  "description": "Rules for phase gadgets: arity-1 phase spiders attached to an X- or (graph-like) Z-spider, which represent diagonal phase rotations."
+ },
+ {
+  "id": "supplementarity",
+  "calculus": "ZX",
+  "name": "Supplementarity and Clifford+T rules",
+  "description": "Rules that are needed for completeness beyond the Clifford fragment, such as supplementarity and the commutation rules of the Clifford+T axiomatisations."
+ },
+ {
+  "id": "spider-nests",
+  "calculus": "ZX",
+  "name": "Spider nests",
+  "description": "Products of phase gadgets that multiply to the identity. They are used to reduce the T-count of Clifford+T circuits: if a circuit contains more than half of a nest, that part can be replaced by the inverse of the rest."
+ },
+ {
+  "id": "triangle",
+  "calculus": "ZX",
+  "name": "Triangle rules",
+  "description": "Rules for the triangle, the non-unitary single-qubit map with matrix ((1, 1), (0, 1)). It can be written as a Clifford+T ZX-diagram, but several complete axiomatisations (Ng and Wang; Hadzihasanovic, Ng and Wang; Jeandel, Perdrix and Vilmart) add it as a generator, in the latter case with a parameter, because it makes the translation to and from the ZW-calculus simple. These rules are only drawn: PyZX has no triangle generator."
+ },
+ {
+  "id": "lambda-box",
+  "calculus": "ZX",
+  "name": "λ-box rules",
+  "description": "Rules for the λ-box, the diagonal map diag(1, λ) with λ ≥ 0, which Ng and Wang add to the ZX-calculus to obtain a complete axiomatisation of the universal fragment. Together with phases, λ-boxes represent arbitrary diagonal maps diag(1, λe^{iα}), and the addition rule (AD) expresses the sum of two such numbers. These rules are only drawn and not checked."
+ },
+ {
+  "id": "gates",
+  "calculus": "ZX",
+  "name": "Quantum gates",
+  "description": "How common quantum gates are represented as ZX-diagrams, including the exact scalar. The gate is drawn as a circuit on the left and its diagram on the right."
+ },
+ {
+  "id": "circuits",
+  "calculus": "ZX",
+  "name": "Circuit identities",
+  "description": "Identities between quantum circuits built from CNOT, CZ, Hadamard and phase gates, presented as ZX-diagrams."
+ },
+ {
+  "id": "fault-equivalent",
+  "calculus": "ZX",
+  "name": "Fault-equivalent rewrites",
+  "description": "Rewrites that preserve not only the linear map of a diagram but also its behaviour under noise. Under edge-flip noise every edge can suffer a Pauli X, Y or Z flip. Two diagrams are fault-equivalent if every undetectable fault on one has a fault of at most the same weight with the same effect on the other, so that replacing one by the other in any circuit or code preserves its distance (hence these were first called distance-preserving rewrites). Every fault-equivalent rewrite is a sound ZX rule, but not conversely: spider unfusion, for instance, is in general not fault-equivalent. Fault-equivalent rewrites are used to construct fault-tolerant circuits, such as syndrome extraction and cat-state preparation, by construction. The equations shown are checked as ordinary ZX equations; their fault equivalence is not checked."
+ },
+ {
+  "id": "zh-hboxes",
+  "calculus": "ZH",
+  "name": "H-box rules",
+  "description": "Rules for H-boxes: fusion of H-boxes, the identity and the interaction with Z-spiders."
+ },
+ {
+  "id": "zh-arithmetic",
+  "calculus": "ZH",
+  "name": "Arithmetic of H-box labels",
+  "description": "Rules that multiply and add the labels of H-boxes."
+ },
+ {
+  "id": "zh-bialgebra",
+  "calculus": "ZH",
+  "name": "ZH bialgebra and copy rules",
+  "description": "The interaction between Z-spiders, X-spiders and H-boxes: bialgebra, copy and orthogonality rules."
+ },
+ {
+  "id": "zh-translation",
+  "calculus": "ZH",
+  "name": "H-boxes and the ZX-calculus",
+  "description": "Rules that translate between H-boxes and the generators of the ZX-calculus: Hadamards, phases, X-spiders and phase gadgets."
+ },
+ {
+  "id": "zh-gates",
+  "calculus": "ZH",
+  "name": "Quantum gates with H-boxes",
+  "description": "Multi-qubit gates such as the Toffoli and CCZ gates are particularly simple in the ZH-calculus. The gate is drawn as a circuit on the left and its diagram on the right."
+ },
+ {
+  "id": "zw-rules",
+  "calculus": "ZW",
+  "name": "W-node basics",
+  "description": "Rules of the ZW-calculus involving the W-node."
+ },
+ {
+  "id": "zw-bialgebra",
+  "calculus": "ZW",
+  "name": "ZW bialgebra and Hopf rules",
+  "description": "The interaction of the W-node with itself and with Z-spiders: the bialgebra laws (one of which needs the fermionic crossing) and the Hopf rules that disconnect parallel wires."
+ },
+ {
+  "id": "zw-arithmetic",
+  "calculus": "ZW",
+  "name": "ZW arithmetic",
+  "description": "Rules of the labelled ZW-calculus that encode a commutative ring: the W-node adds labels, white (Z) spiders multiply them."
+ },
+ {
+  "id": "fermionic",
+  "calculus": "ZW",
+  "name": "Fermionic crossing rules",
+  "description": "Rules for the crossing (fermionic swap) of the ZW-calculus: a swap that picks up a sign when two |1>s are exchanged. It behaves like an ordinary swap for even maps, but odd maps such as the black vertices pick up signs. These rules are drawn only, as PyZX has no crossing generator."
+ }
+]

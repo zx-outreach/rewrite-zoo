@@ -1,0 +1,39 @@
+{
+  "id": "gate-s",
+  "name": "S gate",
+  "aliases": [
+    "phase gate",
+    "S",
+    "√Z"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "gates",
+  "order": 5,
+  "summary": "The S gate is a Z-spider with phase π/2.",
+  "description": "The phase gate $S = \\mathrm{diag}(1, i)$ is a Z-spider with phase π/2.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 1,
+    "gates": [
+      [
+        "S",
+        0
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "clifford",
+    "gate"
+  ]
+}

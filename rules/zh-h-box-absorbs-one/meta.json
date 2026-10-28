@@ -1,0 +1,50 @@
+{
+  "id": "zh-h-box-absorbs-one",
+  "name": "H-boxes absorb |1⟩",
+  "aliases": [
+    "(HCP)",
+    "NOT-state absorption"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-bialgebra",
+  "order": 4,
+  "summary": "An X-state with phase π (|1⟩) on a leg of an H-box can be removed, lowering the arity of the H-box.",
+  "description": "Plugging the basis state $|1\\rangle$ (an arity-1 X-spider with phase $\\pi$) into a leg of an H-box gives the H-box with that leg removed and the same label: the AND of $1$ and $x$ is just $x$. Together with [|0⟩ explodes an H-box](../zh-h-box-zero-state-copy/) this describes how H-boxes act on computational basis states.\n\nIt holds for H-boxes with an arbitrary label, and follows from [labelled H-box fusion](../zh-h-box-fusion-labelled/).",
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "Shown for an H-box with n = 2 other legs; holds for any n.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Lemma 3.3, rule (HCP)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Lemma 2.27"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-fusion-labelled",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "copy",
+    "state",
+    "H-box",
+    "absorb"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

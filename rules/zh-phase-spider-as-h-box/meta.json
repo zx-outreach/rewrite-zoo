@@ -1,0 +1,40 @@
+{
+  "id": "zh-phase-spider-as-h-box",
+  "name": "Z-phase as an H-box",
+  "aliases": [
+    "green spider translation",
+    "phase as label"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-translation",
+  "order": 2,
+  "summary": "A Z-spider with phase α is a phase-free Z-spider with an arity-1 H-box labelled $e^{iα}$ attached.",
+  "description": "A Z-spider with phase $\\alpha$ equals a phase-free Z-spider with an extra leg, plugged by the arity-1 H-box with label $e^{i\\alpha}$ (the state $|0\\rangle + e^{i\\alpha}|1\\rangle$). This is how ZX-diagrams are translated into ZH-diagrams: the ZH-calculus only has phase-free Z-spiders, and puts all phases into H-box labels.\n\nWith [Hadamard as an H-box](../zh-hadamard-as-h-box/) this gives a translation of every ZX-diagram into the ZH-calculus.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Section 2.1, translation of the green spider"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-phase-state",
+      "relation": "generalises"
+    }
+  ],
+  "tags": [
+    "translation",
+    "phase",
+    "label",
+    "Z-spider"
+  ]
+}

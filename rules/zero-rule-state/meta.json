@@ -1,0 +1,44 @@
+{
+  "id": "zero-rule-state",
+  "name": "Zero rule (state form)",
+  "aliases": [
+    "(ZO')",
+    "(ZO′)",
+    "simplified zero rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "pauli",
+  "group": "scalars",
+  "order": 11,
+  "summary": "In the presence of the zero scalar, the Z-state can be replaced by the X-state.",
+  "description": "The simplified version of the [zero rule](../zero-rule/) used in the minimal axiomatisation of the stabilizer ZX-calculus by Backens, Perdrix and Wang: next to the zero scalar (a Z-spider with phase π and no legs), a phase-free Z-state can be replaced by a phase-free X-state. Both sides are the zero vector.\n\nTogether with the other simplified rules this implies the original zero rule and the [zero scalar rule](../zero-scalar-rule/), and it cannot be derived from the remaining axioms.",
+  "scalar": "1",
+  "source": {
+    "bib": "BackensSimplified",
+    "location": "Figure 2 (simplified rules), rule (ZO′)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2017minimal",
+      "location": "Figure 1, rule (ZO′)"
+    },
+    {
+      "bib": "k.stoltz2026simplified",
+      "location": "Table 1 (ZX_simp), rule (ZO′)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zero-rule",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "zero",
+    "scalar",
+    "stabilizer",
+    "completeness",
+    "minimal"
+  ],
+  "alternative_of": "zero-rule"
+}

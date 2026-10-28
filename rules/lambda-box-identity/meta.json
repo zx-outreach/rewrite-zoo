@@ -1,0 +1,43 @@
+{
+  "id": "lambda-box-identity",
+  "name": "λ-box with label 1",
+  "aliases": [
+    "(L3)",
+    "2(b)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "lambda-box",
+  "order": 4,
+  "summary": "The λ-box with λ = 1 is the identity.",
+  "description": "The λ-box $\\mathrm{diag}(1, 1)$ is the identity wire.\n\n**Conventions.** The λ-box of Ng and Wang is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in their papers, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). It is the same as a Z-box of arity 2 with label $\\lambda$, which is how it is drawn and checked here (the rule holds for every complex $\\lambda$; it is checked for some positive values). Scalars that the papers write as diagrams are given here as numbers.",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 2, rule (L3)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 6, rule (L3)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(b)"
+    }
+  ],
+  "related": [
+    {
+      "id": "identity-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "lambda-box-multiplication",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "identity"
+  ]
+}

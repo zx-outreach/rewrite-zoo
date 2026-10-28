@@ -1,0 +1,101 @@
+{
+  "id": "pauli-gadget-removal",
+  "name": "Pauli phase gadget removal",
+  "aliases": [
+    "Z-deletion",
+    "Z-like deletion",
+    "Z-insertion",
+    "(ZL)",
+    "Pauli measurement removal",
+    "YZ-plane Pauli vertex removal"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "phase-gadgets",
+  "order": 3,
+  "summary": "A spider connected only to an X-spider with phase aπ and, by Hadamard edges, to some neighbours can be removed by adding aπ to all of its neighbours.",
+  "description": "Let $u$ be a phase-free Z-spider whose only plain leg ends in an X-spider with phase $a\\pi$ ($a\\in\\{0,1\\}$), and which is connected to its neighbours by Hadamard edges. Then $u$ can be deleted, together with its edges, at the cost of adding $a\\pi$ to every neighbour. In graph-like form, $u$ is a phase gadget with a Pauli phase: a phase gadget with phase $\\pi$ is the tensor product of Pauli Z's on its targets, and a phase gadget with phase 0 is the identity.\n\nIn MBQC language, this says that a qubit measured in the Z basis (a YZ- or XZ-plane measurement with a Pauli angle) can be removed from a graph state, with Pauli Z corrections on its neighbours. Read from right to left, with $a=0$, it inserts a new vertex with arbitrary neighbours ('Z-insertion'), which is used in proofs of flow-preserving completeness. If $u$ has a phase $\\beta$ (e.g. $\\frac\\pi2$, the XZ-plane case), the same holds with an additional scalar $e^{ia\\beta}$.",
+  "variables": {
+    "a": "boolean"
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n is the number of neighbours of u (shown for n = 3). The neighbours may have any phases and any number of further legs and edges; aπ is added to their phases.",
+  "scalar": "sqrt(2)**(1-n)",
+  "source": {
+    "bib": "Backens2020extraction",
+    "location": "Section 4.3 (Removing Clifford vertices), lemma on YZ/XZ-plane Pauli measurements"
+  },
+  "also_in": [
+    {
+      "bib": "backens2026completeness",
+      "location": "Section 3.1 (Z-like deletion) and rule (ZL)"
+    }
+  ],
+  "related": [
+    {
+      "id": "state-copy",
+      "relation": "derived-from"
+    },
+    {
+      "id": "identity-gadget-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "clifford-gadget-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "pauli",
+    "graph-like",
+    "MBQC",
+    "measurement",
+    "deletion"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "neighbours",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.8,
+          0
+        ]
+      }
+    ]
+  }
+}

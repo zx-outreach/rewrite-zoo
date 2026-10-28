@@ -1,0 +1,64 @@
+{
+  "id": "supplementarity",
+  "name": "Supplementarity",
+  "aliases": [
+    "(SUP)",
+    "SUP",
+    "antipodal merging",
+    "supplementarity rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "supplementarity",
+  "order": 1,
+  "summary": "Two Z-states with antipodal phases α and α+π plugged into the same X-spider merge into one Z-spider with phase 2α+π.",
+  "description": "Two arity-one Z-spiders whose phases differ by π (they are *antipodal*) and that are connected to the same X-spider can be merged into a single Z-spider with phase $2\\alpha+\\pi$, connected to the X-spider by two wires. Both sides denote the state $\\frac{1}{\\sqrt2}(1-e^{2i\\alpha})\\ket{0}$. By the [Hopf rule](../hopf/) the right-hand side can be simplified further to a scalar times a phase-free X-state.\n\nSupplementarity was introduced by Perdrix and Wang, inspired by an observation of Coecke and Edwards, who proved that it is *necessary*: it can be derived from the original rules of the ZX-calculus if and only if $\\alpha$ is a multiple of $\\pi/2$. In particular it cannot be derived for $\\alpha=\\pi/4$, which showed that the ZX-calculus of that time was incomplete for Clifford+T. It is one of the axioms of the complete axiomatisations of Jeandel, Perdrix and Vilmart for Clifford+T and for the full (universal) ZX-calculus. In Vilmart's near-minimal axiomatisation it is no longer an axiom, but is derived from the [Euler-angle rule](../euler-angles/).\n\nIts graphical meaning is that *antiphase twins* can be merged, see [merging antiphase twins](../antiphase-twins/), and it is the case $n=2$ of [cyclotomic supplementarity](../cyclotomic-supplementarity/).",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "supplementarity",
+    "location": "Section 3, supplementarity equation"
+  },
+  "also_in": [
+    {
+      "bib": "cyclo",
+      "location": "Fig. 1, rule (SUP)"
+    },
+    {
+      "bib": "SimonCompleteness",
+      "location": "Fig. 1, rule (SUP)"
+    },
+    {
+      "bib": "JPV-universal",
+      "location": "Fig. 1 and Fig. 2, rule (SUP)"
+    },
+    {
+      "bib": "jeandel2019completeness",
+      "location": "Fig. 2, rule (SUP)"
+    }
+  ],
+  "related": [
+    {
+      "id": "cyclotomic-supplementarity",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "antiphase-twins",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "hopf",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "supplementarity",
+    "antipodal",
+    "antiphase",
+    "necessity",
+    "incompleteness",
+    "clifford+t"
+  ]
+}

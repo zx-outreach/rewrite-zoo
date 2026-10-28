@@ -1,0 +1,40 @@
+{
+  "id": "reidemeister-curl",
+  "name": "Curl removal (first Reidemeister move)",
+  "aliases": [
+    "(R1)",
+    "Reidemeister I",
+    "loop axiom",
+    "twist removal"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "spiders",
+  "order": 12,
+  "summary": "A wire with a curl (crossing itself through a braiding) is a straight wire.",
+  "description": "Backens, Perdrix and Wang show that the meta-rule *only connectivity matters* can be replaced by the axioms of a braided autonomous category, provided one adds the loop axiom (R1): a curl in a wire, made with the braiding (either way round), can be pulled straight. Together with the other rules this recovers the full ZX-calculus for stabilizer quantum mechanics.\n\nIn PyZX and ZXLive only the connectivity of a diagram is stored, so this axiom holds by construction. The paper distinguishes over- and under-crossings, which are not drawn here.",
+  "checked": false,
+  "unchecked_reason": "a wire crossing itself cannot be represented in PyZX graphs, where only connectivity matters",
+  "scalar": "1",
+  "source": {
+    "bib": "backens2017minimal",
+    "location": "Section 4.2, Figure 3 (Reidemeister moves), rule (R1)"
+  },
+  "related": [
+    {
+      "id": "cup-as-spider",
+      "relation": "see-also"
+    },
+    {
+      "id": "fermionic-crossing-curl",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "braiding",
+    "Reidemeister",
+    "curl",
+    "3D isotopy",
+    "only connectivity matters"
+  ]
+}

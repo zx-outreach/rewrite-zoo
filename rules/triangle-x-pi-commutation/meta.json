@@ -1,0 +1,42 @@
+{
+  "id": "triangle-x-pi-commutation",
+  "name": "Triangle and X(π) commutation",
+  "aliases": [
+    "(TR1)",
+    "2(e)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 1,
+  "summary": "An X(π) can be moved through a triangle, which turns the triangle around.",
+  "description": "An X(π) phase (a NOT gate) moves through a triangle by reversing the direction of the triangle: the transpose of the triangle followed by NOT equals NOT followed by the triangle. This is what allows treating the triangle as 'pseudo-undirected' (axiom 2(e) of the LICS'18 paper).\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR1)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR1)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(e)"
+    }
+  ],
+  "related": [
+    {
+      "id": "pi-commutation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "NOT",
+    "transpose"
+  ]
+}

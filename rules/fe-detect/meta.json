@@ -1,0 +1,85 @@
+{
+  "id": "fe-detect",
+  "name": "Removing a detectable fault gadget",
+  "aliases": [
+    "(Detect_fe)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 25,
+  "summary": "A fault gadget that is detected by a detecting spider can be removed, adding the pairwise combinations with the other gadgets on that detector.",
+  "description": "Consider $n$ fault gadgets, with weights $w_1, \\dots, w_n$ and targets on the spiders of the legs $b_1, \\dots, b_n$, whose red spiders are all connected by fault-free edges to one green spider (on the right). This spider acts as a detector: it flags every fault that triggers an odd number of these gadgets. The first gadget can be removed from the detector, provided gadgets for its combinations with each of the others are added, with weights $w_1 + w_i$ and targets $b_1$ and $b_i$: an undetectable fault uses an even number of the gadgets, so the first gadget only matters in such combinations. Applying the rule repeatedly removes all detectable atomic faults, which are irrelevant for fault equivalence.\n\nA *fault gadget* is a red spider connected by fault-free edges to its targets (here Z-spiders, whose phase-free Z-flips it describes) and by a noisy *spawning edge*, annotated with the weight of the fault, to a one-legged green spider. A flip on the spawning edge spreads to the targets, so the gadget models one atomic fault; without a flip it does nothing. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "scalar": "sqrt(2)**(m - 1)",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 3, rule $(\\textsc{Detect}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "fe-comb",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness",
+    "detecting region",
+    "detector"
+  ],
+  "arity": {
+    "params": {
+      "m": {
+        "label": "other gadgets on the detector (n − 1)",
+        "min": 1,
+        "max": 3
+      }
+    },
+    "lhs": [
+      {
+        "param": "m",
+        "vertices": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "offset": [
+          0,
+          1.4
+        ],
+        "dots_shift": [
+          0.8,
+          0.35
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "m",
+        "vertices": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "offset": [
+          0,
+          1.4
+        ],
+        "dots_shift": [
+          0.8,
+          0.35
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "m": 2
+  },
+  "parameter_notes": "m = n − 1 further fault gadgets are connected to the detecting spider (shown for m = 2, i.e. n = 3 in the paper's notation); holds for any m ≥ 1."
+}

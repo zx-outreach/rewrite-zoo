@@ -1,0 +1,42 @@
+{
+  "id": "zh-zero-label",
+  "name": "H-box with label 0",
+  "aliases": [
+    "zero-labelled H-box",
+    "NAND"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-arithmetic",
+  "order": 10,
+  "summary": "An H-box with label 0 is a standard H-box with one extra leg plugged by a phase-free Z-state.",
+  "description": "An H-box with label $0$ has all entries $1$ except for a $0$ where all legs are $1$: as a function of the basis states it is the NAND. It can be written using only standard H-boxes: plugging a phase-free Z-state (i.e. summing) into one leg of a standard H-box gives $1 + (-1)^{x_1\\cdots x_n}$, which is $2$ unless all $x_i$ are $1$, and $0$ otherwise. Hence the scalar factor 2.",
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "Shown for an H-box with n = 3 legs; holds for any n.",
+  "scalar": "1/2",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "backens2021completenessZH",
+    "location": "Section 2.5, the 0-labelled H-box of higher arity"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-unit-generalised",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "label 0",
+    "NAND",
+    "H-box"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

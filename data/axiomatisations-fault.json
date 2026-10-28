@@ -1,0 +1,101 @@
+[
+ {
+  "bib": "rusch2025completeness",
+  "results": [
+   {
+    "title": "Completeness for fault equivalence of Clifford ZX-diagrams",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem in Sec. 3.2 (proved as Theorem in Sec. 6.1); rules in Fig. 3",
+    "summary": "Two Clifford ZX-diagrams with weighted edge-flip noise, with their noise models represented by fault gadgets, are fault-equivalent iff they can be rewritten into each other using the rules of Fig. 3: the Clifford ZX axioms applied to fault-free (idealised) parts of the diagram, rules for moving fault gadgets, and rules for changing the atomic faults. Noisy edges carry weights and fault-free edges are drawn in bold purple in the paper; these annotations are not shown on the rule pages of the zoo.",
+    "axioms": [
+     {
+      "label": "(Fusion)",
+      "rule": "spider-fusion",
+      "note": "Fault-free version: all edges idealised; the phases are multiples of π/2."
+     },
+     {
+      "label": "(Pi-Copy)",
+      "rule": "pi-commutation",
+      "note": "Fault-free version: all edges idealised; the phase is kπ/2."
+     },
+     {
+      "label": "(Copy)",
+      "rule": "state-copy",
+      "note": "Fault-free version (all edges idealised) of the phase-free case."
+     },
+     {
+      "label": "(Elim)",
+      "rule": "identity-removal",
+      "note": "Fault-free version: all edges idealised."
+     },
+     {
+      "label": "(Bialgebra)",
+      "rule": "bialgebra",
+      "note": "Fault-free version: all edges idealised."
+     },
+     {
+      "label": "(Colour)",
+      "rule": "colour-change",
+      "note": "Fault-free version: all edges idealised; the phase is kπ/2."
+     },
+     {
+      "label": "(Elim_fe)",
+      "rule": "fe-identity-removal",
+      "note": "Weighted version: a noisy wire with weight vector w equals a phase-free Z-spider with a noisy leg of weight w and a fault-free leg."
+     },
+     {
+      "label": "(XPhase_fe)",
+      "rule": "fe-x-phase"
+     },
+     {
+      "label": "(Commute_fe)",
+      "rule": "fe-commute"
+     },
+     {
+      "label": "(Scalar_fe)",
+      "rule": "fe-scalar"
+     },
+     {
+      "label": "(Merge_fe)",
+      "rule": "fe-merge"
+     },
+     {
+      "label": "(Comb_fe)",
+      "rule": "fe-comb"
+     },
+     {
+      "label": "(Detect_fe)",
+      "rule": "fe-detect"
+     }
+    ]
+   },
+   {
+    "title": "Completeness for w-fault equivalence",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem in Sec. 6.2; rules in Fig. 3 and Fig. 4 (a)",
+    "summary": "Adding the rule (Limit_fe) of Fig. 4 (a) to the rules of Fig. 3 gives a complete calculus for w-fault equivalence of Clifford ZX-diagrams under weighted edge-flip noise. Only the additional rule is listed here.",
+    "axioms": [
+     {
+      "label": "(Limit_fe)",
+      "rule": "fe-limit"
+     }
+    ]
+   },
+   {
+    "title": "Completeness for fault boundedness",
+    "calculus": "ZX",
+    "fragment": "clifford",
+    "location": "Theorem in Sec. 6.2; rules in Fig. 3 and Fig. 4 (b)",
+    "summary": "Adding the directed rule (Bound_fb) of Fig. 4 (b) to the rules of Fig. 3 gives a complete calculus for fault boundedness of Clifford ZX-diagrams; adding both rules of Fig. 4 gives completeness for w-fault boundedness. Only the additional rule is listed here.",
+    "axioms": [
+     {
+      "label": "(Bound_fb)",
+      "rule": "fb-bound"
+     }
+    ]
+   }
+  ]
+ }
+]

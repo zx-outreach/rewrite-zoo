@@ -1,0 +1,132 @@
+{
+  "id": "zh-h-box-fusion",
+  "name": "H-box fusion",
+  "aliases": [
+    "(HS1)",
+    "(hs)",
+    "H-spider rule",
+    "AND fusion"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-hboxes",
+  "order": 1,
+  "summary": "Two H-boxes connected through an arity-2 H-box (a Hadamard) fuse into a single H-box.",
+  "description": "Two H-boxes that are connected via an arity-2 H-box fuse into one H-box carrying all the remaining legs. This is the H-box analogue of [spider fusion](../spider-fusion/): just as Z-spiders fuse when connected by a plain wire, H-boxes fuse when they are connected by a wire carrying a Hadamard.\n\nThinking of an H-box followed by a Hadamard as a multi-input AND gate, the rule says that a tree of ANDs is a single AND gate. The version where one of the H-boxes carries an arbitrary label is [labelled H-box fusion](../zh-h-box-fusion-labelled/).",
+  "parameters": {
+    "n": 2,
+    "m": 2
+  },
+  "parameter_notes": "n legs on the first H-box and m on the second (shown for n = m = 2); holds for any number of legs.",
+  "scalar": "2",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Figure 2, rule (HS1)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 1, rule (hs)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-fusion-labelled",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-h-box-identity",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "H-box",
+    "fusion",
+    "AND",
+    "Toffoli"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  }
+}

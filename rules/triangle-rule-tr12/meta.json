@@ -1,0 +1,36 @@
+{
+  "id": "triangle-rule-tr12",
+  "name": "CNOT absorbed by triangles",
+  "aliases": [
+    "(TR12)",
+    "2(m)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 15,
+  "summary": "A CNOT after two triangles on the copies of a Z-spider can be removed.",
+  "description": "A phase-free Z-spider copies its input into two branches with triangles (pointing towards the spider), followed by a CNOT (a Z-spider and an X-spider joined by a wire). The CNOT can be removed. The paper writes the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the left-hand side.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "sqrt(2)/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR12)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR12)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(m)"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "CNOT"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "gate-z-rotation",
+  "name": "Z-phase gate",
+  "aliases": [
+    "phase shift",
+    "RZ",
+    "Z rotation"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "gates",
+  "order": 7,
+  "summary": "The phase gate diag(1, e^{iα}) is a Z-spider with phase α.",
+  "description": "The phase gate $\\mathrm{diag}(1, e^{i\\alpha})$, which equals the Z-rotation $R_Z(\\alpha)$ up to a global phase, is a Z-spider with phase α.",
+  "variables": {
+    "alpha": "real"
+  },
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 1,
+    "gates": [
+      [
+        "RZ",
+        0,
+        "alpha"
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "rotation",
+    "gate"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "spider-nest",
+  "name": "Spider nest identity",
+  "aliases": [
+    "spider nest",
+    "4-qubit spider nest",
+    "phase gadget nest"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "spider-nests",
+  "order": 1,
+  "summary": "On four qubits, the product of π/4 phase gadgets on all non-empty subsets of qubits, with sign (−1)^(k+1) for gadgets of size k, is the identity.",
+  "description": "A *spider nest* is a collection of [phase gadgets](../phase-gadget-fusion/) that multiplies to the identity. On four qubits, taking a gadget with phase $\\frac\\pi4$ on every qubit, $-\\frac\\pi4$ on every pair, $\\frac\\pi4$ on every triple and $-\\frac\\pi4$ on all four gives the identity. This follows from the identity $\\sum_{\\emptyset\\neq S\\subseteq[n]} (-1)^{|S|+1}\\,\\bigoplus_{i\\in S}x_i = 2^{n-1}x_1\\cdots x_n$ for bit strings $x$, so that for $n=4$ the total phase is a multiple of $2\\pi$.\n\nMunson, Coecke and Wang derived the spider nest identities for all $n$ from a decomposition of phase gadgets into AND gates: an $n$-qubit $\\frac\\pi4$-gadget equals a product of 1-gadgets with phase $\\frac{(n-2)(n-3)\\pi}8$, 2-gadgets with phase $\\frac{(3-n)\\pi}4$ and 3-gadgets with phase $\\frac\\pi4$, and moving the $n$-gadget to the other side gives the nest. Spider nests are used by de Beaudrap, Bian and Wang to reduce the T-count of circuits: whenever a circuit contains more than half of a nest, it can be replaced by the inverse of the other half.",
+  "parameters": {
+    "n": 4
+  },
+  "parameter_notes": "Shown for n = 4 qubits, where the gadget phases are ±π/4. For other n the 1- and 2-gadget phases depend on n, and the n-gadget has phase −π/4.",
+  "scalar": "256*sqrt(2)",
+  "source": {
+    "bib": "Munson2019ANDgates",
+    "location": "Section 5, spider nest identities (following the corollary on decomposing π/4 phase gadgets)"
+  },
+  "also_in": [
+    {
+      "bib": "deBeaudrapN2020treducspidernest"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-nest-clifford",
+      "relation": "see-also"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "spider nest",
+    "phase gadget",
+    "T-count",
+    "optimisation",
+    "parity",
+    "clifford+t"
+  ]
+}

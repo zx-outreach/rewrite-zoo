@@ -1,0 +1,41 @@
+{
+  "id": "triangle-x-state",
+  "name": "Triangle fixes the X-state",
+  "aliases": [
+    "(TR2)",
+    "2(f)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 2,
+  "summary": "The phase-free X-state (|0⟩) is left unchanged by the triangle.",
+  "description": "Plugging the phase-free X-state, i.e. $|0\\rangle$ up to a scalar, into the input of a triangle gives the same state back.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR2)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 5, rule (TR2)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(f)"
+    }
+  ],
+  "related": [
+    {
+      "id": "triangle-x-pi-state",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "state"
+  ]
+}

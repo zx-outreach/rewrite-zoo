@@ -1,0 +1,51 @@
+{
+  "id": "zh-z-special",
+  "name": "Z-spider special rule",
+  "aliases": [
+    "(ZS2)",
+    "(id)",
+    "special Frobenius",
+    "COPY then merge"
+  ],
+  "calculus": "ZH",
+  "fragment": "phase-free",
+  "group": "zh-hboxes",
+  "order": 4,
+  "summary": "Copying a wire with a Z-spider and merging it back again gives the identity.",
+  "description": "Two phase-free Z-spiders connected by two parallel wires, each with one other leg, equal a plain wire. In terms of Frobenius algebras this says that the Z-spider is *special*. Classically: copying a bit and then comparing the two copies does nothing.\n\nIn the ZX-calculus this follows from [spider fusion](../spider-fusion/), [self-loop removal](../self-loop-removal/) and [identity removal](../identity-removal/). In the ZH-calculus it is one of the axioms; the phase-free (ZS2) of the original paper also states that the arity-2 Z-spider is the identity.",
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (ZS2)"
+  },
+  "also_in": [
+    {
+      "bib": "PhasefreeZH2019",
+      "location": "Figure 2, rule (ZS2)"
+    },
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 1, rule (id)"
+    }
+  ],
+  "related": [
+    {
+      "id": "identity-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-dedup",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "Z-spider",
+    "special",
+    "Frobenius",
+    "COPY"
+  ]
+}

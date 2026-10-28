@@ -1,0 +1,114 @@
+{
+  "id": "identity-gadget-removal",
+  "name": "Gadget fusion into a spider",
+  "aliases": [
+    "identity gadget removal",
+    "arity-1 gadget fusion"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "phase-gadgets",
+  "order": 2,
+  "view": "graph-like",
+  "summary": "A phase gadget attached to a single spider fuses into that spider.",
+  "description": "A phase gadget that is connected to just one spider is simply a phase on that spider: the gadget's phase is added to the phase of the spider. In graph-like form the gadget is a phase-free Z-spider connected by Hadamard edges both to the spider and to the gadget's phase.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 7 (phase gadgets)"
+  },
+  "related": [
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "graph-like",
+    "fusion"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  },
+  "parameter_notes": "n inputs and m outputs on the spider (shown for n = m = 2); holds for any number of legs."
+}

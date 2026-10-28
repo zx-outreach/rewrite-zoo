@@ -1,0 +1,44 @@
+{
+  "id": "zh-unit",
+  "name": "Unit rule",
+  "aliases": [
+    "(U)",
+    "unit"
+  ],
+  "calculus": "ZH",
+  "fragment": "phase-free",
+  "group": "zh-arithmetic",
+  "order": 8,
+  "summary": "An arity-1 H-box with label 1 is a phase-free Z-spider.",
+  "description": "An arity-1 H-box with label $1$ is the (co)vector $\\langle 0| + \\langle 1|$, which is exactly the phase-free arity-1 Z-spider. See the [generalised unit rule](../zh-unit-generalised/) for H-boxes of any arity labelled $1$, which completely disconnect.",
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (U)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 3, rule (U)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-unit-generalised",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "zh-h-box-phase-state",
+      "relation": "special-case-of"
+    }
+  ],
+  "tags": [
+    "unit",
+    "label",
+    "H-box"
+  ]
+}

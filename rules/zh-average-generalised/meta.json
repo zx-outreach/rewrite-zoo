@@ -1,0 +1,85 @@
+{
+  "id": "zh-average-generalised",
+  "name": "Generalised average rule",
+  "aliases": [
+    "(A!)"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-arithmetic",
+  "order": 6,
+  "summary": "Two H-boxes on the same Z-spiders, connected through a NOT, average their labels.",
+  "description": "The !-box generalisation of the [average rule](../zh-average/): two H-boxes with labels $a$ and $b$ that are connected to the same set of Z-spiders, and to each other via a NOT gate, combine into a single H-box with label $\\frac{a+b}{2}$ (and a scalar factor 2).",
+  "variables": {
+    "a": "complex",
+    "b": "complex"
+  },
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "Shown for H-boxes connected to n = 2 Z-spiders; holds for any n.",
+  "scalar": "2",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Lemma 2.3, rule (A!)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Lemma 3.8 (in the sum form of the average rule)"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "tags": [
+    "average",
+    "addition",
+    "label"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "Z-spiders",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

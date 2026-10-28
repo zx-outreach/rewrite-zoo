@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block bodyclass %}page-completeness{% endblock %}
+{% block content %}
+<header class="rule-head">
+  <h1>Complete axiomatisations</h1>
+  <p class="lede">Papers that prove a set of rewrite rules complete: two diagrams in the fragment are equal as linear maps if and only if one can be rewritten into the other. For each result, the rules of the axiomatisation are listed, linked to the rules in the zoo where possible.</p>
+</header>
+<ol class="paper-list completeness-list">
+{% for c in papers %}
+  <li class="paper">
+    <p class="ref">
+      <a class="paper-title" href="{{ c.slug }}/index.html">{{ c.title }}</a>.
+      <span class="paper-authors">{{ c.author_str }}</span> ({{ c.year }}).
+      {% if c.arxiv %}<a class="pill" href="{{ c.arxiv }}">arXiv</a>{% endif %}
+    </p>
+    <ul class="result-list">
+    {% for res in c.results %}
+      <li><a href="{{ c.slug }}/index.html#{{ res.anchor }}">{{ res.title }}</a>
+        {% if res.fragment_name %}<span class="badge frag-{{ res.fragment|replace('+','p') }}">{{ res.calculus }} · {{ res.fragment_name }}</span>{% endif %}
+        <span class="muted">{{ res.axioms|length }} rules, {{ res.n_in_zoo }} in the zoo</span></li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ol>
+{% endblock %}

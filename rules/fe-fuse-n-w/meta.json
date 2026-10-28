@@ -1,0 +1,183 @@
+{
+  "id": "fe-fuse-n-w",
+  "name": "w-fault-equivalent 2n-legged spider ladder",
+  "aliases": [
+    "(Fuse-n_w-fe)",
+    "w-fault-equivalent spider ladder"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 8,
+  "summary": "A 2n-legged Z-spider is w-fault-equivalent to two n-legged spiders of which only w legs are connected pairwise.",
+  "description": "A cheaper version of the [fault-equivalent spider ladder](../fe-fuse-n/): only the first $w$ legs of the two $n$-legged spiders pass through connected pairs of three-legged spiders, and the other $n-w$ legs are plain. The rewrite is not fault-equivalent but **$w$-fault-equivalent**: every undetectable fault of weight less than $w$ on one side has a fault of at most the same weight with the same effect on the other side. This suffices for instance for circuits that only need to be fault-tolerant up to distance $w$. Fault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1.",
+  "conditions": "w-fault equivalence only; w ≥ 1 rungs.",
+  "scalar": "1",
+  "source": {
+    "bib": "rodatz2025fault",
+    "location": "Sec. 6.2, rule $(\\textsc{Fuse-n}_{w\\text{-fe}})$; proof in the appendix"
+  },
+  "also_in": [
+    {
+      "bib": "boriskhesin2026spidercat:",
+      "location": "Sec. 2, figure of fault-equivalent rewrites"
+    }
+  ],
+  "related": [
+    {
+      "id": "fe-fuse-n",
+      "relation": "variant-of"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "w-fault-equivalent",
+    "edge-flip noise",
+    "fault tolerance",
+    "unfusion",
+    "cat state",
+    "distance"
+  ],
+  "arity": {
+    "params": {
+      "w": {
+        "label": "connected legs per half (w)",
+        "min": 1,
+        "max": 3
+      },
+      "k": {
+        "label": "other legs per half (n − w)",
+        "min": 0,
+        "max": 2
+      }
+    },
+    "lhs": [
+      {
+        "param": "w",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "k",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          0.5
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "w",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "k",
+        "vertices": [
+          4
+        ],
+        "offset": [
+          0,
+          0.5
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "w",
+        "vertices": [
+          2,
+          4
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_at": 4,
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "k",
+        "vertices": [
+          5
+        ],
+        "offset": [
+          0,
+          0.5
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "w",
+        "vertices": [
+          3,
+          6
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_at": 6,
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "k",
+        "vertices": [
+          7
+        ],
+        "offset": [
+          0,
+          0.5
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "w": 2,
+    "k": 1
+  },
+  "parameter_notes": "A spider with 2n legs, n = w + k, of which w pairs are connected (shown for w = 2, k = 1). The rewrite is w-fault-equivalent for any w ≥ 1 and k ≥ 0."
+}

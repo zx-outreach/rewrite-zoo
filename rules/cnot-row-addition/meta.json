@@ -1,0 +1,45 @@
+{
+  "id": "cnot-row-addition",
+  "name": "CNOT as a row operation",
+  "aliases": [
+    "row addition",
+    "CNOT pivot",
+    "Gaussian elimination step",
+    "frontier row operation"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "graph-like",
+  "order": 3,
+  "summary": "A CNOT on the outputs of two spiders corresponds to adding the neighbourhood of one spider to that of the other.",
+  "description": "Consider spiders that are each connected to one output, and to some other spiders by Hadamard edges, described by a biadjacency matrix $M$ over $\\mathbb F_2$. Adding the row of the first spider to the row of the second (toggling every Hadamard edge of the second spider to a neighbour of the first) and then applying a CNOT on their outputs, with the target on the first, leaves the diagram unchanged.\n\nThis is the key step of the circuit-extraction algorithm for graph-like diagrams: Gaussian elimination of the biadjacency matrix of the frontier is turned into a CNOT circuit. Duncan, Kissinger, Perdrix and van de Wetering also show that the rule preserves focused gflow.",
+  "parameter_notes": "Shown for two spiders with two neighbours each, one of them shared. Holds for any neighbourhoods; the neighbours may have any further legs and edges.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "duncan2019graph",
+    "location": "Section 7 (Circuit extraction for general circuits), Proposition (CNOT and row operations)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "bialgebra-generalised",
+      "relation": "derived-from"
+    },
+    {
+      "id": "graph-state-pivot",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CNOT",
+    "Gaussian elimination",
+    "extraction",
+    "graph-like",
+    "biadjacency",
+    "gflow"
+  ]
+}

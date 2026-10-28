@@ -1,0 +1,123 @@
+{
+  "id": "zh-unit-generalised",
+  "name": "Label-1 H-box disconnects",
+  "aliases": [
+    "(U!)",
+    "generalised unit rule",
+    "H-box with label 1"
+  ],
+  "calculus": "ZH",
+  "fragment": "phase-free",
+  "group": "zh-arithmetic",
+  "order": 9,
+  "summary": "An H-box with label 1 is the all-ones tensor, so it falls apart into phase-free Z-spiders.",
+  "description": "An H-box with label $1$ has all its entries equal to $1$, so it is a product of the vectors $|0\\rangle + |1\\rangle$ on each leg: it disconnects into a phase-free arity-1 Z-spider on each of its legs.\n\nThis is frequently used after the [generalised multiply rule](../zh-multiply-generalised/): two standard H-boxes connected to the same Z-spiders multiply to an H-box with label $(-1)^2 = 1$, which then disappears.",
+  "parameters": {
+    "n": 1,
+    "m": 2
+  },
+  "parameter_notes": "n inputs and m outputs on the H-box (shown for n = 1, m = 2); holds for any number of legs.",
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Lemma 2.3, rule (U!)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Section 2.5, labelled H-boxes of higher arity"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-zero-state-copy",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "unit",
+    "disconnect",
+    "label 1",
+    "H-box"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3,
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

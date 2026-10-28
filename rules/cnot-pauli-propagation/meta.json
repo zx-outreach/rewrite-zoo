@@ -1,0 +1,47 @@
+{
+  "id": "cnot-pauli-propagation",
+  "name": "Pauli X propagates through CNOT",
+  "aliases": [
+    "Pauli pushing through CNOT",
+    "X copy through control",
+    "CNOT Pauli conjugation"
+  ],
+  "calculus": "ZX",
+  "fragment": "pauli",
+  "group": "circuits",
+  "order": 5,
+  "summary": "A Pauli X on the control of a CNOT becomes a Pauli X on both qubits.",
+  "description": "Pushing a Pauli X gate on the control qubit through a CNOT gate copies it to the target: $\\mathrm{CNOT}\\,(X\\otimes I) = (X\\otimes X)\\,\\mathrm{CNOT}$. In the ZX-calculus the π X-phase is copied through the Z-spider of the control by the [π-commutation rule](../pi-commutation/), and the copy on the target fuses into the X-spider there. With colours swapped (also shown on this page), a Pauli Z on the target is copied to the control.\n\nTogether with [phase commutation](../cnot-phase-commutation/), this gives all the rules for propagating Paulis through CNOT circuits, as needed in stabiliser simulation, measurement-based computation and error correction.",
+  "scalar": "1",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 5.2 (Pauli pushing)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.2.2 (circuit identities)"
+    }
+  ],
+  "related": [
+    {
+      "id": "pi-commutation",
+      "relation": "derived-from"
+    },
+    {
+      "id": "cnot-phase-commutation",
+      "relation": "see-also"
+    },
+    {
+      "id": "cz-pauli-propagation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "pauli",
+    "CNOT",
+    "pauli pushing",
+    "stabiliser",
+    "circuit"
+  ]
+}

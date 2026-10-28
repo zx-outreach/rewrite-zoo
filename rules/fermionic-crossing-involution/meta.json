@@ -1,0 +1,41 @@
+{
+  "id": "fermionic-crossing-involution",
+  "name": "Crossing is an involution",
+  "aliases": [
+    "rei^x_2",
+    "1(a)",
+    "second Reidemeister move",
+    "fermionic swap involution"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 1,
+  "summary": "Two fermionic crossings in a row cancel.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nLike an ordinary swap, the crossing is its own inverse (the second Reidemeister move): the signs $-1$ of the two crossings cancel.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $rei^x_2$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 1(a)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-crossing-yang-baxter",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "involution",
+    "Reidemeister"
+  ]
+}

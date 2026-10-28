@@ -1,0 +1,36 @@
+{
+  "id": "param-triangle-addition",
+  "name": "Parametrised triangle addition",
+  "aliases": [
+    "(TA)",
+    "triangle addition"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "triangle",
+  "order": 21,
+  "summary": "Two parametrised triangles in sequence, with parameters r and s, equal one with parameter r + s.",
+  "description": "The parametrised triangle of Jeandel, Perdrix and Vilmart is the matrix $\\begin{pmatrix}1&r\\\\0&1\\end{pmatrix}$ (read from its tip to its base), and these matrices multiply by adding their parameters. Together with the [decomposition (TD)](../param-triangle-decomposition/) this gives the ring structure of $\\mathbb C$, which replaces the λ-boxes and the addition rule of Ng and Wang. In the paper the triangles are drawn in red.",
+  "variables": {
+    "r": "complex",
+    "s": "complex"
+  },
+  "checked": false,
+  "unchecked_reason": "the parametrised triangle is not a generator of PyZX or ZXLive",
+  "scalar": "1",
+  "source": {
+    "bib": "jeandel2019completeness",
+    "location": "Fig. 6, rule (TA)"
+  },
+  "related": [
+    {
+      "id": "lambda-addition",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "parametrised triangle",
+    "addition"
+  ]
+}

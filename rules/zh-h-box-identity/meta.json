@@ -1,0 +1,47 @@
+{
+  "id": "zh-h-box-identity",
+  "name": "H-box identity",
+  "aliases": [
+    "(HS2)",
+    "(hh)",
+    "Hadamard cancellation"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford",
+  "group": "zh-hboxes",
+  "order": 3,
+  "summary": "Two arity-2 H-boxes in a row are the identity, up to a factor of 2.",
+  "description": "An arity-2 H-box with the standard label $-1$ is the matrix $\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$, i.e. $\\sqrt 2$ times a Hadamard gate. Two of them in a row therefore give twice the identity. This is the ZH counterpart of [Hadamard cancellation](../hadamard-cancellation/).\n\nIn the completeness paper of 2021 it is shown that this rule is actually derivable from the other rules of the phase-free ZH-calculus.",
+  "scalar": "2",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (HS2)"
+  },
+  "also_in": [
+    {
+      "bib": "PhasefreeZH2019",
+      "location": "Figure 2, rule (HS2)"
+    },
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 1, rule (hh)"
+    }
+  ],
+  "related": [
+    {
+      "id": "hadamard-cancellation",
+      "relation": "equivalent-to"
+    },
+    {
+      "id": "zh-hadamard-as-h-box",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "H-box",
+    "Hadamard",
+    "identity"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+}

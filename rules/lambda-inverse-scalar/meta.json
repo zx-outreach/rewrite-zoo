@@ -1,0 +1,42 @@
+{
+  "id": "lambda-inverse-scalar",
+  "name": "λ-box inverse rule",
+  "aliases": [
+    "(IV)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "lambda-box",
+  "order": 1,
+  "summary": "The scalar √2 times a λ-box scalar with λ = 1 − 1/√2 is the empty diagram.",
+  "description": "A connected pair of phase-free Z- and X-spiders is the scalar $\\sqrt 2$, and a λ-box between a phase-free Z-effect and a Z(π)-state is the scalar $1 - \\lambda$. With $\\lambda = 1 - 1/\\sqrt 2$ the two scalars are inverse to each other, so that $\\sqrt 2$ has a diagrammatic inverse (compare the [inverse rule](../inverse-rule/) of the stabiliser fragment).\n\n**Conventions.** The λ-box of Ng and Wang is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in their papers, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). It is the same as a Z-box of arity 2 with label $\\lambda$, which is how it is drawn and checked here (the rule holds for every complex $\\lambda$; it is checked for some positive values). Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "lambda": {
+      "domain": "real",
+      "values": [
+        0.29289321881345254
+      ]
+    }
+  },
+  "conditions": "$\\lambda = 1 - 1/\\sqrt 2$",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 2, rule (IV)"
+  },
+  "related": [
+    {
+      "id": "inverse-rule",
+      "relation": "see-also"
+    },
+    {
+      "id": "clifford-t-inverse-scalar",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "scalar",
+    "inverse"
+  ]
+}

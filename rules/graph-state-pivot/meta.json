@@ -1,0 +1,48 @@
+{
+  "id": "graph-state-pivot",
+  "name": "Pivoting of graph states",
+  "aliases": [
+    "pivoting property",
+    "graph state pivot",
+    "edge local complementation"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "pivoting",
+  "order": 2,
+  "summary": "Hadamards on two adjacent vertices of a graph state and Z on their common neighbours implement a pivot of the graph.",
+  "description": "The *pivot* $G\\wedge uv$ of a graph along an edge $uv$ is the local complementation $G\\star u\\star v\\star u$. Write $A$ for the neighbours of only $u$, $B$ for the neighbours of only $v$ and $C$ for the common neighbours. The pivot toggles every edge between two vertices from different sets among $A$, $B$, $C$, and exchanges $u$ and $v$: in $G\\wedge uv$, $u$ is connected to $B\\cup C$ and $v$ to $A\\cup C$.\n\nOn graph states, $|G\\wedge uv\\rangle = H_u H_v \\prod_{w\\in C} Z_w\\,|G\\rangle$. Duncan and Perdrix showed that when $u$ and $v$ have no common neighbours this follows from the generalised bialgebra rule alone, but that the general case needs an extra axiom (the H-loop axiom, see [Hadamard self-loop removal](../hadamard-self-loop-removal/)), which in turn follows from the [Euler decomposition](../euler-decomposition-hadamard/). This equation is the basis of the graph-like [pivot simplification](../pivot/).",
+  "parameter_notes": "Shown for one neighbour of only u (a), one shared neighbour (c) and one neighbour of only v (b). The same holds for any sets of neighbours and any further vertices.",
+  "scalar": "2*sqrt(2)",
+  "source": {
+    "bib": "DP3",
+    "location": "Section 'Pivoting', Pivoting Property"
+  },
+  "also_in": [
+    {
+      "bib": "duncan2019graph",
+      "location": "Section 4, equation for pivoting of graph states"
+    }
+  ],
+  "related": [
+    {
+      "id": "graph-state-local-complementation",
+      "relation": "derived-from"
+    },
+    {
+      "id": "pivot",
+      "relation": "used-to-derive"
+    },
+    {
+      "id": "hadamard-self-loop-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "pivot",
+    "pivoting",
+    "graph state",
+    "local Clifford",
+    "clifford"
+  ]
+}

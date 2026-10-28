@@ -1,0 +1,47 @@
+{
+  "id": "hadamard-cancellation",
+  "name": "Hadamard cancellation",
+  "aliases": [
+    "Hadamard self-inverse",
+    "HH = I",
+    "(H2)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "hadamard",
+  "order": 1,
+  "summary": "Two Hadamard gates in a row cancel each other.",
+  "description": "The Hadamard gate is self-inverse: two Hadamards in sequence are equal to the identity wire.\n\nIn PyZX and ZXLive a Hadamard gate is represented by a *Hadamard edge*, so two Hadamard gates in a row are represented as two Hadamard edges meeting at a phase-free arity-2 spider. In graph-like diagrams this rule is used to remove such identity spiders.",
+  "scalar": "1",
+  "source": {
+    "bib": "CD2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Figure 1"
+    }
+  ],
+  "related": [
+    {
+      "id": "colour-change",
+      "relation": "see-also"
+    },
+    {
+      "id": "identity-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "euler-decomposition-hadamard",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "hadamard",
+    "identity"
+  ]
+}

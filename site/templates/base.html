@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} · {% endif %}ZX Rewrite Zoo</title>
+<meta name="description" content="{% block description %}An interactive catalogue of rewrite rules for the ZX-, ZH- and ZW-calculus, verified with PyZX.{% endblock %}">
+<link rel="icon" href="{{ root }}assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="stylesheet" href="{{ root }}assets/style.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script defer src="{{ root }}assets/zxview.js"></script>
+<script defer src="{{ root }}assets/tikz.js"></script>
+<script defer src="{{ root }}assets/app.js"></script>
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ root }}index.html">
+      <svg class="brand-mark" viewBox="0 0 40 24" aria-hidden="true"><line x1="10" y1="12" x2="30" y2="12"/><circle cx="10" cy="12" r="7" class="z"/><circle cx="30" cy="12" r="7" class="x"/></svg>
+      <span>ZX Rewrite Zoo</span>
+    </a>
+    <nav class="site-nav">
+      <a href="{{ root }}index.html">Rules</a>
+      <a href="{{ root }}completeness/index.html">Completeness</a>
+      <a href="{{ root }}papers/index.html">Papers</a>
+      <a href="{{ root }}about/index.html">About</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Every rule (except those marked <em>not checked</em>) and each of its generated variants is checked by tensor contraction with <a href="https://github.com/zxcalc/pyzx">PyZX</a> {{ pyzx_version }} when the site is built (last build {{ built }}).
+    Rules can be downloaded as TikZ, PyZX JSON or <a href="https://github.com/zxcalc/zxlive">ZXLive</a> rule files.</p>
+  </div>
+</footer>
+<script>window.ZOO_ROOT = "{{ root }}";</script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

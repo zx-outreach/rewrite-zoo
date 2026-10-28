@@ -1,0 +1,57 @@
+{
+  "id": "zh-multiply",
+  "name": "Multiply rule",
+  "aliases": [
+    "(M)",
+    "multiply"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-arithmetic",
+  "order": 1,
+  "summary": "Two arity-1 H-boxes with labels a and b merged by a Z-spider become one H-box with label ab.",
+  "description": "An arity-1 H-box with label $a$ is the (unnormalised) state $|0\\rangle + a|1\\rangle$. The Z-spider with two inputs and one output multiplies such states entrywise, so two of them merge into the state $|0\\rangle + ab\\,|1\\rangle$, an H-box with label $ab$.\n\nWhen $a = e^{i\\alpha}$ and $b = e^{i\\beta}$ this is just phase addition under [spider fusion](../spider-fusion/). See the [generalised multiply rule](../zh-multiply-generalised/) for H-boxes of higher arity.",
+  "variables": {
+    "a": "complex",
+    "b": "complex"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (M)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 3, rule (M)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-multiply-phase-free",
+      "relation": "generalises"
+    },
+    {
+      "id": "zh-multiply-generalised",
+      "relation": "special-case-of"
+    },
+    {
+      "id": "zh-average",
+      "relation": "see-also"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "multiply",
+    "label",
+    "arithmetic",
+    "H-box"
+  ]
+}

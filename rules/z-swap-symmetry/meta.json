@@ -1,0 +1,50 @@
+{
+  "id": "z-swap-symmetry",
+  "name": "White vertices are symmetric",
+  "aliases": [
+    "0c",
+    "0d",
+    "sym_z",
+    "3(c)",
+    "symmetry of the white vertex"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-rules",
+  "order": 21,
+  "summary": "Swapping two legs of a white vertex (Z-box) gives the same white vertex.",
+  "description": "The (labelled) white vertices of the ZW-calculus, $|0\\cdots0\\rangle + r\\,|1\\cdots1\\rangle$, are symmetric: swapping two of their legs with an ordinary swap does not change them. In the 2015 paper (Rule 0) the white vertices are unlabelled Z-spiders with phase $\\pi$; in the thesis ($sym_z$) and in Hadzihasanovic, Ng and Wang (3(c)) they carry a label $r$ from a commutative ring. In PyZX this holds by construction.",
+  "variables": {
+    "r": "complex"
+  },
+  "parameter_notes": "Shown for a white vertex with four legs; holds for any number of legs.",
+  "checked": false,
+  "unchecked_reason": "both sides are the same PyZX graph: symmetry of the generator is built into the graph representation",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), Rule 0 (0c, 0d, 0d′)"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $sym_z$"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 3(c)"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-swap-symmetry",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "Z-box",
+    "white vertex",
+    "symmetry",
+    "swap"
+  ]
+}

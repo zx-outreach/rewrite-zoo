@@ -1,0 +1,55 @@
+{
+  "id": "lambda-addition",
+  "name": "Addition rule",
+  "aliases": [
+    "(AD)",
+    "sum rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "lambda-box",
+  "order": 7,
+  "summary": "Two branches carrying λ₁·exp(iβ) and λ₂·exp(iα), joined by a structure with triangles, equal one branch carrying their sum.",
+  "description": "The addition rule of Ng and Wang: the states $|0\\rangle + \\lambda_1 e^{i\\beta}|1\\rangle$ and $|0\\rangle + \\lambda_2 e^{i\\alpha}|1\\rangle$ (a λ-box and a phase on a Z-state) are combined by a structure of Z-spiders, an X-spider and two triangles that adds their $|1\\rangle$ components. The result is the diagonal map $\\mathrm{diag}(1, \\lambda e^{i\\gamma})$ with $\\lambda e^{i\\gamma} = \\lambda_1 e^{i\\beta} + \\lambda_2 e^{i\\alpha}$. Together with the λ-boxes this lets the ZX-calculus express the ring structure of $\\mathbb C$, which is used to translate the [ZW-calculus](../w-sum/) into the ZX-calculus. The paper writes the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the left-hand side. The 2018 paper of Ng and Wang uses a [smaller version](../lambda-addition-simplified/) with only one triangle.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.\n\nThe λ-box is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in the papers of Ng and Wang, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). Up to the fact that it is drawn differently, it is a Z-box of arity 2 with label $\\lambda$. Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real",
+    "gamma": "real",
+    "lambda": "real",
+    "lambda1": "real",
+    "lambda2": "real"
+  },
+  "conditions": "$λe^{iγ} = λ₁e^{iβ} + λ₂e^{iα}$, with λ, λ₁, λ₂ ≥ 0.",
+  "checked": false,
+  "unchecked_reason": "the triangle and the λ-box are not generators of PyZX or ZXLive",
+  "scalar": "sqrt(2)/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 2, rule (AD)"
+  },
+  "related": [
+    {
+      "id": "lambda-addition-simplified",
+      "relation": "see-also"
+    },
+    {
+      "id": "w-sum",
+      "relation": "see-also"
+    },
+    {
+      "id": "addition-rule",
+      "relation": "see-also"
+    },
+    {
+      "id": "param-triangle-addition",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "addition",
+    "sum",
+    "triangle"
+  ]
+}

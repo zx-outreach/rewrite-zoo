@@ -1,0 +1,50 @@
+{
+  "id": "fermionic-crossing-not",
+  "name": "NOT through the crossing",
+  "aliases": [
+    "7b",
+    "ant_x^n",
+    "2(g)",
+    "the binary black vertex is odd"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "fermionic",
+  "order": 7,
+  "summary": "Moving a NOT (binary black vertex) through the crossing leaves a Pauli Z on the other wire.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe binary black vertex of the ZW-calculus is the NOT gate (here the X-spider with phase $\\pi$). It is *odd*, so the crossing is not natural for it: moving it through the crossing leaves the binary white vertex, the Pauli Z (Z-spider with phase $\\pi$), on the other wire. Indeed, the crossing is $\\mathrm{CZ}\\circ\\mathrm{SWAP}$ and $\\mathrm{CZ}$ maps $X\\otimes I$ to $X\\otimes Z$.\n\nIn Hadzihasanovic's thesis ($ant_x^n$) and in Hadzihasanovic, Ng and Wang (2(g)) the Pauli Z is drawn as a [curl through the crossing](../fermionic-curl-minus-one/).",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), Rule 7b"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $ant_x^n$"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 2(g)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-crossing-w-merge",
+      "relation": "see-also"
+    },
+    {
+      "id": "cz-pauli-propagation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "NOT",
+    "odd",
+    "Pauli"
+  ]
+}

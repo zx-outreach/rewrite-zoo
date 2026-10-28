@@ -1,0 +1,40 @@
+{
+  "id": "swap-three-cnots",
+  "name": "Three CNOTs make a SWAP",
+  "aliases": [
+    "SWAP decomposition",
+    "SWAP = 3 CNOTs"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "circuits",
+  "order": 2,
+  "summary": "The SWAP gate is equal to three alternating CNOT gates.",
+  "description": "A SWAP gate equals three CNOTs in which the middle one has its control and target reversed. In the ZX-calculus this is proved by deforming the diagram so that the [bialgebra rule](../bialgebra/) applies to the first two CNOTs, after which the remaining pair of CNOTs [cancels](../cnot-cancellation/).\n\nThis identity is used in routing quantum circuits on restricted architectures, where SWAPs must be implemented with the native two-qubit gates.",
+  "scalar": "2*sqrt(2)",
+  "source": {
+    "bib": "vandewetering2020zxcalculus",
+    "location": "Section 4.5 (bialgebra and Hopf rule)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "bialgebra",
+      "relation": "derived-from"
+    },
+    {
+      "id": "cnot-cancellation",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "SWAP",
+    "CNOT",
+    "circuit",
+    "routing"
+  ]
+}

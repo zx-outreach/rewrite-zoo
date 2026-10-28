@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block bodyclass %}page-group{% endblock %}
+{% block description %}{{ group.name }}: {{ group.description }}{% endblock %}
+{% block content %}
+<header class="rule-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ root }}index.html">Rules</a> › {{ group.calculus }}</nav>
+  <h1>{{ group.name }}</h1>
+  <p class="badges"><span class="badge calc">{{ group.calculus }}</span> <span class="muted">{{ group.rules|length }} rule{% if group.rules|length != 1 %}s{% endif %}</span></p>
+  <p class="lede">{{ group.description }}</p>
+</header>
+<div class="with-toc">
+{% set anchors = false %}{% set current = group.id %}
+{% include "_toc.html" %}
+<div class="toc-main group-rules">
+{% for r in rules_full %}
+  <article class="group-rule">
+    <div class="group-rule-head">
+      <h2><a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a></h2>
+      <span class="badge frag-{{ r.fragment|replace('+','p') }}">{{ r.fragment_name }}</span>
+    </div>
+    <div class="equation static" data-static-eq="{{ r.id }}"></div>
+    <p>{{ r.summary }} <span class="muted">— {{ r.source.cite }}</span></p>
+  </article>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script type="application/json" id="index-data">{{ group.rules|json|safe }}</script>
+{% endblock %}

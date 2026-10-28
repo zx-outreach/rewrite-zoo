@@ -1,0 +1,124 @@
+{
+  "id": "colour-change",
+  "name": "Colour change",
+  "aliases": [
+    "Hadamard commutation",
+    "colour-change rule",
+    "(H)",
+    "(C)",
+    "(H2)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "hadamard",
+  "order": 2,
+  "summary": "Surrounding a spider with Hadamards changes its colour.",
+  "description": "An X-spider is equal to a Z-spider with the same phase with a Hadamard gate on each of its legs (and vice versa). Combined with [Hadamard cancellation](../hadamard-cancellation/) this can also be seen as a rule for pushing a Hadamard gate through a spider, changing its colour.\n\nThis is the rule that turns any ZX-diagram into a graph-like diagram containing only Z-spiders and Hadamard edges.",
+  "variables": {
+    "alpha": "real"
+  },
+  "parameter_notes": "n inputs and m outputs (shown for n = m = 2); holds for any number of legs.",
+  "scalar": "1",
+  "source": {
+    "bib": "CD2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.1 (basic rewrite rules)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Figure 1"
+    }
+  ],
+  "related": [
+    {
+      "id": "hadamard-cancellation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "hadamard",
+    "colour change",
+    "graph-like"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1.4
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1.4
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1.4
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1.4
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  }
+}

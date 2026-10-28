@@ -1,0 +1,45 @@
+{
+  "id": "inverse-rule-simplified",
+  "name": "Inverse rule (simplified form)",
+  "aliases": [
+    "(IV')",
+    "(IV′)",
+    "star-free star rule"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "scalars",
+  "order": 14,
+  "summary": "The scalar 2 (a Z-spider without legs) times two copies of 1/√2 (a Z- and X-spider joined by three wires) is the empty diagram.",
+  "description": "A Z-spider with no legs is the scalar 2, and a Z-spider and an X-spider connected by three wires is the scalar $\\frac1{\\sqrt2}$. Together the three components are the empty diagram.\n\nThis is the scalar axiom of the simplified stabilizer ZX-calculus of Backens, Perdrix and Wang. It plays the role of Backens' star rule (a dedicated generator for $\\frac12$ that is inverse to the legless Z-spider), and is equivalent to the [inverse rule](../inverse-rule/) given the other axioms.",
+  "scalar": "1",
+  "source": {
+    "bib": "BackensSimplified",
+    "location": "Figure 2 (simplified rules), rule (IV′)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2017minimal",
+      "location": "Figure 1, rule (IV′)"
+    },
+    {
+      "bib": "k.stoltz2026simplified",
+      "location": "Table 1 (ZX_simp), rule (IV′)"
+    }
+  ],
+  "related": [
+    {
+      "id": "inverse-rule",
+      "relation": "equivalent-to"
+    }
+  ],
+  "tags": [
+    "scalar",
+    "inverse",
+    "stabilizer",
+    "completeness",
+    "minimal"
+  ],
+  "notes": "The right-hand side is the empty diagram.",
+  "alternative_of": "inverse-rule"
+}

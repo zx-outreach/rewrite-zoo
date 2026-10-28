@@ -1,0 +1,38 @@
+{
+  "id": "gate-swap",
+  "name": "SWAP gate",
+  "aliases": [
+    "swap"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "gates",
+  "order": 12,
+  "summary": "The SWAP gate is just two crossing wires.",
+  "description": "In the ZX-calculus the SWAP gate is simply a crossing of wires. See also [three CNOTs make a SWAP](../swap-three-cnots/).",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 2,
+    "gates": [
+      [
+        "SWAP",
+        0,
+        1
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "SWAP",
+    "gate"
+  ]
+}

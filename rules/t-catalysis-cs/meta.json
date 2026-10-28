@@ -1,0 +1,36 @@
+{
+  "id": "t-catalysis-cs",
+  "name": "T gate by catalysis with a CS gate",
+  "aliases": [
+    "catalysis",
+    "T catalysis",
+    "CS catalysis",
+    "catalytic T gate"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "circuits",
+  "order": 40,
+  "summary": "A CNOT followed by a controlled-S gate, acting on a qubit and a |T⟩ state, applies a T gate to the qubit and returns the |T⟩ state unchanged.",
+  "description": "Using a single copy of the magic state $\\ket{T} = \\ket{0}+e^{i\\pi/4}\\ket{1}$ as a *catalyst*, a T gate can be implemented with Clifford gates and one controlled-S (CS) gate: apply a CNOT from the qubit to the catalyst, followed by CS. Here the CS gate $=\\mathrm{CZ}(\\frac\\pi2)$ is written in its standard decomposition into two CNOTs, a $-\\frac\\pi4$ phase on the target and $\\frac\\pi4$ phases on both qubits. The two adjacent CNOTs cancel, the $-\\frac\\pi4$ phase turns the catalyst into $\\ket{+}$, which the last CNOT leaves unchanged, and the final $\\frac\\pi4$ phases apply a T gate to the qubit and restore the catalyst.\n\nBecause the catalyst is returned unchanged, one $\\ket{T}$ state suffices to replace every T gate of a Clifford+T circuit by a Clifford+CS circuit. Kissinger, Ross and van de Wetering use this kind of catalysis to build complete axiomatisations from the phase-free ZH-calculus by adjoining catalysis rules.",
+  "scalar": "sqrt(2)/4",
+  "source": {
+    "bib": "kissinger2024catalysing",
+    "location": "Section 1, example: a CS gate and a |T⟩ catalyst apply a T gate"
+  },
+  "related": [
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "catalysis",
+    "magic state",
+    "T gate",
+    "CS gate",
+    "controlled phase",
+    "circuit",
+    "clifford+t"
+  ]
+}

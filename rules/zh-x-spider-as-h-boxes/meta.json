@@ -1,0 +1,128 @@
+{
+  "id": "zh-x-spider-as-h-boxes",
+  "name": "X-spider from H-boxes",
+  "aliases": [
+    "grey spider definition",
+    "(X)"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford",
+  "group": "zh-translation",
+  "order": 4,
+  "summary": "A phase-free X-spider is a Z-spider with arity-2 H-boxes on all its legs, up to a scalar.",
+  "description": "In the ZH-calculus the X-spider (the grey spider) is not a generator but is *defined* as a phase-free Z-spider with an arity-2 H-box on each leg, together with a scalar. This is the ZH version of the [colour change](../colour-change/) rule. Classically, the grey spider is the XOR.\n\nThe scalar here is for the PyZX normalisation of the X-spider, and differs from the one in the papers, where the grey spider is normalised so that it is exactly the XOR on basis states.",
+  "parameters": {
+    "n": 1,
+    "m": 2
+  },
+  "parameter_notes": "n inputs and m outputs on the X-spider (shown for n = 1, m = 2); holds for any number of legs.",
+  "scalar": "sqrt(2)**(-(n+m))",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Section 2.1, definition of the grey spider"
+  },
+  "also_in": [
+    {
+      "bib": "PhasefreeZH2019",
+      "location": "Section 3, definition (X)"
+    },
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Section 2.1, definition (X)"
+    }
+  ],
+  "related": [
+    {
+      "id": "colour-change",
+      "relation": "equivalent-to"
+    },
+    {
+      "id": "zh-hadamard-as-h-box",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "X-spider",
+    "grey spider",
+    "XOR",
+    "translation",
+    "definition"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          4,
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

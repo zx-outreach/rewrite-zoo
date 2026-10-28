@@ -1,0 +1,34 @@
+{
+  "id": "cnot-cz-commutation",
+  "name": "Commuting a CZ past a CNOT target",
+  "aliases": [
+    "CZ-CNOT commutation"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "circuits",
+  "order": 10,
+  "summary": "A CZ on the target of a CNOT can be moved through it at the cost of an extra CZ on the control.",
+  "description": "A CZ gate acting on the target qubit of a CNOT can be commuted through the CNOT by adding a CZ between the control of the CNOT and the other qubit of the CZ. It is the [colour-changed](../colour-change/) version of [commuting CNOTs](../cnot-target-control-commutation/): with a Hadamard on the third qubit, the CZ becomes a CNOT whose control is the CNOT's target.\n\nRules like this are the basis of algorithms that push CZ gates through CNOT circuits, for instance when extracting circuits from graph-like diagrams.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "cnot-target-control-commutation",
+      "relation": "variant-of"
+    },
+    {
+      "id": "bialgebra",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "CNOT",
+    "CZ",
+    "commutation",
+    "circuit"
+  ]
+}

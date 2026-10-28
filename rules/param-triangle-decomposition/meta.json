@@ -1,0 +1,37 @@
+{
+  "id": "param-triangle-decomposition",
+  "name": "Parametrised triangle decomposition",
+  "aliases": [
+    "(TD)",
+    "triangle decomposition"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "triangle",
+  "order": 20,
+  "summary": "The parametrised triangle with parameter exp(iθ)·tan(α) equals a ZX-diagram in α and θ.",
+  "description": "Jeandel, Perdrix and Vilmart give the triangle a parameter $r \\in \\mathbb C$: the parametrised triangle is the matrix $\\begin{pmatrix}1&r\\\\0&1\\end{pmatrix}$ (read from its tip to its base). This rule expresses it as an ordinary ZX-diagram when $r = e^{i\\theta}\\tan(\\alpha)$, which covers every $r$. The paper writes the scalars as diagrams on both sides: a legless Z($2\\alpha$)-spider on the left and a Z($-\\pi/4$)–X($\\pi$) pair on the right.\n\nThe triangle with parameter 1 is the usual triangle, so with $\\alpha = \\pi/4$ and $\\theta = 0$ this gives a decomposition of the triangle into Clifford+T generators. In the paper the parametrised triangle is drawn in red, with its parameter next to it.",
+  "variables": {
+    "alpha": "real",
+    "theta": "real"
+  },
+  "conditions": "α ≠ π/2 mod π",
+  "checked": false,
+  "unchecked_reason": "the parametrised triangle is not a generator of PyZX or ZXLive",
+  "scalar": "sqrt(2)*exp(-I*pi/4)/(1 + exp(2*I*alpha))",
+  "source": {
+    "bib": "jeandel2019completeness",
+    "location": "Fig. 6, rule (TD)"
+  },
+  "related": [
+    {
+      "id": "param-triangle-addition",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle",
+    "parametrised triangle",
+    "decomposition"
+  ]
+}

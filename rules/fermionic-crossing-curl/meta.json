@@ -1,0 +1,44 @@
+{
+  "id": "fermionic-crossing-curl",
+  "name": "Crossing curls can change side",
+  "aliases": [
+    "rei^x_1",
+    "1(e)",
+    "first Reidemeister move for the crossing"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 3,
+  "summary": "A curl made with the fermionic crossing can be moved from one side of a wire to the other.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nA wire that crosses itself through a fermionic crossing is not a plain wire: it is the Pauli Z, $\\mathrm{diag}(1, -1)$ (see [the curl is −1](../fermionic-curl-minus-one/)). This axiom says that it does not matter on which side of the wire the curl is drawn.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $rei^x_1$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 1(e)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-curl-minus-one",
+      "relation": "see-also"
+    },
+    {
+      "id": "reidemeister-curl",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "curl",
+    "Reidemeister"
+  ]
+}

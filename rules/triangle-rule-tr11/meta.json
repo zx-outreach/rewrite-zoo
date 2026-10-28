@@ -1,0 +1,30 @@
+{
+  "id": "triangle-rule-tr11",
+  "name": "Triangle rule (TR11)",
+  "aliases": [
+    "(TR11)"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "triangle",
+  "order": 14,
+  "summary": "A Z-spider and an X(π)-spider joined by a wire, followed by triangles into a Z-spider, simplify to just the triangles.",
+  "description": "Two inputs pass through a phase-free Z-spider and an X(π)-spider that are connected by a wire, and then through triangles into a Z-spider. This equals the two inputs passing through the triangles into the Z-spider directly. The paper writes the scalar as a connected pair of phase-free Z- and X-spiders ($\\sqrt 2$) on the left-hand side.\n\n**Conventions.** The triangle is the matrix $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ read from its tip to its base: a triangle pointing towards the inputs is $|0\\rangle\\langle 0|+|0\\rangle\\langle 1|+|1\\rangle\\langle 1|$, and a triangle pointing towards the outputs is its transpose. It can be written as a Clifford+T ZX-diagram. The papers read diagrams from top to bottom, so their triangles pointing up point towards the inputs here. Scalars that the papers write as diagrams (such as a connected pair of phase-free Z- and X-spiders, which is $\\sqrt 2$) are given here as numbers.",
+  "checked": false,
+  "unchecked_reason": "the triangle is not a generator of PyZX or ZXLive",
+  "scalar": "sqrt(2)/2",
+  "scalar_side": "lhs",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 3, rule (TR11)"
+  },
+  "related": [
+    {
+      "id": "triangle-rule-tr12",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "triangle"
+  ]
+}

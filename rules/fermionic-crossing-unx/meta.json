@@ -1,0 +1,44 @@
+{
+  "id": "fermionic-crossing-unx",
+  "name": "Uncrossing white vertices on a W-node",
+  "aliases": [
+    "unx",
+    "3(i)"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 11,
+  "summary": "Between the legs of two labelled white vertices on a W-node, a fermionic crossing is an ordinary swap.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nTwo labelled white vertices (Z-boxes with labels $r$ and $s$) attached to the same W-node never both carry a $|1\\rangle$, since the W-node spreads a single excitation. So a fermionic crossing between a leg of one and a leg of the other never picks up a sign, and can be replaced by an ordinary swap. This is the labelled analogue of [rule X](../fermionic-crossing-elimination/).",
+  "variables": {
+    "r": "complex",
+    "s": "complex"
+  },
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $unx$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 3(i)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-crossing-elimination",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "swap",
+    "Z-box",
+    "W"
+  ]
+}

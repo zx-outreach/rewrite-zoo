@@ -1,0 +1,120 @@
+{
+  "id": "self-loop-removal",
+  "name": "Self-loop removal",
+  "aliases": [
+    "loop removal",
+    "(S1′)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "spiders",
+  "order": 3,
+  "summary": "A plain wire from a spider to itself can be removed.",
+  "description": "A spider that is connected to itself by a plain wire is equal to the same spider without that wire. This follows from spider fusion together with the fact that cups and caps are themselves (phase-free) spiders. Compare this with [Hadamard self-loop removal](../hadamard-self-loop-removal/), where the self-loop contains a Hadamard and adds a π phase.",
+  "variables": {
+    "alpha": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "CD2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 3"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "derived-from"
+    },
+    {
+      "id": "hadamard-self-loop-removal",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "self-loop",
+    "spider"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  },
+  "parameter_notes": "n inputs and m outputs (shown for n = m = 2); holds for any number of legs."
+}

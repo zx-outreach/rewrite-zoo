@@ -1,0 +1,32 @@
+{
+  "id": "fe-scalar",
+  "name": "Idealising a scalar fault gadget",
+  "aliases": [
+    "(Scalar_fe)",
+    "scalar rule (fault equivalence)"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 20,
+  "summary": "The noisy edge of a disconnected fault gadget can be made fault-free: a fault without observable effect can be ignored.",
+  "description": "A fault gadget that has no targets is a scalar diagram: a red and a green one-legged spider connected by an edge. On the left-hand side this edge is noisy, with weight vector $\\vec w$ (weights of its $X$-, $Y$- and $Z$-flips); on the right-hand side it is fault-free. A flip on it only changes a global scalar, so it has no observable effect, and the two sides are fault-equivalent.\n\nSemantically the two sides are the same ZX-diagram; only the noise annotation changes. As in the paper, noisy edges are labelled with their weight (the cost of a flip on that edge; a vector of weights for the $X$-, $Y$- and $Z$-flips, unlabelled noisy edges have weight 1), and *fault-free* (idealised) edges are drawn bold purple. These annotations are shown on the rule as stated; derived variants (transpose, colour swap, other legs counts) may drop them.",
+  "scalar": "1",
+  "source": {
+    "bib": "rusch2025completeness",
+    "location": "Fig. 3, rule $(\\textsc{Scalar}_{\\text{fe}})$"
+  },
+  "related": [
+    {
+      "id": "fe-limit",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "fault gadget",
+    "weighted noise",
+    "completeness",
+    "scalar"
+  ]
+}

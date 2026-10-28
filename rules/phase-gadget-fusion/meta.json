@@ -1,0 +1,108 @@
+{
+  "id": "phase-gadget-fusion",
+  "name": "Phase gadget fusion",
+  "aliases": [
+    "gadget fusion",
+    "(gf)",
+    "(GF)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "phase-gadgets",
+  "order": 1,
+  "summary": "Two phase gadgets on the same set of spiders fuse together, and their phases add.",
+  "description": "A *phase gadget* is a phase-free X-spider connected to a number of Z-spiders, with one extra leg ending in a Z-spider carrying a phase. Phase gadgets represent diagonal unitaries: a gadget connected to qubits $q_1,\\ldots,q_n$ with phase α implements $e^{-i\\frac{\\alpha}{2} Z\\otimes\\cdots\\otimes Z}$ (up to a global phase). Two phase gadgets connected to exactly the same set of spiders fuse into a single gadget whose phase is the sum of the two.\n\nThis is the basis of the phase-teleportation T-count optimisation of PyZX.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real",
+    "gamma": "real"
+  },
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "n is the number of spiders the gadgets are connected to (shown for n = 2).",
+  "scalar": "sqrt(2)**(-(n-1))",
+  "source": {
+    "bib": "kissinger2019tcount"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Chapter 8, Table 8.2 (derived rewrite rules)"
+    },
+    {
+      "bib": "duncan2019graph"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "derived-from"
+    },
+    {
+      "id": "bialgebra-generalised",
+      "relation": "derived-from"
+    },
+    {
+      "id": "identity-gadget-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "fusion",
+    "T-count",
+    "phase polynomial"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "targets",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          5,
+          4,
+          6
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.7,
+          0
+        ],
+        "index_vars": [
+          "gamma"
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3,
+          2,
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.7,
+          0
+        ],
+        "index_vars": [
+          "gamma"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "zero-rule",
+  "name": "Zero rule",
+  "aliases": [
+    "(ZO)",
+    "zero diagram rule",
+    "disconnecting zero diagrams"
+  ],
+  "calculus": "ZX",
+  "fragment": "pauli",
+  "group": "scalars",
+  "order": 10,
+  "summary": "In the presence of the zero scalar, any wire can be cut.",
+  "description": "A Z-spider with phase π and no legs represents the scalar $1+e^{i\\pi}=0$. In a diagram that contains this zero scalar, any wire can be replaced by a disconnected Z-effect and X-state, since both sides are then the zero map. Together with the [zero scalar rule](../zero-scalar-rule/) this allows bringing any zero diagram into a normal form that only depends on its numbers of inputs and outputs.\n\nThe rule was suggested by Kissinger and introduced as an axiom by Backens to make the stabilizer ZX-calculus complete for diagrams with scalars. In the simplified rule set of Backens, Perdrix and Wang it is replaced by the [state version](../zero-rule-state/).",
+  "scalar": "1",
+  "source": {
+    "bib": "Backens:2015aa",
+    "location": "Section 4.3 (Completeness for stabilizer zero diagrams), zero rule"
+  },
+  "also_in": [
+    {
+      "bib": "BackensSimplified",
+      "location": "Figure 1, rule (ZO)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zero-rule-state",
+      "relation": "variant-of"
+    },
+    {
+      "id": "zero-scalar-rule",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "zero",
+    "scalar",
+    "stabilizer",
+    "completeness",
+    "disconnect"
+  ]
+}

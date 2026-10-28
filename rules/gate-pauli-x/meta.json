@@ -1,0 +1,39 @@
+{
+  "id": "gate-pauli-x",
+  "name": "Pauli X gate",
+  "aliases": [
+    "NOT gate",
+    "X"
+  ],
+  "calculus": "ZX",
+  "fragment": "pauli",
+  "group": "gates",
+  "order": 1,
+  "summary": "The Pauli X (NOT) gate is an X-spider with phase π.",
+  "description": "The NOT gate $X = |0\\rangle\\langle 1| + |1\\rangle\\langle 0|$ is a phase-π X-spider with one input and one output.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 1,
+    "gates": [
+      [
+        "X",
+        0
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "pauli",
+    "NOT",
+    "gate"
+  ]
+}

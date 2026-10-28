@@ -1,0 +1,40 @@
+{
+  "id": "fermionic-crossing-cup",
+  "name": "Cups slide through the crossing",
+  "aliases": [
+    "nat_x^η",
+    "1(c)",
+    "naturality of the crossing for the cup"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "fermionic",
+  "order": 4,
+  "summary": "A wire crossing both legs of a cup can be moved off the cup.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe cup $|00\\rangle + |11\\rangle$ is even, so the crossing is natural with respect to it: a wire that crosses both legs of a cup (through two fermionic crossings) can be pulled off it. The signs of the two crossings cancel.",
+  "checked": false,
+  "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator; bare cups cannot be drawn with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $nat_x^\\eta$"
+  },
+  "also_in": [
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 1(c)"
+    }
+  ],
+  "related": [
+    {
+      "id": "fermionic-crossing-cap",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "crossing",
+    "fermionic swap",
+    "cup",
+    "naturality"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "cnot-conjugation-reversal",
+  "name": "Reversing CNOT-conjugated rotations",
+  "aliases": [
+    "XX and ZZ rotations",
+    "CNOT sandwich reversal"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "circuits",
+  "order": 8,
+  "summary": "An X-rotation on the control and a Z-rotation on the target, between two CNOTs, can be moved to the other qubits by reversing the CNOTs.",
+  "description": "Conjugating $X(\\beta)\\otimes Z(\\alpha)$ by a CNOT gives the commuting product of an $X\\otimes X$ rotation by β and a $Z\\otimes Z$ rotation by α. Conjugating $Z(\\alpha)\\otimes X(\\beta)$ by the reversed CNOT gives the same two rotations, so the two circuits are equal.\n\nIn the ZX-calculus each side is a pair of phase gadgets (one of each colour) connecting the two qubits, which is why the identity holds.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Section 8.2.2 (circuit identities)"
+  },
+  "related": [
+    {
+      "id": "phase-gadget-cnot-conjugation",
+      "relation": "see-also"
+    },
+    {
+      "id": "cnot-phase-commutation",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "CNOT",
+    "phase gadget",
+    "Pauli exponential",
+    "circuit"
+  ]
+}

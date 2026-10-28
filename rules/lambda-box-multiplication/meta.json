@@ -1,0 +1,62 @@
+{
+  "id": "lambda-box-multiplication",
+  "name": "λ-boxes multiply",
+  "aliases": [
+    "(L4)",
+    "2(c)"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "lambda-box",
+  "order": 5,
+  "summary": "Two λ-boxes in sequence fuse into one whose label is the product.",
+  "description": "λ-boxes compose by multiplying their labels, just as phases of spiders add: $\\mathrm{diag}(1, \\lambda_2)\\,\\mathrm{diag}(1, \\lambda_1) = \\mathrm{diag}(1, \\lambda_1\\lambda_2)$.\n\n**Conventions.** The λ-box of Ng and Wang is the diagonal map $\\mathrm{diag}(1, \\lambda)$ with $\\lambda \\geq 0$ (a yellow box in their papers, a green box in the LICS'18 paper of Hadzihasanovic, Ng and Wang). It is the same as a Z-box of arity 2 with label $\\lambda$, which is how it is drawn and checked here (the rule holds for every complex $\\lambda$; it is checked for some positive values). Scalars that the papers write as diagrams are given here as numbers.",
+  "variables": {
+    "lambda1": {
+      "domain": "real",
+      "values": [
+        "1/3",
+        "2",
+        "5/2"
+      ]
+    },
+    "lambda2": {
+      "domain": "real",
+      "values": [
+        "1/3",
+        "2",
+        "5/2"
+      ]
+    }
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 2, rule (L4)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 6, rule (L4)"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 4, ZX axiom 2(c)"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    },
+    {
+      "id": "zw-weighted-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "lambda",
+    "multiplication",
+    "fusion"
+  ]
+}

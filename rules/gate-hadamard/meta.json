@@ -1,0 +1,38 @@
+{
+  "id": "gate-hadamard",
+  "name": "Hadamard gate",
+  "aliases": [
+    "H"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "gates",
+  "order": 4,
+  "summary": "The Hadamard gate is a Hadamard edge (or a yellow box).",
+  "description": "The Hadamard gate $H = \\frac{1}{\\sqrt2}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$ is drawn as a yellow box, or as a blue dashed Hadamard edge. See the [Euler decomposition](../euler-decomposition-hadamard/) for how to write it with spiders.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 1,
+    "gates": [
+      [
+        "H",
+        0
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "hadamard",
+    "gate",
+    "clifford"
+  ]
+}

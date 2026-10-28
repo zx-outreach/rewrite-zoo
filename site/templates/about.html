@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block bodyclass %}page-about{% endblock %}
+{% block content %}
+<header class="rule-head">
+  <h1>About &amp; conventions</h1>
+  <p class="lede">The ZX Rewrite Zoo is a catalogue of rewrite rules for the qubit ZX-calculus and its relatives, the ZH- and ZW-calculus. Each rule records where it first appeared, which fragment it belongs to, and how it relates to other rules.</p>
+</header>
+<div class="prose about">
+<h2>Semantics and scalars</h2>
+<p>All diagrams use the semantics of <a href="https://github.com/zxcalc/pyzx">PyZX</a>, which agrees with the conventions of <a href="https://github.com/zxcalc/book">Picturing Quantum Software</a>:</p>
+<ul>
+  <li>A Z-spider with phase <span class="math">$\alpha$</span> is <span class="math">$|0\cdots0\rangle\langle0\cdots0| + e^{i\alpha}|1\cdots1\rangle\langle1\cdots1|$</span>.</li>
+  <li>An X-spider with phase <span class="math">$\alpha$</span> is <span class="math">$|{+}\cdots{+}\rangle\langle{+}\cdots{+}| + e^{i\alpha}|{-}\cdots{-}\rangle\langle{-}\cdots{-}|$</span>.</li>
+  <li>A Hadamard gate, drawn as a yellow box in the two-colour view or as a blue dashed <em>Hadamard edge</em> in the graph-like view, is the unitary <span class="math">$\tfrac{1}{\sqrt2}\begin{pmatrix}1&amp;1\\1&amp;-1\end{pmatrix}$</span>. In the data, Hadamard gates in ZX-rules are always stored as Hadamard edges.</li>
+  <li>An H-box in a ZH-rule with label <span class="math">$a$</span> is the <em>unnormalised</em> tensor with entries <span class="math">$a^{i_1 \cdots i_n}$</span>, following the original ZH-calculus. With label <span class="math">$-1$</span> (shown without a label) and two legs it is therefore <span class="math">$\sqrt2$</span> times the Hadamard gate.</li>
+</ul>
+<p>A rule with scalar <span class="math">$s$</span> states that <strong>LHS = <span class="math">$s$</span> · RHS</strong> as linear maps, exactly. The scalar is stored in the rule's metadata, not in the diagrams. This lets it depend on the parameters of the rule, such as the phases or the number of legs. Use the <em>Scalar on left</em> toggle to move the scalar to the other side.</p>
+
+<h2>Fragments</h2>
+<p>The fragments are nested. Each one contains all the previous ones:</p>
+<ol>
+  <li><strong>Phase-free</strong>: Z- and X-spiders whose phases are all zero, and no Hadamards.</li>
+  <li><strong>Pauli</strong>: spider phases are 0 or π, still without Hadamards.</li>
+  <li><strong>Clifford</strong>: phases are multiples of π/2, and Hadamards are allowed.</li>
+  <li><strong>Clifford+T</strong>: phases are multiples of π/4.</li>
+  <li><strong>Universal</strong>: arbitrary phases.</li>
+</ol>
+<p>A rule is listed under the <em>smallest</em> fragment in which it can be stated. A rule with a free phase parameter <span class="math">$\alpha \in \mathbb{R}$</span> is therefore universal, even if it is also often used with Clifford phases.</p>
+<p>ZH- and ZW-rules are classified in the same hierarchy, according to the smallest ZX-fragment that contains their generators. An H-box with the standard label −1 is a Hadamard (Clifford) when it has two legs, and of Toffoli type (Clifford+T) when it has three or more. A W-node can be built from Clifford+T diagrams. H-boxes and Z-boxes with labels that are not phases make a rule universal. So the phase-free ZH-calculus of the literature ends up under Clifford+T here. The fragment is computed from the diagrams when the site is built, and the build fails if it disagrees with the metadata.</p>
+
+<h2>Views and variants</h2>
+<p>Every ZX-rule can be shown in three views:</p>
+<ul>
+  <li><strong>Two-colour</strong>: Z- and X-spiders, with Hadamard gates drawn as boxes.</li>
+  <li><strong>GH</strong>: every X-spider is turned into a Z-spider by putting Hadamards on its legs, so there are only Z-spiders, connected by plain or Hadamard edges (blue, dashed).</li>
+  <li><strong>Graph-like</strong>: additionally all spiders connected by plain edges are fused, self-loops and pairs of parallel Hadamard edges are removed, and every input and output is connected by a plain wire to its own spider. Rules that become trivial in this form, like spider fusion, have no graph-like view. The scalar is adjusted for the simplifications.</li>
+</ul>
+<p>One of the views is drawn by hand; the others are derived automatically and are marked as such.</p>
+<p>The following variants of each rule are generated automatically, rather than listed as separate rules:</p>
+<ul>
+  <li><strong>Colour-swapped</strong>: swap Z and X. This is available for all ZX-rules.</li>
+  <li><strong>Conjugate</strong>: negate all phases and conjugate all labels; the scalar is conjugated as well.</li>
+  <li><strong>Transpose</strong>: mirror the diagram, so that inputs become outputs.</li>
+  <li><strong>Adjoint</strong>: both of the above.</li>
+</ul>
+<p>The build checks every single generated variant, including its transformed scalar.</p>
+
+<h2>Rules with any number of legs</h2>
+<p>Many rules hold for any number of legs, such as spider fusion, or for any number of repeated parts, such as the neighbours in local complementation. These are shown with <strong>⋯</strong> between the repeated parts. On the rule page you can choose a specific number of legs. Every such instance in the offered range is generated and verified separately.</p>
+
+<h2>Complete axiomatisations</h2>
+<p>The <a href="{{ root }}completeness/index.html">completeness pages</a> list, for each completeness result in the literature, all the rules of the complete axiomatisation, with their labels in the paper. Some axioms cannot be represented here, for instance because they use the triangle, the λ-box or the fermionic crossing, or because they state that a bare cup is a spider. These are listed with an explanation.</p>
+<p>Some rules in the literature are only a different representation of a rule in the zoo, for instance with the scalar written as a diagram, or the special case needed for one completeness proof. These are listed on the page of the main rule as <em>alternative representations</em>.</p>
+
+<h2>Quantum gates</h2>
+<p>The <a href="{{ root }}groups/gates/index.html">quantum gates</a> section shows common gates (Paulis, Hadamard, phase gates, CNOT, CZ, SWAP, CCZ, Toffoli, controlled Hadamard and controlled SWAP) as a circuit on the left and as a ZX- or ZH-diagram on the right, with the exact scalar. These are verified against the unitary of the circuit. The diagram can be exported to PyZX; the circuit side can only be exported to TikZ.</p>
+
+<h2>Rules that are only drawn</h2>
+<p>Some rules from the literature cannot be represented in PyZX or ZXLive, for instance because they use the triangle, the λ-box, Backens' star or the fermionic crossing of the ZW-calculus, or because they are about bare cups and caps. These rules are still included, marked <span class="badge unchecked">not checked</span>. They are drawn (with symbols for the extra generators) and can be exported to TikZ, but they are not verified and cannot be exported to PyZX or ZXLive.</p>
+
+<h2>Verification</h2>
+<p>When the site is built, the two sides of every variant are contracted to matrices with PyZX and compared, scalar included.</p>
+<ul>
+  <li><strong>Symbolic phases</strong> are checked at a set of fixed and random values from their domain. Boolean, Clifford and Clifford+T parameters are checked exhaustively when the number of combinations is small.</li>
+  <li><strong>Rules with an arbitrary number of legs</strong> are checked for every number of legs offered on the rule page, with the scalar formula evaluated at those numbers. All variants are checked for the default number of legs; the other numbers are checked in every view.</li>
+</ul>
+
+<h2>Downloads</h2>
+<ul>
+  <li><strong>TikZ</strong>: <a href="https://tikzit.github.io">TikZiT</a> files using the styles of <em>Picturing Quantum Software</em>. Download the <a href="{{ root }}downloads/zx-rewrites.tikzstyles">style file</a> to typeset them.</li>
+  <li><strong>PyZX JSON</strong>: the left- and right-hand sides as PyZX graphs (<code>zx.Graph.from_json</code>). The scalar is not included; it is in the metadata.</li>
+  <li><strong>ZXLive</strong>: <code>.zxr</code> custom rule files. When the scalar is a number, it is stored in the right-hand side's scalar so that ZXLive's correctness check passes. There is also a <a href="{{ root }}downloads/zx-rewrites-zxlive.zip">zip with all rules</a> that can be used directly as a ZXLive custom-rules folder.</li>
+  <li><strong>Everything</strong>: a <a href="{{ root }}downloads/zx-rewrites-all.zip">zip with all rules</a>, including their metadata.</li>
+</ul>
+
+<h2>Contributing</h2>
+<p>Each rule is a directory <code>rules/&lt;id&gt;/</code> containing:</p>
+<ul>
+  <li><code>meta.json</code> with the rule's metadata;</li>
+  <li><code>lhs.json</code> and <code>rhs.json</code> with its PyZX graphs (these can be drawn and saved with ZXLive);</li>
+  <li>optionally, a hand-made version of the other view in <code>alt/</code>.</li>
+</ul>
+<p>Running <code>python build.py</code> verifies everything and regenerates the site.</p>
+</div>
+{% endblock %}

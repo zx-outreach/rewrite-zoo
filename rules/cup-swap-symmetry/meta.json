@@ -1,0 +1,36 @@
+{
+  "id": "cup-swap-symmetry",
+  "name": "Cups are symmetric",
+  "aliases": [
+    "com",
+    "symmetry of the cup",
+    "symmetry of the cap",
+    "self-dual compact structure"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "spiders",
+  "order": 7,
+  "summary": "A cup followed by a swap is the cup (and likewise for the cap).",
+  "description": "Swapping the two legs of a cup gives the cup back; upside down, the same holds for the cap. This is the axiom $com$ of Hadzihasanovic's ZW-calculus, which makes the compact structure *symmetric*. It holds in the ZX-, ZH- and ZW-calculus alike, and is built into PyZX and ZXLive, where only connectivity matters.\n\nThe swap here is an ordinary swap of wires, not the fermionic crossing of the ZW-calculus.",
+  "checked": false,
+  "unchecked_reason": "bare cups and caps cannot be represented with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $com$"
+  },
+  "related": [
+    {
+      "id": "cup-as-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "cup",
+    "cap",
+    "swap",
+    "symmetry",
+    "compact closed"
+  ]
+}

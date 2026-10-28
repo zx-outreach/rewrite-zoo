@@ -1,0 +1,46 @@
+{
+  "id": "gate-ccz-zh",
+  "name": "CCZ gate (H-box)",
+  "aliases": [
+    "controlled-controlled-Z",
+    "CCZ"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-gates",
+  "order": 1,
+  "summary": "The CCZ gate is three Z-spiders connected to one standard H-box.",
+  "description": "In the ZH-calculus the CCZ gate is very simple: the H-box with label −1 and three legs is the tensor $(-1)^{x_1x_2x_3}$, and the Z-spiders copy the three bits into it. Compare the [ZX-calculus version](../gate-ccz-phase-gadgets/) with phase gadgets.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 3,
+    "gates": [
+      [
+        "CCZ",
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "gate-ccz-phase-gadgets",
+      "relation": "equivalent-to"
+    }
+  ],
+  "tags": [
+    "CCZ",
+    "H-box",
+    "gate"
+  ]
+}

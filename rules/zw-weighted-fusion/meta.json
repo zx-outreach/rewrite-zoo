@@ -1,0 +1,50 @@
+{
+  "id": "zw-weighted-fusion",
+  "name": "Weighted spider fusion",
+  "aliases": [
+    "cut_z",
+    "rng_×",
+    "label multiplication",
+    "Z-box fusion",
+    "white spider rule"
+  ],
+  "calculus": "ZW",
+  "fragment": "universal",
+  "group": "zw-arithmetic",
+  "order": 2,
+  "summary": "Two connected white (Z) spiders with labels r and s fuse into one with label rs.",
+  "description": "In the $R$-labelled ZW-calculus the white spider with label $r$ is $|0\\cdots0\\rangle + r|1\\cdots1\\rangle$, which in PyZX is a Z-box with label $r$. Two connected white spiders fuse, and their labels multiply. For two-legged spiders this is the axiom $rng_\\times^{r,s}$: composing $\\mathrm{diag}(1, r)$ and $\\mathrm{diag}(1, s)$ gives $\\mathrm{diag}(1, rs)$; the [sum rule](../w-sum/) provides addition.\n\nWith $r = e^{i\\alpha}$ and $s = e^{i\\beta}$ this is ordinary spider fusion of the ZX-calculus.",
+  "variables": {
+    "r": "complex",
+    "s": "complex"
+  },
+  "parameter_notes": "Shown for two spiders with two outer legs each; holds for any number of legs.",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2017algebra",
+    "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $cut_z$"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.1, axiom $rng_\\times^{r,s}$"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-sum",
+      "relation": "see-also"
+    },
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "Z-box",
+    "fusion",
+    "multiplication",
+    "arithmetic",
+    "label"
+  ]
+}

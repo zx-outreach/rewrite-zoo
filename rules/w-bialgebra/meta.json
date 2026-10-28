@@ -1,0 +1,50 @@
+{
+  "id": "w-bialgebra",
+  "name": "W bialgebra",
+  "aliases": [
+    "ba_W",
+    "5a",
+    "W Hopf algebra",
+    "fermionic bialgebra"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-bialgebra",
+  "order": 2,
+  "summary": "A W merge followed by a W split equals W splits followed by W merges, with a fermionic crossing.",
+  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nThe W-node read as a merge (dot on the right) and as a split (dot on the left) form a bialgebra, but only up to a sign: the two wires that cross must be connected by Hadzihasanovic's *crossing*, the 'fermionic swap' $|00\\rangle\\langle00| + |01\\rangle\\langle10| + |10\\rangle\\langle01| - |11\\rangle\\langle11|$, which picks up a sign when both wires carry an excitation. With an ordinary swap the rule is false. PyZX has no crossing generator, so here it is written as a swap followed by a CZ gate (two Z-spiders joined by a Hadamard edge).\n\nThis is axiom 5a of Hadzihasanovic's ZW-calculus (black monoid and comonoid form a Hopf algebra), generalised to $\\mathrm{ba}_W^{n,m}$. Its companion with a Z-spider, the [W/Z bialgebra](../w-z-bialgebra/), needs no crossing.",
+  "parameter_notes": "Shown for two inputs and two outputs; holds for any numbers of inputs and outputs, with a fermionic crossing between every pair of crossing wires.",
+  "scalar": "sqrt(2)",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), Rule 5a"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2015diagrammatic",
+      "location": "Section 3 (The rules), generalised bialgebra rule I, $\\mathrm{ba}_W^{n,m}$"
+    },
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $ba_w$"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-z-bialgebra",
+      "relation": "see-also"
+    },
+    {
+      "id": "w-hopf",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "W",
+    "bialgebra",
+    "crossing",
+    "fermionic swap",
+    "CZ"
+  ],
+  "notes": "The crossing of the ZW-calculus is not a generator in PyZX; it is represented here by a swap and a CZ (Hadamard edge between two phase-free Z-spiders), which has the same linear map. The scalar $\\sqrt{2}$ compensates for the normalisation of the Hadamard edge: the Z-spiders joined by a Hadamard edge are $\\mathrm{CZ}/\\sqrt{2}$."
+}

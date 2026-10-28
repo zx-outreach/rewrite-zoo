@@ -1,0 +1,51 @@
+{
+  "id": "w-swap-symmetry",
+  "name": "W-nodes are symmetric",
+  "aliases": [
+    "0a",
+    "0b",
+    "sym_w",
+    "2(e)",
+    "symmetry of the black vertex"
+  ],
+  "calculus": "ZW",
+  "fragment": "clifford+t",
+  "group": "zw-rules",
+  "order": 20,
+  "summary": "Swapping two legs of a W-node (black vertex) gives the same W-node.",
+  "description": "The black vertices of the ZW-calculus are symmetric: swapping two of their legs with an ordinary swap does not change them (Rule 0 of Hadzihasanovic 2015, $sym_w$ of his thesis). This is what allows treating them as vertices of an undirected graph. In PyZX the outputs of a W-node are unordered, so this holds by construction.\n\nThe swap here is an ordinary swap; for the fermionic crossing see [W-nodes are symmetric under the crossing](../w-fermionic-symmetry/).",
+  "parameter_notes": "Shown for a W-node with three outputs; holds for any number of legs.",
+  "checked": false,
+  "unchecked_reason": "both sides are the same PyZX graph: symmetry of the generator is built into the graph representation",
+  "scalar": "1",
+  "source": {
+    "bib": "hadzihasanovic2015diagrammatic",
+    "location": "Section 3 (The rules), Rule 0 (0a, 0b, 0b′)"
+  },
+  "also_in": [
+    {
+      "bib": "hadzihasanovic2017algebra",
+      "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $sym_w$"
+    },
+    {
+      "bib": "HarnyAmarCompleteness",
+      "location": "Section 3, ZW axiom 2(e)"
+    }
+  ],
+  "related": [
+    {
+      "id": "w-fermionic-symmetry",
+      "relation": "see-also"
+    },
+    {
+      "id": "z-swap-symmetry",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "W",
+    "symmetry",
+    "swap",
+    "black vertex"
+  ]
+}

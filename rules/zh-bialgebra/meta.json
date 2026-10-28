@@ -1,0 +1,136 @@
+{
+  "id": "zh-bialgebra",
+  "name": "ZH bialgebra",
+  "aliases": [
+    "(BA2)",
+    "(ba2)",
+    "AND-COPY bialgebra"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-bialgebra",
+  "order": 1,
+  "summary": "A standard H-box connected to an X-spider becomes a complete bipartite graph of Z-spiders and H-boxes.",
+  "description": "The ZH analogue of the [bialgebra rule](../bialgebra-generalised/). An H-box connected to a phase-free X-spider is equal to a complete bipartite graph, where every leg of the H-box gets a Z-spider and every leg of the X-spider gets an H-box.\n\nClassically this expresses that the AND gate and the COPY gate form a bialgebra, just like XOR and COPY: taking the AND and then copying the result is the same as copying both inputs and taking the ANDs pairwise. A special case is that an X-state (a $|0\\rangle$) [explodes an H-box](../zh-h-box-zero-state-copy/).",
+  "parameters": {
+    "n": 2,
+    "m": 2
+  },
+  "parameter_notes": "n legs on the H-box and m on the X-spider (shown for n = m = 2); holds for any numbers of legs.",
+  "scalar": "sqrt(2)**(1-m)",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (BA2)"
+  },
+  "also_in": [
+    {
+      "bib": "PhasefreeZH2019",
+      "location": "Figure 2, rule (BA2)"
+    },
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 1, rule (ba2)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "bialgebra-generalised",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-h-box-zero-state-copy",
+      "relation": "used-to-derive"
+    }
+  ],
+  "tags": [
+    "bialgebra",
+    "AND",
+    "COPY",
+    "strong complementarity"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "legs of the H-box",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "legs of the X-spider",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1,
+          0
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3,
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

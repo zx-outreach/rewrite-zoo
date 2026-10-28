@@ -1,0 +1,30 @@
+% TikZiT styles for the diagrams of the ZX Rewrite Zoo.
+% These follow the styles of "Picturing Quantum Software" (Kissinger & van de Wetering).
+% Usage: \usepackage{tikzit} and \input{zx-rewrites.tikzstyles}, then \tikzfig{...} or \input the .tikz file.
+% Needs \usetikzlibrary{shapes.geometric, shapes.misc} (for the triangle, star and swap styles).
+
+\tikzstyle{none}=[inner sep=0mm]
+\tikzstyle{Z dot}=[inner sep=0.1mm, minimum size=2mm, shape=circle, draw=black, fill={rgb,255: red,216; green,248; blue,216}, font={\tiny\boldmath}]
+\tikzstyle{Z phase dot}=[minimum size=5mm, font={\footnotesize\boldmath}, shape=rectangle, rounded corners=2mm, inner sep=0.2mm, outer sep=-2mm, scale=0.8, tikzit shape=circle, draw=black, fill={rgb,255: red,216; green,248; blue,216}, tikzit draw=blue]
+\tikzstyle{X dot}=[inner sep=0.1mm, minimum size=2mm, shape=circle, draw=black, fill={rgb,255: red,232; green,165; blue,165}, font={\tiny\boldmath}]
+\tikzstyle{X phase dot}=[minimum size=5mm, font={\footnotesize\boldmath}, shape=rectangle, rounded corners=2mm, inner sep=0.2mm, outer sep=-2mm, scale=0.8, tikzit shape=circle, draw=black, fill={rgb,255: red,232; green,165; blue,165}, tikzit draw=blue]
+\tikzstyle{hadamard}=[fill={rgb,255: red,255; green,255; blue,130}, draw=black, shape=rectangle, inner sep=1mm, minimum height=1.875mm, minimum width=1.875mm, scale=0.8, tikzit fill=yellow, font={\footnotesize\boldmath}]
+\tikzstyle{Z box}=[fill={rgb,255: red,216; green,248; blue,216}, draw=black, shape=rectangle, inner sep=1mm, minimum height=3mm, minimum width=3mm, font={\footnotesize\boldmath}]
+\tikzstyle{W triangle}=[fill=black, draw=black, shape=regular polygon, regular polygon sides=3, shape border rotate=90, inner sep=0pt, minimum size=3mm, tikzit shape=rectangle]
+\tikzstyle{W input}=[fill=black, draw=black, shape=circle, inner sep=0pt, minimum size=0.8mm]
+
+% Generators that are not part of PyZX, and circuit gates (need \usetikzlibrary{shapes.geometric, shapes.misc})
+\tikzstyle{box}=[fill=white, draw=black, shape=rectangle, minimum size=4mm, inner sep=0.6mm, font={\footnotesize}]
+\tikzstyle{triangle}=[fill=white, draw=black, shape=isosceles triangle, isosceles triangle apex angle=60, minimum size=3mm, inner sep=0pt, tikzit shape=rectangle]
+\tikzstyle{star}=[fill=black, draw=black, shape=star, star points=5, minimum size=2.5mm, inner sep=0pt, tikzit shape=circle]
+\tikzstyle{gate}=[fill=white, draw=black, shape=rectangle, minimum height=5mm, minimum width=5mm, font={\small}]
+\tikzstyle{cnot ctrl}=[fill=black, draw=black, shape=circle, inner sep=0pt, minimum width=1.2mm]
+\tikzstyle{cnot targ}=[fill=white, draw=black, shape=circle, inner sep=0pt, minimum width=2.6mm, path picture={\draw (path picture bounding box.north) -- (path picture bounding box.south) (path picture bounding box.west) -- (path picture bounding box.east);}]
+\tikzstyle{swap x}=[draw=black, shape=cross out, minimum size=2mm, inner sep=0pt, line width=0.8pt, tikzit shape=rectangle]
+
+\tikzstyle{hadamard edge}=[-, dashed, dash pattern=on 2pt off 0.75pt, very thick, draw={rgb,255: red,68; green,136; blue,255}]
+
+% Fault-equivalent rewrites: fault-free edges and edge weights
+\tikzstyle{fault free edge}=[-, line width=1.6pt, draw={rgb,255: red,128; green,0; blue,160}]
+\tikzstyle{edge weight}=[fill=white, inner sep=0.5pt, font={\scriptsize}, auto]
+\tikzstyle{fermionic crossing}=[draw=gray, shape=circle, minimum size=3.5mm, inner sep=0pt]

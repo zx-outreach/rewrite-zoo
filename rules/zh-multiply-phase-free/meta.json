@@ -1,0 +1,32 @@
+{
+  "id": "zh-multiply-phase-free",
+  "name": "Phase-free multiply rule",
+  "aliases": [
+    "(M)",
+    "(m)",
+    "NOT NOT"
+  ],
+  "calculus": "ZH",
+  "fragment": "pauli",
+  "group": "zh-arithmetic",
+  "order": 2,
+  "summary": "Two arity-1 standard H-boxes merged by a Z-spider give a phase-free Z-state.",
+  "description": "The special case $a = b = -1$ of the [multiply rule](../zh-multiply/): the arity-1 H-box is the state $|0\\rangle - |1\\rangle$, and multiplying two of these entrywise gives $|0\\rangle + |1\\rangle$, which is the phase-free arity-1 Z-spider. Classically, it can be read as $\\neg\\neg x = x$.\n\nThis is the form of the multiply rule that is an axiom of the phase-free ZH-calculus.",
+  "scalar": "1",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Figure 2, rule (M)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 1, rule (m)"
+    }
+  ],
+  "tags": [
+    "multiply",
+    "phase-free",
+    "H-box"
+  ],
+  "alternative_of": "zh-multiply"
+}

@@ -1,0 +1,121 @@
+{
+  "id": "fe-fuse-n",
+  "name": "Fault-equivalent 2n-legged spider ladder",
+  "aliases": [
+    "(Fuse-n_fe)",
+    "recursive spider rewrite",
+    "spider ladder"
+  ],
+  "calculus": "ZX",
+  "fragment": "phase-free",
+  "group": "fault-equivalent",
+  "order": 7,
+  "summary": "A 2n-legged Z-spider is fault-equivalent to two n-legged spiders whose legs are connected pairwise.",
+  "description": "A phase-free Z-spider with $2n$ legs is fault-equivalent to two $n$-legged spiders, each of whose legs passes through a three-legged spider, with the $i$-th three-legged spider of the one connected to the $i$-th three-legged spider of the other. The rungs form detecting regions, so that flips which would spread to many legs are detected. Fault equivalence is with respect to *edge-flip noise*: every edge of the diagram can suffer a Pauli $X$, $Y$ or $Z$ flip of weight 1.\n\nThis is the form of the even spider decomposition used in *Fault Tolerance by Construction*; it is the [distance-preserving decomposition of an even spider](../fe-even-spider-decomposition/) with each four-legged spider split into two connected three-legged ones. If only $w$-fault equivalence is required, fewer rungs suffice: see the [w-fault-equivalent version](../fe-fuse-n-w/).",
+  "scalar": "1",
+  "source": {
+    "bib": "rodatz2025fault",
+    "location": "Sec. 6.2, rule $(\\textsc{Fuse-n}_{\\text{fe}})$; proof in the appendix"
+  },
+  "also_in": [
+    {
+      "bib": "boriskhesin2026spidercat:",
+      "location": "Sec. 2, figure of fault-equivalent rewrites"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "variant-of"
+    },
+    {
+      "id": "fe-even-spider-decomposition",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "fault-equivalent",
+    "edge-flip noise",
+    "fault tolerance",
+    "unfusion",
+    "cat state",
+    "syndrome extraction"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "legs per half",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          4
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_at": 4,
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      },
+      {
+        "param": "n",
+        "vertices": [
+          3,
+          5
+        ],
+        "offset": [
+          0,
+          0.8
+        ],
+        "dots_at": 5,
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "A spider with 2n legs (shown for n = 3); holds for any n ≥ 1."
+}

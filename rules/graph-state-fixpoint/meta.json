@@ -1,0 +1,89 @@
+{
+  "id": "graph-state-fixpoint",
+  "name": "Graph state stabiliser (fixpoint property)",
+  "aliases": [
+    "fixpoint property",
+    "graph state stabiliser",
+    "X on a vertex, Z on its neighbours"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "local-complementation",
+  "order": 3,
+  "summary": "Applying X to a vertex of a graph state and Z to all its neighbours leaves the graph state unchanged.",
+  "description": "For every vertex $u$ of a graph $G$, the Pauli operator $X_u \\prod_{v\\in N(u)} Z_v$ stabilises the graph state $|G\\rangle$. Graphically: the X-spider with phase π on the output of $u$ is copied through the Z-spider $u$, turns into Z-spiders with phase π after passing the Hadamard edges, and these fuse with the π phases on the neighbours, which cancel.\n\nThese $|V(G)|$ operators generate the stabiliser group of the graph state. The property is also what one gets by applying [local complementation of graph states](../graph-state-local-complementation/) twice at the same vertex, since $(G\\star u)\\star u = G$.",
+  "parameters": {
+    "n": 3
+  },
+  "parameter_notes": "n is the number of neighbours of u (shown for n = 3). The neighbours may be connected to further vertices, which are left unchanged.",
+  "scalar": "1",
+  "source": {
+    "bib": "DuncanPerdrixGraphStates",
+    "location": "Section 4 (Graph states), Property (Fixpoint)"
+  },
+  "also_in": [
+    {
+      "bib": "KissingervdWeteringbook"
+    }
+  ],
+  "related": [
+    {
+      "id": "graph-state-local-complementation",
+      "relation": "derived-from"
+    },
+    {
+      "id": "pi-commutation",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "graph state",
+    "stabiliser",
+    "fixpoint",
+    "pauli"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "neighbours",
+        "min": 1,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3,
+          4,
+          5
+        ],
+        "offset": [
+          0,
+          1.2
+        ],
+        "dots_shift": [
+          0.6,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2,
+          3
+        ],
+        "offset": [
+          0,
+          1.2
+        ],
+        "dots_shift": [
+          0.6,
+          0
+        ]
+      }
+    ]
+  }
+}

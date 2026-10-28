@@ -1,0 +1,129 @@
+{
+  "id": "zh-h-box-fusion-labelled",
+  "name": "Labelled H-box fusion",
+  "aliases": [
+    "(HS1)",
+    "(HS)",
+    "H-spider rule"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-hboxes",
+  "order": 2,
+  "summary": "An H-box with label a fuses with a standard H-box through an arity-2 H-box, keeping the label a.",
+  "description": "An H-box with an arbitrary complex label $a$ that is connected through an arity-2 H-box to a standard (label $-1$) H-box fuses with it into a single H-box with label $a$ and all the remaining legs. Note that only one of the two H-boxes may carry a non-standard label.\n\nWith $a = -1$ this is the phase-free [H-box fusion](../zh-h-box-fusion/) rule. A useful consequence is that H-boxes absorb $|1\\rangle$ states, see [H-boxes absorb |1⟩](../zh-h-box-absorbs-one/).",
+  "variables": {
+    "a": "complex"
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  },
+  "parameter_notes": "n legs on the first H-box and m on the second (shown for n = m = 2); holds for any number of legs.",
+  "scalar": "2",
+  "scalar_side": "rhs",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (HS1)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 3, rule (HS)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "H-box",
+    "fusion",
+    "label"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          4
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  }
+}

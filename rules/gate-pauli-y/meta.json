@@ -1,0 +1,37 @@
+{
+  "id": "gate-pauli-y",
+  "name": "Pauli Y gate",
+  "aliases": [
+    "Y"
+  ],
+  "calculus": "ZX",
+  "fragment": "pauli",
+  "group": "gates",
+  "order": 3,
+  "summary": "The Pauli Y gate is a Z(π) followed by an X(π), times the global phase i.",
+  "description": "Since $Y = iXZ$, the Pauli Y gate is a phase-π Z-spider followed by a phase-π X-spider, up to the global phase $i$.",
+  "kind": "circuit",
+  "circuit": {
+    "qubits": 1,
+    "gates": [
+      [
+        "Y",
+        0
+      ]
+    ]
+  },
+  "scalar": "I",
+  "source": {
+    "bib": "KissingervdWeteringbook",
+    "location": "Chapter 8, Table 8.3 (unitaries)"
+  },
+  "also_in": [
+    {
+      "bib": "vandewetering2020zxcalculus"
+    }
+  ],
+  "tags": [
+    "pauli",
+    "gate"
+  ]
+}

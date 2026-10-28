@@ -1,0 +1,47 @@
+{
+  "id": "zh-intro",
+  "name": "Intro rule",
+  "aliases": [
+    "(I)",
+    "introduction rule"
+  ],
+  "calculus": "ZH",
+  "fragment": "universal",
+  "group": "zh-arithmetic",
+  "order": 7,
+  "summary": "An H-box state can be split into two copies, controlled by a bit and its negation.",
+  "description": "The left-hand side discards the input (with a phase-free Z-effect) and outputs an H-box state with label $a$. On the right-hand side the input is copied; one copy, negated, and the other copy each control an arity-2 H-box with label $a$. Since exactly one of $x$ and $\\neg x$ is $1$, the output is always $|0\\rangle + a|1\\rangle$.\n\nRead from right to left, the rule removes a pair of H-boxes with the same label that differ only by a NOT on one of their connections; it is a close cousin of the [generalised multiply rule](../zh-multiply-generalised/).",
+  "variables": {
+    "a": "complex"
+  },
+  "scalar": "1",
+  "source": {
+    "bib": "EPTCS287.2",
+    "location": "Figure 1, rule (I)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Figure 3, rule (I)"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-average",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "intro",
+    "label",
+    "H-box"
+  ]
+}

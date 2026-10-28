@@ -1,0 +1,43 @@
+{
+  "id": "hadamard-cup-slide",
+  "name": "Hadamard slides along a cup",
+  "aliases": [
+    "(H3)",
+    "Hadamard on a cap"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford",
+  "group": "hadamard",
+  "order": 20,
+  "summary": "A Hadamard on one leg of a cup (or cap) can be moved to the other leg.",
+  "description": "The Hadamard gate is symmetric (equal to its own transpose), so it can slide along a cup or cap from one leg to the other. In axiomatisations in which [cups are spiders](../cup-as-spider/) this follows from the [colour change rule](../colour-change/), but Ng and Wang state it as an axiom. It is equivalent to [the Hadamard being self-transpose](../hadamard-transpose/), the form used in the LICS'18 paper of Hadzihasanovic, Ng and Wang.\n\nIn PyZX and ZXLive inputs and outputs are determined by their position, so a bare cup cannot be drawn directly.",
+  "checked": false,
+  "unchecked_reason": "a bare cup (a wire whose two ends are both outputs) cannot be represented with ZXLive-style boundaries",
+  "scalar": "1",
+  "source": {
+    "bib": "ng2017universal",
+    "location": "Fig. 1, rule (H3)"
+  },
+  "also_in": [
+    {
+      "bib": "ng_completeness_2018",
+      "location": "Fig. 4, rule (H3)"
+    }
+  ],
+  "related": [
+    {
+      "id": "hadamard-transpose",
+      "relation": "equivalent-to"
+    },
+    {
+      "id": "cup-as-spider",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "Hadamard",
+    "cup",
+    "cap",
+    "transpose"
+  ]
+}

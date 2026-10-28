@@ -1,0 +1,97 @@
+{
+  "id": "zh-h-box-z-pi-copy",
+  "name": "Z(π) copies through an H-box",
+  "aliases": [
+    "(HCP)",
+    "AND post-selection",
+    "H-box π rule"
+  ],
+  "calculus": "ZH",
+  "fragment": "clifford+t",
+  "group": "zh-bialgebra",
+  "order": 5,
+  "summary": "A Z-state with phase π on an H-box gives the |1⟩ state on all the other legs.",
+  "description": "Plugging the state $|0\\rangle - |1\\rangle$ (an arity-1 Z-spider with phase $\\pi$) into a leg of an H-box with label $a$ gives $1 - a$ when all other legs are $1$, and $0$ otherwise. Hence the result is proportional to the basis state $|1\\cdots 1\\rangle$, i.e. an X-state with phase $\\pi$ on every other leg. In terms of AND gates it says that post-selecting the output of an AND on $\\langle 1|$ forces all its inputs to be $1$.\n\nThis is the only one of the basic derived rules of the phase-free ZH-calculus that needs the [ortho rule](../zh-ortho/). Conversely, together with [AND of a copied bit](../zh-dedup/) it can replace the ortho rule in the axiomatisation of the 2021 completeness paper.",
+  "parameters": {
+    "n": 2
+  },
+  "parameter_notes": "Shown for an H-box with n = 2 other legs; holds for any n.",
+  "scalar": "sqrt(2)**(2-n)",
+  "source": {
+    "bib": "PhasefreeZH2019",
+    "location": "Lemma 3.3, rule (HCP)"
+  },
+  "also_in": [
+    {
+      "bib": "backens2021completenessZH",
+      "location": "Lemma 2.28"
+    },
+    {
+      "bib": "vandewetering2020zxcalculus",
+      "location": "Section 8.2"
+    },
+    {
+      "bib": "KissingervdWeteringbook",
+      "location": "Section 8.4 (H-box cheatsheet)"
+    }
+  ],
+  "related": [
+    {
+      "id": "zh-h-box-zero-state-copy",
+      "relation": "see-also"
+    },
+    {
+      "id": "zh-ortho",
+      "relation": "derived-from"
+    }
+  ],
+  "tags": [
+    "copy",
+    "state",
+    "post-selection",
+    "AND"
+  ],
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "arity": {
+    "params": {
+      "n": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          0,
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.5,
+          0
+        ]
+      }
+    ]
+  }
+}

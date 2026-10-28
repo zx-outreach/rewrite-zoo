@@ -1,0 +1,140 @@
+{
+  "id": "graph-like-identity-removal",
+  "name": "Graph-like identity removal",
+  "aliases": [
+    "identity removal (graph-like)",
+    "id-simp",
+    "(id)",
+    "neighbour unfusion",
+    "vertex splitting",
+    "vertex fusion",
+    "boundary unfusion"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "graph-like",
+  "order": 1,
+  "view": "graph-like",
+  "summary": "A phase-free arity-2 spider between two Hadamard edges can be removed by fusing its two neighbours.",
+  "description": "In a graph-like diagram, a phase-free spider with exactly two Hadamard edges is an identity (since two Hadamards cancel). Removing it makes its two neighbours adjacent by a plain wire, so they fuse: the result is a single spider with phase $\\alpha+\\beta$ that has all the other legs and edges of both neighbours (parallel Hadamard edges that arise this way can be removed with the [Hopf rule for Hadamard edges](../hadamard-hopf/)). This rule can reduce the number of non-Clifford spiders, as the phases are combined.\n\nRead from right to left, the rule *unfuses* a spider into two, splitting both its phase and its neighbourhood arbitrarily ('neighbour unfusion' or 'vertex splitting'). A common use is to unfuse a boundary spider, so that its neighbour becomes internal and pivoting can be applied (as in the graph-theoretic simplification paper).",
+  "variables": {
+    "alpha": "real",
+    "beta": "real"
+  },
+  "parameter_notes": "n legs on the first neighbour and m on the second (shown for n = m = 2); holds for any number of legs.",
+  "scalar": "1",
+  "source": {
+    "bib": "kissinger2019tcount",
+    "location": "Section 'Full simplification of ZX-diagrams', rule (ID)"
+  },
+  "also_in": [
+    {
+      "bib": "duncan2019graph",
+      "location": "Section 5, boundary unfusion before pivoting"
+    },
+    {
+      "bib": "backens2026completeness",
+      "location": "Section 3.3, Proposition (Vertex splitting and fusion)"
+    }
+  ],
+  "related": [
+    {
+      "id": "spider-fusion",
+      "relation": "derived-from"
+    },
+    {
+      "id": "hadamard-cancellation",
+      "relation": "derived-from"
+    },
+    {
+      "id": "identity-removal",
+      "relation": "variant-of"
+    }
+  ],
+  "tags": [
+    "identity",
+    "graph-like",
+    "fusion",
+    "unfusion",
+    "simplification",
+    "T-count"
+  ],
+  "arity": {
+    "params": {
+      "n": {
+        "label": "inputs",
+        "min": 0,
+        "max": 4
+      },
+      "m": {
+        "label": "outputs",
+        "min": 0,
+        "max": 4
+      }
+    },
+    "lhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          3
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ],
+    "rhs": [
+      {
+        "param": "n",
+        "vertices": [
+          1
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          0.35,
+          0
+        ]
+      },
+      {
+        "param": "m",
+        "vertices": [
+          2
+        ],
+        "offset": [
+          0,
+          1
+        ],
+        "dots_shift": [
+          -0.35,
+          0
+        ]
+      }
+    ]
+  },
+  "parameters": {
+    "n": 2,
+    "m": 2
+  }
+}
