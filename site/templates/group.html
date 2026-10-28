@@ -3,7 +3,7 @@
 {% block description %}{{ group.name }}: {{ group.description }}{% endblock %}
 {% block content %}
 <header class="rule-head">
-  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ root }}index.html">Rules</a> › {{ group.calculus }}</nav>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ root }}index.html">Rules</a> › <a href="{{ root }}index.html#s-{{ group.section }}">{{ group.section_name }}</a></nav>
   <h1>{{ group.name }}</h1>
   <p class="badges"><span class="badge calc">{{ group.calculus }}</span> <span class="muted">{{ group.rules|length }} rule{% if group.rules|length != 1 %}s{% endif %}</span></p>
   <p class="lede">{{ group.description }}</p>

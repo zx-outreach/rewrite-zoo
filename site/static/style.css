@@ -285,3 +285,8 @@ table.axioms tr.missing td { background: var(--surface-2); }
   .toc-box[open] > summary::before { content: "▾ "; }
   .toc ul { columns: 2; }
 }
+
+.section-title { font-size: 1.6rem; margin: 40px 0 0; padding-bottom: 6px; border-bottom: 3px solid var(--shade); scroll-margin-top: 230px; }
+.with-toc .section-title:first-child, .toc-main > #rule-list > .section-title:first-child { margin-top: 18px; }
+.toc-calc a { color: inherit; border-bottom: 0; }
+.toc-calc a:hover { text-decoration: underline; }

@@ -7,11 +7,18 @@
     return n ? JSON.parse(n.textContent) : null;
   }
 
+  // KaTeX has no \textsc: imitate small caps (first letter normal size, the rest as smaller capitals)
+  function smallCaps(math) {
+    return math.replace(/\\textsc\{([^{}]*)\}/g, (m, s) => "\\text{" + s.replace(/(\S)(\S*)/g,
+      (w, a, rest) => a + (rest ? "{\\small " + rest.toUpperCase() + "}" : "")) + "}");
+  }
+
   function mathify(root) {
     if (!window.renderMathInElement) return;
     window.renderMathInElement(root, {
       delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
       throwOnError: false,
+      preProcess: smallCaps,
     });
   }
 
@@ -267,14 +274,8 @@
         interactive: true, hboxes: v.view === "two-colour", dots: arity && state.generic,
         scalarLeft: left ? sLeft : "", scalarRight: left ? "" : sRight,
       });
-      const bits = [];
-      if (!v.scalarKnown) bits.push("Equality holds up to a non-zero scalar.");
-      if (arity && state.generic) bits.push("Holds for any number of legs; select a number above to see a specific instance.");
-      bits.push(v.curated ? "This version is drawn by hand." : "This version is generated automatically.");
-      if (data.checked === false) bits.push("This rule is not checked.");
-      else if (v.samples) bits.push(`Verified at ${v.samples} parameter value${v.samples === 1 ? "" : "s"}.`);
-      bits.push("Drag the spiders to rearrange the diagram.");
-      note.textContent = bits.join(" ");
+      note.textContent = v.scalarKnown ? "" : "Equality holds up to a non-zero scalar.";
+      note.hidden = !note.textContent;
       const tags = [state.view !== v0 ? state.view : "", state.symmetry !== "id" ? state.symmetry : "",
         state.colour ? "colour" : "", state.swap ? "swap" : ""];
       if (arity && !state.generic) for (const k of Object.keys(state.values).sort()) tags.push(`${k}=${state.values[k]}`);
@@ -408,6 +409,10 @@
     document.querySelectorAll(".group-section").forEach((s) => {
       const li = document.querySelector(`[data-toc-item="${s.dataset.group}"]`);
       if (li) li.hidden = s.hidden;
+    });
+    // section titles disappear when all their groups are filtered out
+    document.querySelectorAll(".section-title").forEach((h) => {
+      h.hidden = !document.querySelector(`.group-section[data-section="${h.dataset.section}"]:not([hidden])`);
     });
   }
 

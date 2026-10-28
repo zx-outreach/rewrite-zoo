@@ -75,25 +75,29 @@
   "id": "triangle",
   "calculus": "ZX",
   "name": "Triangle rules",
-  "description": "Rules for the triangle, the non-unitary single-qubit map with matrix ((1, 1), (0, 1)). It can be written as a Clifford+T ZX-diagram, but several complete axiomatisations (Ng and Wang; Hadzihasanovic, Ng and Wang; Jeandel, Perdrix and Vilmart) add it as a generator, in the latter case with a parameter, because it makes the translation to and from the ZW-calculus simple. These rules are only drawn: PyZX has no triangle generator."
+  "description": "Rules for the triangle, the non-unitary single-qubit map with matrix ((1, 1), (0, 1)). It can be written as a Clifford+T ZX-diagram, but several complete axiomatisations (Ng and Wang; Hadzihasanovic, Ng and Wang; Jeandel, Perdrix and Vilmart) add it as a generator, in the latter case with a parameter, because it makes the translation to and from the ZW-calculus simple. These rules are only drawn: PyZX has no triangle generator.",
+  "section": "algebraic"
  },
  {
   "id": "lambda-box",
   "calculus": "ZX",
   "name": "λ-box rules",
-  "description": "Rules for the λ-box, the diagonal map diag(1, λ) with λ ≥ 0, which Ng and Wang add to the ZX-calculus to obtain a complete axiomatisation of the universal fragment. Together with phases, λ-boxes represent arbitrary diagonal maps diag(1, λe^{iα}), and the addition rule (AD) expresses the sum of two such numbers. These rules are only drawn and not checked."
+  "description": "Rules for the λ-box, the diagonal map diag(1, λ) with λ ≥ 0, which Ng and Wang add to the ZX-calculus to obtain a complete axiomatisation of the universal fragment. Together with phases, λ-boxes represent arbitrary diagonal maps diag(1, λe^{iα}), and the addition rule (AD) expresses the sum of two such numbers. These rules are only drawn and not checked.",
+  "section": "algebraic"
  },
  {
   "id": "gates",
   "calculus": "ZX",
-  "name": "Quantum gates",
-  "description": "How common quantum gates are represented as ZX-diagrams, including the exact scalar. The gate is drawn as a circuit on the left and its diagram on the right."
+  "name": "Gates as ZX-diagrams",
+  "description": "How common quantum gates are represented as ZX-diagrams, including the exact scalar. The gate is drawn as a circuit on the left and its diagram on the right.",
+  "section": "circuits"
  },
  {
   "id": "circuits",
   "calculus": "ZX",
   "name": "Circuit identities",
-  "description": "Identities between quantum circuits built from CNOT, CZ, Hadamard and phase gates, presented as ZX-diagrams."
+  "description": "Identities between quantum circuits built from CNOT, CZ, Hadamard and phase gates, presented as ZX-diagrams.",
+  "section": "circuits"
  },
  {
   "id": "fault-equivalent",
@@ -128,8 +132,9 @@
  {
   "id": "zh-gates",
   "calculus": "ZH",
-  "name": "Quantum gates with H-boxes",
-  "description": "Multi-qubit gates such as the Toffoli and CCZ gates are particularly simple in the ZH-calculus. The gate is drawn as a circuit on the left and its diagram on the right."
+  "name": "Gates as ZH-diagrams",
+  "description": "Multi-qubit gates such as the Toffoli and CCZ gates are particularly simple in the ZH-calculus. The gate is drawn as a circuit on the left and its diagram on the right.",
+  "section": "circuits"
  },
  {
   "id": "zw-rules",

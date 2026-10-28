@@ -26,6 +26,16 @@ from .variants import SYMMETRY_NAMES, Variant
 SITE_SRC = ROOT / "site"
 DOMAIN_NAMES = {"real": "ℝ", "boolean": "{0, 1}", "clifford": "multiples of π/2",
                 "clifford+t": "multiples of π/4", "complex": "ℂ", "integer": "ℤ"}
+# Top-level sections of the catalogue (a group goes in the section of its calculus unless it says otherwise)
+SECTIONS = [("zx", "ZX-calculus"), ("algebraic", "Algebraic ZX"), ("zh", "ZH-calculus"), ("zw", "ZW-calculus"),
+            ("circuits", "Quantum circuits")]
+SECTION_NAMES = dict(SECTIONS)
+
+
+def section_of(group: Dict[str, Any]) -> str:
+    return group.get("section", group["calculus"].lower())
+
+
 VIEW_NAMES = {"two-colour": "Two-colour", "gh": "GH", "graph-like": "Graph-like"}
 
 md = MarkdownIt("commonmark", {"typographer": True}).enable("table")
@@ -258,7 +268,7 @@ def build_site(cat: Catalogue, out: Path) -> None:
     env.filters["json"] = lambda x: json.dumps(x, ensure_ascii=False).replace("</", "<\\/")
     built = datetime.date.today().isoformat()
     common = {"pyzx_version": pyzx.__version__, "built": built, "fragments": FRAGMENTS,
-              "fragment_names": FRAGMENT_NAMES, "calculi": CALCULI, "groups": cat.groups}
+              "fragment_names": FRAGMENT_NAMES, "calculi": CALCULI, "groups": cat.groups, "sections": SECTIONS}
 
     def write(path: str, template: str, depth: int, **ctx):
         f = out / path
@@ -408,7 +418,10 @@ def build_site(cat: Catalogue, out: Path) -> None:
     by_group: Dict[str, List[dict]] = {g["id"]: [] for g in cat.groups}
     for e in index_entries:
         by_group[e["group"]].append(e)
-    groups_ctx = [dict(g, rules=by_group[g["id"]]) for g in cat.groups if by_group[g["id"]]]
+    order = [s for s, _ in SECTIONS]
+    groups_ctx = [dict(g, rules=by_group[g["id"]], section=section_of(g), section_name=SECTION_NAMES[section_of(g)])
+                  for g in cat.groups if by_group[g["id"]]]
+    groups_ctx.sort(key=lambda g: order.index(g["section"]))  # stable: keeps the order within a section
     for g in groups_ctx:
         write(f"groups/{g['id']}/index.html", "group.html", 2, group=g, title=g["name"], toc=groups_ctx,
               rules_full=[contexts[e["id"]] for e in g["rules"]])

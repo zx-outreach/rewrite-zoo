@@ -3,10 +3,10 @@
 <nav class="toc" aria-label="Categories">
   <details class="toc-box" open>
     <summary>Categories</summary>
-    {% for calc in calculi %}
-    {% set gs = toc|selectattr("calculus", "equalto", calc)|list %}
+    {% for sec, sec_name in sections %}
+    {% set gs = toc|selectattr("section", "equalto", sec)|list %}
     {% if gs %}
-    <p class="toc-calc">{{ calc }}-calculus</p>
+    <p class="toc-calc">{% if anchors %}<a href="#s-{{ sec }}">{{ sec_name }}</a>{% else %}<a href="{{ root }}index.html#s-{{ sec }}">{{ sec_name }}</a>{% endif %}</p>
     <ul>
       {% for g in gs %}
       <li data-toc-item="{{ g.id }}"><a href="{% if anchors %}#g-{{ g.id }}{% else %}{{ root }}groups/{{ g.id }}/index.html{% endif %}" data-toc="{{ g.id }}"{% if g.id == current %} aria-current="page"{% endif %}>{{ g.name }} <span class="toc-n">{{ g.rules|length }}</span></a></li>
