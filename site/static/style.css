@@ -290,3 +290,22 @@ table.axioms tr.missing td { background: var(--surface-2); }
 .with-toc .section-title:first-child, .toc-main > #rule-list > .section-title:first-child { margin-top: 18px; }
 .toc-calc a { color: inherit; border-bottom: 0; }
 .toc-calc a:hover { text-decoration: underline; }
+
+/* downloads behind a toggle */
+details.downloads > summary.dl-toggle { list-style: none; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+  font-size: .9rem; font-weight: 700; padding: 6px 14px; border-radius: 7px; border: 1px solid var(--border); background: var(--surface-2); }
+details.downloads > summary.dl-toggle::-webkit-details-marker { display: none; }
+details.downloads > summary.dl-toggle span { transition: transform .15s; display: inline-block; }
+details.downloads[open] > summary.dl-toggle span { transform: rotate(90deg); }
+details.downloads[open] .dl-buttons { margin-top: 10px; }
+/* related rules grouped by relation */
+.related-groups { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; }
+.related-groups dt { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding-top: 3px; }
+.related-groups dd { margin: 0; }
+.related-groups ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 18px; }
+@media (max-width: 600px) {
+  .related-groups { grid-template-columns: 1fr; gap: 2px; }
+  .related-groups dd { margin-bottom: 10px; }
+  .related-groups ul { display: block; }
+  .related-groups li { margin: 4px 0; }
+}

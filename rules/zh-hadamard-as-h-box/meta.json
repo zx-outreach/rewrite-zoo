@@ -8,8 +8,8 @@
   "fragment": "clifford",
   "group": "zh-translation",
   "order": 1,
-  "summary": "An arity-2 H-box with the standard label is √2 times a Hadamard gate.",
-  "description": "The arity-2 H-box with label $-1$ is the matrix $\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix} = \\sqrt 2\\,H$. This is why H-boxes are called H-boxes: they generalise the Hadamard gate to any number of legs. Hence a Hadamard gate (drawn on the right as a Hadamard edge) can always be translated into an H-box and back.\n\nBecause of this, ZH-diagrams often draw an arity-2 H-box and a Hadamard gate in the same way, ignoring the factor $\\sqrt 2$.",
+  "summary": "An arity-2 H-box with the standard label is √2 times a Hadamard gate, drawn as a Hadamard edge.",
+  "description": "The arity-2 H-box with label $-1$ is the matrix $\\begin{pmatrix}1&1\\1&-1\\end{pmatrix} = \\sqrt 2\\,H$. This is why H-boxes are called H-boxes: they generalise the Hadamard gate to any number of legs. Hence a Hadamard gate, drawn on the right as a Hadamard edge (blue, dashed), can always be translated into an H-box and back.\n\nBecause of this, ZH-diagrams often draw an arity-2 H-box and a Hadamard gate in the same way, ignoring the factor $\\sqrt 2$. To avoid this ambiguity the rule is only shown in graph-like form here.",
   "scalar": "sqrt(2)",
   "source": {
     "bib": "EPTCS287.2",
@@ -36,5 +36,6 @@
     "translation",
     "H-box"
   ],
-  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers."
+  "notes": "The H-boxes here are *unnormalised*: an H-box with label $a$ has all entries equal to $1$, except for the entry where all wires are $1$, which is $a$. The grey spiders of the ZH papers are normalised differently from the X-spiders of PyZX, so scalar factors may differ from those in the papers.",
+  "view": "graph-like"
 }

@@ -15,11 +15,10 @@
 {% for r in rules_full %}
   <article class="group-rule">
     <div class="group-rule-head">
-      <h2><a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a></h2>
-      <span class="badge frag-{{ r.fragment|replace('+','p') }}">{{ r.fragment_name }}</span>
+      <h2><a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name|subs }}</a></h2>
     </div>
     <div class="equation static" data-static-eq="{{ r.id }}"></div>
-    <p>{{ r.summary }} <span class="muted">— {{ r.source.cite }}</span></p>
+    <p>{{ r.summary }}</p>
   </article>
 {% endfor %}
 </div>

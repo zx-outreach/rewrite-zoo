@@ -12,14 +12,18 @@
       <a class="paper-title" href="{{ c.slug }}/index.html">{{ c.title }}</a>.
       <span class="paper-authors">{{ c.author_str }}</span> ({{ c.year }}).
       {% if c.arxiv %}<a class="pill" href="{{ c.arxiv }}">arXiv</a>{% endif %}
+      {% if c.results|length == 1 and c.results[0].fragment_name %}
+      <span class="badge frag-{{ c.results[0].fragment|replace('+','p') }}">{{ c.results[0].calculus }} · {{ c.results[0].fragment_name }}</span>
+      {% endif %}
     </p>
+    {% if c.results|length > 1 %}
     <ul class="result-list">
     {% for res in c.results %}
-      <li><a href="{{ c.slug }}/index.html#{{ res.anchor }}">{{ res.title }}</a>
-        {% if res.fragment_name %}<span class="badge frag-{{ res.fragment|replace('+','p') }}">{{ res.calculus }} · {{ res.fragment_name }}</span>{% endif %}
-        <span class="muted">{{ res.axioms|length }} rules, {{ res.n_in_zoo }} in the zoo</span></li>
+      <li><a href="{{ c.slug }}/index.html#{{ res.anchor }}">{{ res.title|subs }}</a>
+        {% if res.fragment_name %}<span class="badge frag-{{ res.fragment|replace('+','p') }}">{{ res.calculus }} · {{ res.fragment_name }}</span>{% endif %}</li>
     {% endfor %}
     </ul>
+    {% endif %}
   </li>
 {% endfor %}
 </ol>

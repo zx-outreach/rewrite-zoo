@@ -21,8 +21,8 @@
      },
      {
       "label": "(Copy)",
-      "rule": "state-copy",
-      "note": "Fault-free version (all edges idealised) of the phase-free case."
+      "rule": "state-copy-phase-free",
+      "note": "Fault-free version (all edges idealised)."
      },
      {
       "label": "(Elim)",

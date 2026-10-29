@@ -31,8 +31,8 @@
      },
      {
       "label": "Copying",
-      "rule": "state-copy",
-      "note": "Phase-free instance (a phase-free spider copies the phase-free state of the other colour), stated without scalars."
+      "rule": "state-copy-phase-free",
+      "note": "Stated without scalars."
      },
      {
       "label": "π-copy rule",
@@ -80,8 +80,7 @@
      },
      {
       "label": "Cup rule",
-      "rule": "identity-removal",
-      "note": "The paper states it as 'a spider with two outputs and no inputs is a cup'; this is identity removal with a wire bent."
+      "rule": "cup-as-spider"
      },
      {
       "label": "Bialgebra rule (scaled)",
@@ -90,8 +89,8 @@
      },
      {
       "label": "Copy rule (scaled)",
-      "rule": "state-copy",
-      "note": "Phase-free instance; scaled version of Section 3.2."
+      "rule": "state-copy-phase-free",
+      "note": "Scaled version of Section 3.2."
      },
      {
       "label": "Colour change rule",
@@ -145,8 +144,7 @@
      },
      {
       "label": "Cup rule",
-      "rule": "identity-removal",
-      "note": "The paper states it as 'a spider with two outputs and no inputs is a cup'; this is identity removal with a wire bent."
+      "rule": "cup-as-spider"
      },
      {
       "label": "Bialgebra rule (scaled)",
@@ -155,8 +153,8 @@
      },
      {
       "label": "Copy rule (scaled)",
-      "rule": "state-copy",
-      "note": "Phase-free instance; scaled version of Section 3.2."
+      "rule": "state-copy-phase-free",
+      "note": "Scaled version of Section 3.2."
      },
      {
       "label": "Colour change rule",
@@ -225,13 +223,12 @@
      },
      {
       "label": "(S3)",
-      "rule": "identity-removal",
-      "note": "A phase-free green spider with two outputs is the cup: identity removal with the wire bent."
+      "rule": "cup-as-spider"
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance; the scalar is written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2)",
@@ -284,8 +281,8 @@
      },
      {
       "label": "(S3′)",
-      "rule": "identity-removal",
-      "note": "First half of (S3′): the phase-free green cup is the cup (identity removal with the wire bent); called (S3′L) in backens2017minimal."
+      "rule": "cup-as-spider",
+      "note": "First half of (S3′); called (S3′L) in backens2017minimal."
      },
      {
       "label": "(S3′)",
@@ -294,8 +291,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance with the scalar written as a diagram (a Z- and an X-spider joined by a wire)."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2′)",
@@ -343,8 +340,8 @@
      },
      {
       "label": "(S3′L)",
-      "rule": "identity-removal",
-      "note": "Drawn together with (S3′R) as (S3′) in Figure 1: the phase-free green cup is the cup (identity removal with the wire bent)."
+      "rule": "cup-as-spider",
+      "note": "Drawn together with (S3′R) as (S3′) in Figure 1."
      },
      {
       "label": "(S3′R)",
@@ -353,8 +350,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance with the scalar written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2′)",
@@ -397,8 +394,8 @@
      },
      {
       "label": "(S3′L)",
-      "rule": "identity-removal",
-      "note": "Drawn together with (S3′R) as (S3′) in Figure 1: the phase-free green cup is the cup (identity removal with the wire bent)."
+      "rule": "cup-as-spider",
+      "note": "Drawn together with (S3′R) as (S3′) in Figure 1."
      },
      {
       "label": "(S3′R)",
@@ -407,8 +404,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance with the scalar written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2′)",
@@ -456,8 +453,8 @@
      },
      {
       "label": "(S3′L)",
-      "rule": "identity-removal",
-      "note": "Drawn together with (S3′R) as (S3′) in Figure 1: the phase-free green cup is the cup (identity removal with the wire bent)."
+      "rule": "cup-as-spider",
+      "note": "Drawn together with (S3′R) as (S3′) in Figure 1."
      },
      {
       "label": "(S3′R)",
@@ -466,8 +463,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance with the scalar written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(EU′)",
@@ -526,8 +523,7 @@
      },
      {
       "label": "(S3′L)",
-      "rule": "identity-removal",
-      "note": "The phase-free green cup is the cup: identity removal with the wire bent."
+      "rule": "cup-as-spider"
      },
      {
       "label": "(S3′R)",
@@ -536,8 +532,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance with the scalar written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2′)",
@@ -615,8 +611,8 @@
      },
      {
       "label": "(C1)",
-      "rule": "state-copy",
-      "note": "Phase-free instance, stated without scalars."
+      "rule": "state-copy-phase-free",
+      "note": "Stated without scalars."
      },
      {
       "label": "(L)",
@@ -693,8 +689,8 @@
      },
      {
       "label": "(sc)",
-      "rule": "state-copy",
-      "note": "First (sc) rule: the state-copy half of strong complementarity, for a phase-free Z-spider with two outputs; the scalar is written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "First (sc) rule, for a Z-spider with two outputs; the scalar is written as a diagram."
      },
      {
       "label": "(sc)",
@@ -1523,8 +1519,8 @@
      },
      {
       "label": "1(b)",
-      "rule": "identity-removal",
-      "note": "A phase-free green spider with two inputs is the cap: identity removal with the wire bent."
+      "rule": "cup-as-spider",
+      "note": "The cap version (upside down): a phase-free spider with two inputs is the cap."
      },
      {
       "label": "1(c)",
@@ -1549,8 +1545,8 @@
      },
      {
       "label": "1(g)",
-      "rule": "state-copy",
-      "note": "Phase-free instance with the scalar written as a diagram."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "1(h)",

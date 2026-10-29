@@ -133,8 +133,43 @@ def instantiate(g: BaseGraph, values: Dict[str, Any]) -> BaseGraph:
 
 
 def tensor(g: BaseGraph):
-    """The matrix of a fully concrete diagram, including its scalar (inputs -> outputs)."""
+    """The matrix of a fully concrete diagram, including its scalar (inputs -> outputs).
+
+    PyZX contracts multigraphs naively, column by column, which can need enormous intermediate
+    tensors (e.g. for big spider nests). When the diagram has no parallel edges or self-loops it is
+    copied to PyZX's simple-graph backend first, so that the smarter contraction strategy is used."""
+    h = _as_simple(g) if g.num_vertices() > 20 else None
+    if h is not None:
+        try:
+            return h.to_matrix(preserve_scalar=True)
+        except Exception:
+            pass
     return g.to_matrix(preserve_scalar=True)
+
+
+def _as_simple(g: BaseGraph):
+    seen = set()
+    for e in g.edges():
+        s, t = g.edge_st(e)
+        key = (min(s, t), max(s, t))
+        if s == t or key in seen:
+            return None
+        seen.add(key)
+    if any(g.type(v) not in (VT.BOUNDARY, VT.Z, VT.X, VT.H_BOX, VT.Z_BOX) for v in g.vertices()):
+        return None
+    h = zx.Graph("simple")
+    m = {}
+    for v in g.vertices():
+        m[v] = h.add_vertex(g.type(v), qubit=g.qubit(v), row=g.row(v), phase=g.phase(v))
+        for k in g.vdata_keys(v):
+            h.set_vdata(m[v], k, g.vdata(v, k))
+    for e in g.edges():
+        s, t = g.edge_st(e)
+        h.add_edge((m[s], m[t]), g.edge_type(e))
+    h.set_inputs(tuple(m[v] for v in g.inputs()))
+    h.set_outputs(tuple(m[v] for v in g.outputs()))
+    h.scalar = g.scalar.copy()
+    return h
 
 
 def structural_problems(g: BaseGraph) -> List[str]:

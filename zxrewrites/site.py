@@ -170,6 +170,16 @@ def variant_payload(rule, v: Variant, validate: bool = False) -> Dict[str, Any]:
     }
 
 
+_SUB = re.compile(r"(?<=[A-Za-z0-9′')])_(?:\{([^}]*)\}|([A-Za-z0-9]+))")
+
+
+def subscripts(text) -> "Markup":
+    """Display text with plain-text subscripts (ZW_R, ZX'_opt, E_ZX, Detect_fe) as real subscripts."""
+    from markupsafe import Markup, escape
+    s = str(escape(text if text is not None else ""))
+    return Markup(_SUB.sub(lambda m: "<sub>" + (m.group(1) or m.group(2)) + "</sub>", s))
+
+
 def slug(key: str) -> str:
     import re
     return re.sub(r"[^A-Za-z0-9]+", "-", key).strip("-").lower()
@@ -221,12 +231,24 @@ def rule_context(p: Processed, cat: Catalogue, related: List[dict]) -> Dict[str,
         "also_in": [ref_entry(cat.bib, ref) for ref in m.get("also_in", [])],
         "axiom_of": [ref_entry(cat.bib, {"bib": k}) for k in m.get("axiom_of", [])],
         "related": related, "tags": m.get("tags", []),
+        "related_groups": _group_related(related),
         "view": r.view, "has_alt": r.alt_lhs is not None,
         "n_variants": len(p.variants), "n_samples": sum(v.result.samples for v in p.variants if v.result),
         "default_key": default_key(p),
         "checked": m.get("checked", True), "unchecked_reason": m.get("unchecked_reason", ""),
         "kind": m.get("kind", "equation"), "exports": exports(r),
     }
+
+
+def _group_related(related: List[dict]) -> List[tuple]:
+    """[(relation name, [rules])] in the order of the (already sorted) list."""
+    out: List[tuple] = []
+    for r in related:
+        if out and out[-1][0] == r["relation_name"]:
+            out[-1][1].append(r)
+        else:
+            out.append((r["relation_name"], [r]))
+    return out
 
 
 def symmetric_relations(cat: Catalogue) -> Dict[str, List[dict]]:
@@ -265,6 +287,7 @@ def build_site(cat: Catalogue, out: Path) -> None:
 
     env = Environment(loader=FileSystemLoader(SITE_SRC / "templates"),
                       autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
+    env.filters["subs"] = subscripts
     env.filters["json"] = lambda x: json.dumps(x, ensure_ascii=False).replace("</", "<\\/")
     built = datetime.date.today().isoformat()
     common = {"pyzx_version": pyzx.__version__, "built": built, "fragments": FRAGMENTS,

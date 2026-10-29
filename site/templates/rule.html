@@ -12,19 +12,8 @@
 {% block content %}
 <header class="rule-head">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ root }}index.html">Rules</a> › <a href="{{ root }}groups/{{ rule.group.id }}/index.html">{{ rule.group.name }}</a></nav>
-  <h1>{{ rule.name }}</h1>
-  {% if rule.aliases %}<p class="aliases">Also known as: {% for a in rule.aliases %}<span>{{ a }}</span>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
-  <p class="badges">
-    <span class="badge calc">{{ rule.calculus }}</span>
-    <span class="badge frag-{{ rule.fragment|replace('+','p') }}" title="The smallest fragment containing this rule">{{ rule.fragment_name }}</span>
-    {% if arity %}<span class="badge arity" title="This rule holds for any number of legs">any number of legs</span>{% endif %}
-    {% if rule.kind == "circuit" %}<span class="badge circuit">circuit</span>{% endif %}
-    {% if rule.checked %}
-    <span class="badge verified" title="LHS = scalar · RHS checked by tensor contraction for {{ rule.n_variants }} variants and {{ rule.n_samples }} parameter samples">✓ Verified with PyZX {{ pyzx_version }}</span>
-    {% else %}
-    <span class="badge unchecked" title="This rule cannot be represented in PyZX, so it is drawn but not checked">not checked</span>
-    {% endif %}
-  </p>
+  <h1>{{ rule.name|subs }}</h1>
+  {% if rule.aliases %}<p class="aliases">Also known as: {% for a in rule.aliases %}<span>{{ a|subs }}</span>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
   <p class="lede">{{ rule.summary }}</p>
   {% if not rule.checked %}<p class="alt-note"><strong>Not checked:</strong> {{ rule.unchecked_reason or "this rule uses notation that PyZX cannot represent" }}. It is drawn here and can be exported to TikZ, but it is not checked and cannot be exported to PyZX or ZXLive.</p>{% endif %}
   {% if rule.alternative_of %}<p class="alt-note">This is an alternative representation of <a href="{{ root }}rules/{{ rule.alternative_of.id }}/index.html">{{ rule.alternative_of.name }}</a>, in the form needed for a particular paper.</p>{% endif %}
@@ -58,8 +47,8 @@
   </div>
   <div class="equation" id="equation" aria-live="polite"></div>
   <p class="diagram-note muted" id="variant-note"></p>
-  <div class="downloads">
-    <span class="control-label">Download this version</span>
+  <details class="downloads">
+    <summary class="dl-toggle">Download <span aria-hidden="true">→</span></summary>
     <div class="dl-buttons">
       <button type="button" data-dl="tikzEq">TikZ (equation)</button>
       <button type="button" data-dl="tikzLhs">TikZ (LHS)</button>
@@ -70,7 +59,7 @@
       <button type="button" data-copy="tikzEq" class="ghost">Copy TikZ</button>
     </div>
     <p class="muted small">Also: <a href="{{ root }}downloads/{{ rule.id }}/{{ rule.id }}.zip">all variants (.zip)</a> · <a href="{{ root }}downloads/{{ rule.id }}/meta.json">metadata (meta.json)</a> · <a href="{{ root }}downloads/zx-rewrites.tikzstyles">TikZiT styles</a></p>
-  </div>
+  </details>
 </section>
 
 <div class="rule-body">
@@ -93,6 +82,10 @@
       <dd>{% if rule.scalar_general is none %}Holds up to a non-zero scalar.{% elif rule.scalar_general == "1" %}Exact equality, no scalar.{% else %}LHS = <span class="math">${{ rule.scalar_general }}$</span> · RHS{% endif %}</dd>
       <dt>Calculus</dt><dd>{{ rule.calculus }}</dd>
       <dt>Fragment</dt><dd>{{ rule.fragment_name }}</dd>
+      {% if rule.kind == "circuit" %}<dt>Kind</dt><dd>Quantum circuit and its diagram</dd>{% endif %}
+      <dt>Verification</dt>
+      <dd>{% if rule.checked %}Verified with PyZX {{ pyzx_version }}: {{ rule.n_variants }} variants{% if arity %}, every number of legs{% endif %}, scalar included.{% else %}Not checked: {{ rule.unchecked_reason or "it uses notation that PyZX cannot represent" }}.{% endif %}</dd>
+      <dt>First appeared in</dt><dd>{{ rule.source.cite }}</dd>
       <dt>Group</dt><dd><a href="{{ root }}groups/{{ rule.group.id }}/index.html">{{ rule.group.name }}</a></dd>
       {% if rule.tags %}<dt>Keywords</dt><dd>{{ rule.tags|join(', ') }}</dd>{% endif %}
     </dl>
@@ -109,7 +102,7 @@
   {% endif %}
   {% if rule.axiom_of %}
   <h3>Axiom in the complete rule set of</h3>
-  <ul class="refs">{% for p in rule.axiom_of %}<li>{% if p.labels %}<strong>{{ p.labels|join(', ') }}</strong> in {% endif %}{{ paper(p) }}{% if p.completeness %} <a class="pill" href="{{ root }}completeness/{{ p.completeness }}/index.html">complete rule set</a>{% endif %}</li>{% endfor %}</ul>
+  <ul class="refs">{% for p in rule.axiom_of %}<li>{% if p.labels %}<strong>{{ p.labels|join(', ')|subs }}</strong> in {% endif %}{{ paper(p) }}{% if p.completeness %} <a class="pill" href="{{ root }}completeness/{{ p.completeness }}/index.html">complete rule set</a>{% endif %}</li>{% endfor %}</ul>
   {% endif %}
 </section>
 
@@ -130,9 +123,12 @@
 {% if rule.related %}
 <section class="related">
   <h2>Related rules</h2>
-  <ul class="related-list">
-  {% for r in rule.related %}<li><span class="relation">{{ r.relation_name }}</span> <a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name }}</a></li>{% endfor %}
-  </ul>
+  <dl class="related-groups">
+  {% for rel, items in rule.related_groups %}
+    <dt>{{ rel }}</dt>
+    <dd><ul>{% for r in items %}<li><a href="{{ root }}rules/{{ r.id }}/index.html">{{ r.name|subs }}</a></li>{% endfor %}</ul></dd>
+  {% endfor %}
+  </dl>
 </section>
 {% endif %}
 {% endblock %}

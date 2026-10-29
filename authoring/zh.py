@@ -770,10 +770,9 @@ rule(
 L = D()
 L.wire(0, 0, 2, L.h(1, 0))
 R = D()
-z = R.z(1, 0)
-R.e(R.b(0, 0), z).he(z, R.b(2, 0))
+R.he(R.b(0, 0), R.b(2, 0))
 rule(
-    "zh-hadamard-as-h-box", lhs=L, rhs=R,
+    "zh-hadamard-as-h-box", lhs=L, rhs=R, view="graph-like",
     name="Hadamard as an H-box",
     aliases=["Hadamard translation"],
     calculus="ZH", fragment="phase-free", group="zh-translation", order=1,

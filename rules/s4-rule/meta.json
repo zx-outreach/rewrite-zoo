@@ -1,0 +1,54 @@
+{
+  "id": "s4-rule",
+  "name": "S4 rule (spider-nest map separates)",
+  "aliases": [
+    "(S4)",
+    "S4-rule",
+    "S4 rule",
+    "spider-nest map s_4 separates",
+    "s4 separates",
+    "diagonal completeness for Clifford+T",
+    "scalable spider nest"
+  ],
+  "calculus": "ZX",
+  "fragment": "clifford+t",
+  "group": "spider-nests",
+  "order": 3,
+  "summary": "The spider-nest map s₄ — π/4 phase gadgets connecting one input to all 16 subsets of four fresh |+⟩ outputs — disconnects into a ⟨+| effect on the input and four |+⟩ states.",
+  "description": "Kissinger and van de Wetering define the *spider-nest maps* $s_n : 1 \\to n$ inductively: $s_0$ is a $\\frac\\pi4$ Z-effect, and $s_n$ copies its input into $s_{n-1}$ and, through an X-spider that also produces the new output, into a second copy of $s_{n-1}$. Unfolded, $s_n$ is the map $\\ket{x} \\mapsto \\sum_{y\\in\\mathbb F_2^n} \\exp\\big(\\frac{i\\pi}4\\sum_{S\\subseteq[n]} (x\\oplus\\bigoplus_{i\\in S} y_i)\\big)\\ket{y}$: a $\\frac\\pi4$ phase gadget on the input together with each of the $2^n$ subsets of the outputs, where the outputs start as $\\ket{+}$ states. The *S4 rule* says that $s_4$ *separates*: it equals (up to a scalar) a $\\bra{+}$ effect on the input and $\\ket{+}$ states on the four outputs, i.e. the total phase does not depend on $x$ or $y$.\n\nBending the input wire around, this is equivalent to the 5-qubit spider nest in which 16 $\\frac\\pi4$ gadgets act on qubit 1 together with every subset of qubits 2–5 (Eq. (19) of the paper): its connectivity matrix $(\\vec 1\\ B_4)$ is triorthogonal. By induction the same holds for every $s_n$ with $n\\geq4$. The main result of the paper is that the Clifford ZX-calculus plus this single rule is *diagonally complete* for Clifford+T: it proves every spider nest identity $D_M = I$ (for $M$ triorthogonal), and hence it is complete for CNOT+T circuits. In particular it proves the [4-qubit spider nest](../spider-nest/). It is not complete for all Clifford+T diagrams, since it is sound for an interpretation that breaks [supplementarity](../supplementarity/).",
+  "parameters": {
+    "n": 4
+  },
+  "parameter_notes": "The paper's rule is the case n = 4. The maps s_n separate for every n ≥ 4 (Lemma 3.3, derived from S4 by induction), but s_n has 2^n gadgets, so these are not offered as a family.",
+  "scalar": "1/65536",
+  "source": {
+    "bib": "kissinger2024scalable",
+    "location": "Section 3, Eq. (18), the S4-rule (the map s_4 of Definition 2.1, Eq. (14))"
+  },
+  "related": [
+    {
+      "id": "spider-nest",
+      "relation": "used-to-derive"
+    },
+    {
+      "id": "spider-nest-clifford",
+      "relation": "see-also"
+    },
+    {
+      "id": "phase-gadget-fusion",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "spider nest",
+    "phase gadget",
+    "triorthogonal",
+    "T-count",
+    "completeness",
+    "diagonal completeness",
+    "CNOT+T",
+    "scalable",
+    "clifford+t"
+  ],
+  "notes": "The paper states the rule in scalable notation, up to a non-zero scalar. Here $s_4$ is unfolded into ordinary ZX: the spider on the left is the input (its $\\frac\\pi4$ phase is the gadget for the empty subset), the four spiders with outputs are the outputs, and every other spider pair is a $\\frac\\pi4$ phase gadget connecting the input to a non-empty subset of the outputs."
+}

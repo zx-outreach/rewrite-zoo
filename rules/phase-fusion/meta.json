@@ -1,0 +1,56 @@
+{
+  "id": "phase-fusion",
+  "name": "Phase fusion (PF)",
+  "aliases": [
+    "(PF)",
+    "PF",
+    "flow-preserving phase fusion",
+    "phase redistribution",
+    "gadget phase exchange"
+  ],
+  "calculus": "ZX",
+  "fragment": "universal",
+  "group": "phase-gadgets",
+  "order": 5,
+  "view": "graph-like",
+  "summary": "The phases of a phase gadget with a single target and of that target can be redistributed arbitrarily, keeping their sum.",
+  "description": "A phase gadget that is attached to a single spider only contributes its phase to that spider (see [gadget fusion into a spider](../identity-gadget-removal/)). Instead of removing the gadget, this rule keeps the structure of the diagram and only moves phase between the gadget and its target: phases $\\alpha$ (gadget) and $\\beta$ (target) can be replaced by $\\gamma$ and $\\alpha-\\gamma+\\beta$ for any $\\gamma$.\n\nIn MBQC terms the gadget is a YZ-measured vertex (an X-phase effect on a vertex of the graph) whose only neighbour is XY-measured. Since the underlying graph and the measurement planes do not change, the rule preserves Pauli flow, gflow and extended causal flow in both directions. Backens and Perdrix use it as the flow-preserving replacement of the phase-adding part of spider fusion: in their complete set of flow-preserving rules, merging and splitting the neighbourhoods of spiders is done with Z-insertion and pivoting instead. With $\\gamma$ chosen suitably, the rule is its own inverse.",
+  "variables": {
+    "alpha": "real",
+    "beta": "real",
+    "gamma": "real"
+  },
+  "parameters": {
+    "n": 2,
+    "m": 1
+  },
+  "parameter_notes": "The target has n inputs and m outputs (shown for n = 2, m = 1); it may have any number of further legs and Hadamard edges. γ is the arbitrary new phase of the gadget (α′ in the paper).",
+  "scalar": "1",
+  "source": {
+    "bib": "backens2026completeness",
+    "location": "Lemma 24 (Phase fusion); rule (PF) in Fig. 2"
+  },
+  "related": [
+    {
+      "id": "identity-gadget-removal",
+      "relation": "derived-from"
+    },
+    {
+      "id": "graph-like-identity-removal",
+      "relation": "see-also"
+    },
+    {
+      "id": "pauli-gadget-removal",
+      "relation": "see-also"
+    }
+  ],
+  "tags": [
+    "phase gadget",
+    "graph-like",
+    "MBQC",
+    "flow",
+    "gflow",
+    "fusion",
+    "YZ-plane"
+  ]
+}

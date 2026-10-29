@@ -9,12 +9,12 @@
     {% if paper.arxiv %}<a class="pill" href="{{ paper.arxiv }}">arXiv</a>{% endif %}</p>
   {% if paper.results|length > 1 %}
   <p class="muted">This paper contains {{ paper.results|length }} completeness results:
-    {% for res in paper.results %}<a href="#{{ res.anchor }}">{{ res.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+    {% for res in paper.results %}<a href="#{{ res.anchor }}">{{ res.title|subs }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
   {% endif %}
 </header>
 {% for res in paper.results %}
 <section class="result" id="{{ res.anchor }}">
-  <h2>{{ res.title }}</h2>
+  <h2>{{ res.title|subs }}</h2>
   <p class="badges">
     {% if res.calculus %}<span class="badge calc">{{ res.calculus }}</span>{% endif %}
     {% if res.fragment_name %}<span class="badge frag-{{ res.fragment|replace('+','p') }}">{{ res.fragment_name }}</span>{% endif %}
@@ -26,10 +26,10 @@
     <tbody>
     {% for ax in res.rows %}
       <tr{% if not ax.entry %} class="missing"{% endif %}>
-        <td class="label">{{ ax.label }}</td>
+        <td class="label">{{ ax.label|subs }}</td>
         <td>
           {% if ax.entry %}
-          <a href="{{ root }}rules/{{ ax.rule }}/index.html">{{ ax.rule_name }}</a>
+          <a href="{{ root }}rules/{{ ax.rule }}/index.html">{{ ax.rule_name|subs }}</a>
           <div class="axiom-eq" data-thumb="{{ ax.rule }}" aria-hidden="true"></div>
           {% else %}
           <span class="muted">Not in the zoo.</span> {{ ax.description }}

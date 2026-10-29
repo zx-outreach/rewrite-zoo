@@ -44,9 +44,8 @@
     <a class="card" href="rules/{{ e.id }}/index.html" data-id="{{ e.id }}">
       <div class="thumb" data-thumb="{{ e.id }}" aria-hidden="true"></div>
       <div class="card-body">
-        <h3>{{ e.name }}</h3>
+        <h3>{{ e.name|subs }}</h3>
         <p class="summary">{{ e.summary }}</p>
-        <p class="card-meta"><span class="badge frag-{{ e.fragment|replace('+','p') }}">{{ fragment_names[e.fragment] }}</span>{% if e.any_arity %} <span class="badge arity" title="Holds for any number of legs">n legs</span>{% endif %}{% if not e.checked %} <span class="badge unchecked" title="Not representable in PyZX; drawn but not checked">not checked</span>{% endif %} <span class="muted">{{ e.cite }}</span></p>
       </div>
     </a>
   {% endfor %}

@@ -1,0 +1,45 @@
+[
+ {
+  "bib": "backens2026completeness",
+  "results": [
+   {
+    "title": "Completeness for flow-preserving rewriting",
+    "calculus": "ZX",
+    "fragment": "universal",
+    "location": "Theorem 74 (Theorem 1, informal); rules in Fig. 2",
+    "summary": "The rules of Fig. 2 are complete for flow-preserving rewriting: any two MBQC-form ZX-diagrams with Pauli flow that represent the same linear map can be transformed into each other by these rules such that every intermediate diagram has a flow. Several rules are directed, and some directions may only be applied when the flow satisfies extra conditions (Z-insertion, E_ZX); local complementation preserves gflow and Pauli flow, but extended causal flow only in special cases. The proof first extracts a diagram with extended causal flow using only flow-preserving rules, and then uses a new complete equational theory for quantum circuits with ancilla initialisation (Theorem 59, Fig. 5).",
+    "axioms": [
+     {
+      "label": "(IO)",
+      "rule": "graph-like-identity-removal",
+      "description": "Input/output expansion and contraction: an input (output) vertex can be split off into a path of two extra phase-free vertices joined by Hadamard edges, the phase staying on the original vertex.",
+      "note": "Read from right to left, with the neighbour on one side having only the input (or output) wire and phase 0. The paper restricts the rule to input and output vertices (Lemma 15), since only then it preserves flow; the phase cannot be split. Its two parts, for an input and for an output, are the same equation."
+     },
+     {
+      "label": "(PF)",
+      "rule": "phase-fusion"
+     },
+     {
+      "label": "(ZL)",
+      "rule": "pauli-gadget-removal",
+      "note": "The case a = 0: the paper's vertex has a phase-free X-effect (a Z-measurement). Deletion (Lemma 19) preserves every kind of flow; the inverse direction, Z-insertion, is only flow-preserving if the new vertex is labelled Z (Lemma 21), or labelled YZ under the conditions of Theorem 22."
+     },
+     {
+      "label": "(LC)",
+      "rule": "graph-state-local-complementation",
+      "note": "Sides swapped: the paper rewrites G into G⋆u followed by X(−π/2) on u and Z(π/2) on its neighbours. The paper's vertices are in MBQC form, so the neighbours of u may also have inputs and further edges; u may not be an input and no vertex may be an output (Lemma 17)."
+     },
+     {
+      "label": "(E_ZX)",
+      "rule": "euler-flow-preserving"
+     },
+     {
+      "label": "(SN)",
+      "rule": "spider-nest",
+      "note": "The paper states the rule for the full spider nest on any number n of qubits with phase 2π (gadget phases (−1)^(|s|−1)·2π/2^(n−1)), in the deletion direction only; the stored rule is the case n = 4 (phases ±π/4), and the case n = 3 is the Clifford spider nest (spider-nest-clifford, phases ±π/2). The paper draws the gadgets as phase-free Z-vertices with Hadamard edges and an X-phase effect."
+     }
+    ]
+   }
+  ]
+ }
+]

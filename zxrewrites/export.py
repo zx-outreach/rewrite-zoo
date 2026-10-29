@@ -371,6 +371,9 @@ def check_zxr(text: str, exact: bool) -> None:
     L, R = sides
     if len(L.inputs()) != len(R.inputs()) or len(L.outputs()) != len(R.outputs()):
         raise ValueError("ZXLive: inputs/outputs of the two sides do not match")
-    if exact and not graphs.variables(L) and not graphs.variables(R):
+    # (the matrix comparison is skipped for diagrams with many legs: the rule itself is verified anyway,
+    # and a 2^n x 2^n matrix for large n does not fit in memory)
+    small = len(L.inputs()) + len(L.outputs()) <= 12 and max(L.num_vertices(), R.num_vertices()) <= 25
+    if exact and small and not graphs.variables(L) and not graphs.variables(R):
         if not np.allclose(L.to_matrix(), R.to_matrix()):
             raise ValueError("ZXLive: the two sides are not equal (scalar included)")

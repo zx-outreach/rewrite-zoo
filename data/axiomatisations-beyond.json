@@ -28,8 +28,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2)",
@@ -95,8 +95,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2)",
@@ -162,8 +162,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2)",
@@ -224,8 +224,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -269,8 +269,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -326,8 +326,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -392,8 +392,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -470,8 +470,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -520,8 +520,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -582,8 +582,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2)",
@@ -754,8 +754,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B2)",
@@ -896,8 +896,8 @@
      },
      {
       "label": "(B1)",
-      "rule": "state-copy",
-      "note": "Phase-free case of the stored rule; the paper ignores scalars."
+      "rule": "state-copy-phase-free",
+      "note": "Stated without scalars."
      },
      {
       "label": "(B2)",
@@ -991,8 +991,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
@@ -1036,8 +1036,8 @@
      },
      {
       "label": "(CP)",
-      "rule": "state-copy",
-      "note": "The paper's rule is the phase-free case (an X-state copied by a phase-free Z-spider with two outputs) with the scalar written as a diagram; the stored rule is the general version (basis state aπ, phase α on the Z-spider) with the scalar as a number."
+      "rule": "state-copy-phase-free",
+      "note": "The scalar is written as a diagram."
      },
      {
       "label": "(B)",
