@@ -1,8 +1,8 @@
 """Axioms of complete axiomatisations (stabilizer ZX, ZH, ZW) that were missing from the other authoring
 scripts. Found while compiling the completeness pages (data/axiomatisations-clifford.json).
 
-ZW conventions as in zw.py: PyZX's W-node is a symmetric black vertex of the undirected ZW-calculus with a
-binary black vertex (NOT) on its input leg, and a W-node without outputs is the state |0> (the unit).
+ZW conventions as in zw.py: PyZX's W-spider is a symmetric black vertex of the undirected ZW-calculus with a
+binary black vertex (NOT) on its input leg, and a W-spider without outputs is the state |0> (the unit).
 """
 
 from dsl import D, rule
@@ -16,13 +16,13 @@ BPW_MIN = "backens2017minimal"
 STOLTZ = "k.stoltz2026simplified"
 
 W_EXPLAINER = (
-    "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ "
+    "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ "
     "and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it "
     "spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.")
 
 UNIT_EXPLAINER = (
-    "A W-node with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the "
-    "unit of the W-node read as a 'merge'.")
+    "A W-spider with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the "
+    "unit of the W-spider read as a 'merge'.")
 
 
 # ---------------------------------------------------------------------------------------------
@@ -79,8 +79,8 @@ rule(
     summary="Plugging the W unit |0⟩ into the W counit ⟨0| gives the empty diagram.",
     description=(
         W_EXPLAINER + " " + UNIT_EXPLAINER + "\n\n"
-        "Connecting two W-nodes without outputs along their input legs is therefore the scalar "
-        "$\\langle 0|0\\rangle = 1$, the empty diagram. This is one of the Hopf-algebra axioms of the W-node "
+        "Connecting two W-spiders without outputs along their input legs is therefore the scalar "
+        "$\\langle 0|0\\rangle = 1$, the empty diagram. This is one of the Hopf-algebra axioms of the W-spider "
         "(the counit of the unit is 1), axiom 5c of Hadzihasanovic's original complete ZW-calculus, where the "
         "unit is drawn as a binary black vertex on a black vertex with a loop."),
     scalar="auto",
@@ -110,15 +110,15 @@ rule(
     name="Z-spider copies the W unit",
     aliases=["6b", "|0⟩ copy through Z", "Z copies W unit"],
     calculus="ZW", fragment="clifford+t", group="zw-bialgebra", order=5,
-    summary="The state |0⟩ (a W-node without outputs) is copied by a phase-free Z-spider.",
+    summary="The state |0⟩ (a W-spider without outputs) is copied by a phase-free Z-spider.",
     description=(
         UNIT_EXPLAINER + "\n\n"
-        "A phase-free Z-spider sends $|0\\rangle$ to $|0\\cdots0\\rangle$, so plugging the unit of the W-node "
+        "A phase-free Z-spider sends $|0\\rangle$ to $|0\\cdots0\\rangle$, so plugging the unit of the W-spider "
         "into it gives a copy of the unit on every output. Together with the [W/Z bialgebra](../w-z-bialgebra/) "
-        "and the [Z/W Hopf rule](../zw-hopf/) this is one of the axioms saying that the W-node and the Z-spider "
+        "and the [Z/W Hopf rule](../zw-hopf/) this is one of the axioms saying that the W-spider and the Z-spider "
         "form a (Hopf-like) bialgebra: axiom 6b of Hadzihasanovic's original complete ZW-calculus. It is the "
         "ZW-version of the [state copy](../state-copy/) rule of the ZX-calculus, with the $|0\\rangle$ state drawn "
-        "as a W-node instead of an X-spider."),
+        "as a W-spider instead of an X-spider."),
     parameter_notes="Shown for a Z-spider with two outputs; holds for any number of outputs.",
     scalar="auto",
     source={"bib": ZW15, "location": "Section 3 (The rules), Rule 6b"},
@@ -147,15 +147,15 @@ rule(
     name="W self-loop removal",
     aliases=["tr_w", "tr_W", "W trace", "W loop removal", "2(d)"],
     calculus="ZW", fragment="clifford+t", group="zw-rules", order=5,
-    summary="A plain self-loop on the outputs of a W-node can be removed.",
+    summary="A plain self-loop on the outputs of a W-spider can be removed.",
     description=(
         W_EXPLAINER + "\n\n"
-        "Connecting two outputs of a W-node to each other (a trace) keeps only the terms where both are "
+        "Connecting two outputs of a W-spider to each other (a trace) keeps only the terms where both are "
         "$|0\\rangle$, since at most one output carries the excitation. So the loop can simply be removed. In "
         "the undirected ZW-calculus this is the rule $tr_W$: a black vertex with a self-loop is a black vertex "
         "with two fewer legs. Together with [W fusion](../w-fusion/) it makes up the spider presentation of the "
         "black vertices."),
-    parameter_notes="Shown for a W-node with two remaining outputs; holds for any number of outputs.",
+    parameter_notes="Shown for a W-spider with two remaining outputs; holds for any number of outputs.",
     scalar="auto",
     source={"bib": ZW15, "location": "Section 3 (The rules), spider rule $\\mathrm{tr}_W$"},
     also_in=[{"bib": THESIS, "location": "Chapter 5, Section 5.2 (list of rules of the ZW calculus), rule $tr_w$"},

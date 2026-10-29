@@ -11,8 +11,8 @@
   ],
   "calculus": "ZX",
   "fragment": "universal",
-  "group": "euler",
-  "order": 1,
+  "group": "hadamard",
+  "order": 7,
   "summary": "A Z–X–Z sequence of rotations equals an X–Z–X sequence of rotations, with angles given by explicit (non-linear) formulas.",
   "description": "By Euler's rotation theorem every single-qubit unitary can be written both as a Z–X–Z and as an X–Z–X sequence of rotations. This rule makes that explicit: $R_Z(\\alpha_3)R_X(\\alpha_2)R_Z(\\alpha_1) = e^{i\\gamma}R_X(\\beta_3)R_Z(\\beta_2)R_X(\\beta_1)$, where the angles $\\beta_1,\\beta_2,\\beta_3$ and the global phase $\\gamma$ are the following functions of $\\alpha_1,\\alpha_2,\\alpha_3$. Let $x^+ = \\frac{\\alpha_1+\\alpha_3}2$, $x^- = x^+-\\alpha_3$, $z = \\cos\\frac{\\alpha_2}2\\cos x^+ + i\\sin\\frac{\\alpha_2}2\\cos x^-$ and $z' = \\cos\\frac{\\alpha_2}2\\sin x^+ - i\\sin\\frac{\\alpha_2}2\\sin x^-$. Then $\\beta_1 = \\arg z+\\arg z'$, $\\beta_2 = 2\\arg(i+|z/z'|)$, $\\beta_3 = \\arg z - \\arg z'$ and $\\gamma = x^+-\\arg z+\\frac{\\alpha_2-\\beta_2}2$.\n\nCoecke and Wang introduced the scalar-free version as rule (P), and showed that adding it makes the ZX-calculus complete for 2-qubit Clifford+T circuits; it necessarily leaves the Clifford+T fragment, since the angles $\\beta_i$ are generally not multiples of $\\pi/4$. Vilmart then showed that this single *non-linear* rule (with the scalar, which in the paper is drawn as a small diagram on the right-hand side) together with a few Clifford axioms and the [Clifford+T scalar rule (E)](../clifford-t-scalar/) is complete for the full ZX-calculus, replacing supplementarity and the axioms (C), (BW) and (A). A non-linear axiom like this one is necessary for completeness of the universal ZX-calculus.\n\nThe stored instance is checked for $\\alpha_1=\\frac\\pi3$, $\\alpha_2=\\frac\\pi4$, $\\alpha_3=\\frac{3\\pi}5$ (the other angles computed from the formulas); the authoring script also checks the formulas on random angles.",
   "variables": {

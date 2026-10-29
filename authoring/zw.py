@@ -1,9 +1,9 @@
 """Rules of the qubit ZW-calculus (Hadzihasanovic 2015, thesis 2017; Carette et al. 2023; the book).
 
-PyZX's W-node is a *directed* W-node: a W_OUTPUT vertex (triangle) joined to a W_INPUT vertex (dot)
+PyZX's W-spider is a *directed* W-spider: a W_OUTPUT vertex (triangle) joined to a W_INPUT vertex (dot)
 carrying the single input leg.  Its tensor is |0> -> |0...0>, |1> -> |10...0> + ... + |0...01>.
 In Hadzihasanovic's undirected presentation, black vertices are the fully symmetric W tensors
-(sum of all weight-one basis states) and a binary black vertex is the NOT gate.  PyZX's W-node is
+(sum of all weight-one basis states) and a binary black vertex is the NOT gate.  PyZX's W-spider is
 exactly a symmetric black vertex (the triangle) with a binary black vertex (the dot) on the input
 leg, so the rules below are translated literally.  White vertices of the 2015 calculus are Z-spiders
 with phase pi; the r-labelled white vertices of the thesis are Z-boxes with label r.
@@ -26,13 +26,13 @@ def th(loc):
 
 
 W_EXPLAINER = (
-    "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ "
+    "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ "
     "and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it "
     "spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.")
 
 UNIT_EXPLAINER = (
-    "A W-node with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the "
-    "unit of the W-node read as a 'merge'.")
+    "A W-spider with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the "
+    "unit of the W-spider read as a 'merge'.")
 
 # ---------------------------------------------------------------------------------------------
 # W fusion
@@ -53,19 +53,19 @@ for y in (0, 1, 2):
 rule(
     "w-fusion", lhs=L, rhs=R,
     name="W fusion",
-    aliases=["W spider rule", "W associativity", "sp_W", "cut_w", "W-node fusion"],
+    aliases=["W spider rule", "W associativity", "sp_W", "cut_w", "W-spider fusion"],
     calculus="ZW", fragment="clifford+t", group="zw-rules", order=1,
-    summary="A W-node plugged into the input of another W-node fuses with it.",
+    summary="A W-spider plugged into the input of another W-spider fuses with it.",
     description=(
         W_EXPLAINER + "\n\n"
-        "When an output of one W-node is connected to the input of another, the two fuse into a single W-node "
-        "with all the remaining outputs. This expresses (co)associativity of the W-node, and is the reason we "
-        "can speak of a single $n$-output W-node rather than a tree of binary ones.\n\n"
+        "When an output of one W-spider is connected to the input of another, the two fuse into a single W-spider "
+        "with all the remaining outputs. This expresses (co)associativity of the W-spider, and is the reason we "
+        "can speak of a single $n$-output W-spider rather than a tree of binary ones.\n\n"
         "In Hadzihasanovic's undirected presentation this is the spider rule $\\mathrm{sp}_W^{n,m}$ for black "
         "vertices: two black vertices connected through a binary black vertex fuse. Together with "
-        "[W identity](../w-identity/) it also gives the unit law: fusing with a W-node that has no outputs "
+        "[W identity](../w-identity/) it also gives the unit law: fusing with a W-spider that has no outputs "
         "simply removes an output."),
-    parameter_notes="Shown for W-nodes with two outputs each; holds for any number of outputs on either W-node.",
+    parameter_notes="Shown for W-spiders with two outputs each; holds for any number of outputs on either W-spider.",
     scalar="auto",
     source=r15("spider rule $\\mathrm{sp}_W^{n,m}$"),
     also_in=[r15("Rule 1a (associativity, expanded form)"), th("rule $cut_w$"),
@@ -88,14 +88,14 @@ R.wire(0, 0, 2.2)
 rule(
     "w-identity", lhs=L, rhs=R,
     name="W identity",
-    aliases=["black involution", "inv", "W-node with one output"],
+    aliases=["black involution", "inv", "W-spider with one output"],
     calculus="ZW", fragment="clifford+t", group="zw-rules", order=2,
-    summary="A W-node with a single output is the identity wire.",
+    summary="A W-spider with a single output is the identity wire.",
     description=(
         W_EXPLAINER + " With just one output it maps $|0\\rangle\\mapsto|0\\rangle$ and "
         "$|1\\rangle\\mapsto|1\\rangle$, so it is the identity.\n\n"
         "In the undirected ZW-calculus, the binary black vertex is the NOT gate $|01\\rangle+|10\\rangle$, and "
-        "PyZX's W-node with one output consists of two such vertices in a row. The rule is then axiom 2a "
+        "PyZX's W-spider with one output consists of two such vertices in a row. The rule is then axiom 2a "
         "of Hadzihasanovic: the binary black vertex is an involution."),
     scalar="auto",
     source=r15("Rule 2a"),
@@ -122,13 +122,13 @@ rule(
     name="W copies its unit",
     aliases=["W unit copy", "5b", "|0⟩ copy through W"],
     calculus="ZW", fragment="phase-free", group="zw-rules", order=3,
-    summary="The state |0⟩ (a W-node without outputs) is copied by a W-node.",
+    summary="The state |0⟩ (a W-spider without outputs) is copied by a W-spider.",
     description=(
         W_EXPLAINER + " " + UNIT_EXPLAINER + "\n\n"
-        "Since the W-node sends $|0\\rangle$ to $|0\\cdots0\\rangle$, plugging the unit into its input "
+        "Since the W-spider sends $|0\\rangle$ to $|0\\cdots0\\rangle$, plugging the unit into its input "
         "gives a copy of the unit on every output. This is the rule that makes the unit a comonoid "
-        "homomorphism, one of the Hopf-algebra axioms of the W-node (axiom 5b of Hadzihasanovic)."),
-    parameter_notes="Shown for a W-node with two outputs; holds for any number of outputs.",
+        "homomorphism, one of the Hopf-algebra axioms of the W-spider (axiom 5b of Hadzihasanovic)."),
+    parameter_notes="Shown for a W-spider with two outputs; holds for any number of outputs.",
     scalar="auto",
     source=r15("Rule 5b"),
     also_in=[{"bib": BOOK}],
@@ -157,7 +157,7 @@ rule(
     name="Z(π) commutes through W",
     aliases=["automorphism rule", "am_W", "3b", "Pauli Z through W"],
     calculus="ZW", fragment="clifford+t", group="zw-rules", order=4,
-    summary="A Pauli Z on the input of a W-node can be pushed onto all of its outputs.",
+    summary="A Pauli Z on the input of a W-spider can be pushed onto all of its outputs.",
     description=(
         W_EXPLAINER + "\n\n"
         "Every term in the image of $|1\\rangle$ has exactly one output in state $|1\\rangle$, so a sign "
@@ -166,7 +166,7 @@ rule(
         "automorphism of the black monoid (axiom 3b, generalised to $n$ outputs as $\\mathrm{am}_W^n$).\n\n"
         "The same argument works for any diagonal map $\\mathrm{diag}(1,r)$: see "
         "[weights copy through W](../w-weight-copy/)."),
-    parameter_notes="Shown for a W-node with two outputs; holds for any number of outputs.",
+    parameter_notes="Shown for a W-spider with two outputs; holds for any number of outputs.",
     scalar="auto",
     source=r15("Rule 3b"),
     also_in=[r15("generalised automorphism rule $\\mathrm{am}_W^n$"), {"bib": BOOK}],
@@ -194,18 +194,18 @@ rule(
     name="Weights copy through W",
     aliases=["nat_c^r", "comonoid homomorphism", "W phase pushing", "Z-box through W"],
     calculus="ZW", fragment="universal", group="zw-rules", order=5,
-    summary="A weight diag(1, r) on the input of a W-node can be pushed onto each of its outputs.",
+    summary="A weight diag(1, r) on the input of a W-spider can be pushed onto each of its outputs.",
     description=(
         W_EXPLAINER + "\n\n"
         "In the $R$-labelled ZW-calculus $\\mathrm{ZW}_R$, the white vertex with label $r$ (here a Z-box) "
         "with two legs is the map $\\mathrm{diag}(1, r) = |0\\rangle\\langle 0| + r|1\\rangle\\langle 1|$. "
-        "Because each term produced by the W-node has at most one excitation, a weight $r$ on the input "
+        "Because each term produced by the W-spider has at most one excitation, a weight $r$ on the input "
         "is the same as a weight $r$ on each output: every label is a comonoid homomorphism for the "
-        "W-node.\n\n"
-        "With $r = e^{i\\alpha}$ this pushes Z-phases through a W-node, and with $r = -1$ it is "
+        "W-spider.\n\n"
+        "With $r = e^{i\\alpha}$ this pushes Z-phases through a W-spider, and with $r = -1$ it is "
         "[Z(π) commutes through W](../w-pi-commutation/)."),
     variables={"r": "complex"},
-    parameter_notes="Shown for a W-node with two outputs; holds for any number of outputs.",
+    parameter_notes="Shown for a W-spider with two outputs; holds for any number of outputs.",
     scalar="1",
     source=th("rule $nat_c^r$"),
     axiom_of=[THESIS],
@@ -238,14 +238,14 @@ rule(
     name="W/Z bialgebra",
     aliases=["ZW bialgebra", "6a", "ba^{n,m}", "ba_zw"],
     calculus="ZW", fragment="phase-free", group="zw-bialgebra", order=1,
-    summary="A W-node merge followed by a Z-spider copy equals Z-copies followed by W merges.",
+    summary="A W-spider merge followed by a Z-spider copy equals Z-copies followed by W merges.",
     description=(
         W_EXPLAINER + " Read from right to left (the dot on the right), it merges its legs: "
         "$|0\\cdots0\\rangle\\mapsto|0\\rangle$, a single excitation maps to $|1\\rangle$, and everything "
         "else to $0$.\n\n"
-        "The phase-free Z-spider and the W-node satisfy a bialgebra law: merging two wires with a W-node "
+        "The phase-free Z-spider and the W-spider satisfy a bialgebra law: merging two wires with a W-spider "
         "and then copying with a Z-spider is the same as copying each input with a Z-spider and merging "
-        "the copies pairwise with W-nodes. This is axiom 6a of Hadzihasanovic's ZW-calculus, there written "
+        "the copies pairwise with W-spiders. This is axiom 6a of Hadzihasanovic's ZW-calculus, there written "
         "with the black monoid and the 'mixed' white comonoid, and generalises to any number of inputs and "
         "outputs ($\\mathrm{ba}^{n,m}$; in the thesis, with a label $r$ on the Z-spider, $ba_{zw}$).\n\n"
         "Unlike the [W bialgebra](../w-bialgebra/), the crossing wires here are an ordinary swap: they "
@@ -292,7 +292,7 @@ rule(
     summary="A W merge followed by a W split equals W splits followed by W merges, with a fermionic crossing.",
     description=(
         W_EXPLAINER + "\n\n"
-        "The W-node read as a merge (dot on the right) and as a split (dot on the left) form a bialgebra, "
+        "The W-spider read as a merge (dot on the right) and as a split (dot on the left) form a bialgebra, "
         "but only up to a sign: the two wires that cross must be connected by Hadzihasanovic's *crossing*, "
         "the 'fermionic swap' $|00\\rangle\\langle00| + |01\\rangle\\langle10| + |10\\rangle\\langle01| - "
         "|11\\rangle\\langle11|$, which picks up a sign when both wires carry an excitation. With an ordinary "
@@ -335,10 +335,10 @@ rule(
     name="W Hopf rule",
     aliases=["antipode rule", "5d", "W complementarity"],
     calculus="ZW", fragment="pauli", group="zw-bialgebra", order=3,
-    summary="Splitting with a W-node, applying Z(π) to one branch and merging again disconnects the wire.",
+    summary="Splitting with a W-spider, applying Z(π) to one branch and merging again disconnects the wire.",
     description=(
         W_EXPLAINER + " " + UNIT_EXPLAINER + "\n\n"
-        "The W-node is a Hopf algebra whose antipode is the Pauli Z: splitting a wire with a W-node, "
+        "The W-spider is a Hopf algebra whose antipode is the Pauli Z: splitting a wire with a W-spider, "
         "applying $Z$ to one of the two branches and merging them again gives $|0\\rangle\\langle0|$, since "
         "the two ways of routing an excitation cancel. This is axiom 5d of Hadzihasanovic's ZW-calculus.\n\n"
         "It is the case $n = m = 1$ of the [W loop rule](../w-loop/), which counts the branches with signs."),
@@ -370,13 +370,13 @@ rule(
     name="Z/W Hopf rule",
     aliases=["6c", "loop", "lp^n", "ZW complementarity"],
     calculus="ZW", fragment="phase-free", group="zw-bialgebra", order=4,
-    summary="A Z-spider and a W-node connected by two wires disconnect.",
+    summary="A Z-spider and a W-spider connected by two wires disconnect.",
     description=(
         W_EXPLAINER + " " + UNIT_EXPLAINER + "\n\n"
-        "Copying a basis state with a Z-spider and merging the two copies with a W-node kills $|1\\rangle$ "
+        "Copying a basis state with a Z-spider and merging the two copies with a W-spider kills $|1\\rangle$ "
         "(two excitations cannot be merged) and keeps $|0\\rangle$, so the composite is "
         "$|0\\rangle\\langle0|$. This is axiom 6c of Hadzihasanovic's ZW-calculus. More generally, any number "
-        "$n \\geq 2$ of parallel wires between a W-node and a Z-spider can be cut ($\\mathrm{lp}^n$), and in "
+        "$n \\geq 2$ of parallel wires between a W-spider and a Z-spider can be cut ($\\mathrm{lp}^n$), and in "
         "the thesis the Z-spider may carry any label $r$ (rule $loop$)."),
     parameter_notes="Shown with two parallel wires; holds for any number $n \\geq 2$ of wires.",
     scalar="auto",
@@ -413,7 +413,7 @@ rule(
     summary="Between a W split and a W merge, a wire with Z(π) cancels a plain wire.",
     description=(
         W_EXPLAINER + "\n\n"
-        "Splitting with a W-node and merging again with $k$ parallel wires gives $\\mathrm{diag}(1, k)$: "
+        "Splitting with a W-spider and merging again with $k$ parallel wires gives $\\mathrm{diag}(1, k)$: "
         "the excitation can take any of the $k$ routes. A wire carrying a Pauli Z contributes $-1$ instead "
         "of $+1$, so $n$ plain wires and $m \\leq n$ wires with Z can be replaced by $n - m$ plain wires. "
         "This is Hadzihasanovic's generalised loop rule $\\mathrm{lp}_W^{n,m}$, a form of integer arithmetic "
@@ -449,18 +449,18 @@ rule(
     name="Sum rule",
     aliases=["addition rule", "rng_+", "W addition", "convolution"],
     calculus="ZW", fragment="universal", group="zw-arithmetic", order=1,
-    summary="Splitting with a W-node, applying weights r and s to the branches and merging gives weight r+s.",
+    summary="Splitting with a W-spider, applying weights r and s to the branches and merging gives weight r+s.",
     description=(
         W_EXPLAINER + "\n\n"
         "Write $r$ for the two-legged white vertex (Z-box) $\\mathrm{diag}(1, r)$. Splitting a wire with a "
-        "W-node, applying $r$ and $s$ to the two branches and merging them with a W-node gives "
+        "W-spider, applying $r$ and $s$ to the two branches and merging them with a W-spider gives "
         "$\\mathrm{diag}(1, r + s)$, because the excitation goes through exactly one of the branches. "
         "Together with [weighted spider fusion](../zw-weighted-fusion/), which multiplies labels, this "
         "is how the ring structure of $R$ is encoded in the $R$-labelled ZW-calculus: addition is "
         "convolution with respect to the W Hopf algebra.\n\n"
         "The rule generalises to any number of branches, giving the sum of all labels. In the planar "
         "W-calculus of Carette, Moutot, Perez and Vilmart it reads: two parallel edges with weights $r$ and "
-        "$s$ between two W-nodes can be replaced by one edge with weight $r+s$."),
+        "$s$ between two W-spiders can be replaced by one edge with weight $r+s$."),
     variables={"r": "complex", "s": "complex"},
     parameter_notes="Shown with two branches; holds for any number of branches.",
     scalar="1",
@@ -527,16 +527,16 @@ rule(
     name="W adds states",
     aliases=["W as addition", "Add", "W-H-add"],
     calculus="ZW", fragment="universal", group="zw-arithmetic", order=4,
-    summary="Merging the states |0⟩+a|1⟩ and |0⟩+b|1⟩ with a W-node gives |0⟩+(a+b)|1⟩.",
+    summary="Merging the states |0⟩+a|1⟩ and |0⟩+b|1⟩ with a W-spider gives |0⟩+(a+b)|1⟩.",
     description=(
         W_EXPLAINER + " Read as a merge (dot on the right) it maps $|00\\rangle\\mapsto|0\\rangle$, "
         "$|01\\rangle, |10\\rangle\\mapsto|1\\rangle$ and $|11\\rangle\\mapsto 0$.\n\n"
         "A one-legged Z-box with label $a$ is the state $|0\\rangle + a|1\\rangle$ (the same as a one-legged "
-        "H-box with label $a$). Merging two such states with a W-node drops the $|11\\rangle$ term and adds "
-        "the labels: the W-node implements addition. This is the basis of the encoding of arithmetic in "
+        "H-box with label $a$). Merging two such states with a W-spider drops the $|11\\rangle$ term and adds "
+        "the labels: the W-spider implements addition. This is the basis of the encoding of arithmetic in "
         "the GHZ/W- and ZW-calculi, and of the 'Add' gadget used to build sums of diagrams."),
     variables={"a": "complex", "b": "complex"},
-    parameter_notes="Shown for two states; holds for any number of states merged by one W-node.",
+    parameter_notes="Shown for two states; holds for any number of states merged by one W-spider.",
     scalar="1",
     source={"bib": BOOK},
     related=[{"id": "w-sum", "relation": "see-also"}],

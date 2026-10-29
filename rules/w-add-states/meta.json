@@ -10,13 +10,13 @@
   "fragment": "universal",
   "group": "zw-arithmetic",
   "order": 4,
-  "summary": "Merging the states |0⟩+a|1⟩ and |0⟩+b|1⟩ with a W-node gives |0⟩+(a+b)|1⟩.",
-  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. Read as a merge (dot on the right) it maps $|00\\rangle\\mapsto|0\\rangle$, $|01\\rangle, |10\\rangle\\mapsto|1\\rangle$ and $|11\\rangle\\mapsto 0$.\n\nA one-legged Z-box with label $a$ is the state $|0\\rangle + a|1\\rangle$ (the same as a one-legged H-box with label $a$). Merging two such states with a W-node drops the $|11\\rangle$ term and adds the labels: the W-node implements addition. This is the basis of the encoding of arithmetic in the GHZ/W- and ZW-calculi, and of the 'Add' gadget used to build sums of diagrams.",
+  "summary": "Merging the states |0⟩+a|1⟩ and |0⟩+b|1⟩ with a W-spider gives |0⟩+(a+b)|1⟩.",
+  "description": "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. Read as a merge (dot on the right) it maps $|00\\rangle\\mapsto|0\\rangle$, $|01\\rangle, |10\\rangle\\mapsto|1\\rangle$ and $|11\\rangle\\mapsto 0$.\n\nA one-legged Z-box with label $a$ is the state $|0\\rangle + a|1\\rangle$ (the same as a one-legged H-box with label $a$). Merging two such states with a W-spider drops the $|11\\rangle$ term and adds the labels: the W-spider implements addition. This is the basis of the encoding of arithmetic in the GHZ/W- and ZW-calculi, and of the 'Add' gadget used to build sums of diagrams.",
   "variables": {
     "a": "complex",
     "b": "complex"
   },
-  "parameter_notes": "Shown for two states; holds for any number of states merged by one W-node.",
+  "parameter_notes": "Shown for two states; holds for any number of states merged by one W-spider.",
   "scalar": "1",
   "source": {
     "bib": "KissingervdWeteringbook"

@@ -9,7 +9,7 @@
   "calculus": "ZX",
   "fragment": "universal",
   "group": "hadamard",
-  "order": 20,
+  "order": 21,
   "summary": "Bending both wires of a Hadamard gate (taking its transpose) gives the Hadamard gate.",
   "description": "The Hadamard gate is a symmetric matrix, so it equals its own transpose: bending its input wire up with a cap and its output wire down with a cup gives the Hadamard gate again. Because of this, the Hadamard gate can be treated as an undirected edge decoration, which is how PyZX represents it. In the complete axiomatisation of Hadzihasanovic, Ng and Wang this is axiom 1(e).",
   "checked": false,

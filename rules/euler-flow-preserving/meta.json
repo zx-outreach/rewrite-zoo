@@ -11,8 +11,8 @@
   ],
   "calculus": "ZX",
   "fragment": "universal",
-  "group": "euler",
-  "order": 4,
+  "group": "hadamard",
+  "order": 9,
   "view": "graph-like",
   "summary": "A Hadamard edge between spiders with phases α₁ and α₂ can be replaced by a path through three new spiders with phases β₁, β₂, β₃, moving the phases α₁, α₂ onto the path.",
   "description": "This is the [Euler-angle rule with a Hadamard](../euler-angles-hadamard/) in graph-like form. Unfusing the phases of the two spiders, the left-hand side contains $R_Z(\\alpha_2)HR_Z(\\alpha_1)$ on the edge, and the path on the right-hand side is $HR_Z(\\beta_3)HR_Z(\\beta_2)HR_Z(\\beta_1)H = R_X(\\beta_3)R_Z(\\beta_2)R_X(\\beta_1)$, so the two sides are equal up to the global phase $e^{i\\gamma}$ by Vilmart's formulas.\n\nBackens and Perdrix use this form in their complete set of flow-preserving rewrite rules. In MBQC terms the two spiders are XY-measured vertices $a$ and $b$ (with angles $\\alpha_1$ and $\\alpha_2$) and the rule inserts three new XY-measured vertices $x, y, z$ on the edge between them, while $a$ and $b$ get angle 0. It preserves extended causal flow when the flow corrects $a$ by $b$ (or $b$ by $a$): the new flow is $a\\mapsto x\\mapsto y\\mapsto z\\mapsto b$. It is only needed in this causal-flow setting, where it is used to translate the Euler rule of the complete equational theory for quantum circuits.\n\nThe stored instance is checked for $\\alpha_1=\\frac\\pi3$, $\\alpha_2=\\frac{2\\pi}7$.",
@@ -85,5 +85,6 @@
     "non-linear",
     "universal"
   ],
-  "notes": "The build checks one generic instance of the angles; `python authoring/flow_preserving.py --selftest` checks the formulas with PyZX on random angles and on the two degenerate cases."
+  "notes": "The build checks one generic instance of the angles; `python authoring/flow_preserving.py --selftest` checks the formulas with PyZX on random angles and on the two degenerate cases.",
+  "alternative_of": "euler-angles"
 }

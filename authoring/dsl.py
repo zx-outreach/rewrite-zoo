@@ -84,7 +84,7 @@ class D:
         return v
 
     def w(self, x, y, input_dir=(-0.35, 0)):
-        """A W-node (black triangle).  Returns (w_out, w_in): attach the single 'input' leg of the W
+        """A W-spider (black triangle).  Returns (w_out, w_in): attach the single 'input' leg of the W
         to ``w_in`` and the other legs to ``w_out``."""
         wo = self._v(VT.W_OUTPUT, x, y)
         wi = self._v(VT.W_INPUT, x + input_dir[0], y + input_dir[1])

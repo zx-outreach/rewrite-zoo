@@ -236,7 +236,7 @@ rule(
     "hadamard-pi2-sandwich", lhs=L, rhs=R,
     name="Hadamard between two π/2 X-rotations",
     aliases=["V H V = S†", "Hadamard Euler sandwich"],
-    calculus="ZX", fragment="clifford", group="euler", order=11,
+    calculus="ZX", fragment="clifford", group="hadamard", order=11,
     summary="A Hadamard gate between two π/2 X-rotations is a −π/2 Z-rotation.",
     description=(
         "Sandwiching a Hadamard gate between two X-rotations by π/2 (the $V=\\sqrt X$ gate) gives the Z-rotation "

@@ -10,7 +10,7 @@ ZX fragments are nested: phase-free ⊂ Pauli ⊂ Clifford ⊂ Clifford+T ⊂ un
 
 The same hierarchy is used for ZH and ZW rules, by asking which ZX fragment the generators belong to:
 a standard H-box is a Hadamard (Clifford) with two legs and Toffoli-type (Clifford+T) with three or
-more; a W-node is Clifford+T; labels that are not phases are universal.
+more; a W-spider is Clifford+T; labels that are not phases are universal.
 """
 
 from __future__ import annotations
@@ -113,7 +113,7 @@ def graph_level(g, calculus: str, domains: Dict[str, str]) -> int:
         elif t == VT.Z_BOX:
             lvl = max(lvl, zbox_level(label_of(g, v), domains))
         elif t in (VT.W_INPUT, VT.W_OUTPUT):
-            lvl = max(lvl, LEVEL["clifford+t"])  # W-nodes can be built from triangles, i.e. Clifford+T
+            lvl = max(lvl, LEVEL["clifford+t"])  # W-spiders can be built from triangles, i.e. Clifford+T
     for e in g.edges():
         if g.edge_type(e) == ET.HADAMARD:
             lvl = max(lvl, LEVEL["clifford"])

@@ -121,6 +121,14 @@
     });
   }
 
+  function initGenerators() {
+    const gens = readJSON("generator-data") || {};
+    document.querySelectorAll("[data-gen]").forEach((c) => {
+      const d = gens[c.dataset.gen];
+      if (d) c.appendChild(ZXView.draw(d, { scale: 38, hboxes: d.hboxes !== false }));
+    });
+  }
+
   function initGroup() {
     const entries = readJSON("index-data") || [];
     const byId = {};
@@ -422,6 +430,7 @@
     initToc();
     if (document.body.classList.contains("page-group")) initGroup();
     if (document.body.classList.contains("page-completeness")) initIndex();
+    if (document.body.classList.contains("page-about")) { initIndex(); initGenerators(); }
     if (document.body.classList.contains("page-rule")) { initRule(); initAlternatives(); }
   }
 

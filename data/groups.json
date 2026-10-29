@@ -9,7 +9,7 @@
   "id": "hadamard",
   "calculus": "ZX",
   "name": "Hadamards and colour change",
-  "description": "Rules involving the Hadamard gate: it is self-inverse, it changes the colour of spiders, and it can be decomposed into Euler angles."
+  "description": "Rules involving the Hadamard gate: it is self-inverse, it changes the colour of spiders, and it can be decomposed into π/2 rotations. Also the Euler-angle rules relating different decompositions of single-qubit unitaries into Z- and X-rotations."
  },
  {
   "id": "copy",
@@ -24,16 +24,16 @@
   "description": "The interaction between phase-free Z- and X-spiders: strong complementarity (bialgebra) and complementarity (Hopf)."
  },
  {
-  "id": "scalars",
+  "id": "phase-gadgets",
   "calculus": "ZX",
-  "name": "Scalars",
-  "description": "Rules for diagrams without inputs or outputs, and rules whose purpose is to fix scalar factors."
+  "name": "Phase gadgets",
+  "description": "Rules for phase gadgets: arity-1 phase spiders attached to an X- or (graph-like) Z-spider, which represent diagonal phase rotations."
  },
  {
-  "id": "euler",
+  "id": "graph-like",
   "calculus": "ZX",
-  "name": "Euler decompositions",
-  "description": "Rules that relate different decompositions of single-qubit unitaries into Z- and X-rotations."
+  "name": "Graph-like simplifications",
+  "description": "Further rules for simplifying graph-like diagrams, for instance removing identity spiders and parallel Hadamard edges."
  },
  {
   "id": "local-complementation",
@@ -48,16 +48,10 @@
   "description": "Rules that complement the edges between the neighbourhoods of two connected spiders. In graph-like diagrams these allow removing pairs of spiders with Pauli phases."
  },
  {
-  "id": "graph-like",
+  "id": "spider-nests",
   "calculus": "ZX",
-  "name": "Graph-like simplifications",
-  "description": "Further rules for simplifying graph-like diagrams, for instance removing identity spiders and parallel Hadamard edges."
- },
- {
-  "id": "phase-gadgets",
-  "calculus": "ZX",
-  "name": "Phase gadgets",
-  "description": "Rules for phase gadgets: arity-1 phase spiders attached to an X- or (graph-like) Z-spider, which represent diagonal phase rotations."
+  "name": "Spider nests",
+  "description": "Products of phase gadgets that multiply to the identity. They are used to reduce the T-count of Clifford+T circuits: if a circuit contains more than half of a nest, that part can be replaced by the inverse of the rest."
  },
  {
   "id": "supplementarity",
@@ -66,10 +60,16 @@
   "description": "Rules that are needed for completeness beyond the Clifford fragment, such as supplementarity and the commutation rules of the Clifford+T axiomatisations."
  },
  {
-  "id": "spider-nests",
+  "id": "fault-equivalent",
   "calculus": "ZX",
-  "name": "Spider nests",
-  "description": "Products of phase gadgets that multiply to the identity. They are used to reduce the T-count of Clifford+T circuits: if a circuit contains more than half of a nest, that part can be replaced by the inverse of the rest."
+  "name": "Fault-equivalent rewrites",
+  "description": "Rewrites that preserve not only the linear map of a diagram but also its behaviour under noise. Under edge-flip noise every edge can suffer a Pauli X, Y or Z flip. Two diagrams are fault-equivalent if every undetectable fault on one has a fault of at most the same weight with the same effect on the other, so that replacing one by the other in any circuit or code preserves its distance (hence these were first called distance-preserving rewrites). Every fault-equivalent rewrite is a sound ZX rule, but not conversely: spider unfusion, for instance, is in general not fault-equivalent. Fault-equivalent rewrites are used to construct fault-tolerant circuits, such as syndrome extraction and cat-state preparation, by construction. The equations shown are checked as ordinary ZX equations; their fault equivalence is not checked."
+ },
+ {
+  "id": "scalars",
+  "calculus": "ZX",
+  "name": "Scalars",
+  "description": "Rules for diagrams without inputs or outputs, and rules whose purpose is to fix scalar factors."
  },
  {
   "id": "triangle",
@@ -93,17 +93,18 @@
   "section": "circuits"
  },
  {
+  "id": "zh-gates",
+  "calculus": "ZH",
+  "name": "Gates as ZH-diagrams",
+  "description": "Multi-qubit gates such as the Toffoli and CCZ gates are particularly simple in the ZH-calculus. The gate is drawn as a circuit on the left and its diagram on the right.",
+  "section": "circuits"
+ },
+ {
   "id": "circuits",
   "calculus": "ZX",
   "name": "Circuit identities",
   "description": "Identities between quantum circuits built from CNOT, CZ, Hadamard and phase gates, presented as ZX-diagrams.",
   "section": "circuits"
- },
- {
-  "id": "fault-equivalent",
-  "calculus": "ZX",
-  "name": "Fault-equivalent rewrites",
-  "description": "Rewrites that preserve not only the linear map of a diagram but also its behaviour under noise. Under edge-flip noise every edge can suffer a Pauli X, Y or Z flip. Two diagrams are fault-equivalent if every undetectable fault on one has a fault of at most the same weight with the same effect on the other, so that replacing one by the other in any circuit or code preserves its distance (hence these were first called distance-preserving rewrites). Every fault-equivalent rewrite is a sound ZX rule, but not conversely: spider unfusion, for instance, is in general not fault-equivalent. Fault-equivalent rewrites are used to construct fault-tolerant circuits, such as syndrome extraction and cat-state preparation, by construction. The equations shown are checked as ordinary ZX equations; their fault equivalence is not checked."
  },
  {
   "id": "zh-hboxes",
@@ -130,29 +131,22 @@
   "description": "Rules that translate between H-boxes and the generators of the ZX-calculus: Hadamards, phases, X-spiders and phase gadgets."
  },
  {
-  "id": "zh-gates",
-  "calculus": "ZH",
-  "name": "Gates as ZH-diagrams",
-  "description": "Multi-qubit gates such as the Toffoli and CCZ gates are particularly simple in the ZH-calculus. The gate is drawn as a circuit on the left and its diagram on the right.",
-  "section": "circuits"
- },
- {
   "id": "zw-rules",
   "calculus": "ZW",
-  "name": "W-node basics",
-  "description": "Rules of the ZW-calculus involving the W-node."
+  "name": "W-spider basics",
+  "description": "Rules of the ZW-calculus involving the W-spider."
  },
  {
   "id": "zw-bialgebra",
   "calculus": "ZW",
   "name": "ZW bialgebra and Hopf rules",
-  "description": "The interaction of the W-node with itself and with Z-spiders: the bialgebra laws (one of which needs the fermionic crossing) and the Hopf rules that disconnect parallel wires."
+  "description": "The interaction of the W-spider with itself and with Z-spiders: the bialgebra laws (one of which needs the fermionic crossing) and the Hopf rules that disconnect parallel wires."
  },
  {
   "id": "zw-arithmetic",
   "calculus": "ZW",
   "name": "ZW arithmetic",
-  "description": "Rules of the labelled ZW-calculus that encode a commutative ring: the W-node adds labels, white (Z) spiders multiply them."
+  "description": "Rules of the labelled ZW-calculus that encode a commutative ring: the W-spider adds labels, white (Z) spiders multiply them."
  },
  {
   "id": "fermionic",

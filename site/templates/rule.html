@@ -92,6 +92,20 @@
   </aside>
 </div>
 
+{% if alternatives %}
+<section class="alternatives">
+  <h2>Alternative representations</h2>
+  <p class="muted">Equivalent versions of this rule in the form in which they appear in other papers.</p>
+  {% for a in alternatives %}
+  <article class="group-rule">
+    <div class="group-rule-head"><h3><a href="{{ root }}rules/{{ a.id }}/index.html">{{ a.name }}</a></h3> <span class="badge frag-{{ a.fragment|replace('+','p') }}">{{ a.fragment_name }}</span></div>
+    <div class="equation static" data-alt-eq="{{ a.id }}"></div>
+    <p>{{ a.summary }} <span class="muted">— {{ a.cite }}</span></p>
+  </article>
+  {% endfor %}
+</section>
+{% endif %}
+
 <section class="sources">
   <h2>Sources</h2>
   <h3>First appeared in</h3>
@@ -106,19 +120,7 @@
   {% endif %}
 </section>
 
-{% if alternatives %}
-<section class="alternatives">
-  <h2>Alternative representations</h2>
-  <p class="muted">Equivalent versions of this rule in the form in which they appear in other papers.</p>
-  {% for a in alternatives %}
-  <article class="group-rule">
-    <div class="group-rule-head"><h3><a href="{{ root }}rules/{{ a.id }}/index.html">{{ a.name }}</a></h3> <span class="badge frag-{{ a.fragment|replace('+','p') }}">{{ a.fragment_name }}</span></div>
-    <div class="equation static" data-alt-eq="{{ a.id }}"></div>
-    <p>{{ a.summary }} <span class="muted">— {{ a.cite }}</span></p>
-  </article>
-  {% endfor %}
-</section>
-{% endif %}
+
 
 {% if rule.related %}
 <section class="related">

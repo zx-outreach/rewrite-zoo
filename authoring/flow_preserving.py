@@ -123,7 +123,8 @@ rule(
     name="Flow-preserving Euler rule (E_ZX)",
     aliases=["(E_ZX)", "E_ZX", "(EZX)", "Euler rule (flow-preserving)", "graph-like Euler rule",
              "Euler decomposition of an edge"],
-    calculus="ZX", fragment="universal", group="euler", order=4, view="graph-like",
+    calculus="ZX", fragment="universal", group="hadamard", order=9, view="graph-like",
+    alternative_of="euler-angles",
     summary="A Hadamard edge between spiders with phases α₁ and α₂ can be replaced by a path through three new spiders with phases β₁, β₂, β₃, moving the phases α₁, α₂ onto the path.",
     description=(
         "This is the [Euler-angle rule with a Hadamard](../euler-angles-hadamard/) in graph-like form. Unfusing "

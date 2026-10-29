@@ -11,9 +11,9 @@
   "fragment": "clifford+t",
   "group": "zw-rules",
   "order": 4,
-  "summary": "A Pauli Z on the input of a W-node can be pushed onto all of its outputs.",
-  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nEvery term in the image of $|1\\rangle$ has exactly one output in state $|1\\rangle$, so a sign $-1$ on the input is the same as a sign $-1$ on every output. In Hadzihasanovic's ZW-calculus, where the binary white vertex is the Pauli Z, this says that the binary white vertex is an automorphism of the black monoid (axiom 3b, generalised to $n$ outputs as $\\mathrm{am}_W^n$).\n\nThe same argument works for any diagonal map $\\mathrm{diag}(1,r)$: see [weights copy through W](../w-weight-copy/).",
-  "parameter_notes": "m is the number of outputs of the W-node (shown for m = 2); holds for any m.",
+  "summary": "A Pauli Z on the input of a W-spider can be pushed onto all of its outputs.",
+  "description": "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nEvery term in the image of $|1\\rangle$ has exactly one output in state $|1\\rangle$, so a sign $-1$ on the input is the same as a sign $-1$ on every output. In Hadzihasanovic's ZW-calculus, where the binary white vertex is the Pauli Z, this says that the binary white vertex is an automorphism of the black monoid (axiom 3b, generalised to $n$ outputs as $\\mathrm{am}_W^n$).\n\nThe same argument works for any diagonal map $\\mathrm{diag}(1,r)$: see [weights copy through W](../w-weight-copy/).",
+  "parameter_notes": "m is the number of outputs of the W-spider (shown for m = 2); holds for any m.",
   "scalar": "1",
   "source": {
     "bib": "hadzihasanovic2015diagrammatic",

@@ -547,12 +547,12 @@ def w_fusion():
     w, wi = R.w(2, 1.25)
     a2, bn2, bm2 = R.b(0, 1.25), R.b(4.5, c1), R.b(4.5, c2)
     R.e(a2, wi).e(w, bn2).e(w, bm2)
-    spec = {"params": {"n": param("other outputs of the first W-node", 0, 3),
-                       "m": param("outputs of the second W-node", 0, 3)},
+    spec = {"params": {"n": param("other outputs of the first W-spider", 0, 3),
+                       "m": param("outputs of the second W-spider", 0, 3)},
             "lhs": [outs("n", bn, shift=0.6), outs("m", bm, shift=0.6)],
             "rhs": [outs("n", bn2, shift=0.6), outs("m", bm2, shift=0.6)]}
     return L, R, spec, {"n": 1, "m": 2}, {
-        "parameter_notes": "n is the number of other outputs of the first W-node and m the number of "
+        "parameter_notes": "n is the number of other outputs of the first W-spider and m the number of "
                            "outputs of the second (shown for n = 1, m = 2); holds for any n and m."}
 
 
@@ -573,7 +573,7 @@ def _w_commute(kind):
             "lhs": [outs("m", b, shift=0.5)],
             "rhs": [unit("m", [s2, b2], dots_shift=[-0.55, 0])]}
     return L, R, spec, {"m": 2}, {
-        "parameter_notes": "m is the number of outputs of the W-node (shown for m = 2); holds for any m."}
+        "parameter_notes": "m is the number of outputs of the W-spider (shown for m = 2); holds for any m."}
 
 
 @family("w-pi-commutation")
@@ -621,7 +621,7 @@ def w_zero_copy():
             "lhs": [outs("m", b, shift=0.5)],
             "rhs": [unit("m", [w2, wi2, b2], dots_shift=[0.8, 0])]}
     return L, R, spec, {"m": 2}, {
-        "parameter_notes": "m is the number of outputs of the W-node (shown for m = 2); holds for any m."}
+        "parameter_notes": "m is the number of outputs of the W-spider (shown for m = 2); holds for any m."}
 
 
 # ---------------------------------------------------------------------------------------------

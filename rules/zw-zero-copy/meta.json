@@ -10,8 +10,8 @@
   "fragment": "clifford+t",
   "group": "zw-bialgebra",
   "order": 5,
-  "summary": "The state |0⟩ (a W-node without outputs) is copied by a phase-free Z-spider.",
-  "description": "A W-node with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the unit of the W-node read as a 'merge'.\n\nA phase-free Z-spider sends $|0\\rangle$ to $|0\\cdots0\\rangle$, so plugging the unit of the W-node into it gives a copy of the unit on every output. Together with the [W/Z bialgebra](../w-z-bialgebra/) and the [Z/W Hopf rule](../zw-hopf/) this is one of the axioms saying that the W-node and the Z-spider form a (Hopf-like) bialgebra: axiom 6b of Hadzihasanovic's original complete ZW-calculus. It is the ZW-version of the [state copy](../state-copy/) rule of the ZX-calculus, with the $|0\\rangle$ state drawn as a W-node instead of an X-spider.",
+  "summary": "The state |0⟩ (a W-spider without outputs) is copied by a phase-free Z-spider.",
+  "description": "A W-spider with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the unit of the W-spider read as a 'merge'.\n\nA phase-free Z-spider sends $|0\\rangle$ to $|0\\cdots0\\rangle$, so plugging the unit of the W-spider into it gives a copy of the unit on every output. Together with the [W/Z bialgebra](../w-z-bialgebra/) and the [Z/W Hopf rule](../zw-hopf/) this is one of the axioms saying that the W-spider and the Z-spider form a (Hopf-like) bialgebra: axiom 6b of Hadzihasanovic's original complete ZW-calculus. It is the ZW-version of the [state copy](../state-copy/) rule of the ZX-calculus, with the $|0\\rangle$ state drawn as a W-spider instead of an X-spider.",
   "parameter_notes": "Shown for a Z-spider with two outputs; holds for any number of outputs.",
   "scalar": "1",
   "source": {

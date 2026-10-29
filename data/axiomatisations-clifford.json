@@ -1050,7 +1050,7 @@
     "calculus": "ZW",
     "fragment": "clifford+t",
     "location": "Theorem 15 and Corollary 16 (Section 4); rules: Rules 0–7 and X of Section 3",
-    "summary": "The ZW-calculus (black W-vertices, white Z(π)-vertices and a fermionic crossing) is complete for qubit maps with integer coefficients, exactly. The theorem is stated for the condensed calculus with spider rules; the expanded calculus of Rules 0–7 and X is complete as well. The white vertices of this paper are Z-spiders with phase π; the translations below follow the conventions of the zoo's ZW rules (white monoid ↦ phase-free Z-spider, black vertex ↦ W-node).",
+    "summary": "The ZW-calculus (black W-vertices, white Z(π)-vertices and a fermionic crossing) is complete for qubit maps with integer coefficients, exactly. The theorem is stated for the condensed calculus with spider rules; the expanded calculus of Rules 0–7 and X is complete as well. The white vertices of this paper are Z-spiders with phase π; the translations below follow the conventions of the zoo's ZW rules (white monoid ↦ phase-free Z-spider, black vertex ↦ W-spider).",
     "axioms": [
      {
       "label": "0a",
@@ -1096,7 +1096,7 @@
      {
       "label": "1b",
       "rule": "w-fusion",
-      "note": "Unit law of the black monoid: the instance where one W-node has no outputs (the unit |0⟩), followed by [w-identity]."
+      "note": "Unit law of the black monoid: the instance where one W-spider has no outputs (the unit |0⟩), followed by [w-identity]."
      },
      {
       "label": "1c",
@@ -1111,7 +1111,7 @@
      {
       "label": "2a",
       "rule": "w-identity",
-      "note": "The binary black vertex (NOT) is an involution; PyZX's W-node with one output is two binary black vertices in a row."
+      "note": "The binary black vertex (NOT) is an involution; PyZX's W-spider with one output is two binary black vertices in a row."
      },
      {
       "label": "2b",
@@ -1279,7 +1279,7 @@
      {
       "label": "inv",
       "rule": "w-identity",
-      "note": "The binary black vertex (NOT) is an involution; PyZX's W-node with one output is two binary black vertices in a row."
+      "note": "The binary black vertex (NOT) is an involution; PyZX's W-spider with one output is two binary black vertices in a row."
      },
      {
       "label": "ba_w",
@@ -1697,7 +1697,7 @@
      {
       "label": "row 2, 3rd",
       "rule": "w-weight-copy",
-      "note": "The paper's version: a weight r on one leg of a (symmetric) black vertex equals r times weights 1/r on all its other legs (r ≠ 0). In PyZX the black vertex is a W-node with a NOT on its input, so this is [w-weight-copy] with weight 1/r up to a NOT and the scalar r."
+      "note": "The paper's version: a weight r on one leg of a (symmetric) black vertex equals r times weights 1/r on all its other legs (r ≠ 0). In PyZX the black vertex is a W-spider with a NOT on its input, so this is [w-weight-copy] with weight 1/r up to a NOT and the scalar r."
      },
      {
       "label": "row 2, 4th",

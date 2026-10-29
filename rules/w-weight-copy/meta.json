@@ -11,12 +11,12 @@
   "fragment": "universal",
   "group": "zw-rules",
   "order": 5,
-  "summary": "A weight diag(1, r) on the input of a W-node can be pushed onto each of its outputs.",
-  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nIn the $R$-labelled ZW-calculus $\\mathrm{ZW}_R$, the white vertex with label $r$ (here a Z-box) with two legs is the map $\\mathrm{diag}(1, r) = |0\\rangle\\langle 0| + r|1\\rangle\\langle 1|$. Because each term produced by the W-node has at most one excitation, a weight $r$ on the input is the same as a weight $r$ on each output: every label is a comonoid homomorphism for the W-node.\n\nWith $r = e^{i\\alpha}$ this pushes Z-phases through a W-node, and with $r = -1$ it is [Z(π) commutes through W](../w-pi-commutation/).",
+  "summary": "A weight diag(1, r) on the input of a W-spider can be pushed onto each of its outputs.",
+  "description": "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nIn the $R$-labelled ZW-calculus $\\mathrm{ZW}_R$, the white vertex with label $r$ (here a Z-box) with two legs is the map $\\mathrm{diag}(1, r) = |0\\rangle\\langle 0| + r|1\\rangle\\langle 1|$. Because each term produced by the W-spider has at most one excitation, a weight $r$ on the input is the same as a weight $r$ on each output: every label is a comonoid homomorphism for the W-spider.\n\nWith $r = e^{i\\alpha}$ this pushes Z-phases through a W-spider, and with $r = -1$ it is [Z(π) commutes through W](../w-pi-commutation/).",
   "variables": {
     "r": "complex"
   },
-  "parameter_notes": "m is the number of outputs of the W-node (shown for m = 2); holds for any m.",
+  "parameter_notes": "m is the number of outputs of the W-spider (shown for m = 2); holds for any m.",
   "scalar": "1",
   "source": {
     "bib": "hadzihasanovic2017algebra",

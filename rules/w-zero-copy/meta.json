@@ -10,9 +10,9 @@
   "fragment": "clifford+t",
   "group": "zw-rules",
   "order": 3,
-  "summary": "The state |0⟩ (a W-node without outputs) is copied by a W-node.",
-  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. A W-node with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the unit of the W-node read as a 'merge'.\n\nSince the W-node sends $|0\\rangle$ to $|0\\cdots0\\rangle$, plugging the unit into its input gives a copy of the unit on every output. This is the rule that makes the unit a comonoid homomorphism, one of the Hopf-algebra axioms of the W-node (axiom 5b of Hadzihasanovic).",
-  "parameter_notes": "m is the number of outputs of the W-node (shown for m = 2); holds for any m.",
+  "summary": "The state |0⟩ (a W-spider without outputs) is copied by a W-spider.",
+  "description": "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. A W-spider with no outputs is the state $|0\\rangle$ (read as an effect, it is $\\langle 0|$), which is the unit of the W-spider read as a 'merge'.\n\nSince the W-spider sends $|0\\rangle$ to $|0\\cdots0\\rangle$, plugging the unit into its input gives a copy of the unit on every output. This is the rule that makes the unit a comonoid homomorphism, one of the Hopf-algebra axioms of the W-spider (axiom 5b of Hadzihasanovic).",
+  "parameter_notes": "m is the number of outputs of the W-spider (shown for m = 2); holds for any m.",
   "scalar": "1",
   "source": {
     "bib": "hadzihasanovic2015diagrammatic",

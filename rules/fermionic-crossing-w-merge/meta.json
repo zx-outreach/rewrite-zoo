@@ -6,14 +6,14 @@
     "nat_x^w",
     "2(a)",
     "the black monoid is even",
-    "naturality of the crossing for the W-node"
+    "naturality of the crossing for the W-spider"
   ],
   "calculus": "ZW",
   "fragment": "clifford+t",
   "group": "fermionic",
   "order": 6,
   "summary": "A wire crossing the output of a W merge equals the wire crossing both of its inputs.",
-  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe W-node used as a merge (the black monoid: a ternary black vertex followed by a binary black vertex) is an *even* map, so the crossing is natural for it: a wire crossing its output can be moved to cross both of its inputs instead, without a sign. Compare with the odd [NOT gate](../fermionic-crossing-not/) and with the symmetric black vertex, which is odd and [picks up a sign](../fermionic-crossing-w-sign/).",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nThe W-spider used as a merge (the black monoid: a ternary black vertex followed by a binary black vertex) is an *even* map, so the crossing is natural for it: a wire crossing its output can be moved to cross both of its inputs instead, without a sign. Compare with the odd [NOT gate](../fermionic-crossing-not/) and with the symmetric black vertex, which is odd and [picks up a sign](../fermionic-crossing-w-sign/).",
   "checked": false,
   "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
   "scalar": "1",

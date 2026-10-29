@@ -4,14 +4,14 @@
   "aliases": [
     "black involution",
     "inv",
-    "W-node with one output"
+    "W-spider with one output"
   ],
   "calculus": "ZW",
   "fragment": "clifford+t",
   "group": "zw-rules",
   "order": 2,
-  "summary": "A W-node with a single output is the identity wire.",
-  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. With just one output it maps $|0\\rangle\\mapsto|0\\rangle$ and $|1\\rangle\\mapsto|1\\rangle$, so it is the identity.\n\nIn the undirected ZW-calculus, the binary black vertex is the NOT gate $|01\\rangle+|10\\rangle$, and PyZX's W-node with one output consists of two such vertices in a row. The rule is then axiom 2a of Hadzihasanovic: the binary black vertex is an involution.",
+  "summary": "A W-spider with a single output is the identity wire.",
+  "description": "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg. With just one output it maps $|0\\rangle\\mapsto|0\\rangle$ and $|1\\rangle\\mapsto|1\\rangle$, so it is the identity.\n\nIn the undirected ZW-calculus, the binary black vertex is the NOT gate $|01\\rangle+|10\\rangle$, and PyZX's W-spider with one output consists of two such vertices in a row. The rule is then axiom 2a of Hadzihasanovic: the binary black vertex is an involution.",
   "scalar": "1",
   "source": {
     "bib": "hadzihasanovic2015diagrammatic",

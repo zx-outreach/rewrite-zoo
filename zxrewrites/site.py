@@ -27,8 +27,8 @@ SITE_SRC = ROOT / "site"
 DOMAIN_NAMES = {"real": "ℝ", "boolean": "{0, 1}", "clifford": "multiples of π/2",
                 "clifford+t": "multiples of π/4", "complex": "ℂ", "integer": "ℤ"}
 # Top-level sections of the catalogue (a group goes in the section of its calculus unless it says otherwise)
-SECTIONS = [("zx", "ZX-calculus"), ("algebraic", "Algebraic ZX"), ("zh", "ZH-calculus"), ("zw", "ZW-calculus"),
-            ("circuits", "Quantum circuits")]
+SECTIONS = [("zx", "ZX-calculus"), ("circuits", "Quantum circuits"), ("algebraic", "Algebraic ZX"),
+            ("zh", "ZH-calculus"), ("zw", "ZW-calculus")]
 SECTION_NAMES = dict(SECTIONS)
 
 
@@ -178,6 +178,38 @@ def subscripts(text) -> "Markup":
     from markupsafe import Markup, escape
     s = str(escape(text if text is not None else ""))
     return Markup(_SUB.sub(lambda m: "<sub>" + (m.group(1) or m.group(2)) + "</sub>", s))
+
+
+def about_generators() -> Dict[str, dict]:
+    """Small diagrams of the basic building blocks, for the About page (viewer format)."""
+    def legs(centre, t, label="", n_in=2, n_out=2, extra=None):
+        nodes = [{"id": 0, "x": 1, "y": 0.5, "t": t, "label": label}]
+        edges = []
+        k = 1
+        for i in range(n_in):
+            nodes.append({"id": k, "x": 0, "y": 0.5 + (i - (n_in - 1) / 2), "t": 0, "label": ""})
+            edges.append([k, 0, 1])
+            k += 1
+        for i in range(n_out):
+            nodes.append({"id": k, "x": 2, "y": 0.5 + (i - (n_out - 1) / 2), "t": 0, "label": ""})
+            edges.append([0, k, 1])
+            k += 1
+        nodes[0].update(extra or {})
+        return {"nodes": nodes, "edges": edges}
+
+    wire_h = {"nodes": [{"id": 0, "x": 0, "y": 0, "t": 0, "label": ""}, {"id": 1, "x": 2, "y": 0, "t": 0, "label": ""}],
+              "edges": [[0, 1, 2]]}
+    w = {"nodes": [{"id": 0, "x": 1.2, "y": 0.5, "t": 5, "label": ""}, {"id": 1, "x": 0.8, "y": 0.5, "t": 4, "label": ""},
+                   {"id": 2, "x": 0, "y": 0.5, "t": 0, "label": ""}, {"id": 3, "x": 2.2, "y": 0, "t": 0, "label": ""},
+                   {"id": 4, "x": 2.2, "y": 1, "t": 0, "label": ""}],
+         "edges": [[1, 0, 1], [2, 1, 1], [0, 3, 1], [0, 4, 1]]}
+    return {
+        "z": legs(None, 1, "α"), "x": legs(None, 2, "α"),
+        "hbox-gate": dict(wire_h, hboxes=True), "hedge": dict(wire_h, hboxes=False),
+        "hbox": legs(None, 3, "a", 2, 1), "w": w,
+        "triangle": legs(None, 99, "", 1, 1, {"sym": "triangle", "colour": "#ffff82"}),
+        "lambda": legs(None, 6, "λ", 1, 1),
+    }
 
 
 def slug(key: str) -> str:
@@ -489,7 +521,12 @@ def build_site(cat: Catalogue, out: Path) -> None:
         write(f"completeness/{c['slug']}/index.html", "completeness.html", 2, paper=c, title=f"Completeness: {c['cite']}",
               thumbs=[r["entry"] for res in c["results"] for r in res["rows"] if r["entry"]])
     write("completeness/index.html", "completeness_index.html", 1, papers=comp, title="Complete axiomatisations")
-    write("about/index.html", "about.html", 1, title="About & conventions")
+    about_ids = ["spider-fusion", "colour-change", "euler-decomposition-hadamard", "pi-commutation", "zh-h-box-fusion",
+                 "gate-toffoli-zh", "w-fusion", "w-sum", "triangle-hopf", "lambda-box-multiplication", "bialgebra",
+                 "cnot-pauli-propagation", "y-state", "gate-t", "bialgebra-generalised"]
+    by_id_all = {e["id"]: e for e in index_entries_all}
+    write("about/index.html", "about.html", 1, title="About & conventions",
+          examples=[by_id_all[i] for i in about_ids if i in by_id_all], generators=about_generators())
     write("index.html", "index.html", 0, entries=index_entries, groups_ctx=groups_ctx,
           n_rules=n_all, n_variants=sum(len(p.variants) for p in cat.rules),
           n_papers=len(papers))

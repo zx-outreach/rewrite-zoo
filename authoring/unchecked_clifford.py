@@ -8,7 +8,7 @@ Drawing conventions used here:
 * curved wires use invisible way points (D.way, a quadratic control point) and invisible joints
   (a "crossing" symbol with only two legs), see the helpers below;
 * ZW translations follow authoring/zw.py: the black vertex with a binary black vertex on one leg is PyZX's
-  W-node (triangle + dot), a lone triangle is the symmetric black vertex, the binary black vertex is the NOT
+  W-spider (triangle + dot), a lone triangle is the symmetric black vertex, the binary black vertex is the NOT
   gate X(pi), white vertices are Z-spiders (2015: with phase pi) and r-labelled white vertices are Z-boxes.
 """
 
@@ -105,7 +105,7 @@ def curl(d, a, b, x, y0, side=-1, fermionic=True, h=0.45, u=0.6):
 
 
 def black(d, x, y):
-    """A symmetric black vertex of the ZW-calculus (PyZX's W-node without its input dot)."""
+    """A symmetric black vertex of the ZW-calculus (PyZX's W-spider without its input dot)."""
     return d._v(VT.W_OUTPUT, x, y)
 
 
@@ -448,13 +448,13 @@ path(R, R.b(0, 2), C(1.5, 2), X2, C(2.5, 1), wo)
 rule(
     "fermionic-crossing-w-merge", lhs=L, rhs=R,
     name="W merge passes through the crossing",
-    aliases=["7a", "nat_x^w", "2(a)", "the black monoid is even", "naturality of the crossing for the W-node"],
+    aliases=["7a", "nat_x^w", "2(a)", "the black monoid is even", "naturality of the crossing for the W-spider"],
     **base(
         calculus="ZW", fragment="clifford+t", group="fermionic", order=next(ORDER),
         unchecked_reason=FERMIONIC,
         summary="A wire crossing the output of a W merge equals the wire crossing both of its inputs.",
         description=(CROSSING_EXPLAINER + "\n\n"
-                     "The W-node used as a merge (the black monoid: a ternary black vertex followed by a binary "
+                     "The W-spider used as a merge (the black monoid: a ternary black vertex followed by a binary "
                      "black vertex) is an *even* map, so the crossing is natural for it: a wire crossing its "
                      "output can be moved to cross both of its inputs instead, without a sign. Compare with the "
                      "odd [NOT gate](../fermionic-crossing-not/) and with the symmetric black vertex, which is odd "
@@ -527,10 +527,10 @@ rule(
     **base(
         calculus="ZW", fragment="clifford+t", group="fermionic", order=next(ORDER),
         unchecked_reason=FERMIONIC,
-        summary="Between the legs of two white vertices merged by a W-node, a fermionic crossing is an ordinary swap.",
+        summary="Between the legs of two white vertices merged by a W-spider, a fermionic crossing is an ordinary swap.",
         description=(CROSSING_EXPLAINER + "\n\n"
                      "Rule X of Hadzihasanovic's first complete ZW-calculus: two white vertices whose outputs are "
-                     "merged by a black monoid (a W-node), with their inputs interleaved through a fermionic "
+                     "merged by a black monoid (a W-spider), with their inputs interleaved through a fermionic "
                      "crossing, equal the same diagram with an ordinary swap. It is used to eliminate crossings "
                      "when rewriting to normal form.\n\n"
                      "In the 2015 paper the white structures are a ternary white vertex with a binary white vertex "
@@ -545,7 +545,7 @@ rule(
 
 # --- symmetry of black / white vertices under swaps and crossings
 def sym(kind, crossing):
-    """kind: 'w' (W-node) or 'z' (Z-box r). crossing: None (straight), 'swap' or 'fermionic'."""
+    """kind: 'w' (W-spider) or 'z' (Z-box r). crossing: None (straight), 'swap' or 'fermionic'."""
     d = D()
     if kind == "w":
         v, wi = d.w(1.5, 0.5)
@@ -569,20 +569,20 @@ def sym(kind, crossing):
 
 rule(
     "w-swap-symmetry", lhs=sym("w", "swap"), rhs=sym("w", None),
-    name="W-nodes are symmetric",
+    name="W-spiders are symmetric",
     aliases=["0a", "0b", "sym_w", "2(e)", "symmetry of the black vertex"],
     **base(
         calculus="ZW", fragment="clifford+t", group="zw-rules", order=20,
         unchecked_reason="both sides are the same PyZX graph: symmetry of the generator is built into the graph representation",
-        summary="Swapping two legs of a W-node (black vertex) gives the same W-node.",
+        summary="Swapping two legs of a W-spider (black vertex) gives the same W-spider.",
         description=(
             "The black vertices of the ZW-calculus are symmetric: swapping two of their legs with an ordinary "
             "swap does not change them (Rule 0 of Hadzihasanovic 2015, $sym_w$ of his thesis). This is what "
-            "allows treating them as vertices of an undirected graph. In PyZX the outputs of a W-node are "
+            "allows treating them as vertices of an undirected graph. In PyZX the outputs of a W-spider are "
             "unordered, so this holds by construction.\n\n"
             "The swap here is an ordinary swap; for the fermionic crossing see "
-            "[W-nodes are symmetric under the crossing](../w-fermionic-symmetry/)."),
-        parameter_notes="Shown for a W-node with three outputs; holds for any number of legs.",
+            "[W-spiders are symmetric under the crossing](../w-fermionic-symmetry/)."),
+        parameter_notes="Shown for a W-spider with three outputs; holds for any number of legs.",
         scalar="1",
         source=r15("Rule 0 (0a, 0b, 0b′)"),
         also_in=[th("$sym_w$"), lics("2(e)")],
@@ -616,19 +616,19 @@ rule(
 
 rule(
     "w-fermionic-symmetry", lhs=sym("w", "fermionic"), rhs=sym("w", None),
-    name="W-nodes are symmetric under the crossing",
+    name="W-spiders are symmetric under the crossing",
     aliases=["sym^x_w", "2(f)", "flexsymmetry"],
     **base(
         calculus="ZW", fragment="universal", group="fermionic", order=next(ORDER),
         unchecked_reason=FERMIONIC,
-        summary="Crossing two legs of a W-node with the fermionic crossing gives the same W-node.",
+        summary="Crossing two legs of a W-spider with the fermionic crossing gives the same W-spider.",
         description=(CROSSING_EXPLAINER + "\n\n"
-                     "Every term of a W-node has at most one $|1\\rangle$ among any two of its legs, so the sign of "
+                     "Every term of a W-spider has at most one $|1\\rangle$ among any two of its legs, so the sign of "
                      "the fermionic crossing never appears: black vertices are symmetric under the crossing as "
                      "well as under the [ordinary swap](../w-swap-symmetry/). In the planar W-calculus of Carette "
                      "et al., where wires may not cross, this is the axiom that removes a fermionic swap between "
                      "two adjacent legs of a black vertex."),
-        parameter_notes="Shown for a W-node with three outputs; holds for any number of legs.",
+        parameter_notes="Shown for a W-spider with three outputs; holds for any number of legs.",
         scalar="1",
         source=th("$sym^x_w$"),
         also_in=[lics("2(f)"), car("row 4, 1st axiom")],
@@ -667,7 +667,7 @@ rule(
     ))
 
 
-# --- unx: crossings between labelled white vertices on a W-node become swaps
+# --- unx: crossings between labelled white vertices on a W-spider become swaps
 def unx(fermionic):
     d = D()
     wo, wi = d.w(1.3, 1.5)
@@ -686,16 +686,16 @@ def unx(fermionic):
 
 rule(
     "fermionic-crossing-unx", lhs=unx(True), rhs=unx(False),
-    name="Uncrossing white vertices on a W-node",
+    name="Uncrossing white vertices on a W-spider",
     aliases=["unx", "3(i)"],
     **base(
         calculus="ZW", fragment="universal", group="fermionic", order=next(ORDER),
         unchecked_reason=FERMIONIC,
         variables={"r": "complex", "s": "complex"},
-        summary="Between the legs of two labelled white vertices on a W-node, a fermionic crossing is an ordinary swap.",
+        summary="Between the legs of two labelled white vertices on a W-spider, a fermionic crossing is an ordinary swap.",
         description=(CROSSING_EXPLAINER + "\n\n"
-                     "Two labelled white vertices (Z-boxes with labels $r$ and $s$) attached to the same W-node "
-                     "never both carry a $|1\\rangle$, since the W-node spreads a single excitation. So a fermionic "
+                     "Two labelled white vertices (Z-boxes with labels $r$ and $s$) attached to the same W-spider "
+                     "never both carry a $|1\\rangle$, since the W-spider spreads a single excitation. So a fermionic "
                      "crossing between a leg of one and a leg of the other never picks up a sign, and can be "
                      "replaced by an ordinary swap. This is the labelled analogue of "
                      "[rule X](../fermionic-crossing-elimination/)."),
@@ -859,12 +859,12 @@ rule(
     aliases=["ax-zero", "zero axiom", "nullary black vertex"],
     **base(
         calculus="ZW", fragment="universal", group="zw-rules", order=22,
-        unchecked_reason="the black vertex without legs (the scalar 0) is not a PyZX W-node",
+        unchecked_reason="the black vertex without legs (the scalar 0) is not a PyZX W-spider",
         summary="The legless black vertex (the scalar 0) next to a wire equals 0 times the disconnected wire.",
         description=(
             "The black vertex with no legs is the empty sum, the scalar $0$. This axiom of the planar "
             "W-calculus says that a diagram multiplied by it is $0$ times a disconnected diagram: here a wire is "
-            "cut into the effect $\\langle 0|$ and the state $|0\\rangle$, each a W-node with no outputs. It "
+            "cut into the effect $\\langle 0|$ and the state $|0\\rangle$, each a W-spider with no outputs. It "
             "plays the role of the [zero rule](../zero-rule/) of the ZX-calculus.\n\n"
             "With the scalar $0$ written as a number both sides are $0$."),
         scalar="0",

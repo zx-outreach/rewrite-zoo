@@ -454,7 +454,7 @@ rule(
     "euler-angles", lhs=L, rhs=R,
     name="Euler-angle rule (EU)",
     aliases=["(EU)", "(P)", "Euler rule", "colour swapping of Euler angles", "ZXZ = XZX", "Euler angles"],
-    calculus="ZX", fragment="universal", group="euler", order=1,
+    calculus="ZX", fragment="universal", group="hadamard", order=1,
     summary="A Z–X–Z sequence of rotations equals an X–Z–X sequence of rotations, with angles given by explicit (non-linear) formulas.",
     description=(
         "By Euler's rotation theorem every single-qubit unitary can be written both as a Z–X–Z and as an X–Z–X "
@@ -497,7 +497,7 @@ rule(
     "euler-angles-hadamard", lhs=L, rhs=R,
     name="Euler-angle rule with a Hadamard (EU′)",
     aliases=["(EU')", "EU'", "Euler-Hadamard rule"],
-    calculus="ZX", fragment="universal", group="euler", order=2,
+    calculus="ZX", fragment="universal", group="hadamard", order=2,
     summary="A Z-rotation, a Hadamard and a Z-rotation equal an X–Z–X sequence of rotations, with angles given by explicit formulas.",
     description=(
         "A variant of the [Euler-angle rule](../euler-angles/) in which the middle X-rotation is replaced by a "

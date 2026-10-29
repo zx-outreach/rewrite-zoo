@@ -1,6 +1,6 @@
 {
   "id": "w-swap-symmetry",
-  "name": "W-nodes are symmetric",
+  "name": "W-spiders are symmetric",
   "aliases": [
     "0a",
     "0b",
@@ -12,9 +12,9 @@
   "fragment": "clifford+t",
   "group": "zw-rules",
   "order": 20,
-  "summary": "Swapping two legs of a W-node (black vertex) gives the same W-node.",
-  "description": "The black vertices of the ZW-calculus are symmetric: swapping two of their legs with an ordinary swap does not change them (Rule 0 of Hadzihasanovic 2015, $sym_w$ of his thesis). This is what allows treating them as vertices of an undirected graph. In PyZX the outputs of a W-node are unordered, so this holds by construction.\n\nThe swap here is an ordinary swap; for the fermionic crossing see [W-nodes are symmetric under the crossing](../w-fermionic-symmetry/).",
-  "parameter_notes": "Shown for a W-node with three outputs; holds for any number of legs.",
+  "summary": "Swapping two legs of a W-spider (black vertex) gives the same W-spider.",
+  "description": "The black vertices of the ZW-calculus are symmetric: swapping two of their legs with an ordinary swap does not change them (Rule 0 of Hadzihasanovic 2015, $sym_w$ of his thesis). This is what allows treating them as vertices of an undirected graph. In PyZX the outputs of a W-spider are unordered, so this holds by construction.\n\nThe swap here is an ordinary swap; for the fermionic crossing see [W-spiders are symmetric under the crossing](../w-fermionic-symmetry/).",
+  "parameter_notes": "Shown for a W-spider with three outputs; holds for any number of legs.",
   "checked": false,
   "unchecked_reason": "both sides are the same PyZX graph: symmetry of the generator is built into the graph representation",
   "scalar": "1",

@@ -6,15 +6,15 @@
     "W associativity",
     "sp_W",
     "cut_w",
-    "W-node fusion"
+    "W-spider fusion"
   ],
   "calculus": "ZW",
   "fragment": "clifford+t",
   "group": "zw-rules",
   "order": 1,
-  "summary": "A W-node plugged into the input of another W-node fuses with it.",
-  "description": "The W-node (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nWhen an output of one W-node is connected to the input of another, the two fuse into a single W-node with all the remaining outputs. This expresses (co)associativity of the W-node, and is the reason we can speak of a single $n$-output W-node rather than a tree of binary ones.\n\nIn Hadzihasanovic's undirected presentation this is the spider rule $\\mathrm{sp}_W^{n,m}$ for black vertices: two black vertices connected through a binary black vertex fuse. Together with [W identity](../w-identity/) it also gives the unit law: fusing with a W-node that has no outputs simply removes an output.",
-  "parameter_notes": "n is the number of other outputs of the first W-node and m the number of outputs of the second (shown for n = 1, m = 2); holds for any n and m.",
+  "summary": "A W-spider plugged into the input of another W-spider fuses with it.",
+  "description": "The W-spider (black triangle) with one input and $n$ outputs maps $|0\\rangle \\mapsto |0\\cdots 0\\rangle$ and $|1\\rangle \\mapsto |10\\cdots0\\rangle + |010\\cdots0\\rangle + \\cdots + |0\\cdots01\\rangle$: it spreads a single excitation over its outputs in all possible ways. The small dot marks its input leg.\n\nWhen an output of one W-spider is connected to the input of another, the two fuse into a single W-spider with all the remaining outputs. This expresses (co)associativity of the W-spider, and is the reason we can speak of a single $n$-output W-spider rather than a tree of binary ones.\n\nIn Hadzihasanovic's undirected presentation this is the spider rule $\\mathrm{sp}_W^{n,m}$ for black vertices: two black vertices connected through a binary black vertex fuse. Together with [W identity](../w-identity/) it also gives the unit law: fusing with a W-spider that has no outputs simply removes an output.",
+  "parameter_notes": "n is the number of other outputs of the first W-spider and m the number of outputs of the second (shown for n = 1, m = 2); holds for any n and m.",
   "scalar": "1",
   "source": {
     "bib": "hadzihasanovic2015diagrammatic",
@@ -52,12 +52,12 @@
   "arity": {
     "params": {
       "n": {
-        "label": "other outputs of the first W-node",
+        "label": "other outputs of the first W-spider",
         "min": 0,
         "max": 3
       },
       "m": {
-        "label": "outputs of the second W-node",
+        "label": "outputs of the second W-spider",
         "min": 0,
         "max": 3
       }

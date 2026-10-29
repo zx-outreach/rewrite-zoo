@@ -8,8 +8,8 @@
   ],
   "calculus": "ZX",
   "fragment": "universal",
-  "group": "euler",
-  "order": 2,
+  "group": "hadamard",
+  "order": 8,
   "summary": "A Z-rotation, a Hadamard and a Z-rotation equal an X–Z–X sequence of rotations, with angles given by explicit formulas.",
   "description": "A variant of the [Euler-angle rule](../euler-angles/) in which the middle X-rotation is replaced by a Hadamard gate: $R_Z(\\alpha_2)\\,H\\,R_Z(\\alpha_1) = e^{i\\gamma}R_X(\\beta_3)R_Z(\\beta_2)R_X(\\beta_1)$, where, with $x^+=\\frac{\\alpha_1+\\alpha_2}2$, $x^-=x^+-\\alpha_2$, $z=-\\sin x^+ + i\\cos x^-$ and $z' = \\cos x^+ - i\\sin x^-$: $\\beta_1=\\arg z+\\arg z'$, $\\beta_2 = 2\\arg(i+|z/z'|)$, $\\beta_3=\\arg z-\\arg z'$ and $\\gamma = x^+-\\arg z+\\frac{\\pi-\\beta_2}2$.\n\nVilmart showed that this rule together with the [inverse rule with a phase](../inverse-scalar-phase/) can replace the Euler-angle rule (EU), the Euler decomposition of the Hadamard and the [Clifford+T scalar rule (E)](../clifford-t-scalar/). This gives a complete axiomatisation of the universal ZX-calculus with only seven rules: spider fusion, the two identity rules, (IV), copy, bialgebra, colour change and (EU′).\n\nThe stored instance is checked for $\\alpha_1=\\frac\\pi3$, $\\alpha_2=\\frac{2\\pi}7$.",
   "variables": {

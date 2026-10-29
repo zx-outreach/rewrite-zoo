@@ -309,3 +309,17 @@ details.downloads[open] .dl-buttons { margin-top: 10px; }
   .related-groups ul { display: block; }
   .related-groups li { margin: 4px 0; }
 }
+.about-toc { background: var(--surface-2); border-radius: var(--radius); padding: 8px 14px; margin: 18px 0 6px; }
+.about-toc p { margin: 0; }
+.about h2.about-part { margin-top: 48px; padding-top: 14px; border-top: 3px solid var(--shade); }
+.about h3 { margin-top: 24px; font-size: 1.1rem; }
+.about h2, .about h3 { scroll-margin-top: 70px; }
+
+/* About page illustrations */
+.gen-row, .tile-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; margin: 10px 0 18px; }
+.gen-fig { margin: 0; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 120px; }
+.gen-fig figcaption { font-size: .8rem; color: var(--muted); margin-top: 4px; text-align: center; }
+.gen-diagram svg { display: block; }
+.mini-card { width: 210px; }
+.mini-card .thumb { height: 90px; }
+.mini-name { display: block; padding: 6px 10px 8px; font-size: .85rem; font-weight: 700; line-height: 1.25; }

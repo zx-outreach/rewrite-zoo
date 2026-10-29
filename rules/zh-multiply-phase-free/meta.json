@@ -28,5 +28,10 @@
     "phase-free",
     "H-box"
   ],
-  "alternative_of": "zh-multiply"
+  "related": [
+    {
+      "id": "zh-multiply",
+      "relation": "special-case-of"
+    }
+  ]
 }

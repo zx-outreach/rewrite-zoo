@@ -24,7 +24,7 @@ Afterwards, verify with `python build.py --check --only=spider-fusion` from the 
 * Inputs and outputs are matched between LHS and RHS by their vertical order (the `y` coordinate). So the i-th input from the top on the left-hand side corresponds to the i-th input from the top on the right-hand side.
 * **ZX rules**: Hadamard gates are written as Hadamard edges (`D.he`). Do not use H-boxes in ZX rules: PyZX H-boxes are *unnormalised*, being ZH H-boxes. The site draws Hadamard edges as yellow boxes in the two-colour view.
 * **ZH rules**: `D.h(x, y)` is an H-box with the standard label −1. Use `D.h(x, y, phase="alpha")` for label e^{iα}, or `D.h(x, y, label="a")` / `label=0.5` for arbitrary complex labels. Write products as `a⋅b` (the PyZX parser drops `*`).
-* **ZW rules**: `w_out, w_in = D.w(x, y)` creates a W-node. Its single special leg attaches to `w_in`; all other legs attach to `w_out`.
+* **ZW rules**: `w_out, w_in = D.w(x, y)` creates a W-spider. Its single special leg attaches to `w_in`; all other legs attach to `w_out`.
 * Phases are in units of π: `"1/2"` is π/2, and `"alpha"` is the angle α. Boolean variables (phase aπ, a ∈ {0, 1}) must be declared with `D(bools="a b")` *and* `"variables": {"a": "boolean"}`.
 * Variable names must be ASCII (`alpha`, `beta1`, `gamma`, `a`, `j`); they are displayed as α, β₁, γ ….
 * Avoid layouts where an edge passes through a node, or where several edges lie on top of each other (e.g. complete graphs on collinear nodes). Leave boundary legs long enough (about 1 unit) for a Hadamard box to fit.

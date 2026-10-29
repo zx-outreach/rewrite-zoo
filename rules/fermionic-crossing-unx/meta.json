@@ -1,6 +1,6 @@
 {
   "id": "fermionic-crossing-unx",
-  "name": "Uncrossing white vertices on a W-node",
+  "name": "Uncrossing white vertices on a W-spider",
   "aliases": [
     "unx",
     "3(i)"
@@ -9,8 +9,8 @@
   "fragment": "universal",
   "group": "fermionic",
   "order": 11,
-  "summary": "Between the legs of two labelled white vertices on a W-node, a fermionic crossing is an ordinary swap.",
-  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nTwo labelled white vertices (Z-boxes with labels $r$ and $s$) attached to the same W-node never both carry a $|1\\rangle$, since the W-node spreads a single excitation. So a fermionic crossing between a leg of one and a leg of the other never picks up a sign, and can be replaced by an ordinary swap. This is the labelled analogue of [rule X](../fermionic-crossing-elimination/).",
+  "summary": "Between the legs of two labelled white vertices on a W-spider, a fermionic crossing is an ordinary swap.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nTwo labelled white vertices (Z-boxes with labels $r$ and $s$) attached to the same W-spider never both carry a $|1\\rangle$, since the W-spider spreads a single excitation. So a fermionic crossing between a leg of one and a leg of the other never picks up a sign, and can be replaced by an ordinary swap. This is the labelled analogue of [rule X](../fermionic-crossing-elimination/).",
   "variables": {
     "r": "complex",
     "s": "complex"

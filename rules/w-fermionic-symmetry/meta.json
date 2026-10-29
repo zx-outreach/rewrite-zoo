@@ -1,6 +1,6 @@
 {
   "id": "w-fermionic-symmetry",
-  "name": "W-nodes are symmetric under the crossing",
+  "name": "W-spiders are symmetric under the crossing",
   "aliases": [
     "sym^x_w",
     "2(f)",
@@ -10,9 +10,9 @@
   "fragment": "universal",
   "group": "fermionic",
   "order": 9,
-  "summary": "Crossing two legs of a W-node with the fermionic crossing gives the same W-node.",
-  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nEvery term of a W-node has at most one $|1\\rangle$ among any two of its legs, so the sign of the fermionic crossing never appears: black vertices are symmetric under the crossing as well as under the [ordinary swap](../w-swap-symmetry/). In the planar W-calculus of Carette et al., where wires may not cross, this is the axiom that removes a fermionic swap between two adjacent legs of a black vertex.",
-  "parameter_notes": "Shown for a W-node with three outputs; holds for any number of legs.",
+  "summary": "Crossing two legs of a W-spider with the fermionic crossing gives the same W-spider.",
+  "description": "The *crossing* (fermionic swap) of the ZW-calculus is the map $|00\\rangle\\langle 00| + |01\\rangle\\langle 10| + |10\\rangle\\langle 01| - |11\\rangle\\langle 11|$: a swap that picks up a sign $-1$ when two $|1\\rangle$'s (two fermions) are exchanged. It equals a SWAP followed by a CZ. It behaves like a symmetric braiding, except that it is only natural for *even* maps (those whose terms all have an even number of 1s); maps of odd parity, such as the black vertices, pick up signs. \n\nEvery term of a W-spider has at most one $|1\\rangle$ among any two of its legs, so the sign of the fermionic crossing never appears: black vertices are symmetric under the crossing as well as under the [ordinary swap](../w-swap-symmetry/). In the planar W-calculus of Carette et al., where wires may not cross, this is the axiom that removes a fermionic swap between two adjacent legs of a black vertex.",
+  "parameter_notes": "Shown for a W-spider with three outputs; holds for any number of legs.",
   "checked": false,
   "unchecked_reason": "uses the fermionic crossing of the ZW-calculus, which is not a PyZX generator",
   "scalar": "1",

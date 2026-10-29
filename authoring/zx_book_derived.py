@@ -184,7 +184,7 @@ rule(
     "y-state", lhs=L, rhs=R,
     name="Y-state identity",
     aliases=["S-state equality", "Y eigenstate"],
-    calculus="ZX", fragment="clifford", group="euler", order=10,
+    calculus="ZX", fragment="clifford", group="hadamard", order=10,
     summary="The two ways of writing the Pauli Y eigenstate as a single spider are equal up to a global phase.",
     description=(
         "An X-spider with phase −π/2 and a Z-spider with phase π/2, each with a single leg, both represent the "
